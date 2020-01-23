@@ -1,3 +1,32 @@
-.test {
-    color: red;
+body {
+    margin: 0;
+    padding: 0;
+}
+header {
+    display: flex;
+    padding-top: 45px;
+    margin-left: 3.70vw;
+}
+.section-logo {
+    width: 18.51vw;
+    text-align: center;
+}
+.section-nav {
+    display: flex;
+    width: 78.09vw;
+    justify-content: flex-end;
+}
+nav.section-nav-left>ul {
+    margin: 0;
+    display: flex;
+    list-style: none;
+}
+nav.section-nav-left>ul>li {
+    padding: 0 3vw;
+}
+.section-nav-right>span, .section-nav-right>a, .section-nav-right>button {
+    margin: 0 2vw;
+}
+a.section-nav-right-cart {
+    margin-left: 0;
 }
