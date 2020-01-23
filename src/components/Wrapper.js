@@ -1,14 +1,15 @@
 import React from 'react';
 
-import { Header, Footer} from './'
+import { Header, Footer, LeftBar} from './'
 
 function Wrapper(props) {
     return (
-        <div>
+        <main>
+            <LeftBar />
             <Header/>
             {props.children}
             <Footer/>
-        </div>
+        </main>
     );
 }
 
