@@ -1,24 +1,21 @@
 import React from "react"
-// import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
-import {Wrapper} from "../components"
-// import Image from "../components/image"
-// import SEO from "../components/seo"
+import {Wrapper, Hero} from "../components"
 
 const IndexPage = () => (
-  // <Layout>
-  //   <SEO title="Home" />
-  //   <h1>Hi people</h1>
-  //   <p>Welcome to your new Gatsby site.</p>
-  //   <p>Now go build something great.</p>
-  //   <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-  //     <Image />
-  //   </div>
-  //   <Link to="/page-2/">Go to page 2</Link>
-  // </Layout>
-    <Wrapper>
-        <p>Hello</p>
-    </Wrapper>
-)
+    <div className="application">
+        <Helmet>
+            <meta charSet="utf-8" />
+            <title>Fitt Find</title>
+            <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+        </Helmet>
+        <Wrapper>
+            <Hero>
+                Hello there I am Hero element.
+            </Hero>
+        </Wrapper>
+    </div>
+);
 
 export default IndexPage
