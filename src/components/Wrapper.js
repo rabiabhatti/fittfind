@@ -5,8 +5,8 @@ import { Header, Footer, LeftBar} from './'
 function Wrapper(props) {
     return (
         <main>
-            <LeftBar />
             <Header/>
+            <LeftBar />
             {props.children}
             <Footer/>
         </main>

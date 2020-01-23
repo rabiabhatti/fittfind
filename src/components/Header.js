@@ -1,33 +1,36 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import replaceable from '../images/replaceable.png'
 import  '../styles/header.css'
+import cart from '../images/cart.png'
+import menu from '../images/menu.png'
+import logo_dark from '../images/logo-dark.png'
 
 const Header = () => (
   <header>
-    {/*<div style={{margin: `0 auto`, maxWidth: 960, padding: `1.45rem 1.0875rem`,}}>*/}
-    {/*  <h1 className='test'>*/}
-    {/*    <Link to="/" style={{color: `white`, textDecoration: `none`,}}>*/}
-    {/*      Test*/}
-    {/*    </Link>*/}
-    {/*  </h1>*/}
-    {/*</div>*/}
-      <Link to={'/'} >
-          <img src={replaceable} />
-      </Link>
-    <div>
-        <Link to="/men">Men</Link>
-        <Link to="/women">Women</Link>
-        <Link to="/app">App</Link>
-        <Link to="/gym">Gym</Link>
-        <Link to="/contact">Contact</Link>
+    <Link to={'/'} id='logo'>
+      <img src={logo_dark} />
+    </Link>
+    <div className='section-nav'>
+      <div className='section-nav-left'>
+          <Link to="/men">Men</Link>
+          <Link to="/women">Women</Link>
+          <Link to="/app">App</Link>
+          <Link to="/gym">Gym</Link>
+          <Link to="/contact">Contact</Link>
+      </div>
+      <div className='section-nav-right'>
+          <span className='section-nav-right-currency'>Currency USD</span>
+          <Link to="/cart"  className='section-nav-right-cart'>
+              <img src={cart} />
+              <span>Empty Basket</span>
+          </Link>
+          <button role='button' className='section-nav-right-menu'>
+              <img src={menu} />
+          </button>
+      </div>
     </div>
-    <div>
-        <span>Currency USD</span>
-        <Link to="/cart">Empty Basket</Link>
-        <button role='button'>Menu</button>
-    </div>
+
   </header>
 );
 
