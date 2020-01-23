@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { Header, Footer, LeftBar} from './'
+import { Header, Footer} from './'
 
 function Wrapper(props) {
     return (
         <main>
             <Header/>
-            <LeftBar />
             {props.children}
             <Footer/>
         </main>
