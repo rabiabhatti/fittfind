@@ -1,0 +1,28 @@
+.hide {
+    display: none;
+}
+.show {
+    display: block;
+}
+
+@-webkit-keyframes slide {
+    100% { right: 200px; }
+}
+
+@keyframes slide {
+    100% { right: 200px; }
+}
+
+#slide {
+    width: 900px;
+    right: -900px;
+    background: blue;
+    position: absolute;
+    -webkit-animation: slide 1s forwards;
+    -webkit-animation-delay: 0s;
+    animation: slide 1s forwards;
+    animation-delay: 0s;
+}
+
+.section-slider-right-bar {
+}

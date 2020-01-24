@@ -1,14 +1,11 @@
 import React from 'react';
 
-import { LeftBar, RightBar } from "./";
-
-import '../styles/hero.css'
+import { LeftBar } from "./";
 
 const Hero = (props) => (
-    <div className='section-hero'>
+    <div style={{ display: "flex", flexDirection: 'row', justifyContent: "space-between", position: "relative" }}>
         <LeftBar />
         {props.children}
-        <RightBar />
     </div>
 );
 
