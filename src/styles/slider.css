@@ -16,6 +16,7 @@
 #slide {
     width: 900px;
     right: -900px;
+    z-index: -999;
     background: blue;
     position: absolute;
     -webkit-animation: slide 1s forwards;

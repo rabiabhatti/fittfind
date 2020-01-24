@@ -3,6 +3,8 @@ import { Helmet } from "react-helmet"
 
 import {Wrapper, Hero, Slider} from "../components"
 
+import forwardIcon from '../images/forward-icon.png'
+
 class IndexPage extends React.Component {
     render() {
         return (
@@ -14,6 +16,11 @@ class IndexPage extends React.Component {
                 </Helmet>
                 <Wrapper>
                     <Hero>
+                        <p>Find & release your inner athlete</p>
+                        <button className='findFitBtn'>
+                            Find your fit
+                            <img src={forwardIcon}/>
+                        </button>
                         <Slider />
                     </Hero>
                 </Wrapper>
