@@ -24,7 +24,7 @@ class IndexPage extends React.Component {
                             Find your fit
                             <img src={forwardIcon} alt='forward_icon'/>
                         </button>
-                        <Slider />
+                        <Slider type='hero' />
                     </Hero>
                     <div className='section-products-categories'>
                         <div className='section-products-women'>
@@ -61,6 +61,10 @@ class IndexPage extends React.Component {
                                 <span>Men Shop ---</span>
                             </div>
                         </div>
+                    </div>
+                    <div className='section-features'>
+                        <h2>--- Featured Items</h2>
+                        <Slider type='products' />
                     </div>
                 </Wrapper>
             </div>

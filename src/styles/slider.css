@@ -13,7 +13,7 @@
     100% { right: 200px; }
 }
 
-#slide {
+.hero-slide {
     width: 900px;
     right: -900px;
     z-index: -999;
@@ -25,5 +25,5 @@
     animation-delay: 0s;
 }
 
-.section-slider-right-bar {
+.section-hero-slider-right-bar {
 }
