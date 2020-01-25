@@ -1,11 +1,13 @@
 import React, { Fragment } from 'react'
 
 import '../styles/slider.css'
+import { Product } from './'
 
 import slider1 from '../images/home-slider-1.jpg'
 import slider2 from '../images/home-slider-2.jpg'
 import slider3 from '../images/home-slider-3.jpg'
 import slider4 from '../images/home-slider-4.jpg'
+import forwardIcon from '../images/forward-icon.png'
 
 const hero_carousel = [slider1, slider2, slider3, slider4];
 const products_carousel = [slider1, slider2, slider3, slider4, slider2, slider2, slider2, slider2, slider3, slider3, slider3, slider3, slider4, slider4, slider4, slider4];
@@ -34,28 +36,27 @@ class Slider extends React.Component {
         this.setState({heroSliderPosition: no})
     };
 
-    renderProductsPages = () => {
-        const { productsSliderPosition } = this.state
-        let i = 0;
-        const buttons = [];
-        for (i ; i < products_carousel.length/4; i ++) {
-            console.log('i', i)
-            buttons.push(
-                <button
-                    key={i}
-                    onClick={() => this.setState({ productsSliderPosition: i * 4 })}
-                >
-                    0{i+1}
-                </button>
-            )
+
+    handleBackNextProducts = (type) => {
+        if (type === 'next') {
+            this.setState(prevState => {
+                return {productsSliderPosition: prevState.productsSliderPosition + 4}
+            })
+        } else {
+            this.setState(prevState => {
+                return {productsSliderPosition: prevState.productsSliderPosition - 4}
+            })
         }
-        return buttons
+
     };
 
     render() {
         const { type } = this.props;
         const { heroSliderPosition, productsSliderPosition } = this.state;
-        console.log(productsSliderPosition)
+        const products_pages = [];
+        for (let i = 0; i < products_carousel.length / 4; i++) {
+            products_pages.push(i)
+        }
         return (
             <Fragment>
                 {
@@ -78,19 +79,24 @@ class Slider extends React.Component {
                         social_media: <p>Social Media</p>,
                         products:
                             <div className='section-products-slider'>
-                                {products_carousel.slice(productsSliderPosition, 4).map((item, i) => (
-                                    <div className='section-product' key={i}>
-                                        <img src={item} alt='product_image' width='400' />
-                                        <button className='product-like-btn'>Like icon</button>
-                                        <button className='product-desc'>
-                                            <span className='product-name'>Women hybrid Joggers Black</span>
-                                            <span className='product-price'>$46.00</span>
-                                        </button>
-                                    </div>
+                                {products_carousel.slice(productsSliderPosition, productsSliderPosition + 4).map((item, i) => (
+                                    <Product key={i} img={item} name='Women hybrid Joggers Black' price='$46.00' id={i} />
                                 ))}
                                 <div className='section-products-slider-right-bar'>
                                     <p>pages</p>
-                                    {this.renderProductsPages()}
+                                    {products_pages.map(i => (
+                                        <button key={i} onClick={() => this.setState({productsSliderPosition: i*4})}>
+                                            0{i+1}
+                                        </button>
+                                    ))}
+                                </div>
+                                <div className='section-products-slider-bottom-bar'>
+                                    <button onClick={() => this.handleBackNextProducts('back')} disabled={productsSliderPosition === 0}>
+                                        <img src={forwardIcon} alt='back_button' />
+                                    </button>
+                                    <button onClick={() => this.handleBackNextProducts('next')} disabled={productsSliderPosition === products_carousel.length - 4}>
+                                        <img src={forwardIcon} alt='next_button' />
+                                    </button>
                                 </div>
                             </div>,
                     }[type]

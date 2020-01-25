@@ -27,3 +27,7 @@
 
 .section-hero-slider-right-bar {
 }
+
+.section-products-slider-bottom-bar button:disabled {
+    background-color: aqua;
+}
