@@ -10,7 +10,7 @@ const Header = () => (
   <header>
     <div className='section-logo'>
       <Link to={'/'} id='logo'>
-        <img src={logo_dark} />
+        <img src={logo_dark} alt='Logo' />
       </Link>
     </div>
     <div className='section-nav'>
@@ -36,11 +36,11 @@ const Header = () => (
       <div className='section-nav-right'>
           <span className='section-nav-right-currency'>Currency USD</span>
           <Link to="/cart"  className='section-nav-right-cart'>
-              <img src={cart} />
+              <img src={cart} alt='Cart icon' />
               <span>Empty Basket</span>
           </Link>
-          <button role='button' className='section-nav-right-menu'>
-              <img src={menu} />
+          <button className='section-nav-right-menu'>
+              <img src={menu} alt='Menu icon' />
           </button>
       </div>
     </div>
