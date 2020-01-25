@@ -1,9 +1,12 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import {Wrapper, Hero, Slider} from "../components"
 
 import forwardIcon from '../images/forward-icon.png'
+import women_banner from '../images/home-slider-4.jpg'
+import men_banner from '../images/home-slider-1.jpg'
 
 class IndexPage extends React.Component {
     render() {
@@ -16,13 +19,49 @@ class IndexPage extends React.Component {
                 </Helmet>
                 <Wrapper>
                     <Hero>
-                        <p>Find & release your inner athlete</p>
+                        <h1>Find & release your inner athlete</h1>
                         <button className='findFitBtn'>
                             Find your fit
-                            <img src={forwardIcon}/>
+                            <img src={forwardIcon} alt='forward_icon'/>
                         </button>
                         <Slider />
                     </Hero>
+                    <div className='section-products-categories'>
+                        <div className='section-products-women'>
+                            <div className='section-products-women-banner'>
+                                <img src={women_banner} alt='women_banner' width={400} />
+                                <button className='shop-women-btn'>
+                                    <Link to={'/women'}>Women</Link>
+                                </button>
+                                <span>Women Shop ---</span>
+                            </div>
+                            <div className='section-products-women-categories'>
+                                <h3>Women Categories</h3>
+                                <Link to={`/women?category=new`}>New Releases</Link>
+                                <Link to={`/women?category=sportsbras`}>Sports Bras</Link>
+                                <Link to={`/women?category=tanktops`}>Tank tops</Link>
+                                <Link to={`/women?category=leggings`}>Leggings</Link>
+                                <Link to={`/women?category=shorts`}>Shorts</Link>
+                            </div>
+                        </div>
+                        <div className='section-products-men'>
+                            <div className='section-products-men-categories'>
+                                <h3>Men Categories</h3>
+                                <Link to={`/men?category=new`}>New Releases</Link>
+                                <Link to={`/men?category=compressiontops`}>Compression Tops</Link>
+                                <Link to={`/men?category=tights`}>Tights</Link>
+                                <Link to={`/men?category=hoodies`}>Hoodies</Link>
+                                <Link to={`/men?category=joggers&sweatpants`}>Joggers and sweatpants</Link>
+                            </div>
+                            <div className='section-products-men-banner'>
+                                <img src={men_banner} alt='men_banner' width={400} />
+                                <button className='shop-men-btn'>
+                                    <Link to={'/men'}>Men</Link>
+                                </button>
+                                <span>Men Shop ---</span>
+                            </div>
+                        </div>
+                    </div>
                 </Wrapper>
             </div>
         )
