@@ -14,20 +14,64 @@
 }
 
 .hero-slide {
-    width: 900px;
-    right: -900px;
+    width: 100%;
+    right: -75vw;
     z-index: -999;
     background: blue;
-    position: absolute;
+    /* position: absolute; */
     -webkit-animation: slide 1s forwards;
     -webkit-animation-delay: 0s;
     animation: slide 1s forwards;
     animation-delay: 0s;
 }
-
-.section-hero-slider-right-bar {
-}
-
 .section-products-slider-bottom-bar button:disabled {
     background-color: aqua;
 }
+h1.section-Find-release-hero {
+    width: 48%;
+    bottom: 12vw;
+    font-size: 80px;
+    font-weight: 900;
+    position: absolute;
+    margin-left: 170px;
+    text-transform: uppercase;
+}
+h1.section-Find-release-hero>span {
+    color: #025696;
+}
+button.findFitBtn {
+    bottom: 10vw;
+    border: none;
+    color: #fff;
+    text-align: left;
+    font-weight: 600;
+    padding: 15px 25px;
+    position: absolute;
+    margin-left: 170px;
+    border-radius: 20px;
+    background-color: #025696;
+}
+button.findFitBtn>img {
+    padding-left: 170px;
+}
+.section-hero-slider-right-bar {
+    top: 135px;
+    right: -50px;
+    position: absolute;
+    transform: rotate(90deg);
+}
+.section-hero-slider-right-bar>button {
+    border: none;
+    font-size: 17px;
+    padding: 0 20px;
+    font-weight: 700;
+    background-color: unset;
+}
+.sliders-count-container {
+    top: 15vw;
+    left: 10vw;
+    z-index: -1;
+    font-size: 200px;
+    position: absolute;
+}
+

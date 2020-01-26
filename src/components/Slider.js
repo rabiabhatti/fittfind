@@ -88,10 +88,10 @@ class Slider extends React.Component {
                                     {hero_carousel.map((img, i) => (
                                         <button className={i === heroSliderPosition ? 'active-slider slider-no' : 'slider-no'} key={i} onClick={() => this.heroSliderClick(i)}>0{i+1}</button>
                                     ))}
-                                    <div className='sliders-count-container'>
-                                        <span className='current-slider'>0{heroSliderPosition}</span> -
-                                        <span className='total-sliders'>0{hero_carousel.length}</span>
-                                    </div>
+                                </div>
+                                <div className='sliders-count-container'>
+                                    <span className='current-slider'>0{heroSliderPosition}</span> -
+                                    <span className='total-sliders'>0{hero_carousel.length}</span>
                                 </div>
                             </div>,
                         social_media:

@@ -5,8 +5,8 @@ import { Helmet } from "react-helmet"
 import {Wrapper, Hero, Slider, ImpossibleBanner} from "../components"
 
 import forwardIcon from '../images/forward-icon.png'
-import women_banner from '../images/home-slider-4.jpg'
-import men_banner from '../images/home-slider-1.jpg'
+import women_banner from '../images/women_banner.jpg'
+import men_banner from '../images/men_banner.jpg'
 
 class IndexPage extends React.Component {
     render() {
@@ -19,7 +19,7 @@ class IndexPage extends React.Component {
                 </Helmet>
                 <Wrapper>
                     <Hero>
-                        <h1>Find & release your inner athlete</h1>
+                        <h1 className='section-Find-release-hero'><span>Find</span> & release your inner <span>athlete</span></h1>
                         <button className='findFitBtn'>
                             Find your fit
                             <img src={forwardIcon} alt='forward_icon'/>
@@ -62,6 +62,10 @@ class IndexPage extends React.Component {
                             </div>
                         </div>
                     </div>
+                    <div className='section-features'>
+                        <h2>--- Featured Items</h2>
+                        <Slider type='products' />
+                    </div>
                     <div className='section-apps'>
                         <h2>Book a personal trainer and more with the <span>fittfind</span> app</h2>
                         <div className='section-apps-left'>
@@ -75,10 +79,6 @@ class IndexPage extends React.Component {
                             <img src={women_banner} alt='app_store_imag' width={400} />
                             <img src={women_banner} alt='app_store_video' width={400} />
                         </div>
-                    </div>
-                    <div className='section-features'>
-                        <h2>--- Featured Items</h2>
-                        <Slider type='products' />
                     </div>
                     <div className='section-social-media'>
                         <h2>--- Follow FittFind</h2>

@@ -1,9 +1,59 @@
 .section-left-bar {
-
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
 }
 .section-left-bar-text {
-
+    top: 215px;
+    left: 34px;
+    font-weight: 700;
+    color: #b2bac6;
+    background: none;
+    position: absolute;
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+    text-transform: uppercase;
 }
 .section-left-bar-btn {
-
+    left: 34px;
+    border: none;
+    display: flex;
+    bottom: 100px;
+    position: absolute;
+    background-color: unset;
+    flex-direction: column-reverse;
 }
+.section-left-bar-btn>span {
+    background: none;
+    font-weight: 700;
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+    text-transform: uppercase;
+}
+.section-left-bar-btn>img {
+    width: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
