@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
 
-import {Wrapper, Hero, Slider} from "../components"
+import {Wrapper, Hero, Slider, ImpossibleBanner} from "../components"
 
 import forwardIcon from '../images/forward-icon.png'
 import women_banner from '../images/home-slider-4.jpg'
@@ -70,6 +70,7 @@ class IndexPage extends React.Component {
                         <h2>--- Follow FittFind</h2>
                         <Slider type='social_media' />
                     </div>
+                    <ImpossibleBanner />
                 </Wrapper>
             </div>
         )
