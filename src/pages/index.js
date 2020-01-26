@@ -26,9 +26,9 @@ class IndexPage extends React.Component {
                         <div className='section-products-women-banner'>
                             <img src={women_banner} alt='women_banner' width={400} />
                             <button className='shop-women-btn'>
-                                <Link to={'/women'}>Women</Link>
+                                <Link to={'/women'}><span className='font-lucky-fellas'>fit</span>Women</Link>
                             </button>
-                            <span>Women Shop ---</span>
+                            <span className='shop-women-ver'>Women Shop ---</span>
                         </div>
                         <div className='section-products-women-categories'>
                             <h3>Women Categories</h3>

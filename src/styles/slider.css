@@ -54,6 +54,9 @@ button.findFitBtn {
 button.findFitBtn>img {
     padding-left: 170px;
 }
+.section-hero-slider {
+    width: 73%;
+}
 .section-hero-slider-right-bar {
     top: 135px;
     right: -50px;

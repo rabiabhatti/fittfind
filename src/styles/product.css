@@ -1,5 +1,5 @@
 .prod-cat-background {
-    width: 45vw;
+    width: 45.5vw;
     margin: 0 auto;
 }
 img.prod-cat-back {
@@ -10,4 +10,28 @@ img.prod-cat-back {
 .section-products-women {
     padding-top: 200px;
     margin-left: 170px;
+}
+button.shop-women-btn {
+    border: unset;
+    font-size: 50px;
+    color: #ffffff;
+    margin-top: 15vw;
+    margin-left: -100px;
+    position: absolute;
+    background-color: #055595;
+    padding: 15px 30px 15px 170px;
+}
+span.font-lucky-fellas {
+    font-size: 170px;
+    margin-top: -70px;
+    position: absolute;
+    margin-left: -150px;
+}
+span.shop-women-ver {
+    margin-top: 26vw;
+    font-weight: 700;
+    margin-left: -5vw;
+    position: absolute;
+    transform: rotate(270deg);
+    text-transform: uppercase;
 }
