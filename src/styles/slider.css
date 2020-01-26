@@ -68,10 +68,21 @@ button.findFitBtn>img {
     background-color: unset;
 }
 .sliders-count-container {
-    top: 15vw;
-    left: 10vw;
-    z-index: -1;
-    font-size: 200px;
+    right: 50px;
+    bottom: 60px;
+    display: flex;
     position: absolute;
 }
-
+.sliders-count-container>span.current-slider {
+    font-size: 50px;
+}
+.sliders-count-container>div {
+    display: flex;
+    margin-top: 9px;
+    text-align: center;
+    flex-direction: column;
+}
+span.total-dash {
+    font-size: 30px;
+    line-height: 30px;
+}

@@ -12,7 +12,7 @@ class IndexPage extends React.Component {
         return (
             <Wrapper name='Home'>
                 <Hero>
-                    <h1>Find & release your inner athlete</h1>
+                    <h1 className="section-Find-release-hero"><span>Find</span> & release your inner <span>athlete</span></h1>
                     <button className='findFitBtn'>
                         Find your fit
                         <img src={forwardIcon} alt='forward_icon'/>
