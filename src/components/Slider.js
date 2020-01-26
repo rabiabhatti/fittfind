@@ -90,7 +90,7 @@ class Slider extends React.Component {
                                     ))}
                                 </div>
                                 <div className='sliders-count-container'>
-                                    <span className='current-slider'>0{heroSliderPosition}</span> -
+                                    <span className='current-slider'>0{heroSliderPosition + 1}</span> -
                                     <span className='total-sliders'>0{hero_carousel.length}</span>
                                 </div>
                             </div>,
