@@ -1,16 +1,16 @@
 header {
     display: flex;
     padding-top: 45px;
-    margin-left: 3.70vw;
+    margin-left: 170px;
 }
 .section-logo {
-    width: 18.51vw;
-    text-align: center;
+    width: 30%;
 }
 .section-nav {
+    width: 70%;
     display: flex;
-    width: 78.09vw;
-    justify-content: flex-end;
+    font-weight: bold;
+    justify-content: space-between;
 }
 nav.section-nav-left>ul {
     margin: 0;
@@ -18,10 +18,10 @@ nav.section-nav-left>ul {
     list-style: none;
 }
 nav.section-nav-left>ul>li {
-    padding: 0 3vw;
+    padding: 0 30px 50px 30px;
 }
 .section-nav-right>span, .section-nav-right>a, .section-nav-right>button {
-    margin: 0 2vw;
+    margin: 0 20px;
 }
 a.section-nav-right-cart {
     margin-left: 0;
