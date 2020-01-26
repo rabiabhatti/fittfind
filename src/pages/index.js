@@ -6,6 +6,7 @@ import {Wrapper, Hero, Slider, ImpossibleBanner} from "../components"
 import forwardIcon from '../images/forward-icon.png'
 import women_banner from '../images/women_banner.jpg'
 import men_banner from '../images/men_banner.jpg'
+import cat_back from '../images/prod-cat-back.jpg'
 
 class IndexPage extends React.Component {
     render() {
@@ -20,6 +21,7 @@ class IndexPage extends React.Component {
                     <Slider type='hero' />
                 </Hero>
                 <div className='section-products-categories'>
+                    <div className='prod-cat-background'><img className='prod-cat-back' src={cat_back} alt='cat-back'/></div>
                     <div className='section-products-women'>
                         <div className='section-products-women-banner'>
                             <img src={women_banner} alt='women_banner' width={400} />

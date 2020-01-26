@@ -1,0 +1,13 @@
+.prod-cat-background {
+    width: 45vw;
+    margin: 0 auto;
+}
+img.prod-cat-back {
+    width: 50%;
+    z-index: -1;
+    position: absolute;
+}
+.section-products-women {
+    padding-top: 200px;
+    margin-left: 170px;
+}
