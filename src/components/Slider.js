@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { Link } from 'gatsby'
 
 import '../styles/slider.css'
 import { Product } from './'
@@ -11,10 +12,12 @@ import forwardIcon from '../images/forward-icon.png'
 
 const hero_carousel = [slider1, slider2, slider3, slider4];
 const products_carousel = [slider1, slider2, slider3, slider4, slider2, slider2, slider2, slider2, slider3, slider3, slider3, slider3, slider4, slider4, slider4, slider4];
+const social_carousel = [slider1, slider2, slider3, slider4, slider2, slider2, slider2, slider2, slider3, slider3, slider3, slider3];
 
 class Slider extends React.Component {
     state = {
         heroSliderPosition: 0,
+        socialSliderPosition: 0,
         productsSliderPosition: 0,
     };
 
@@ -47,15 +50,30 @@ class Slider extends React.Component {
                 return {productsSliderPosition: prevState.productsSliderPosition - 4}
             })
         }
+    };
 
+    handleBackNextSocial = (type) => {
+        if (type === 'next') {
+            this.setState(prevState => {
+                return {socialSliderPosition: prevState.socialSliderPosition + 4}
+            })
+        } else {
+            this.setState(prevState => {
+                return {socialSliderPosition: prevState.socialSliderPosition - 4}
+            })
+        }
     };
 
     render() {
         const { type } = this.props;
-        const { heroSliderPosition, productsSliderPosition } = this.state;
+        const { heroSliderPosition, productsSliderPosition, socialSliderPosition } = this.state;
         const products_pages = [];
+        const social_media_pages = [];
         for (let i = 0; i < products_carousel.length / 4; i++) {
             products_pages.push(i)
+        }
+        for (let j = 0; j < social_carousel.length / 4; j++) {
+            social_media_pages.push(j)
         }
         return (
             <Fragment>
@@ -76,7 +94,33 @@ class Slider extends React.Component {
                                     </div>
                                 </div>
                             </div>,
-                        social_media: <p>Social Media</p>,
+                        social_media:
+                            <div className='section-social-media-slider'>
+                                {social_carousel.slice(socialSliderPosition, socialSliderPosition + 4).map((item, i)  => (
+                                    <img src={item} key={i} alt='social_media_image' width={400} />
+                                ))}
+                                <div>
+                                    <Link to={'/'}>
+                                        <img src={forwardIcon} alt='social_media_icon' />
+                                        <span>Follow on Instagram</span>
+                                    </Link>
+                                    <div className='section-social-media-slider-right-bar'>
+                                        {social_media_pages.map(i => (
+                                            <button key={i} onClick={() => this.setState({socialSliderPosition: i*4})}>
+                                                0{i+1}
+                                            </button>
+                                        ))}
+                                    </div>
+                                    <div className='section-products-slider-bottom-bar'>
+                                        <button onClick={() => this.handleBackNextSocial('back')} disabled={socialSliderPosition === 0}>
+                                            <img src={forwardIcon} alt='back_button' />
+                                        </button>
+                                        <button onClick={() => this.handleBackNextSocial('next')} disabled={socialSliderPosition === social_carousel.length - 4}>
+                                            <img src={forwardIcon} alt='next_button' />
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>,
                         products:
                             <div className='section-products-slider'>
                                 {products_carousel.slice(productsSliderPosition, productsSliderPosition + 4).map((item, i) => (

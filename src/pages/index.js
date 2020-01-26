@@ -66,6 +66,10 @@ class IndexPage extends React.Component {
                         <h2>--- Featured Items</h2>
                         <Slider type='products' />
                     </div>
+                    <div className='section-social-media'>
+                        <h2>--- Follow FittFind</h2>
+                        <Slider type='social_media' />
+                    </div>
                 </Wrapper>
             </div>
         )
