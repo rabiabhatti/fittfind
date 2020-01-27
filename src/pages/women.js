@@ -128,11 +128,11 @@ export default class Women extends React.Component {
                         />
                     </div>
                 </div>
-                {/*<div className='section-products-list'>*/}
-                {/*    {products_list.map((item, i) => (*/}
-                {/*        <Product key={i} img={item} name='Women hybrid Joggers Black' price='$46.00' id={i} />*/}
-                {/*    ))}*/}
-                {/*</div>*/}
+                <div className='section-products-list'>
+                    {products_list.map((item, i) => (
+                        <Product key={i} img={item} name='Women hybrid Joggers Black' price='$46.00' id={i} />
+                    ))}
+                </div>
                 <div className='section-social-media'>
                     <h2>--- Follow FittFind</h2>
                     <Slider type='social_media' />
