@@ -1,3 +1,25 @@
 .section-hero-category {
     color: aqua;
 }
+.select-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.react-select-container {
+    width: 20%;
+}
+.react-select__control {
+    border: 0 !important;
+}
+.react-select__indicator-separator {
+    display: none;
+}
+.react-select__indicator {
+    color: #1a1c21 !important;
+}
+.react-select__value-container:focus, .react-select__indicator:focus, .react-select__control:focus, .react-select__control, .react-select__control--is-focused, .react-select__control--menu-is-open {
+    border: 0 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
