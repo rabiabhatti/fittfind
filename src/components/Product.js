@@ -16,9 +16,9 @@ class Product extends React.Component {
 
     render() {
         const { liked } = this.state;
-        const { img, name, price } = this.props;
+        const { img, name, price, id } = this.props;
         return (
-            <div className='section-product'>
+            <div className='section-product' id={id}>
                 <img src={img} alt='product_image' width='150' />
                 <button className='product-like-btn' onClick={this.handleLikePress}>
                     <img src={liked ? like_fill : like_outline} alt='like_icon' />
