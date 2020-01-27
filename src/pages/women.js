@@ -13,14 +13,24 @@ import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
 const products_list = [slider1, slider2, slider3, slider4, slider2, slider2, slider2, slider2, slider3, slider3, slider3, slider3, slider4, slider4, slider4, slider4,slider1, slider2, slider3, slider4, slider2, slider2, slider2, slider2, slider3, slider3, slider3, slider3, slider4, slider4, slider3, slider4, slider4, slider4, slider4];
 
 const categoryOptions = [
-    { value: 'chocolate', label: 'Chocolate' },
-    { value: 'strawberry', label: 'Strawberry' },
-    { value: 'vanilla', label: 'Vanilla' },
+    { value: 'Sport bras', label: 'Sport bras' },
+    { value: 'Leggings', label: 'Leggings' },
+    { value: 'Shorts', label: 'Shorts' },
 ];
 const sizeOptions = [
     { value: '38DD', label: '38DD' },
     { value: '40DD', label: '40DD' },
     { value: '34DD', label: '34DD' },
+];
+const collectionOptions = [
+    { value: 'Player', label: 'Player' },
+    { value: 'Player 2', label: 'Player 2' },
+    { value: 'Player 3', label: 'Player 3' },
+];
+const sortByOptions = [
+    { value: 'Recommended', label: 'Recommended' },
+    { value: 'Recommended 2', label: 'Recommended 2' },
+    { value: 'Recommended 3', label: 'Recommended 3' },
 ];
 
 
@@ -44,14 +54,16 @@ const categories = [
 
 ];
 
-export default class Women extends React.Component {
+export default class Men extends React.Component {
     state = {
         size: '38DD',
         collection: 'player',
         sortBy: 'recommended',
-        sizeOption: sizeOptions[0].value.toUpperCase(),
         category: categories[1].name,
+        sizeOption: sizeOptions[0].value.toUpperCase(),
+        sortByOption: sortByOptions[0].value.toUpperCase(),
         categoryOption: categoryOptions[0].value.toUpperCase(),
+        collectionOption: collectionOptions[0].value.toUpperCase(),
     };
 
     handleCategoryChange = input => {
@@ -65,9 +77,19 @@ export default class Women extends React.Component {
             { sizeOption: input.value.toUpperCase()}
         );
     };
+    handleCollectionChange = input => {
+        this.setState(
+            { collectionOption: input.value.toUpperCase()}
+        );
+    };
+    handleSortChange = input => {
+        this.setState(
+            { sortByOption: input.value.toUpperCase()}
+        );
+    };
 
     render() {
-        const { categoryOption, sizeOption } = this.state;
+        const { categoryOption, sizeOption, collectionOption, sortByOption } = this.state;
         return (
             <Wrapper name='Women'>
                 <Hero className='section-products-hero'>
@@ -107,24 +129,24 @@ export default class Women extends React.Component {
                         <span>COLLECTION:</span>
                         <Select
                             isDisabled={false}
-                            value={categoryOption}
-                            options={categoryOptions}
-                            placeholder={categoryOption}
+                            value={collectionOption}
+                            options={collectionOptions}
+                            placeholder={collectionOption}
                             classNamePrefix="react-select"
                             className='react-select-container'
-                            onChange={this.handleSizeChange}
+                            onChange={this.handleCollectionChange}
                         />
                     </div>
                     <div className='select-container'>
                         <span>SORT BY:</span>
                         <Select
                             isDisabled={false}
-                            value={categoryOption}
-                            options={categoryOptions}
-                            placeholder={categoryOption}
+                            value={sortByOption}
+                            options={sortByOptions}
+                            placeholder={sortByOption}
                             classNamePrefix="react-select"
                             className='react-select-container'
-                            onChange={this.handleSizeChange}
+                            onChange={this.handleSortChange}
                         />
                     </div>
                 </div>
