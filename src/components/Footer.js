@@ -3,8 +3,11 @@ import { Link } from "gatsby"
 
 import  '../styles/footer.css'
 
-import logo_light from '../images/logo-dark.png'
-import replaceable from '../images/replaceable.png'
+import logo_light from '../images/logo_light.png'
+import twitter_icon from '../images/twitter_icon.png'
+import youtube_icon from '../images/youtube_icon.png'
+import facebook_icon from '../images/facebook_icon.png'
+import instagram_icon from '../images/instagram_icon.png'
 
 const Footer = () => (
     <footer>
@@ -25,16 +28,16 @@ const Footer = () => (
                 </Link>
                 <div className='social_media_links'>
                     <Link to={'/'}>
-                        <img src={replaceable} alt='media_icon' width={100} />
+                        <img src={facebook_icon} alt='media_icon' width={100} />
                     </Link>
                     <Link to={'/'}>
-                        <img src={replaceable} alt='media_icon' width={100} />
+                        <img src={instagram_icon} alt='media_icon' width={100} />
                     </Link>
                     <Link to={'/'}>
-                        <img src={replaceable} alt='media_icon' width={100} />
+                        <img src={twitter_icon} alt='media_icon' width={100} />
                     </Link>
                     <Link to={'/'}>
-                        <img src={replaceable} alt='media_icon' width={100} />
+                        <img src={youtube_icon} alt='media_icon' width={100} />
                     </Link>
                 </div>
             </div>
