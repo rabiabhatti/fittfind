@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 import '../styles/slider.css'
 import { Product } from './'
 
+import product from '../images/product.jpg'
 import slider1 from '../images/home-slider-1.jpg'
 import slider2 from '../images/home-slider-2.jpg'
 import slider3 from '../images/home-slider-3.jpg'
@@ -11,7 +12,7 @@ import slider4 from '../images/home-slider-4.jpg'
 import forwardIcon from '../images/forward-icon.png'
 
 const hero_carousel = [slider1, slider2, slider3, slider4];
-const products_carousel = [slider1, slider2, slider3, slider4, slider2, slider2, slider2, slider2, slider3, slider3, slider3, slider3, slider4, slider4, slider4, slider4];
+const products_carousel = [product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product];
 const social_carousel = [slider1, slider2, slider3, slider4, slider2, slider2, slider2, slider2, slider3, slider3, slider3, slider3];
 
 class Slider extends React.Component {
