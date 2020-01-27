@@ -8,6 +8,7 @@ img.prod-cat-back {
     position: absolute;
 }
 .section-products-women {
+    display: flex;
     padding-top: 200px;
     margin-left: 170px;
 }
@@ -21,7 +22,7 @@ button.shop-women-btn {
     background-color: #055595;
     padding: 15px 30px 15px 170px;
 }
-span.font-lucky-fellas {
+span.font-lucky-fellas-w {
     font-size: 170px;
     margin-top: -70px;
     position: absolute;
@@ -34,4 +35,48 @@ span.shop-women-ver {
     position: absolute;
     transform: rotate(270deg);
     text-transform: uppercase;
+}
+.section-products-women-categories {
+    right: 25vw;
+    display: flex;
+    font-weight: 700;
+    position: absolute;
+    flex-direction: column;
+}
+.section-products-men-banner>img {
+    right: 5vw;
+    margin-top: -12.5vw;
+    position: absolute;
+}
+button.shop-men-btn {
+    right: 16vw;
+    border: unset;
+    font-size: 50px;
+    color: #ffffff;
+    position: absolute;
+    background-color: #055595;
+    padding: 15px 170px 15px 30px;
+}
+span.font-lucky-fellas-m {
+    font-size: 170px;
+    margin-top: -70px;
+    position: absolute;
+    margin-left: 20px;
+}
+span.shop-men-ver {
+    right: 21.5vw;
+    margin-top: 14vw;
+    font-weight: 700;
+    position: absolute;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+    text-transform: uppercase;
+}
+.section-products-men-categories {
+    left: 34vw;
+    display: flex;
+    font-weight: 700;
+    margin-top: 170px;
+    position: absolute;
+    flex-direction: column;
 }
