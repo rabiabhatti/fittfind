@@ -7,7 +7,7 @@ const LeftBar = () => (
     <div className='section-left-bar'>
         <p className='section-left-bar-text'>Find & release your inner athlete</p>
         <button className='section-left-bar-btn'>
-            <img src={scrollDownIcon} />
+            <img src={scrollDownIcon} alt='scrollDownIcon' />
             <span>scroll down</span>
         </button>
     </div>
