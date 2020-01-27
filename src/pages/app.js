@@ -25,7 +25,7 @@ export default class Application extends React.Component {
                             Connect with an expert
                         </h3>
                         <p>It’s often a good idea to show which page is currently being viewed by visually changing the link matching the current page. For example, to turn the active link red, either of the following approaches is valid.</p>
-                        <div className='section-application-video-col-left-buttons'>
+                        <div className='section-application-video-col-left-stores-links'>
                             <Link to={'/'}>
                                 <img src={horizontal_line} alt='horizontal_line' />
                             </Link>
@@ -41,6 +41,44 @@ export default class Application extends React.Component {
                                 <img src={play_video} alt='play_video' />
                             </button>
                             <p>Watch application here <img src={horizontal_line} alt='horizontal_line' /></p>
+                        </div>
+                    </div>
+                    <div className='section-application-features'>
+                        <div className='section-application-features-col-left'>
+                            <div className='section-application-feature'>
+                                <h4>Trainer & gym search</h4>
+                                <img src={horizontal_line} alt='horizontal_line' />
+                                <p>It’s often a good idea to show which page is currently being viewed by visually changing the link matching the current page.</p>
+                            </div>
+                            <div className='section-application-feature'>
+                                <h4>Features</h4>
+                                <img src={horizontal_line} alt='horizontal_line' />
+                                <p>It’s often a good idea to show which page is currently being viewed by visually changing the link matching the current page.</p>
+                            </div>
+                        </div>
+                        <div className='section-application-features-col-middle'>
+                            <img src={phone_img} alt='phone_img' />
+                            <div className='section-application-features-col-middle-stores-links'>
+                                <p>Download on</p>
+                                <Link to={'/'}>
+                                    <img src={horizontal_line} alt='horizontal_line' />
+                                </Link>
+                                <Link to={'/'}>
+                                    <img src={horizontal_line} alt='horizontal_line' />
+                                </Link>
+                            </div>
+                        </div>
+                        <div className='section-application-features-col-right'>
+                            <div className='section-application-feature'>
+                                <h4>Messages</h4>
+                                <img src={horizontal_line} alt='horizontal_line' />
+                                <p>It’s often a good idea to show which page is currently being viewed by visually changing the link matching the current page.</p>
+                            </div>
+                            <div className='section-application-feature'>
+                                <h4>IOS & Android compatible</h4>
+                                <img src={horizontal_line} alt='horizontal_line' />
+                                <p>It’s often a good idea to show which page is currently being viewed by visually changing the link matching the current page.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
