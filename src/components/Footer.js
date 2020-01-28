@@ -73,7 +73,7 @@ const Footer = () => (
                 </div>
             </div>
             <div className='row-bottom'>
-                <p>Copywrite 2020 Fittfind</p>
+                <p>© Copywrite 2020 Fittfind</p>
             </div>
         </div>
     </footer>
