@@ -9,6 +9,7 @@ import men_banner from '../images/men_banner.jpg'
 import cat_back from '../images/prod-cat-back.jpg'
 import app_imag from '../images/app-store-imag.jpg'
 import app_video from '../images/app-store-video.jpg'
+import fittfind from '../images/fittfind.png'
 import background_imag from '../images/background-blue-imag.jpg'
 
 class IndexPage extends React.Component {
@@ -66,6 +67,9 @@ class IndexPage extends React.Component {
                 <div className='section-features'>
                     <h2>--- Featured Items</h2>
                     <Slider type='products' />
+                </div>
+                <div className='section-background'>
+                    <img className='section-background-fittfind' src={fittfind} alt='fittfind_imag'/>
                 </div>
                 <div className='section-apps'>
                     <h2 className='section-apps-h2-1'>--- Book a personal trainer</h2><h2 className='section-apps-h2-2'>and more with the <span>fitt</span><span>find</span> app</h2>
