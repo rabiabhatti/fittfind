@@ -7,6 +7,9 @@ import forwardIcon from '../images/forward-icon.png'
 import women_banner from '../images/women_banner.jpg'
 import men_banner from '../images/men_banner.jpg'
 import cat_back from '../images/prod-cat-back.jpg'
+import app_imag from '../images/app-store-imag.jpg'
+import app_video from '../images/app-store-video.jpg'
+import background_imag from '../images/background-blue-imag.jpg'
 
 class IndexPage extends React.Component {
     render() {
@@ -57,6 +60,9 @@ class IndexPage extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div className='section-background'>
+                    <img className='section-background-blue-right' src={background_imag} alt='background_blue_imag'/>
+                </div>
                 <div className='section-features'>
                     <h2>--- Featured Items</h2>
                     <Slider type='products' />
@@ -72,9 +78,9 @@ class IndexPage extends React.Component {
                             </Link>
                         </div>
                         <div className='section-apps-right'>
-                            <img className='section-apps-right-img-1' src={women_banner} alt='app_store_imag'/>
+                            <img className='section-apps-right-img-1' src={app_imag} alt='app_store_imag'/>
                             <span className='section-apps-right-span-1'>Download now</span>
-                            <img className='section-apps-right-img-2' src={women_banner} alt='app_store_video'/>
+                            <img className='section-apps-right-img-2' src={app_video} alt='app_store_video'/>
                             <span className='section-apps-right-span-2'>watch application movie</span>
                         </div>
                     </div>

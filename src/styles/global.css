@@ -19,3 +19,10 @@ img {
     max-width: 100%;
 }
 
+img.section-background-blue-right {
+    right: 0px;
+    z-index: -5;
+    width: 496px;
+    margin-top: 12vw;
+    position: absolute;
+}
