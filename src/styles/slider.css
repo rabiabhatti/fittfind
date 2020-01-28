@@ -198,3 +198,37 @@ span.shop-men-ver {
 .section-products-slider-bottom-bar button:disabled {
     border: 1px solid #0470b6;
 }
+
+.section-social-media {
+    margin-top: 15vw;
+    margin-left: 84px;
+}
+.section-social-media>h2 {
+    font-size: 60px;
+}
+.section-social-media-slider {
+    display: flex;
+    margin-top: 10vw;
+    margin-left: -50px;
+}
+.section-social-media-slider-right>a>span {
+    color: #fff;
+    font-weight: 700;
+    margin-left: -120px;
+}
+.section-social-media-slider-right-bar {
+    right: -17px;
+    margin-top: 0;
+    display: flex;
+    font-weight: 700;
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.section-social-media-slider-right-bar>button {
+    border: none;
+    font-size: 17px;
+    padding: 0 20px;
+    font-weight: 700;
+    background-color: unset;
+}
