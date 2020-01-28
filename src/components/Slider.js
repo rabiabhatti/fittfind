@@ -102,7 +102,7 @@ class Slider extends React.Component {
                             <div className='section-social-media-slider'>
                                 <div className='section-social-media-slider-left'>
                                     {social_carousel.slice(socialSliderPosition, socialSliderPosition + 4).map((item, i)  => (
-                                        <img src={item} key={i} alt='social_media_image' width={400} />
+                                        <img className={`social-media-img${i}`} src={item} key={i} alt='social_media_image' width={400} />
                                     ))}
                                 </div>
                                 <div className='section-social-media-slider-right'>
