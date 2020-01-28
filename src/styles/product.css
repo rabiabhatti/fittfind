@@ -8,6 +8,7 @@
 .section-features>h2 {
     font-size: 60px;
     margin-left: 50px;
+    text-transform: uppercase;
 }
 button.product-like-btn, button.product-desc {
     position: absolute;

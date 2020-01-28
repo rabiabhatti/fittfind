@@ -13,6 +13,7 @@
     margin: 0;
     width: 50%;
     font-size: 60px;
+    text-transform: uppercase;
 }
 h2.section-apps-h2-2 {
     width: 55%;
@@ -23,6 +24,12 @@ h2.section-apps-h2-2 {
     line-height: 1.6;
     font-weight: 600;
     margin-bottom: 60px;
+}
+h2.section-apps-h2-2>span:first-child {
+    color: #055595;
+}
+h2.section-apps-h2-2>span {
+    color: #6c7588;
 }
 .section-apps-left>a {
     bottom: 10vw;

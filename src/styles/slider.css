@@ -208,16 +208,12 @@ span.shop-men-ver {
 }
 .section-social-media>h2 {
     font-size: 60px;
+    text-transform: uppercase;
 }
 .section-social-media-slider {
     display: flex;
-    margin-top: 10vw;
+    margin-top: 13vw;
     margin-left: -50px;
-}
-.section-social-media-slider-right>a>span {
-    color: #fff;
-    font-weight: 700;
-    margin-left: -120px;
 }
 .section-social-media-slider-right-bar {
     right: -17px;
@@ -234,4 +230,64 @@ span.shop-men-ver {
     padding: 0 20px;
     font-weight: 700;
     background-color: unset;
+}
+.section-social-media-slider-left {
+    display: flex;
+}
+.section-social-media-slider-left>img {
+    width: 340px;
+    height: 100%;
+}
+img.social-media-img1 {
+    z-index: 1;
+    margin-top: -115px;
+    -webkit-box-shadow: 42px 42px 55px -39px rgba(0,0,0,0.56);
+    -moz-box-shadow: 42px 42px 55px -39px rgba(0,0,0,0.56);
+    box-shadow: 42px 42px 55px -39px rgba(0,0,0,0.56);
+}
+img.social-media-img2 {
+    margin-top: -15px;
+}
+img.social-media-img3 {
+    margin-top: -140px;
+}
+img.social-media-img4 {
+    -webkit-box-shadow: 42px 42px 55px -39px rgba(0,0,0,0.56);
+    -moz-box-shadow: 42px 42px 55px -39px rgba(0,0,0,0.56);
+    box-shadow: 42px 42px 55px -39px rgba(0,0,0,0.56);
+}
+.section-social-media-slider-right>a {
+    position: absolute;
+    margin-top: -96px;
+    margin-left: -84px;
+}
+.section-social-media-slider-right>a>span {
+    color: #fff;
+    font-weight: 700;
+    margin-left: 37px;
+}
+.section-social-media-slider-right>a>img {
+    margin-left: -70px;
+}
+.section-social-media-slider-right>a {
+    position: absolute;
+    margin-top: -96px;
+    margin-left: -160px;
+}
+.section-social-slider-bottom-bar {
+    right: 210px;
+    margin-top: 330px;
+    position: absolute;
+}
+.section-social-slider-bottom-bar button:disabled {
+    border: 1px solid #0470b6;
+}
+.section-social-slider-bottom-bar>button:first-child {
+    margin-right: 25px;
+}
+.section-social-slider-bottom-bar>button {
+    padding: 30px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    background-color: transparent;
 }

@@ -101,8 +101,8 @@ class Slider extends React.Component {
                         social_media:
                             <div className='section-social-media-slider'>
                                 <div className='section-social-media-slider-left'>
-                                    {social_carousel.slice(socialSliderPosition, socialSliderPosition + 4).map((item, i)  => (
-                                        <img className={`social-media-img${i}`} src={item} key={i} alt='social_media_image' width={400} />
+                                    {social_carousel.slice(socialSliderPosition, socialSliderPosition + 5).map((item, i)  => (
+                                        <img className={`social-media-img${i}`} src={item} key={i} alt='social_media_image' width={330} />
                                     ))}
                                 </div>
                                 <div className='section-social-media-slider-right'>
@@ -117,7 +117,7 @@ class Slider extends React.Component {
                                             </button>
                                         ))}
                                     </div>
-                                    <div className='section-products-slider-bottom-bar'>
+                                    <div className='section-social-slider-bottom-bar'>
                                         <button onClick={() => this.handleBackNextSocial('back')} disabled={socialSliderPosition === 0}>
                                             <img src={forwardIcon} alt='back_button' />
                                         </button>
