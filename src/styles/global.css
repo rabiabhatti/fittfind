@@ -22,14 +22,14 @@ img {
 }
 
 img.section-background-blue-right {
+    right: 0px;
     z-index: -5;
-    right: -5vw;
     width: 440px;
     margin-top: 12vw;
     position: absolute;
 }
 img.section-background-fittfind {
-    right: 0;
+    right: -5vw;
     z-index: -6;
     margin-top: -22vw;
     position: absolute;

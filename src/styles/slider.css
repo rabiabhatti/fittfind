@@ -185,7 +185,7 @@ span.shop-men-ver {
     flex-direction: column;
 }
 .section-products-slider-bottom-bar {
-    right: 300px;
+    right: 210px;
     margin-top: 550px;
     position: absolute;
 }
@@ -197,6 +197,9 @@ span.shop-men-ver {
 }
 .section-products-slider-bottom-bar button:disabled {
     border: 1px solid #0470b6;
+}
+.section-products-slider-bottom-bar>button:first-child {
+    margin-right: 25px;
 }
 
 .section-social-media {
