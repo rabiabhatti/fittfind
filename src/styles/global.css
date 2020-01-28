@@ -4,11 +4,13 @@
 
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     line-height: 1.5;
     color: #333;
     cursor: default;
+    max-width: 100vw;
+    overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;
 }
 a {
     color: inherit;
@@ -19,3 +21,16 @@ img {
     max-width: 100%;
 }
 
+img.section-background-blue-right {
+    right: 0px;
+    z-index: -5;
+    width: 440px;
+    margin-top: 12vw;
+    position: absolute;
+}
+img.section-background-fittfind {
+    right: -5vw;
+    z-index: -6;
+    margin-top: -22vw;
+    position: absolute;
+}

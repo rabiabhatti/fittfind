@@ -24,9 +24,6 @@
     animation: slide 1s forwards;
     animation-delay: 0s;
 }
-.section-products-slider-bottom-bar button:disabled {
-    background-color: aqua;
-}
 h1.section-Find-release-hero {
     width: 48%;
     bottom: 12vw;
@@ -63,7 +60,23 @@ button.findFitBtn>img {
     position: absolute;
     transform: rotate(90deg);
 }
+.section-products-slider-right-bar {
+    right: -70px;
+    display: flex;
+    font-weight: 700;
+    margin-top: 140px;
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
 .section-hero-slider-right-bar>button {
+    border: none;
+    font-size: 17px;
+    padding: 0 20px;
+    font-weight: 700;
+    background-color: unset;
+}
+.section-products-slider-right-bar>button {
     border: none;
     font-size: 17px;
     padding: 0 20px;
@@ -170,4 +183,55 @@ span.shop-men-ver {
     margin-top: 170px;
     position: absolute;
     flex-direction: column;
+}
+.section-products-slider-bottom-bar {
+    right: 210px;
+    margin-top: 550px;
+    position: absolute;
+}
+.section-products-slider-bottom-bar>button {
+    padding: 30px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    background-color: transparent;
+}
+.section-products-slider-bottom-bar button:disabled {
+    border: 1px solid #0470b6;
+}
+.section-products-slider-bottom-bar>button:first-child {
+    margin-right: 25px;
+}
+
+.section-social-media {
+    margin-top: 15vw;
+    margin-left: 84px;
+}
+.section-social-media>h2 {
+    font-size: 60px;
+}
+.section-social-media-slider {
+    display: flex;
+    margin-top: 10vw;
+    margin-left: -50px;
+}
+.section-social-media-slider-right>a>span {
+    color: #fff;
+    font-weight: 700;
+    margin-left: -120px;
+}
+.section-social-media-slider-right-bar {
+    right: -17px;
+    margin-top: 0;
+    display: flex;
+    font-weight: 700;
+    position: absolute;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+.section-social-media-slider-right-bar>button {
+    border: none;
+    font-size: 17px;
+    padding: 0 20px;
+    font-weight: 700;
+    background-color: unset;
 }

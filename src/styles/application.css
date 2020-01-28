@@ -5,3 +5,72 @@
 .section-application-video-col-right-video-container {
     background-image: url("../images/women_banner.jpg");
 }
+.section-apps {
+    margin-top: 15vw;
+    margin-left: 84px;
+}
+.section-apps>h2 {
+    margin: 0;
+    width: 50%;
+    font-size: 60px;
+}
+h2.section-apps-h2-2 {
+    width: 55%;
+}
+.section-apps-left>p {
+    width: 300px;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+.section-apps-left>a {
+    bottom: 10vw;
+    border: none;
+    color: #fff;
+    text-align: left;
+    font-weight: 600;
+    padding: 15px 25px;
+    border-radius: 25px;
+    background-color: #025696;
+}
+.section-apps-left>a>img {
+    margin-left: 80px;
+}
+.section-apps-left>a>img {
+    margin-left: 80px;
+}
+.section-apps-left-right {
+    display: flex;
+    margin-top: 50px;
+}
+img.section-apps-right-img-1 {
+    position: absolute;
+    margin-left: 60px;
+}
+img.section-apps-right-img-2 {
+    z-index: -1;
+    right: 100px;
+    position: absolute;
+    margin-top: -235px;
+}
+span.section-apps-right-span-1 {
+    color: #fff;
+    margin-top: 5vw;
+    font-weight: 700;
+    margin-left: 31vw;
+    position: absolute;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(90deg);
+    text-transform: uppercase;
+}
+span.section-apps-right-span-2 {
+    right: 1.5vw;
+    color: #fff;
+    margin-top: 21vw;
+    font-weight: 700;
+    position: absolute;
+    -webkit-transform: rotate(270deg);
+    transform: rotate(90deg);
+    text-transform: uppercase;
+}
