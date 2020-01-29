@@ -68,3 +68,7 @@ img.section-background-fittfind {
 a, button {
     cursor: pointer;
 }
+
+button:focus, input:focus {
+    outline: none;
+}
