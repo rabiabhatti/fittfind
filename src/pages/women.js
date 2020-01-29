@@ -2,6 +2,7 @@ import React from 'react';
 import Select from 'react-select';
 
 import '../styles/women.css'
+import product from '../images/product.jpg'
 import slider1 from "../images/home-slider-1.jpg";
 import slider2 from "../images/home-slider-2.jpg";
 import slider3 from "../images/home-slider-3.jpg";
@@ -10,7 +11,7 @@ import women_banner from '../images/women_banner.jpg'
 import horizontal_line from '../images/horizontal_line.png'
 import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
 
-const products_list = [slider1, slider2, slider3, slider4, slider2, slider2, slider2, slider2, slider3, slider3, slider3, slider3, slider4, slider4, slider4, slider4,slider1, slider2, slider3, slider4, slider2, slider2, slider2, slider2, slider3, slider3, slider3, slider3, slider4, slider4, slider3, slider4, slider4, slider4, slider4];
+const products_list = [product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product,product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product];
 
 const categoryOptions = [
     { value: 'Sport bras', label: 'Sport bras' },

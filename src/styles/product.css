@@ -17,13 +17,13 @@ button.product-like-btn, button.product-desc {
     max-width: 350px;
     margin-right: 50px;
 }
-div#product0 {
+.section-features div#product0 {
     margin-top: 65px;
 }
-div#product2 {
+.section-features div#product2 {
     margin-top: 50px;
 }
-div#product3 {
+.section-features div#product3 {
     margin-top: -50px;
 }
 button.product-like-btn {
@@ -33,7 +33,7 @@ button.product-like-btn {
     margin-left: -90px;
     background-color: unset;
 }
-.section-product>button.product-desc {
+.section-features .section-product>button.product-desc {
     border: none;
     display: flex;
     font-weight: 700;
