@@ -2,8 +2,10 @@ import React from 'react'
 
 import { Wrapper, Hero } from '../components'
 import one from '../images/01.png'
-import two from '../images/01.png'
-import three from '../images/01.png'
+import two from '../images/02.png'
+import three from '../images/03.png'
+import quotes from '../images/quotes.png'
+import women_banner from '../images/women_banner.jpg'
 import forwardIcon from '../images/forward-icon.png'
 import vertical_line from '../images/vertical_line.png'
 import gym_feature_1 from '../images/gym-feature-1.png'
@@ -11,6 +13,11 @@ import gym_feature_2 from '../images/gym-feature-2.png'
 import gym_feature_3 from '../images/gym-feature-3.png'
 import horizontal_line from '../images/horizontal_line.png'
 import kickstarter_logo from '../images/kickstarter_logo.png'
+import bbc_logo from '../images/bbc.png'
+import guardian_logo from '../images/guardian.png'
+import techradar_logo from '../images/techradar.png'
+import huffington_post_logo from '../images/huffington-post.png'
+import evening_standard_logo from '../images/evening-standard.png'
 
 export default class Gym extends React.Component{
     render() {
@@ -73,6 +80,50 @@ export default class Gym extends React.Component{
                                 <p>Work out today, It only take 3<br/>mins to Fittfind it!</p>
                             </div>
                         </div>
+                    </div>
+                    <div className='section-gym-motivation-banner'>
+                        <img src={women_banner} alt='motivation-img' />
+                        <div className='section-gym-motivation-banner-desc'>
+                            <h3>
+                                <img src={horizontal_line} alt='horizontal_line' />
+                                You won't look back
+                            </h3>
+                            <p>We're working on our customers to create an innovative <br/> solution to fit your fitness needs</p>
+                        </div>
+                        <div className='section-gym-motivation-banner-slider'>
+                            <img src={quotes} alt='quotes-img' />
+                            <div className='motivation-quotes'>
+                                <p>We're working on our customers to create an innovative solution to fit your fitness needs</p>
+                                <p>Socrates</p>
+                            </div>
+                            <div className='motivation-quotes-buttons'>
+                                <button>
+                                    <img src={forwardIcon} alt='back_button' />
+                                </button>
+                                <img src={vertical_line} alt='vertical_line' />
+                                <button>
+                                    <img src={forwardIcon} alt='next_button' />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className='section-gym-supporters'>
+                        <h3>They wrote about us</h3>
+                        <div className='section-gym-supporters-list'>
+                            <img src={evening_standard_logo} alt='evening_standard_logo' />
+                            <img src={techradar_logo} alt='techradar_logo' />
+                            <img src={huffington_post_logo} alt='huffington_post_logo' />
+                            <img src={guardian_logo} alt='guardian_logo' />
+                            <img src={bbc_logo} alt='bbc_logo' />
+                        </div>
+                    </div>
+                    <div className='section-gym-owners'>
+                        <h2>Gym or studio owner?</h2>
+                        <p>Join the new fitness market and get new customers!</p>
+                        <button>
+                            GET LISTED
+                            <img src={forwardIcon} alt='forwardIcon' />
+                        </button>
                     </div>
                 </div>
             </Wrapper>
