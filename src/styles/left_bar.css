@@ -1,4 +1,5 @@
 .section-left-bar {
+    width: 7%;
     display: flex;
     justify-content: space-between;
     flex-direction: column-reverse;
