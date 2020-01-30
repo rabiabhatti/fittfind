@@ -127,6 +127,30 @@ export default class extends React.Component {
                         ))}
                     </div>
                 </Hero>
+                <div className='section-single-product-details-container'>
+                    <div className='section-single-product-benefits'>
+                        <h3>BENEFITS</h3>
+                        <ul>
+                            <li>Jules Verne was a French author who the late nineteenth and early twentieth century.</li>
+                            <li>Follow him on Twitter.</li>
+                            <li>French author who pioneered the genre of science. Follow him on Twitter.</li>
+                            <li>French author wh. Follow him on Twitter.</li>
+                            <li>The genre of science. Follow him on Twitter.</li>
+                            <li>Fiction in the late nineteenth and early twentieth century. Follow him on Twitter.</li>
+                        </ul>
+                    </div>
+                    <div className='section-single-product-details'>
+                        <h3>PRODUCT DETAILS</h3>
+                        <ul>
+                            <li>Jules Verne was a French author who the late nineteenth and early twentieth century.</li>
+                            <li>Follow him on Twitter.</li>
+                            <li>French author who pioneered the genre of science. Follow him on Twitter.</li>
+                            <li>French author wh. Follow him on Twitter.</li>
+                            <li>The genre of science. Follow him on Twitter.</li>
+                            <li>Fiction in the late nineteenth and early twentieth century. Follow him on Twitter.</li>
+                        </ul>
+                    </div>
+                </div>
                 <div className='section-single-product-similar'>
                     <h2>
                         <img className='section-single-product-similar-left-line' src={horizontal_line} alt='horizontal_line' />
