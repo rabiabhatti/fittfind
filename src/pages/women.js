@@ -93,13 +93,15 @@ export default class Men extends React.Component {
         const { categoryOption, sizeOption, collectionOption, sortByOption } = this.state;
         return (
             <Wrapper name='Women'>
-                <Hero className='section-products-hero'>
-                    {categories.map((item, i) => (
-                        <div className='section-hero-category' key={i} style={{ backgroundImage: `url(${item.image})` }}>
-                            <img src={horizontal_line} alt='horizontal_line' />
-                            <p>{item.name.toUpperCase()}</p>
-                        </div>
-                    ))}
+                <Hero>
+                    <div className='section-products-hero'>
+                        {categories.map((item, i) => (
+                            <div className='section-hero-category' key={i} style={{ backgroundImage: `url(${item.image})` }}>
+                                <img src={horizontal_line} alt='horizontal_line' />
+                                <p>{item.name.toUpperCase()}</p>
+                            </div>
+                        ))}
+                    </div>
                 </Hero>
                 <div className='section-products-filters'>
                     <div className='select-container'>

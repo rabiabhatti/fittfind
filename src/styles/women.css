@@ -1,5 +1,26 @@
+.section-products-hero {
+    width: 90%;
+    display: flex;
+    margin: 0 7% 0 0;
+    flex-direction: row;
+    box-shadow: 27px 19px 32px -10px #b2bac6;
+}
 .section-hero-category {
-    color: aqua;
+    width: 25%;
+    display: flex;
+    padding: 10vw 0;
+    align-items: center;
+    flex-direction: column;
+}
+.section-hero-category p {
+    color: #ffffff;
+    font-size: 0.8rem;
+    margin-top: 2rem;
+    font-weight: bold;
+}
+.section-hero-category img {
+    width: 4rem;
+    height: 0.2rem;
 }
 .select-container {
     width: 20%;
