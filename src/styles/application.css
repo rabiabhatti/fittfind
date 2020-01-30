@@ -20,6 +20,56 @@
     margin-bottom: 10vw;
     text-transform: uppercase;
 }
+
+.section-application-video-main {
+    display: flex;
+    margin-left: 5.7%;
+    justify-content: space-between;
+}
+.section-application-video-col-left {
+    width: 20%;
+    align-self: center;
+}
+h3.section-application-video-col-left-heading {
+    font-size: 2vw;
+    line-height: 1;
+}
+p.section-application-video-col-left-text {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 600;
+    padding: 40px 0;
+}
+img.app-store-button-img {
+    border-right: 1px solid #a8aebd;
+}
+.section-application-video-col-right {
+    display: flex;
+    align-items: start;
+    margin-right: 2vw;
+}
+.section-application-video-col-right>img {
+    z-index: 1;
+    width: 18vw;
+    margin-top: 60px;
+    margin-right: -60px;
+}
+.section-application-video-col-right-video-container>p {
+    right: -85px;
+    color: #fff;
+    margin-top: -12vw;
+    font-weight: 700;
+    position: absolute;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+}
+.section-application-video-col-right-video-container .play-video-btn {
+    right: 20vw;
+    border: unset;
+    margin-top: 23vw;
+    position: absolute;
+}
+
 .section-hero-application-text>h1 {
     color: #fff;
     line-height: 1;
@@ -27,10 +77,16 @@
 .section-hero-application-text>h1>span {
     color: #055595;
 }
-
 .section-application-video-col-right-video-container {
-    background-image: url("../images/women_banner.jpg");
+    margin-bottom: -6px;
 }
+.section-application-video-col-right-video-container>p>img {
+    width: 15%;
+    height: 3px;
+    margin-left: 29px;
+    margin-bottom: 4px;
+}
+
 .section-apps {
     margin-top: 15vw;
     margin-left: 84px;
