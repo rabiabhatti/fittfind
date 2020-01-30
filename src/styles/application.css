@@ -58,8 +58,8 @@ img.app-store-button-img {
 .section-application-video-col-right-video-container>p {
     right: -85px;
     color: #fff;
-    margin-top: -12vw;
     font-weight: 700;
+    margin-top: -14vw;
     position: absolute;
     transform: rotate(90deg);
     text-transform: uppercase;
@@ -79,7 +79,8 @@ img.app-store-button-img {
     color: #055595;
 }
 .section-application-video-col-right-video-container {
-    margin-bottom: -6px;
+    overflow: hidden;
+    max-height: 900px;
 }
 .section-application-video-col-right-video-container>p>img {
     width: 15%;
