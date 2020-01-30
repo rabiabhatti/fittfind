@@ -1,5 +1,24 @@
 .section-hero-application {
-    background-image: url("../images/women_banner.jpg");
+
+}
+.section-hero-application-img {
+    max-width: 90vw;
+    margin-right: 4vw;
+}
+.section-hero-application-text {
+    font-size: 2vw;
+    position: relative;
+    margin-top: -16vw;
+    margin-left: 6vw;
+    margin-bottom: 10vw;
+    text-transform: uppercase;
+}
+.section-hero-application-text>h1 {
+    color: #fff;
+    line-height: 1;
+}
+.section-hero-application-text>h1>span {
+    color: #055595;
 }
 
 .section-application-video-col-right-video-container {
@@ -81,3 +100,5 @@ span.section-apps-right-span-2 {
     transform: rotate(90deg);
     text-transform: uppercase;
 }
+
+
