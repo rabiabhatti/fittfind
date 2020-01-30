@@ -165,4 +165,43 @@ span.section-apps-right-span-2 {
     text-transform: uppercase;
 }
 
-
+.section-application-features {
+    display: flex;
+    padding-top: 8vw;
+    align-items: center;
+    justify-content: center;
+    background-size: 300px 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/background-blue-imag.jpg");
+}
+.section-application-features-col-left {
+    text-align: right;
+    width: 20%;
+}
+.section-application-feature {
+    padding-bottom: 40px;
+}
+.section-application-features-col-middle {
+    width: 30%;
+    text-align: center;
+}
+.section-application-features-col-right {
+    width: 20%;
+}
+.section-application-feature>p {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+.section-application-feature>h4 {
+    font-size: 21px;
+}
+.section-application-features-col-middle-stores-links {
+    padding: 30px 0;
+}
+.section-application-features-col-middle-stores-links>p {
+    color: #fff;
+    font-size: 21px;
+    margin-bottom: 5px;
+}

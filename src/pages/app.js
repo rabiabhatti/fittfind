@@ -12,10 +12,13 @@ import app_store_icon from '../images/app-store-icon.png'
 import play_store_icon from '../images/play-store-icon.png'
 import trainer_banner from '../images/personaltrainer.png'
 import iPhone_7_Black from '../images/iPhone7Black.png'
+import iPhone_7_Black_2 from '../images/iPhone7Black2.png'
 import video_girl from '../images/video-girl.png'
 import play_button from '../images/play-button.png'
 import app_store_button from '../images/app-store-button.png'
 import play_store_button from '../images/play-store-button.png'
+import app_store_button_white from '../images/app-store-button-white.png'
+import play_store_button_white from '../images/play-store-button-white.png'
 
 export default class Application extends React.Component {
     render() {
@@ -37,7 +40,7 @@ export default class Application extends React.Component {
                                 <img src={horizontal_line} alt='horizontal_line' />
                                 Connect with an expert
                             </h3>
-                            <p className='section-application-video-col-left-text'>It’s often a good idea to show which page is currently being viewed by visually changing the link matching the current page. For example, to turn the active link red, either of the following approaches is valid.</p>
+                            <p className='section-application-video-col-left-text'>Personal fitness trainers and clients connect through FittFind, a revolutionary app coming soon. If you’re sick and tired of not hitting your New Year’s “better body” resolution, this app is for you.</p>
                             <div className='section-application-video-col-left-stores-links'>
                                 <Link to={'/'}>
                                     <img className='app-store-button-img' src={app_store_button} alt='app_store_button' />
@@ -65,23 +68,23 @@ export default class Application extends React.Component {
                             <div className='section-application-feature'>
                                 <h4>Trainer & gym search</h4>
                                 <img src={horizontal_line} alt='horizontal_line' />
-                                <p>It’s often a good idea to show which page is currently being viewed by visually changing the link matching the current page.</p>
+                                <p>Find the best fitness trainer or gym for your needs based on profiles and reviews. Don’t fall into the trap of choosing the wrong trainer, ultimately killing your drive and wasting your money. Shop before you buy.</p>
                             </div>
                             <div className='section-application-feature'>
                                 <h4>Features</h4>
                                 <img src={horizontal_line} alt='horizontal_line' />
-                                <p>It’s often a good idea to show which page is currently being viewed by visually changing the link matching the current page.</p>
+                                <p>Keep track of your favorite trainers and gyms using this handy feature. This feature is awesome for travellers, part-time residents, and digital nomads - and for anybody who has ever forgotten anything. This feature allows you to stay dialed in with qualified (and certified) trainers who care the most about you.</p>
                             </div>
                         </div>
                         <div className='section-application-features-col-middle'>
-                            <img src={phone_img} alt='phone_img' />
+                            <img src={iPhone_7_Black_2} alt='iPhone_7_Black_2' />
                             <div className='section-application-features-col-middle-stores-links'>
                                 <p>Download on</p>
                                 <Link to={'/'}>
-                                    <img src={horizontal_line} alt='horizontal_line' />
+                                    <img className='app-store-button-img' src={app_store_button_white} alt='app_store_button' />
                                 </Link>
                                 <Link to={'/'}>
-                                    <img src={horizontal_line} alt='horizontal_line' />
+                                    <img className='play-store-button-img' src={play_store_button_white} alt='play_store_button' />
                                 </Link>
                             </div>
                         </div>
@@ -89,12 +92,12 @@ export default class Application extends React.Component {
                             <div className='section-application-feature'>
                                 <h4>Messages</h4>
                                 <img src={horizontal_line} alt='horizontal_line' />
-                                <p>It’s often a good idea to show which page is currently being viewed by visually changing the link matching the current page.</p>
+                                <p>Stay connected with your trainer. Accountability makes the difference between goal success or failure. Recording, measuring, note taking - these are tools of the trade for your fitness trainer. Trainers must be attentive to messages and on the ball. This feature may serve as your first pre-qualifier.</p>
                             </div>
                             <div className='section-application-feature'>
                                 <h4>IOS & Android compatible</h4>
                                 <img src={horizontal_line} alt='horizontal_line' />
-                                <p>It’s often a good idea to show which page is currently being viewed by visually changing the link matching the current page.</p>
+                                <p>We don’t restrict your success in reaching the widest possible range of gyms and qualified trainers in your quest for the best.</p>
                             </div>
                         </div>
                     </div>
