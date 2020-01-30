@@ -4,6 +4,9 @@
 .section-hero-application-img {
     max-width: 90vw;
     margin-right: 4vw;
+    box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
+    -webkit-box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
+    -moz-box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
 }
 .section-hero-application-text {
     font-size: 2vw;
