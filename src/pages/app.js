@@ -15,6 +15,7 @@ export default class Application extends React.Component {
     render() {
         return (
             <Wrapper name={'App'}>
+                <div className='section-hero-video'>
                 <Hero className='section-hero-application'>
                     <div className='section-hero-application-main'>
                         <img className='section-hero-application-img' src={trainer_banner} alt='trainer_banner' />
@@ -24,7 +25,6 @@ export default class Application extends React.Component {
                         </div>
                     </div>
                 </Hero>
-                <div className='section-application-video'>
                     <div className='section-application-video-col-left'>
                         <h3>
                             <img src={horizontal_line} alt='horizontal_line' />
@@ -49,6 +49,8 @@ export default class Application extends React.Component {
                             <p>Watch application movie <img src={horizontal_line} alt='horizontal_line' /></p>
                         </div>
                     </div>
+                </div>
+                <div className='section-application-video'>
                     <div className='section-application-features'>
                         <div className='section-application-features-col-left'>
                             <div className='section-application-feature'>
