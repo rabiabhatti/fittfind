@@ -1,9 +1,13 @@
-.section-hero-application {
-
+.section-hero-video {
+    background-size: 440px 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url("../images/background-blue-imag.jpg");
 }
 .section-hero-application-img {
     max-width: 90vw;
     margin-right: 4vw;
+    pointer-events: none;
     box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
     -webkit-box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
     -moz-box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
