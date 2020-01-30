@@ -23,12 +23,13 @@
 
 .section-application-video-main {
     display: flex;
+    margin-top: 8vw;
     margin-left: 5.7%;
     justify-content: space-between;
 }
 .section-application-video-col-left {
     width: 20%;
-    align-self: center;
+    margin-top: 10vw;
 }
 h3.section-application-video-col-left-heading {
     font-size: 2vw;
