@@ -93,64 +93,71 @@ export default class Men extends React.Component {
         const { categoryOption, sizeOption, collectionOption, sortByOption } = this.state;
         return (
             <Wrapper name='Women'>
-                <Hero className='section-products-hero'>
-                    {categories.map((item, i) => (
-                        <div className='section-hero-category' key={i} style={{ backgroundImage: `url(${item.image})` }}>
-                            <img src={horizontal_line} alt='horizontal_line' />
-                            <p>{item.name.toUpperCase()}</p>
+                <Hero>
+                    <div className='section-products-hero-container'>
+                        <div className='section-products-hero'>
+                            {categories.map((item, i) => (
+                                <button className='section-hero-category' key={i} style={{ backgroundImage: `url(${item.image})` }}>
+                                    <img src={horizontal_line} alt='horizontal_line' />
+                                    <p>{item.name.toUpperCase()}</p>
+                                </button>
+                            ))}
                         </div>
-                    ))}
+                        <div className='section-products-filters'>
+                            <div className='select-container'>
+                                <p>
+                                    <img src={horizontal_line} alt='horizontal_line' />
+                                    CATEGORIES:
+                                </p>
+                                <Select
+                                    isDisabled={false}
+                                    value={categoryOption}
+                                    options={categoryOptions}
+                                    placeholder={categoryOption}
+                                    classNamePrefix="react-select"
+                                    className='react-select-container'
+                                    onChange={this.handleCategoryChange}
+                                />
+                            </div>
+                            <div className='select-container'>
+                                <p><img src={horizontal_line} alt='horizontal_line' />SIZE:</p>
+                                <Select
+                                    isDisabled={false}
+                                    value={sizeOption}
+                                    options={sizeOptions}
+                                    placeholder={sizeOption}
+                                    classNamePrefix="react-select"
+                                    className='react-select-container'
+                                    onChange={this.handleSizeChange}
+                                />
+                            </div>
+                            <div className='select-container'>
+                                <p><img src={horizontal_line} alt='horizontal_line' />COLLECTION:</p>
+                                <Select
+                                    isDisabled={false}
+                                    value={collectionOption}
+                                    options={collectionOptions}
+                                    placeholder={collectionOption}
+                                    classNamePrefix="react-select"
+                                    className='react-select-container'
+                                    onChange={this.handleCollectionChange}
+                                />
+                            </div>
+                            <div className='select-container'>
+                                <p><img src={horizontal_line} alt='horizontal_line' />SORT BY:</p>
+                                <Select
+                                    isDisabled={false}
+                                    value={sortByOption}
+                                    options={sortByOptions}
+                                    placeholder={sortByOption}
+                                    classNamePrefix="react-select"
+                                    className='react-select-container'
+                                    onChange={this.handleSortChange}
+                                />
+                            </div>
+                        </div>
+                    </div>
                 </Hero>
-                <div className='section-products-filters'>
-                    <div className='select-container'>
-                        <span>CATEGORIES:</span>
-                        <Select
-                            isDisabled={false}
-                            value={categoryOption}
-                            options={categoryOptions}
-                            placeholder={categoryOption}
-                            classNamePrefix="react-select"
-                            className='react-select-container'
-                            onChange={this.handleCategoryChange}
-                        />
-                    </div>
-                    <div className='select-container'>
-                        <span>SIZE:</span>
-                        <Select
-                            isDisabled={false}
-                            value={sizeOption}
-                            options={sizeOptions}
-                            placeholder={sizeOption}
-                            classNamePrefix="react-select"
-                            className='react-select-container'
-                            onChange={this.handleSizeChange}
-                        />
-                    </div>
-                    <div className='select-container'>
-                        <span>COLLECTION:</span>
-                        <Select
-                            isDisabled={false}
-                            value={collectionOption}
-                            options={collectionOptions}
-                            placeholder={collectionOption}
-                            classNamePrefix="react-select"
-                            className='react-select-container'
-                            onChange={this.handleCollectionChange}
-                        />
-                    </div>
-                    <div className='select-container'>
-                        <span>SORT BY:</span>
-                        <Select
-                            isDisabled={false}
-                            value={sortByOption}
-                            options={sortByOptions}
-                            placeholder={sortByOption}
-                            classNamePrefix="react-select"
-                            className='react-select-container'
-                            onChange={this.handleSortChange}
-                        />
-                    </div>
-                </div>
                 <div className='section-products-list'>
                     {products_list.map((item, i) => (
                         <Product key={i} img={item} name='Women hybrid Joggers Black' price='$46.00' id={i} />
