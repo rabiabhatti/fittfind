@@ -9,17 +9,20 @@ import vertical_line from '../images/vertical_line.png'
 import horizontal_line from '../images/horizontal_line.png'
 import app_store_icon from '../images/app-store-icon.png'
 import play_store_icon from '../images/play-store-icon.png'
+import trainer_banner from '../images/personaltrainer.png'
 
 export default class Application extends React.Component {
     render() {
         return (
             <Wrapper name={'App'}>
                 <Hero className='section-hero-application'>
-                    <h1>
-                        <span>Find </span>
-                        your private personal
-                        <span>trainer</span>
-                    </h1>
+                    <div className='section-hero-application-main'>
+                        <img className='section-hero-application-img' src={trainer_banner} alt='trainer_banner' />
+                        <div className='section-hero-application-text'>
+                           <h1><span>Find</span> your private</h1>
+                           <h1>personal <span>trainer</span></h1>
+                        </div>
+                    </div>
                 </Hero>
                 <div className='section-application-video'>
                     <div className='section-application-video-col-left'>
