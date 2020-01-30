@@ -205,3 +205,20 @@ span.section-apps-right-span-2 {
     font-size: 21px;
     margin-bottom: 5px;
 }
+.section-application-motivation-banner-1 {
+    display: flex;
+    margin-right: 4vw;
+    margin-left: 5.7%;
+    position: relative;
+}
+.section-application-motivation-banner-dialogue {
+    color: #fff;
+    font-size: 2vw;
+    font-weight: 700;
+    max-height: 400px;
+    margin-left: -51vw;
+    margin-bottom: 6vw;
+    align-self: flex-end;
+    background-color: #055595;
+    padding: 170px 300px 200px 300px;
+}

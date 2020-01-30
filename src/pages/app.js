@@ -19,6 +19,7 @@ import app_store_button from '../images/app-store-button.png'
 import play_store_button from '../images/play-store-button.png'
 import app_store_button_white from '../images/app-store-button-white.png'
 import play_store_button_white from '../images/play-store-button-white.png'
+import motivation_girl_banner from '../images/motivation-girl-banner.png'
 
 export default class Application extends React.Component {
     render() {
@@ -102,11 +103,9 @@ export default class Application extends React.Component {
                         </div>
                     </div>
                     <div className='section-application-motivation-banner-1'>
-                        <img src={phone_img} alt='phone_img' />
+                        <img className='section-application-motivation-banner-girl' src={motivation_girl_banner} alt='motivation_girl_banner' />
                         <div className='section-application-motivation-banner-dialogue'>
-                            <img src={vertical_line} alt='vertical_line' />
                             <p>"The question isn't can you, it's will you?"</p>
-                            <img src={vertical_line} alt='vertical_line' />
                         </div>
                     </div>
                     <div className='section-application-motivation-banner-2'>
