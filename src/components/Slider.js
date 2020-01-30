@@ -129,16 +129,18 @@ class Slider extends React.Component {
                             </div>,
                         products:
                             <div className='section-products-slider'>
-                                {products_carousel.slice(productsSliderPosition, productsSliderPosition + 4).map((item, i) => (
-                                    <Product key={i} img={item} name='Women hybrid Joggers Black' price='$46.00' id={i} />
-                                ))}
-                                <div className='section-products-slider-right-bar'>
-                                    <p>pages</p>
-                                    {products_pages.map(i => (
-                                        <button key={i} onClick={() => this.setState({productsSliderPosition: i*4})}>
-                                            0{i+1}
-                                        </button>
+                                <div className='section-products-slider-container'>
+                                    {products_carousel.slice(productsSliderPosition, productsSliderPosition + 4).map((item, i) => (
+                                        <Product slider={true} key={i} img={item} name='Women hybrid Joggers Black' price='$46.00' id={i} />
                                     ))}
+                                    <div className='section-products-slider-right-bar'>
+                                        <p>pages</p>
+                                        {products_pages.map(i => (
+                                            <button className={`section-products-slider-active-page ${productsSliderPosition === i*4 && 'active-products-slider-page'}`} key={i} onClick={() => this.setState({productsSliderPosition: i*4})}>
+                                                0{i+1}
+                                            </button>
+                                        ))}
+                                    </div>
                                 </div>
                                 <div className='section-products-slider-bottom-bar'>
                                     <button onClick={() => this.handleBackNextProducts('back')} disabled={productsSliderPosition === 0}>

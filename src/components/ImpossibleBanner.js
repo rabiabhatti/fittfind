@@ -1,7 +1,7 @@
 import React from 'react'
 
-import ImpossibleImage from '../images/immpossible.png'
 import fittfind from '../images/fittfind-im.png'
+import ImpossibleImage from '../images/immpossible.png'
 
 function ImpossibleBanner() {
     return (
