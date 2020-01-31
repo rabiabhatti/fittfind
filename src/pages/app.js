@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import '../styles/application.css'
-import { Wrapper, Hero } from '../components'
+import { Wrapper, Hero, ImpossibleBanner } from '../components'
 import phone_img from '../images/women_banner.jpg'
 import play_video from '../images/youtube_icon.png'
 import vertical_line from '../images/vertical_line.png'
@@ -20,6 +20,8 @@ import play_store_button from '../images/play-store-button.png'
 import app_store_button_white from '../images/app-store-button-white.png'
 import play_store_button_white from '../images/play-store-button-white.png'
 import motivation_girl_banner from '../images/motivation-girl-banner.png'
+import iPhone_7_Black_1 from '../images/iPhone7Black1.png'
+import iPhone_7_Black_3 from '../images/iPhone7Black3.png'
 
 export default class Application extends React.Component {
     render() {
@@ -120,7 +122,7 @@ export default class Application extends React.Component {
                                     <p>It’s often a good idea to show which page is currently being viewed by visually changing the link matching the current page.</p>
                                 </div>
                                 <div className='left-banner-image'>
-                                    <img src={phone_img} alt='phone_img' />
+                                    <img src={iPhone_7_Black_1} alt='iPhone_7_Black_1' />
                                     <Link to={'/'}>
                                         <img src={play_store_icon} alt='play_store_icon' width={200} />
                                     </Link>
@@ -129,7 +131,7 @@ export default class Application extends React.Component {
                         </div>
                         <div className='section-application-motivation-banner-right'>
                             <div className='right-banner-image'>
-                                <img src={phone_img} alt='phone_img' />
+                                <img src={iPhone_7_Black_3} alt='iPhone_7_Black_3' />
                                 <Link to={'/'}>
                                     <img src={app_store_icon} alt='app_store_icon' width={200} />
                                 </Link>
@@ -141,6 +143,7 @@ export default class Application extends React.Component {
                         </div>
                     </div>
                 </div>
+                <ImpossibleBanner />
             </Wrapper>
         )
     }

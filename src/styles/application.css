@@ -34,6 +34,7 @@
 h3.section-application-video-col-left-heading {
     font-size: 2vw;
     line-height: 1;
+    text-transform: uppercase;
 }
 p.section-application-video-col-left-text {
     font-size: 16px;
@@ -197,6 +198,7 @@ span.section-apps-right-span-2 {
 }
 .section-application-feature>h4 {
     font-size: 21px;
+    text-transform: uppercase;
 }
 .section-application-features-col-middle-stores-links {
     padding: 30px 0;
@@ -222,4 +224,48 @@ span.section-apps-right-span-2 {
     align-self: flex-end;
     background-color: #055595;
     padding: 170px 300px 200px 300px;
+}
+.section-application-motivation-banner-2 {
+    margin-top: 8vw;
+    margin-right: 4vw;
+    margin-left: 5.7%;
+}
+.section-application-motivation-banner-2, .section-application-motivation-banner-left, .left-banner-container, .section-application-motivation-banner-right {
+    display: flex;
+}
+.section-application-motivation-banner-left {
+    flex-direction: column;
+}
+.left-banner-text, .right-banner-text {
+    width: 40%;
+    margin-top: 80px;
+}
+h3.left-banner-heading {
+    font-size: 2vw;
+    line-height: 1;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.left-banner-text>img {
+    padding-bottom: 40px;
+}
+.left-banner-text {
+    text-align: right;
+}
+.left-banner-text>p, .right-banner-text>p {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+.left-banner-image, .right-banner-image {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.left-banner-image>img, .right-banner-image>img {
+    width: 70%;
+}
+.left-banner-image>a, .right-banner-image>a {
+    padding-top: 40px;
 }
