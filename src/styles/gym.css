@@ -170,3 +170,20 @@
 .motivation-quotes-buttons>button:nth-child(3) {
     border: 1px solid #ffffff;
 }
+.section-gym-supporters {
+    margin-right: 5.7%;
+}
+.section-gym-supporters>h3 {
+    font-size: 2vw;
+    text-align: center;
+}
+.section-gym-supporters-list {
+    display: flex;
+    margin: 100px 0;
+    align-items: center;
+    justify-content: space-around;
+}
+.section-gym-supporters-list>img {
+    width: 130px;
+    height: 100%;
+}
