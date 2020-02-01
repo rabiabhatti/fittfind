@@ -6,7 +6,7 @@
     color: #fff;
     margin-left: 4vw;
     margin-top: -12vw;
-    padding-bottom: 12vw;
+    padding-bottom: 2vw;
     text-transform: uppercase;
 }
 .section-hero-gym-main-banner {
@@ -40,4 +40,71 @@
 }
 .section-hero-gym-main-banner-heading>span:nth-child(2) {
     text-align: right;
+}
+.section-gym-features {
+    padding-top: 10vw;
+    margin-left: 5.7%;
+}
+.section-gym-features-desc-first, .section-gym-features-list {
+    display: flex;
+    justify-content: space-between;
+}
+.section-gym-features-desc {
+    width: 20%;
+}
+.section-gym-features-desc>h3 {
+    font-size: 2vw;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.section-gym-features-desc>p {
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 600;
+    padding: 40px 0;
+}
+.section-gym-features-desc>button {
+    bottom: 10vw;
+    border: none;
+    color: #fff;
+    text-align: left;
+    font-weight: 600;
+    padding: 15px 25px;
+    border-radius: 25px;
+    background-color: #025696;
+    text-transform: uppercase;
+}
+.section-gym-features-desc>button>img {
+    margin-left: 90px;
+}
+.section-gym-features-list {
+    width: 70%;
+}
+.section-gym-feature {
+    width: 33.33%;
+    text-align: center;
+}
+.section-gym-feature-desc>div>h4 {
+    font-size: 22px;
+    text-transform: uppercase;
+}
+.section-gym-feature-desc {
+    width: 65%;
+    text-align: left;
+    margin: 0 auto;
+}
+.section-gym-feature-desc>div>img {
+    width: 110px;
+    max-height: 2px;
+    margin-left: -50px;
+}
+.section-gym-feature-desc>div {
+    padding: 10px 0;
+    margin-top: 50px;
+    background-size: contain;
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.section-gym-features-list>.section-gym-feature:first-child, .section-gym-features-list>.section-gym-feature:nth-child(3) {
+    margin-top: 80px;
 }

@@ -46,49 +46,52 @@ export default class Gym extends React.Component{
                     </div>
                 </Hero>
                 <div className='section-gym-features'>
-                    <div className='section-gym-features-desc'>
-                        <h3>
-                            <img src={horizontal_line} alt='horizontal_line' />
-                            1000 gyms <br/> in your pocket
-                        </h3>
-                        <p>Personal fitness trainers and clients connect through FittFind, a revolutionary app coming soon. If you're sick and tired of not hitting your New Year's "better body" resolution, this app is for you.</p>
-                        <button>
-                            PASS TYPES
-                            <img src={forwardIcon} alt='forwardIcon' />
-                        </button>
+                    <div className='section-gym-features-desc-first'>
+                        <div className='section-gym-features-desc'>
+                            <h3>
+                                <img src={horizontal_line} alt='horizontal_line' />
+                                1000 gyms <br/> in your pocket
+                            </h3>
+                            <p>Personal fitness trainers and clients connect through FittFind, a revolutionary app coming soon. If you're sick and tired of not hitting your New Year's "better body" resolution, this app is for you.</p>
+                            <button>
+                                PASS TYPES
+                                <img src={forwardIcon} alt='forwardIcon' />
+                            </button>
+                        </div>
+                        <div className='section-gym-features-list'>
+                            <div className='section-gym-feature'>
+                                <img src={gym_feature_1} alt='gym_feature_1' />
+                                <div className='section-gym-feature-desc'>
+                                    <div style={{ backgroundImage: `url(${one})` }}>
+                                        <h4>Discover venues</h4>
+                                        <img src={horizontal_line} alt='horizontal_line' />
+                                    </div>
+                                    <p>We will be in every major city</p>
+                                </div>
+                            </div>
+                            <div className='section-gym-feature'>
+                                <img src={gym_feature_2} alt='gym_feature_2' />
+                                <div className='section-gym-feature-desc'>
+                                    <div style={{ backgroundImage: `url(${two})` }}>
+                                        <h4>Select your pass</h4>
+                                        <img src={horizontal_line} alt='horizontal_line' />
+                                    </div>
+                                    <p>Find your desired price</p>
+                                </div>
+                            </div>
+                            <div className='section-gym-feature'>
+                                <img src={gym_feature_3} alt='gym_feature_3' />
+                                <div className='section-gym-feature-desc'>
+                                    <div style={{ backgroundImage: `url(${three})` }}>
+                                        <h4>Go to gym</h4>
+                                        <img src={horizontal_line} alt='horizontal_line' />
+                                    </div>
+                                    <p>Work out today, It only take 3<br/>mins to Fittfind it!</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div className='section-gym-features-list'>
-                        <div className='section-gym-feature'>
-                            <img src={gym_feature_1} alt='gym_feature_1' />
-                            <div className='section-gym-feature-desc'>
-                                <div style={{ backgroundImage: `url(${one})` }}>
-                                    <h4>Discover venues</h4>
-                                    <img src={horizontal_line} alt='horizontal_line' />
-                                </div>
-                                <p>We will be in every major city</p>
-                            </div>
-                        </div>
-                        <div className='section-gym-feature'>
-                            <img src={gym_feature_2} alt='gym_feature_2' />
-                            <div className='section-gym-feature-desc'>
-                                <div style={{ backgroundImage: `url(${two})` }}>
-                                    <h4>Select your pass</h4>
-                                    <img src={horizontal_line} alt='horizontal_line' />
-                                </div>
-                                <p>Find your desired price</p>
-                            </div>
-                        </div>
-                        <div className='section-gym-feature'>
-                            <img src={gym_feature_3} alt='gym_feature_3' />
-                            <div className='section-gym-feature-desc'>
-                                <div style={{ backgroundImage: `url(${three})` }}>
-                                    <h4>Go to gym</h4>
-                                    <img src={horizontal_line} alt='horizontal_line' />
-                                </div>
-                                <p>Work out today, It only take 3<br/>mins to Fittfind it!</p>
-                            </div>
-                        </div>
-                    </div>
+
                     <div className='section-gym-motivation-banner'>
                         <img src={women_banner} alt='motivation-img' />
                         <div className='section-gym-motivation-banner-desc'>
