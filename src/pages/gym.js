@@ -9,6 +9,7 @@ import quotes from '../images/quotes.png'
 import women_banner from '../images/women_banner.jpg'
 import forwardIcon from '../images/forward-icon.png'
 import vertical_line from '../images/vertical_line.png'
+import vertical_line_white from '../images/vertical_line_white.png'
 import gym_feature_1 from '../images/gym-feature-1.png'
 import gym_feature_2 from '../images/gym-feature-2.png'
 import gym_feature_3 from '../images/gym-feature-3.png'
@@ -20,6 +21,9 @@ import techradar_logo from '../images/techradar.png'
 import huffington_post_logo from '../images/huffington-post.png'
 import evening_standard_logo from '../images/evening-standard.png'
 import slider_men from '../images/slider-men.png'
+import gym_motivation_girl from '../images/gym-motivation-girl.png'
+
+
 export default class Gym extends React.Component{
     render() {
         return (
@@ -93,13 +97,15 @@ export default class Gym extends React.Component{
                     </div>
 
                     <div className='section-gym-motivation-banner'>
-                        <img src={women_banner} alt='motivation-img' />
-                        <div className='section-gym-motivation-banner-desc'>
-                            <h3>
-                                <img src={horizontal_line} alt='horizontal_line' />
-                                You won't look back
-                            </h3>
-                            <p>We're working on our customers to create an innovative <br/> solution to fit your fitness needs</p>
+                        <div className='section-gym-motivation-first'>
+                            <img src={gym_motivation_girl} alt='gym_motivation_girl' />
+                            <div className='section-gym-motivation-banner-desc'>
+                                <h3>
+                                    <img src={horizontal_line} alt='horizontal_line' />
+                                    You won't look back
+                                </h3>
+                                <p>We're working on our customers to create an innovative <br/> solution to fit your fitness needs</p>
+                            </div>
                         </div>
                         <div className='section-gym-motivation-banner-slider'>
                             <img src={quotes} alt='quotes-img' />
@@ -111,7 +117,7 @@ export default class Gym extends React.Component{
                                 <button>
                                     <img src={forwardIcon} alt='back_button' />
                                 </button>
-                                <img src={vertical_line} alt='vertical_line' />
+                                <img src={vertical_line_white} alt='vertical_line_white' />
                                 <button>
                                     <img src={forwardIcon} alt='next_button' />
                                 </button>

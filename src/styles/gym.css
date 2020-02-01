@@ -111,3 +111,62 @@
 .section-gym-features-list>.section-gym-feature:first-child, .section-gym-features-list>.section-gym-feature:nth-child(3) {
     margin-top: 80px;
 }
+.section-gym-motivation-first {
+    display: flex;
+    margin-top: 10vw;
+}
+.section-gym-motivation-banner-desc {
+    margin-top: 10vw;
+}
+.section-gym-motivation-banner-desc>h3 {
+    font-size: 2vw;
+    line-height: 1;
+    margin-left: -50px;
+    text-transform: uppercase;
+}
+.section-gym-motivation-banner-desc>p {
+    font-size: 16px;
+    padding: 40px 0;
+    line-height: 1.6;
+    font-weight: 600;
+    margin-left: 3vw;
+}
+.motivation-quotes>p:first-child {
+    font-size: 22px;
+}
+.section-gym-motivation-banner-slider {
+    width: 70vw;
+    color: #fff;
+    font-size: 2vw;
+    text-align: center;
+    position: relative;
+    align-self: flex-end;
+    margin: -30vw auto 15vw 9vw;
+    background-color: #055595;
+    padding: 50px 50px 50px 50px;
+}
+.motivation-quotes>p:nth-child(2) {
+    color: #3d87bf;
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 40px;
+}
+.motivation-quotes {
+    padding: 20px 250px 20px 250px;
+}
+.motivation-quotes-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.motivation-quotes-buttons>button:first-child {
+    border: 1px solid #0470b6;
+}
+.motivation-quotes-buttons>button:first-child, .motivation-quotes-buttons>button:nth-child(3) {
+    padding: 30px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.motivation-quotes-buttons>button:nth-child(3) {
+    border: 1px solid #ffffff;
+}
