@@ -45,6 +45,9 @@
     padding-top: 10vw;
     margin-left: 5.7%;
 }
+.section-gym-features-desc-first {
+    margin-left: 2vw;
+}
 .section-gym-features-desc-first, .section-gym-features-list {
     display: flex;
     justify-content: space-between;
