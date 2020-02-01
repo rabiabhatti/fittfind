@@ -1,0 +1,43 @@
+.section-hero-gym-img>img {
+    width: 93.5vw;
+    max-width: 95vw;
+}
+.section-hero-gym-text {
+    color: #fff;
+    margin-left: 4vw;
+    margin-top: -12vw;
+    padding-bottom: 12vw;
+    text-transform: uppercase;
+}
+.section-hero-gym-main-banner {
+    display: flex;
+    flex-direction: row;
+}
+.section-hero-gym-text>h2 {
+    font-size: 2vw;
+    line-height: 1;
+}
+.section-hero-gym-main-banner>h1 {
+    width: 30%;
+    font-size: 4vw;
+}
+.section-hero-gym-main-banner-heading {
+    width: 35%;
+    display: flex;
+    align-items: center;
+    padding: 0 30px 0 10px;
+    background-color: #055595;
+    justify-content: space-between;
+}
+.section-hero-gym-kickstarter-ref {
+    width: 30%;
+    text-align: right;
+    align-self: center;
+}
+.section-hero-gym-main-banner-heading>span:first-child {
+    font-size: 4vw;
+    font-weight: bold;
+}
+.section-hero-gym-main-banner-heading>span:nth-child(2) {
+    text-align: right;
+}
