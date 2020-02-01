@@ -136,6 +136,7 @@
 }
 .section-gym-motivation-banner-slider {
     width: 70vw;
+    padding: 50px;
     color: #fff;
     font-size: 2vw;
     text-align: center;
@@ -143,7 +144,6 @@
     align-self: flex-end;
     margin: -30vw auto 15vw 9vw;
     background-color: #055595;
-    padding: 50px 50px 50px 50px;
 }
 .motivation-quotes>p:nth-child(2) {
     color: #3d87bf;
@@ -176,6 +176,7 @@
 .section-gym-supporters>h3 {
     font-size: 2vw;
     text-align: center;
+    text-transform: uppercase;
 }
 .section-gym-supporters-list {
     display: flex;
@@ -186,4 +187,35 @@
 .section-gym-supporters-list>img {
     width: 130px;
     height: 100%;
+}
+.section-gym-owners {
+    color: #fff;
+    text-align: center;
+    margin-right: 5.7%;
+    margin-bottom: 5.7%;
+    padding: 150px 300px;
+    background-size: 100% 100%;
+    background-image: url('../images/STUDIO-OWNER-back.png');
+}
+.section-gym-owners>h2 {
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+.section-gym-owners>p {
+    font-size: 22px;
+    padding: 20px 0;
+}
+.section-gym-owners>button {
+    bottom: 10vw;
+    border: none;
+    color: #fff;
+    text-align: left;
+    font-weight: 600;
+    padding: 15px 25px;
+    border-radius: 25px;
+    background-color: #025696;
+    text-transform: uppercase;
+}
+.section-gym-owners>button>img {
+    margin-left: 90px;
 }
