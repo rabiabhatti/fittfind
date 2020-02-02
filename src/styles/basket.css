@@ -125,3 +125,24 @@
 .section-basket-item-detail:last-child {
     font-size: 1.1rem;
 }
+.section-basket-place-order {
+    width: 20%;
+    display: flex;
+    padding: 4rem 0;
+    flex-direction: column;
+    align-self: flex-end;
+}
+.section-basket-place-order-btn {
+    border: 0;
+    color: #fff;
+    min-width: 40%;
+    font-weight: bold;
+    margin-top: 2rem;
+    border-radius: 20px;
+    padding: 0.8rem 1rem;
+    background-color: #025696;
+    text-transform: uppercase;
+}
+.section-basket-place-order p {
+    margin: 5px 0;
+}

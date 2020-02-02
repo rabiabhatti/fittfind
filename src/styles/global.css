@@ -90,6 +90,11 @@ button:focus, input:focus {
     flex-direction: column;
     align-items: flex-start;
 }
+.column-end {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
 .space-between {
     display: flex;
     justify-content: space-between;

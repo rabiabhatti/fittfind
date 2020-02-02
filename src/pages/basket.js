@@ -73,10 +73,10 @@ export default class Basket extends React.Component {
                                         <div className='section-basket-single-item-desc space-between'>
                                             <div className='section-basket-item-detail'>
                                                 <div className='column-start'>
-                                                    <p>Color</p>
-                                                    <p>Size</p>
-                                                    <p>Qty</p>
-                                                </div>
+                                                <p>Color</p>
+                                                <p>Size</p>
+                                                <p>Qty</p>
+                                            </div>
                                                 <div className='column-start'>
                                                     <p>{item.color}</p>
                                                     <p>{item.size}</p>
@@ -100,7 +100,19 @@ export default class Basket extends React.Component {
                         </div>
                     </div>
                     <div className='section-basket-place-order'>
-
+                        <div className='space-between'>
+                            <div className='column-end'>
+                                <p className='heading-light'>Subtotal</p>
+                                <p className='heading-light'>Shipping from</p>
+                                <p className='heading-light'>Total(including taxes)</p>
+                            </div>
+                            <div className='column-start'>
+                                <p>$40</p>
+                                <p>$6</p>
+                                <p>$46</p>
+                            </div>
+                        </div>
+                        <button className='section-basket-place-order-btn'>Order</button>
                     </div>
                     <div className='section-basket-order-details'>
 
