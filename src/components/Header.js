@@ -35,7 +35,7 @@ const Header = () => (
       </nav>
       <div className='section-nav-right'>
           <span className='section-nav-right-currency'>Currency USD</span>
-          <Link to="/cart"  className='section-nav-right-cart'>
+          <Link to="/basket"  className='section-nav-right-cart'>
               <img src={cart} alt='Cart icon' />
               <span>Empty Basket</span>
           </Link>
