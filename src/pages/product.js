@@ -2,11 +2,11 @@ import React from 'react'
 
 import '../styles/single_product.css'
 import like_fill from '../images/like_fill.png'
-import {Product, Wrapper, Hero, ImpossibleBanner, Slider} from '../components'
 import like_outline from '../images/like_outline.png'
 import forwardIcon from '../images/forward-icon.png'
 import horizontal_line from '../images/horizontal_line.png'
 import single_product_banner from '../images/women_banner.jpg'
+import {Wrapper, Hero, ImpossibleBanner, Slider} from '../components'
 
 const sizes = ['XS', 'S', 'M', 'L'];
 

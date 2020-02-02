@@ -67,6 +67,7 @@ img.section-background-fittfind {
 }
 a, button {
     cursor: pointer;
+    border: 0;
     background-image: none;
     background-color: transparent;
 }
@@ -81,8 +82,13 @@ button:focus, input:focus {
 }
 .column-center {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+}
+.column-start {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .space-between {
     display: flex;
