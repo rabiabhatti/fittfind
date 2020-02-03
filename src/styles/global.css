@@ -99,6 +99,10 @@ button:focus, input:focus {
     display: flex;
     justify-content: space-between;
 }
+.align-center {
+    display: flex;
+    align-items: center;
+}
 .uppercase {
     text-transform: uppercase;
 }
