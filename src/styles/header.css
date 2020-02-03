@@ -26,6 +26,9 @@ header {
 span.section-nav-right-currency>span:nth-child(2), .section-header-right>a>span>span:nth-child(2) {
     color: #727785;
 }
+span.section-nav-right-currency>span:nth-child(2) {
+    margin-left: -25px;
+}
 .section-header-right>a, .section-header-right>span {
     width: 37%;
     text-align: center;
