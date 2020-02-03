@@ -4,6 +4,8 @@ import ReactFlagsSelect from 'react-flags-select';
 import 'react-flags-select/css/react-flags-select.css';
 
 import '../styles/basket.css'
+import dhl_icon from '../images/dhl_icon.png'
+import dpd_icon from '../images/dpd_icon.png'
 import women_banner from '../images/women_banner.jpg'
 import forwardIcon from '../images/forward-icon.png'
 import { Wrapper, Hero, BasketInput } from '../components'
@@ -42,6 +44,7 @@ export default class Basket extends React.Component {
       postCode: '',
       country: '',
       phone: '',
+      deliveryMode: '',
     };
 
     _onChange = (event) => {
@@ -57,7 +60,7 @@ export default class Basket extends React.Component {
     }
 
     render() {
-        const { products_count, firstName, lastName, company, address, city, postCode, country, phone } = this.state;
+        const { products_count, firstName, lastName, company, address, city, postCode, deliveryMode, phone } = this.state;
 
         return (
             <Wrapper name='Basket'>
@@ -94,15 +97,15 @@ export default class Basket extends React.Component {
                                         </div>
                                         <div className='section-basket-single-item-desc space-between'>
                                             <div className='section-basket-item-detail'>
+                                               <div className='column-start'>
+                                                    <p className='heading-light'>Color</p>
+                                                    <p className='heading-light'>Size</p>
+                                                    <p className='heading-light'>Qty</p>
+                                                </div>
                                                 <div className='column-start'>
-                                                <p>Color</p>
-                                                <p>Size</p>
-                                                <p>Qty</p>
-                                            </div>
-                                                <div className='column-start'>
-                                                    <p>{item.color}</p>
-                                                    <p>{item.size}</p>
-                                                    <p>{item.qty}</p>
+                                                    <p className='section-basket-item-details'>{item.color}</p>
+                                                    <p className='section-basket-item-details'>{item.size}</p>
+                                                    <p className='section-basket-item-details'>{item.qty}</p>
                                                 </div>
                                             </div>
                                             <p className='section-basket-single-item-price section-basket-item-detail'>${item.price}</p>
@@ -166,6 +169,36 @@ export default class Basket extends React.Component {
                                             </div>
                                         </div>
                                         <BasketInput className='section-basket-address-input' title='Phone' name='phone' width={100} onChange={this._onChange} value={phone} />
+                                    </div>
+                                </div>
+                                <div className='section-basket-delivery-container'>
+                                    <h4>Delivery mode</h4>
+                                    <div className='section-basket-delivery-content'>
+                                        <div className='column-start section-basket-delivery-select-container'>
+                                            <p>Country</p>
+                                            <ReactFlagsSelect
+                                                searchable={true}
+                                                onSelect={this.onSelectCountry}
+                                                className="section-basket-address-select"
+                                                placeholder="Please select" />
+                                        </div>
+                                        <div className='column-start'>
+                                            <div className='section-basket-delivery-mode-container'>
+                                                <input type='radio' name='deliveryMode' value='dpd_p' />
+                                                <img src={dpd_icon} alt='dpd_icon' />
+                                                <p>Pick up point DPD / Chronopost - $6</p>
+                                            </div>
+                                            <div className='section-basket-delivery-mode-container'>
+                                                <input type='radio' name='deliveryMode' value='dpd_s' />
+                                                <img src={dpd_icon} alt='dpd_icon' />
+                                                <p>DPD Standard / Chronopost - $9</p>
+                                            </div>
+                                            <div className='section-basket-delivery-mode-container'>
+                                                <input type='radio' name='deliveryMode' value='dhl' />
+                                                <img src={dhl_icon} alt='dhl_icon' />
+                                                <p>Express DHL - $9</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

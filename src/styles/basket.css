@@ -60,7 +60,7 @@
 .section-basket-details h4 {
     display: flex;
     font-size: 0.9rem;
-    font-weight: bold;
+    font-weight: 700;
     flex-direction: row;
     align-items: center;
     text-transform: uppercase;
@@ -91,12 +91,12 @@
 .section-basket-single-item-details {
     width: 75%;
 }
-.column-start:first-child p, .heading-light {
+.heading-light {
     color: #b2bac6;
     font-weight: 700;
     font-size: 0.75rem;
 }
-.column-start:last-child p {
+.section-basket-item-details {
     margin-left: 0.5rem;
     font-weight: 700;
     font-size: 0.75rem;
@@ -159,7 +159,7 @@
     display: flex;
     flex-direction: column;
 }
-.section-basket-address-input label, .section-basket-address-select-container p {
+.section-basket-address-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p {
     font-weight: 600;
     font-size: 0.75rem;
     margin-bottom: 5px;
@@ -210,4 +210,28 @@
 }
 .section-basket-order-details h2 {
     margin-top: 1rem;
+}
+.section-basket-delivery-content {
+    width: 100%;
+    display: flex;
+    padding: 1.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.section-basket-delivery-select-container {
+    width: 100%;
+}
+.section-basket-delivery-mode-container {
+    display: flex;
+    margin: 0.5rem 0;
+    flex-direction: row;
+    align-items: center;
+}
+.section-basket-delivery-mode-container p {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.section-basket-delivery-mode-container img {
+    width: 2.5rem;
+    margin: 0 1rem;
 }
