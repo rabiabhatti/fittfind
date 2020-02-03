@@ -1,12 +1,13 @@
 import React from "react"
 import { Link } from "gatsby"
 
+import '../styles/products_categories.css'
+
 import {Wrapper, Hero, Slider, ImpossibleBanner} from "../components"
 
 import forwardIcon from '../images/forward-icon.png'
 import women_banner from '../images/women_banner.jpg'
 import men_banner from '../images/men_banner.jpg'
-import cat_back from '../images/prod-cat-back.jpg'
 import app_imag from '../images/app-store-imag.jpg'
 import app_video from '../images/app-store-video.jpg'
 import fittfind from '../images/fittfind.png'
@@ -29,7 +30,6 @@ class IndexPage extends React.Component {
                     </div>
                 </Hero>
                 <div className='section-products-categories'>
-                    <div className='prod-cat-background'><img className='prod-cat-back' src={cat_back} alt='cat-back'/></div>
                     <div className='section-products-women'>
                         <div className='section-products-women-banner'>
                             <img src={women_banner} alt='women_banner' width={400} />
@@ -38,13 +38,13 @@ class IndexPage extends React.Component {
                             </button>
                             <span className='shop-women-ver'>Women Shop ---</span>
                         </div>
-                        <div className='section-products-women-categories'>
-                            <h3>Women Categories</h3>
-                            <Link to={`/women?category=new`}>New Releases</Link>
-                            <Link to={`/women?category=sportsbras`}>Sports Bras</Link>
-                            <Link to={`/women?category=tanktops`}>Tank tops</Link>
-                            <Link to={`/women?category=leggings`}>Leggings</Link>
-                            <Link to={`/women?category=shorts`}>Shorts</Link>
+                        <div className='section-products-men-categories'>
+                            <h3>Men Categories</h3>
+                            <Link to={`/men?category=new`}>New Releases</Link>
+                            <Link to={`/men?category=compressiontops`}>Compression Tops</Link>
+                            <Link to={`/men?category=tights`}>Tights</Link>
+                            <Link to={`/men?category=hoodies`}>Hoodies</Link>
+                            <Link to={`/men?category=joggers&sweatpants`}>Joggers and sweatpants</Link>
                         </div>
                      </div>
                     <div className='section-products-men'>
@@ -55,13 +55,13 @@ class IndexPage extends React.Component {
                             </button>
                             <span className='shop-men-ver'>Men Shop ---</span>
                         </div>
-                        <div className='section-products-men-categories'>
-                            <h3>Men Categories</h3>
-                            <Link to={`/men?category=new`}>New Releases</Link>
-                            <Link to={`/men?category=compressiontops`}>Compression Tops</Link>
-                            <Link to={`/men?category=tights`}>Tights</Link>
-                            <Link to={`/men?category=hoodies`}>Hoodies</Link>
-                            <Link to={`/men?category=joggers&sweatpants`}>Joggers and sweatpants</Link>
+                        <div className='section-products-women-categories'>
+                            <h3>Women Categories</h3>
+                            <Link to={`/women?category=new`}>New Releases</Link>
+                            <Link to={`/women?category=sportsbras`}>Sports Bras</Link>
+                            <Link to={`/women?category=tanktops`}>Tank tops</Link>
+                            <Link to={`/women?category=leggings`}>Leggings</Link>
+                            <Link to={`/women?category=shorts`}>Shorts</Link>
                         </div>
                     </div>
                 </div>

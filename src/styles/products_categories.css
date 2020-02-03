@@ -1,0 +1,20 @@
+.section-products-categories {
+    display: flex;
+    padding-top: 12vw;
+    background-size: 53.1% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/prod-cat-back.jpg);
+}
+.section-products-categories>div {
+    width: 50%;
+}
+.section-products-women {
+    margin-left: 4%;
+}
+.section-products-women-banner {
+    display: flex;
+}
+button.shop-women-btn {
+    margin-left: -40px;
+}
