@@ -85,16 +85,18 @@ class Slider extends React.Component {
                                 {hero_carousel.map((img, i) => (
                                     <img key={i} src={img} alt='carousel' className={heroSliderPosition === i ? 'show hero-slide' : 'hide hero-slide'} />
                                 ))}
-                                <div className='section-hero-slider-right-bar'>
-                                    {hero_carousel.map((img, i) => (
-                                        <button className={i === heroSliderPosition ? 'active-slider slider-no' : 'slider-no'} key={i} onClick={() => this.heroSliderClick(i)}>0{i+1}</button>
-                                    ))}
-                                </div>
-                                <div className='sliders-count-container'>
-                                    <span className='current-slider'>0{heroSliderPosition + 1}</span>
-                                    <div>
-                                        <span className='total-dash'>_</span>
-                                        <span className='total-sliders'>0{hero_carousel.length}</span>
+                                <div className='section-hero-slider-right-numbers'>
+                                    <div className='section-hero-slider-right-bar'>
+                                        {hero_carousel.map((img, i) => (
+                                            <button className={i === heroSliderPosition ? 'active-slider slider-no' : 'slider-no'} key={i} onClick={() => this.heroSliderClick(i)}>0{i+1}</button>
+                                        ))}
+                                    </div>
+                                    <div className='sliders-count-container'>
+                                        <span className='current-slider'>0{heroSliderPosition + 1}</span>
+                                        <div>
+                                            <span className='total-dash'>_</span>
+                                            <span className='total-sliders'>0{hero_carousel.length}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>,

@@ -17,12 +17,16 @@ class IndexPage extends React.Component {
         return (
             <Wrapper name='Home'>
                 <Hero>
-                    <h1 className="section-Find-release-hero"><span>Find</span> & release your inner <span>athlete</span></h1>
-                    <button className='findFitBtn'>
-                        Find your fit
-                        <img src={forwardIcon} alt='forward_icon'/>
-                    </button>
-                    <Slider type='hero' />
+                    <div className="section-main-slider">
+                        <Slider type='hero' />
+                        <div className="section-main-slider-left">
+                            <h1 className="section-Find-release-hero"><span><span>Find</span> & release</span><span>your inner <span>athlete</span></span></h1>
+                            <button className='findFitBtn'>
+                                Find your fit
+                                <img src={forwardIcon} alt='forward_icon'/>
+                            </button>
+                        </div>
+                    </div>
                 </Hero>
                 <div className='section-products-categories'>
                     <div className='prod-cat-background'><img className='prod-cat-back' src={cat_back} alt='cat-back'/></div>
