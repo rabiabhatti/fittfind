@@ -18,7 +18,6 @@
     right: -75vw;
     z-index: -999;
     background: blue;
-    /* position: absolute; */
     -webkit-animation: slide 1s forwards;
     -webkit-animation-delay: 0s;
     animation: slide 1s forwards;
