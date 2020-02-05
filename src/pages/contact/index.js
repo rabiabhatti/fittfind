@@ -2,6 +2,7 @@ import React from 'react'
 
 import '../../styles/contact.css'
 import { Wrapper, Hero } from '../../components'
+import contact_banner from "../../images/home-slider-1.jpg";
 import women_banner from "../../images/women_banner.jpg";
 import contact_feature_3 from '../../images/gym-feature-1.png'
 import contact_feature_2 from '../../images/gym-feature-2.png'
@@ -78,6 +79,31 @@ export default class Contact extends React.Component {
                         </div>
                     </div>
                 </Hero>
+                <div className='section-contact-banner column-center'>
+                    <img className='section-contact-banner-img' src={contact_banner} alt='contact_banner'/>
+                    <div className='section-contact-details column-center'>
+                        <h2>Contact Fittfind</h2>
+                        <div className='section-contact-details-container space-between'>
+                            <div className='column-center section-contact-detail'>
+                                <img className='section-contact-hero-bottom-feature-line' src={horizontal_line} alt='horizontal_line' />
+                                <h4>Email</h4>
+                                <p>info@fittfind.com</p>
+                            </div>
+                            <div className='column-center section-contact-detail'>
+                                <img className='section-contact-hero-bottom-feature-line' src={horizontal_line} alt='horizontal_line' />
+                                <h4>Company Address</h4>
+                                <p>107 Cheapside, London,</p>
+                                <p>EC2V 6DN</p>
+                                <p>United Kingdom</p>
+                            </div>
+                            <div className='column-center section-contact-detail'>
+                                <img className='section-contact-hero-bottom-feature-line' src={horizontal_line} alt='horizontal_line' />
+                                <h4>Phone</h4>
+                                <p>51 258 369 458</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </Wrapper>
         )
     }

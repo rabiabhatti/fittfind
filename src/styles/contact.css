@@ -41,7 +41,7 @@
     margin-bottom: 1rem;
     text-transform: uppercase;
 }
-.section-contact-hero-bottom-features {
+.section-contact-hero-bottom-features, .section-contact-details-container {
     width: 60%;
     flex-direction: row;
     align-items: baseline;
@@ -56,9 +56,34 @@
     height: 1px;
     margin-top: 1rem;
 }
-.section-contact-hero-bottom-feature h4 {
+.section-contact-hero-bottom-feature h4, .section-contact-detail h4 {
     padding: 1rem 0;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.7rem;
     text-transform: uppercase;
+}
+.section-contact-banner-img {
+    width: 86%;
+    z-index: -5;
+}
+.section-contact-details {
+    width: 75%;
+    top: -12rem;
+    color: #ffffff;
+    padding: 4rem 0;
+    position: relative;
+    background-color: #025696;
+}
+.section-contact-details h2 {
+    font-weight: 600;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.section-contact-details-container {
+    width: 60%;
+}
+.section-contact-detail p {
+    font-weight: 600;
+    font-size: 0.7rem;
 }
