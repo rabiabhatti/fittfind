@@ -171,7 +171,7 @@ export default class Basket extends React.Component {
                                         <BasketInput className='section-basket-address-input' title='Phone' name='phone' width={100} onChange={this._onChange} value={phone} />
                                     </div>
                                 </div>
-                                <div className='section-basket-delivery-container'>
+                                <div className='section-basket-address-container'>
                                     <h4>Delivery mode</h4>
                                     <div className='section-basket-delivery-content'>
                                         <div className='column-start section-basket-delivery-select-container'>
@@ -198,6 +198,15 @@ export default class Basket extends React.Component {
                                                 <img src={dhl_icon} alt='dhl_icon' />
                                                 <p>Express DHL - $9</p>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className='section-basket-address-container'>
+                                    <h4>Payment details</h4>
+                                    <div className='section-basket-address-inputs-container'>
+                                        <div className='row-start'>
+                                            <input type='checkbox' />
+                                            <p className='remember-card-text'>Remember my credit cart for a future order</p>
                                         </div>
                                     </div>
                                 </div>
