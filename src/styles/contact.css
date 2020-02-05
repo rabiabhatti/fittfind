@@ -1,0 +1,30 @@
+.section-contact-hero {
+    width: 90%;
+    display: flex;
+    margin: 0 7% 0 0;
+    flex-direction: row;
+}
+.section-contact-hero-category {
+    width: 25%;
+    border: 0;
+    display: flex;
+    padding: 12vw 0;
+    align-items: center;
+    flex-direction: column;
+    background-color: #025696;
+}
+.section-contact-hero-category p {
+    color: #ffffff;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+.section-contact-hero-category img {
+    width: 4rem;
+    height: 0.2rem;
+}
+.section-contact-hero-category h1 {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 2.2rem;
+}

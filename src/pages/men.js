@@ -60,8 +60,8 @@ export default class Men extends React.Component {
         size: '38DD',
         collection: 'player',
         sortBy: 'recommended',
+        hovered: categories[0].name,
         category: categories[1].name,
-        hovered: categories[0].name.toUpperCase(),
         sizeOption: sizeOptions[0].value.toUpperCase(),
         sortByOption: sortByOptions[0].value.toUpperCase(),
         categoryOption: categoryOptions[0].value.toUpperCase(),
@@ -99,8 +99,8 @@ export default class Men extends React.Component {
                         <div className='section-products-hero'>
                             {categories.map((item, i) => (
                                 <button
-                                    onMouseOver={() => this.setState({ hovered: item.name.toUpperCase() })}
-                                    className='section-hero-category' key={i} style={hovered === item.name.toUpperCase() ? { backgroundImage: `url(${item.image})` } : null}
+                                    onMouseOver={() => this.setState({ hovered: item.name })}
+                                    className='section-hero-category' key={i} style={hovered === item.name ? { backgroundImage: `url(${item.image})` } : null}
                                 >
                                     <img src={horizontal_line} alt='horizontal_line' />
                                     <p>{item.name.toUpperCase()}</p>
