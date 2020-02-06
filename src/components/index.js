@@ -5,5 +5,6 @@ export * from './Footer';
 export * from './LeftBar';
 export * from './Wrapper';
 export * from './Product';
+export * from './RightNav';
 export * from './BasketInput';
 export * from './ImpossibleBanner';
