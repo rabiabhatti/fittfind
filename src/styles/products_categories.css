@@ -12,9 +12,12 @@
 .section-products-women {
     margin-left: 4%;
 }
-.section-products-women-banner {
+.section-products-women-banner, .section-products-men-banner {
     display: flex;
 }
 button.shop-women-btn {
     margin-left: -40px;
+}
+button.shop-men-btn {
+    margin-right: -40px;
 }
