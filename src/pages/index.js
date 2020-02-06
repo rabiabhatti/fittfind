@@ -48,13 +48,6 @@ class IndexPage extends React.Component {
                         </div>
                      </div>
                     <div className='section-products-men'>
-                        <div className='section-products-men-banner'>
-                            <img src={men_banner} alt='men_banner' width={400} />
-                            <button className='shop-men-btn'>
-                                <Link to={'/men'}>Men<span className='font-lucky-fellas-m'>fit</span></Link>
-                            </button>
-                            <span className='shop-men-ver'>Men Shop ---</span>
-                        </div>
                         <div className='section-products-women-categories'>
                             <h3>Women Categories</h3>
                             <Link to={`/women?category=new`}>New Releases</Link>
@@ -62,6 +55,13 @@ class IndexPage extends React.Component {
                             <Link to={`/women?category=tanktops`}>Tank tops</Link>
                             <Link to={`/women?category=leggings`}>Leggings</Link>
                             <Link to={`/women?category=shorts`}>Shorts</Link>
+                        </div>
+                        <div className='section-products-men-banner'>
+                            <span className='shop-men-ver'>Men Shop ---</span>
+                            <button className='shop-men-btn'>
+                                <Link to={'/men'}>Men<span className='font-lucky-fellas-m'>fit</span></Link>
+                            </button>
+                            <img src={men_banner} alt='men_banner' width={400} />
                         </div>
                     </div>
                 </div>
