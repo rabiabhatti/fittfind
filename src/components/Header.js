@@ -16,6 +16,21 @@ class Header extends React.Component {
         this.setState({ open_right_bar: false })
     };
 
+    componentDidMount() {
+        document.addEventListener('click', this.handleBodyClick)
+    }
+
+    handleBodyClick = (e) => {
+        const { open_right_bar } = this.state;
+        const buttonClicked = e.target.closest('.section-nav-right-menu');
+        const firedOnSelf = e.target.closest('.section-right-nav-container');
+        if (buttonClicked) {
+            return null
+        } else if (open_right_bar && !firedOnSelf) {
+            this.setState({ open_right_bar: false })
+        }
+    };
+
     render() {
         const { open_right_bar } = this.state;
 
@@ -68,9 +83,7 @@ class Header extends React.Component {
                     </div>
                 </header>
                 {!!open_right_bar &&
-                    <RightNav
-                        onCloseClick={this.closeRightBar}
-                    />
+                    <RightNav onCloseClick={this.closeRightBar}/>
                 }
             </Fragment>
         );
