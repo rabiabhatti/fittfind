@@ -11,6 +11,8 @@ import men_banner from '../images/men_banner.jpg'
 import app_imag from '../images/app-store-imag.jpg'
 import app_video from '../images/app-store-video.jpg'
 import fittfind from '../images/fittfind.png'
+import horizontal_line from '../images/horizontal_line.png'
+import fit from '../images/fit.png'
 import background_imag from '../images/background-blue-imag.jpg'
 
 class IndexPage extends React.Component {
@@ -30,38 +32,46 @@ class IndexPage extends React.Component {
                     </div>
                 </Hero>
                 <div className='section-products-categories'>
-                    <div className='section-products-women'>
-                        <div className='section-products-women-banner'>
-                            <img src={women_banner} alt='women_banner' width={400} />
-                            <button className='shop-women-btn'>
-                                <Link to={'/women'}><span className='font-lucky-fellas-w'>fit</span>Women</Link>
-                            </button>
-                            <span className='shop-women-ver'>Women Shop ---</span>
+                    <div>
+                        <div className='section-products-women'>
+                            <div className='section-products-women-banner'>
+                                <img src={women_banner} alt='women_banner'/>
+                                <span className='shop-women-ver'><span>Women Shop</span><img src={horizontal_line} alt='horizontal_line'/></span>
+                                <button className='shop-women-btn'>
+                                    <Link to={'/women'}><img src={fit} alt='fit'/><span>Women</span></Link>
+                                </button>
+                            </div>
+                            <div className='section-products-men-categories'>
+                                <img src={horizontal_line} alt='horizontal_line'/>
+                                <div>
+                                    <h3>Men Categories</h3>
+                                    <Link to={`/men?category=new`}>New Releases</Link>
+                                    <Link to={`/men?category=compressiontops`}>Compression Tops</Link>
+                                    <Link to={`/men?category=tights`}>Tights</Link>
+                                    <Link to={`/men?category=hoodies`}>Hoodies</Link>
+                                    <Link to={`/men?category=joggers&sweatpants`}>Joggers and sweatpants</Link>
+                                </div>
+                            </div>
                         </div>
-                        <div className='section-products-men-categories'>
-                            <h3>Men Categories</h3>
-                            <Link to={`/men?category=new`}>New Releases</Link>
-                            <Link to={`/men?category=compressiontops`}>Compression Tops</Link>
-                            <Link to={`/men?category=tights`}>Tights</Link>
-                            <Link to={`/men?category=hoodies`}>Hoodies</Link>
-                            <Link to={`/men?category=joggers&sweatpants`}>Joggers and sweatpants</Link>
-                        </div>
-                     </div>
-                    <div className='section-products-men'>
-                        <div className='section-products-women-categories'>
-                            <h3>Women Categories</h3>
-                            <Link to={`/women?category=new`}>New Releases</Link>
-                            <Link to={`/women?category=sportsbras`}>Sports Bras</Link>
-                            <Link to={`/women?category=tanktops`}>Tank tops</Link>
-                            <Link to={`/women?category=leggings`}>Leggings</Link>
-                            <Link to={`/women?category=shorts`}>Shorts</Link>
-                        </div>
-                        <div className='section-products-men-banner'>
-                            <span className='shop-men-ver'>Men Shop ---</span>
-                            <button className='shop-men-btn'>
-                                <Link to={'/men'}>Men<span className='font-lucky-fellas-m'>fit</span></Link>
-                            </button>
-                            <img src={men_banner} alt='men_banner' width={400} />
+                        <div className='section-products-men'>
+                            <div className='section-products-women-categories'>
+                                <img src={horizontal_line} alt='horizontal_line'/>
+                                <div>
+                                    <h3>Women Categories</h3>
+                                    <Link to={`/women?category=new`}>New Releases</Link>
+                                    <Link to={`/women?category=sportsbras`}>Sports Bras</Link>
+                                    <Link to={`/women?category=tanktops`}>Tank tops</Link>
+                                    <Link to={`/women?category=leggings`}>Leggings</Link>
+                                    <Link to={`/women?category=shorts`}>Shorts</Link>
+                                </div>
+                            </div>
+                            <div className='section-products-men-banner'>
+                                <button className='shop-men-btn'>
+                                    <Link to={'/men'}><span>Men</span><img src={fit} alt='fit'/></Link>
+                                </button>
+                                <span className='shop-men-ver'><span>Men Shop</span><img src={horizontal_line} alt='horizontal_line'/></span>
+                                <img src={men_banner} alt='men_banner'/>
+                            </div>
                         </div>
                     </div>
                 </div>

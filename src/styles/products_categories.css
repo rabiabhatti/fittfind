@@ -1,12 +1,19 @@
 .section-products-categories {
-    display: flex;
     padding-top: 12vw;
     background-size: 53.1% 100%;
     background-position: center;
     background-repeat: no-repeat;
+    justify-content: space-between;
     background-image: url(../images/prod-cat-back.jpg);
 }
 .section-products-categories>div {
+    display: flex;
+    background-size: 75% 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/fittfind.png);
+}
+.section-products-categories>div>div {
     width: 50%;
 }
 .section-products-women {
@@ -15,9 +22,88 @@
 .section-products-women-banner, .section-products-men-banner {
     display: flex;
 }
+button.shop-women-btn>a, button.shop-men-btn>a {
+    width: 385px;
+    color: #fff;
+    display: flex;
+    height: 100px;
+    font-size: 50px;
+    align-items: center;
+    text-transform: uppercase;
+    background-color: #055595;
+    justify-content: space-between;
+}
+button.shop-women-btn>a {
+    margin-right: 16vw;
+    padding: 40px 40px 40px 10px;
+}
+button.shop-men-btn>a {
+    margin-left: 210px;
+    padding: 40px 10px 40px 40px;
+}
+button.shop-women-btn>a>img, button.shop-men-btn>a>img {
+    width: 140px;
+    height: 200px;
+}
+button.shop-women-btn>a>span, button.shop-men-btn>a>span {
+    align-self: center;
+}
+span.shop-women-ver, span.shop-men-ver {
+    width: 100%;
+    font-weight: 900;
+    transform: rotate(270deg);
+}
+span.shop-women-ver {
+    margin-right: -25vw;
+}
+span.shop-men-ver {
+    margin-right: -42vw;
+    margin-bottom: -30px;
+}
 button.shop-women-btn {
-    margin-left: -40px;
+    z-index: 2;
+    height: 100px;
+    margin-top: 16vw;
+    margin-left: -22vw;
 }
 button.shop-men-btn {
-    margin-right: -40px;
+    z-index: 2;
+    height: 100px;
+    margin-top: 17vw;
+    margin-right: -8vw;
+}
+span.shop-women-ver>img, span.shop-men-ver>img {
+    width: 50px;
+    height: 4px;
+    margin-left: 20px;
+    padding-bottom: 2px;
+}
+.section-products-women-categories, .section-products-men-categories {
+    width: 17vw;
+    display: flex;
+}
+.section-products-women-categories>img, .section-products-men-categories>img {
+    width: 35%;
+    height: 15px;
+    margin-right: 15px;
+    padding-top: 12px;
+}
+.section-products-women-categories>div, .section-products-men-categories>div {
+    display: flex;
+    flex-direction: column;
+}
+.section-products-women-categories>div>h3, .section-products-men-categories>div>h3 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.section-products-women-categories>div>a, .section-products-men-categories>div>a {
+    font-weight: 600;
+}
+.section-products-men-categories {
+    margin-top: 150px;
+    margin-left: 19.2vw;
+}
+.section-products-women-categories {
+    margin-left: 125px;
+    margin-bottom: 150px;
 }
