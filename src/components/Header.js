@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 import { Link } from "gatsby"
 
 import  '../styles/header.css'
-import { RightNav, SignIn } from "./";
+import { RightNav, SignIn, Register } from "./";
 import cart from '../images/cart.png'
 import menu from '../images/menu.png'
 import logo_dark from '../images/logo-dark.png'
@@ -11,6 +11,7 @@ class Header extends React.Component {
     state = {
         open_right_bar: false,
         show_sign_in_popup: false,
+        show_register_popup: false,
     };
 
     closeRightBar = () => {
@@ -42,13 +43,20 @@ class Header extends React.Component {
             show_sign_in_popup: true
         })
     };
+    handleRegisterClick = () => {
+        this.setState({
+            open_right_bar: false,
+            show_register_popup: true
+        })
+    };
 
     render() {
-        const { open_right_bar, show_sign_in_popup } = this.state;
+        const { open_right_bar, show_sign_in_popup, show_register_popup } = this.state;
 
         return (
             <Fragment>
                 {show_sign_in_popup && <SignIn handleClose={() => this.setState({ show_sign_in_popup: false })} />}
+                {show_register_popup && <Register handleClose={() => this.setState({ show_register_popup: false })} />}
                 <header>
                     <div className='section-header'>
                         <div className='section-header-left'>
@@ -96,7 +104,7 @@ class Header extends React.Component {
                     </div>
                 </header>
                 {!!open_right_bar &&
-                    <RightNav onCloseClick={this.closeRightBar} handleSignInClick={this.handleSignInClick}/>
+                    <RightNav onCloseClick={this.closeRightBar} handleSignInClick={this.handleSignInClick} handleRegisterClick={this.handleRegisterClick} />
                 }
             </Fragment>
         );

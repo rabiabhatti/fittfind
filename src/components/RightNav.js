@@ -11,7 +11,7 @@ function RightNav(props) {
                         <button onClick={props.handleSignInClick}>
                             Sign In
                         </button>
-                        <button>
+                        <button onClick={props.handleRegisterClick}>
                             Create an Account
                         </button>
                         <button>
