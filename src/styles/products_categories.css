@@ -9,8 +9,8 @@
 .section-products-categories>div {
     display: flex;
     background-size: 75% 50%;
-    background-position: center;
     background-repeat: no-repeat;
+    background-position: left center;
     background-image: url(../images/fittfind.png);
 }
 .section-products-categories>div>div {
