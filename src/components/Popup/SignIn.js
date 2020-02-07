@@ -39,7 +39,6 @@ class SignIn extends React.Component {
 
         return (
             <Popup title="Sign In" handleClose={handleClose}>
-                <BasketInput className='section-basket-address-input' title='Name' onChange={this._onChange} width={100} name='name' value={name} />
                 <BasketInput className='section-basket-address-input' title='Email' name='email' width={100} onChange={this._onChange} value={email} />
                 <BasketInput className='section-basket-address-input' title='Password' name='password' width={100} onChange={this._onChange} value={password} />
                 <button className='section-popup-btn' disabled={!enable}>Sign In</button>
