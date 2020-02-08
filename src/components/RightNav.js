@@ -8,10 +8,10 @@ function RightNav(props) {
             <div className='section-right-nav-container space-between'>
                 <div className='section-right-nav-left'>
                     <div className='section-right-nav-left-btns'>
-                        <button>
+                        <button onClick={props.handleSignInClick}>
                             Sign In
                         </button>
-                        <button>
+                        <button onClick={props.handleRegisterClick}>
                             Create an Account
                         </button>
                         <button>

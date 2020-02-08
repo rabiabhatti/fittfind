@@ -7,4 +7,6 @@ export * from './Wrapper';
 export * from './Product';
 export * from './RightNav';
 export * from './BasketInput';
+export * from './Popup/SignIn';
+export * from './Popup/Register';
 export * from './ImpossibleBanner';
