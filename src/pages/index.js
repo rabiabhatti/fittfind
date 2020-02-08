@@ -11,6 +11,8 @@ import women_banner from '../images/women_banner.jpg'
 import men_banner from '../images/men_banner.jpg'
 import app_imag from '../images/app-store-imag.jpg'
 import app_video from '../images/app-store-video.jpg'
+import play_button from '../images/play-button.png'
+import app_store_button_s from '../images/app-store-button-s.png'
 import fittfind from '../images/fittfind.png'
 import horizontal_line from '../images/horizontal_line.png'
 import fit from '../images/fit.png'
@@ -87,10 +89,10 @@ class IndexPage extends React.Component {
                     <img className='section-background-fittfind' src={fittfind} alt='fittfind_imag'/>
                 </div>
                 <div className='section-apps'>
-                    <h2 className='section-apps-h2-1'>--- Book a personal trainer</h2><h2 className='section-apps-h2-2'>and more with the <span>fitt</span><span>find</span> app</h2>
+                    <h2 className='section-apps-h2-1'><img src={horizontal_line} alt='horizontal_line'/> Book a personal trainer</h2><h2 className='section-apps-h2-2'>and more with the <span>fitt</span><span>find</span> app</h2>
                     <div className='section-apps-left-right'>
                         <div className='section-apps-left'>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <br/> It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                            <p>Phasellus ut consectetur diam, sed cursus elit. Aenean euismod, lorem sit amet hendrerit porttitor, metus libero placerat lorem, nec euismod mi nibh id mi.<br/><br/>Nam et vestibulum justo. <br/>Suspendisse venenatis nisi nec turpis bibendum fermentum.</p>
                             <Link to={'/'}>
                                 <span>Find out more</span>
                                 <img src={forwardIcon} alt='forward_icon' />
@@ -98,8 +100,14 @@ class IndexPage extends React.Component {
                         </div>
                         <div className='section-apps-right'>
                             <img className='section-apps-right-img-1' src={app_imag} alt='app_store_imag'/>
+                            <div className='section-apps-right-img-app-store'>
+                                <span>Download on</span>
+                                <img className='section-apps-right-img-store' src={app_store_button_s} alt='app_store_button_s'/>
+                                <span>App store</span>
+                            </div>
                             <span className='section-apps-right-span-1'>Download now</span>
                             <img className='section-apps-right-img-2' src={app_video} alt='app_store_video'/>
+                            <img className='section-apps-right-img-play' src={play_button} alt='play_button'/>
                             <span className='section-apps-right-span-2'>watch application movie</span>
                         </div>
                     </div>
