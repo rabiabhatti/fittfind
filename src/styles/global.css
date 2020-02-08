@@ -34,9 +34,9 @@ img.section-background-blue-right {
     position: absolute;
 }
 img.section-background-fittfind {
-    right: -5vw;
     z-index: -6;
-    margin-top: -22vw;
+    right: -10vw;
+    margin-top: -30vw;
     position: absolute;
 }
 

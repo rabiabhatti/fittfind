@@ -10,6 +10,7 @@ import slider2 from '../images/home-slider-2.jpg'
 import slider3 from '../images/home-slider-3.jpg'
 import slider4 from '../images/home-slider-4.jpg'
 import forwardIcon from '../images/forward-icon.png'
+import backwardIcon from '../images/backward-icon.png'
 
 const hero_carousel = [slider1, slider2, slider3, slider4];
 const products_carousel = [product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product];
@@ -146,7 +147,7 @@ class Slider extends React.Component {
                                 </div>
                                 <div className='section-products-slider-bottom-bar'>
                                     <button onClick={() => this.handleBackNextProducts('back')} disabled={productsSliderPosition === 0}>
-                                        <img src={forwardIcon} alt='back_button' />
+                                        <img src={backwardIcon} alt='back_button' />
                                     </button>
                                     <button onClick={() => this.handleBackNextProducts('next')} disabled={productsSliderPosition === products_carousel.length - 4}>
                                         <img src={forwardIcon} alt='next_button' />
