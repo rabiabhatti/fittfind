@@ -79,7 +79,7 @@ class IndexPage extends React.Component {
                     <img className='section-background-blue-right' src={background_imag} alt='background_blue_imag'/>
                 </div>
                 <div className='section-features'>
-                    <h2>--- Featured Items</h2>
+                    <h2><img src={horizontal_line} alt='horizontal_line'/> <span>Featured Items</span></h2>
                     <Slider type='products' />
                 </div>
                 <div className='section-background'>
