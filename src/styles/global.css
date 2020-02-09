@@ -30,8 +30,13 @@ img {
 img.section-background-blue-right {
     right: 0px;
     z-index: -5;
-    width: 23vw;
+    width: 23.5vw;
     position: absolute;
+}
+img.section-background-blue-right.women, img.section-background-blue-right.Men {
+    position: fixed;
+    min-height: 150vw;
+    margin-top: -10vw;
 }
 img.section-background-fittfind {
     z-index: -6;

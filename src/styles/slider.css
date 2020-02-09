@@ -163,7 +163,7 @@ span.current-slider {
     border: 1px solid #0370b6;
 }
 .section-social-media {
-    margin-top: 10vw;
+    margin-top: 8vw;
     margin-left: 4vw;
     margin-bottom: -4vw;
 }
@@ -233,8 +233,14 @@ span.current-slider {
 .section-social-media-slider-right>a {
     left: -10vw;
     color: #fff;
+    display: flex;
     font-weight: 600;
     position: relative;
+    align-items: center;
+}
+.section-social-media-slider-right>a>img {
+    height: 100%;
+    margin-right: 10px;
 }
 .section-social-slider-bottom-bar {
     right: 11vw;

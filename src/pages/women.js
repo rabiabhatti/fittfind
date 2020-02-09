@@ -9,6 +9,7 @@ import slider3 from "../images/home-slider-3.jpg";
 import slider4 from "../images/home-slider-4.jpg";
 import women_banner from '../images/women_banner.jpg'
 import horizontal_line from '../images/horizontal_line.png'
+import background_imag from '../images/background-blue-imag.jpg'
 import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
 
 const products_list = [product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product,product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product];
@@ -94,6 +95,9 @@ export default class Men extends React.Component {
         const { categoryOption, sizeOption, collectionOption, sortByOption, hovered } = this.state;
         return (
             <Wrapper name='Women'>
+                <div className='section-background'>
+                    <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag'/>
+                </div>
                 <Hero>
                     <div className='section-products-hero-container'>
                         <div className='section-products-hero'>
@@ -168,7 +172,7 @@ export default class Men extends React.Component {
                     ))}
                 </div>
                 <div className='section-social-media'>
-                    <h2>--- Follow FittFind</h2>
+                <h2><img src={horizontal_line} alt='horizontal_line'/> Follow <span>fitt</span><span>find</span></h2>
                     <Slider type='social_media' />
                 </div>
                 <ImpossibleBanner />
