@@ -113,7 +113,7 @@ class IndexPage extends React.Component {
                     </div>
                 </div>
                 <div className='section-social-media'>
-                    <h2>--- Follow FittFind</h2>
+                    <h2><img src={horizontal_line} alt='horizontal_line'/> Follow <span>fitt</span><span>find</span></h2>
                     <Slider type='social_media' />
                 </div>
                 <ImpossibleBanner />

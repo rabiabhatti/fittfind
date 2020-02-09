@@ -11,6 +11,7 @@ import slider3 from '../images/home-slider-3.jpg'
 import slider4 from '../images/home-slider-4.jpg'
 import forwardIcon from '../images/forward-icon.png'
 import backwardIcon from '../images/backward-icon.png'
+import instagram_icon from '../images/instagram_icon.png'
 
 const hero_carousel = [slider1, slider2, slider3, slider4];
 const products_carousel = [product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product];
@@ -110,7 +111,7 @@ class Slider extends React.Component {
                                 </div>
                                 <div className='section-social-media-slider-right'>
                                     <Link to={'/'}>
-                                        <img src={forwardIcon} alt='social_media_icon' />
+                                        <img src={instagram_icon} alt='instagram_icon' />
                                         <span>Follow on Instagram</span>
                                     </Link>
                                     <div className='section-social-media-slider-right-bar'>
