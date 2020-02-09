@@ -165,6 +165,7 @@ span.current-slider {
 .section-social-media {
     margin-top: 10vw;
     margin-left: 4vw;
+    margin-bottom: -4vw;
 }
 
 .section-social-media>h2 {
