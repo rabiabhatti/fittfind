@@ -83,7 +83,7 @@ export default class AboutUs extends React.Component{
                     <h2>Fittfind corporates details</h2>
                     <div className='section-about-us-corporates-details'>
                         {corporates_details.map((item, i) => (
-                            <div className='section-about-us-corporates-single-detail'>
+                            <div className='section-about-us-corporates-single-detail' key={i}>
                                 <div>
                                     <img src={require(`../../images/0${i+1}.png`)} alt={`0${i+1}`} />
                                     <img src={horizontal_line} alt='horizontal_line' />
