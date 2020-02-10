@@ -8,9 +8,22 @@
     flex-direction: row;
 }
 .section-contact-hero-category {
+    border: 0;
+    display: flex;
+    padding: 12vw 0;
+    align-items: center;
+    flex-direction: column;
+    background-color: #025696;
+    transition: background-color 0.3s ease-in;
+}
+.section-contact-hero-category:hover {
+    background-color: transparent;
+}
+.section-contact-hero-top h1 {
     width: 25%;
     border: 0;
     display: flex;
+    color: #ffffff;
     padding: 12vw 0;
     align-items: center;
     flex-direction: column;
@@ -19,7 +32,7 @@
 .section-contact-hero-category p {
     color: #ffffff;
     margin-top: 2rem;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 0.75rem;
 }
 .section-contact-hero-category img {

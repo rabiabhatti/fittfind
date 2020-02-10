@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
 import '../../styles/contact.css'
 import { Wrapper, Hero } from '../../components'
@@ -13,15 +14,19 @@ const categories = [
     {
         name: 'Order Status',
         image: women_banner,
+        link: '/contact/track-order'
     }, {
         name: 'Shipping & Delivery',
         image: women_banner,
+        link: '/contact/shipping&delivery'
     },{
         name: 'Returns',
         image: women_banner,
+        link: '/contact/returns'
     },{
         name: 'Fittfind Corp',
         image: women_banner,
+        link: '/contact/about-us'
     },
 ];
 
@@ -39,17 +44,14 @@ export default class Contact extends React.Component {
                 <Hero>
                     <div className='column-center section-contact-hero'>
                         <div className='section-contact-hero-top'>
-                            <div className='section-contact-hero-category'>
-                                <h1>SUPPORT</h1>
-                            </div>
+                            <h1>SUPPORT</h1>
                             {categories.map((item, i) => (
-                                <button
-                                    onMouseOver={() => this.setState({ hovered: item.name })}
-                                    className='section-contact-hero-category' key={i} style={hovered === item.name ? { backgroundImage: `url(${item.image})` } : null}
-                                >
-                                    <img src={horizontal_line} alt='horizontal_line' />
-                                    <p>{item.name.toUpperCase()}</p>
-                                </button>
+                                <Link to={item.link} key={i} style={{backgroundImage: `url(${item.image})`, width: '25%'}}>
+                                    <div className='section-contact-hero-category'>
+                                        <img src={horizontal_line} alt='horizontal_line' />
+                                        <p>{item.name.toUpperCase()}</p>
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                         <div className='section-contact-hero-bottom column-center'>
