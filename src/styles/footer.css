@@ -63,13 +63,6 @@ footer {
 .social_media_links {
     margin-top: 20px;
 }
-.social_media_links>a>img {
-    padding: 16px;
-    margin: 0 3px;
-    border-radius: 50%;
-    border: 1px solid #4b4d55;
-    background-color: transparent;
-}
 .footer-wrapper>.row-middle>.col-menu>.menu-row {
     width: 25%;
     display: flex;
@@ -84,4 +77,12 @@ footer {
 .footer-wrapper>.row-bottom {
     color: #4b4d55;
     padding-bottom: 30px;
+}
+.media_icon_container {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.7rem;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 1.2rem;
 }

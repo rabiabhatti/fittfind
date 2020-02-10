@@ -30,18 +30,26 @@ const Footer = () => (
                     <Link to={'/'}>
                         <img src={logo_light} alt='logo_light'/>
                     </Link>
-                    <div className='social_media_links'>
+                    <div className='social_media_links row-start'>
                         <Link to={'/'}>
-                            <img src={facebook_icon} alt='media_icon'/>
+                            <div className='media_icon_container'>
+                                <img src={facebook_icon} alt='media_icon'/>
+                            </div>
                         </Link>
                         <Link to={'/'}>
-                            <img src={instagram_icon} alt='media_icon'/>
+                            <div className='media_icon_container'>
+                                <img src={instagram_icon} alt='media_icon'/>
+                            </div>
                         </Link>
                         <Link to={'/'}>
-                            <img src={twitter_icon} alt='media_icon'/>
+                            <div className='media_icon_container'>
+                                <img src={twitter_icon} alt='media_icon'/>
+                            </div>
                         </Link>
                         <Link to={'/'}>
-                            <img src={youtube_icon} alt='media_icon'/>
+                            <div className='media_icon_container'>
+                                <img src={youtube_icon} alt='media_icon'/>
+                            </div>
                         </Link>
                     </div>
                 </div>
