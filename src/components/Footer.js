@@ -24,7 +24,7 @@ const Footer = () => (
                     <img src={forwardIcon} alt='social_media_icon' />
                 </Link>
             </div>
-            <div className='footer-border'></div>
+            <div className='footer-border'/>
             <div className='row-middle'>
                 <div className='col-media'>
                     <Link to={'/'}>
