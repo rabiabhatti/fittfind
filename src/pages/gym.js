@@ -7,6 +7,7 @@ import two from '../images/02.png'
 import three from '../images/03.png'
 import quotes from '../images/quotes.png'
 import women_banner from '../images/women_banner.jpg'
+import backwardIcon from '../images/backward-icon.png'
 import forwardIcon from '../images/forward-icon.png'
 import vertical_line from '../images/vertical_line.png'
 import vertical_line_white from '../images/vertical_line_white.png'
@@ -115,7 +116,7 @@ export default class Gym extends React.Component{
                             </div>
                             <div className='motivation-quotes-buttons'>
                                 <button>
-                                    <img src={forwardIcon} alt='back_button' />
+                                    <img src={backwardIcon} alt='back_button' />
                                 </button>
                                 <img src={vertical_line_white} alt='vertical_line_white' />
                                 <button>

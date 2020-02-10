@@ -1,0 +1,27 @@
+.section-shipping-hero {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    color: #ffffff;
+    position: relative;
+    padding: 4.5rem 4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    text-transform: uppercase;
+    background-color: #025696;
+}
+.section-shipping-hero img {
+    right: 2rem;
+    position: relative;
+}
+.section-shipping-hero span {
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+.section-shipping-hero h1 {
+    left: 1%;
+    top: 40%;
+    font-size: 3rem;
+    font-weight: 700;
+    position: relative;
+}
