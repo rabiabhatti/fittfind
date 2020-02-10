@@ -123,7 +123,7 @@ class Slider extends React.Component {
                                     </div>
                                     <div className='section-social-slider-bottom-bar'>
                                         <button onClick={() => this.handleBackNextSocial('back')} disabled={socialSliderPosition === 0}>
-                                            <img src={forwardIcon} alt='back_button' />
+                                            <img src={backwardIcon} alt='back_button' />
                                         </button>
                                         <button onClick={() => this.handleBackNextSocial('next')} disabled={socialSliderPosition === social_carousel.length - 4}>
                                             <img src={forwardIcon} alt='next_button' />
