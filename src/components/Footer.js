@@ -67,16 +67,16 @@ const Footer = () => (
                     </div>
                     <div className='menu-row'>
                         <h4>Support</h4>
-                        <Link to={'/'}>Track my order</Link>
+                        <Link to={'/contact/order-status'}>Track my order</Link>
                         <Link to={'/'}>Support</Link>
                         <Link to={'/'}>Terms and Conditions</Link>
                         <Link to={'/'}>Privacy Policy</Link>
                     </div>
                     <div className='menu-row'>
                         <h4>Company</h4>
-                        <Link to={'/'}>About us</Link>
+                        <Link to={'/contact/about-us'}>About us</Link>
                         <Link to={'/'}>Press</Link>
-                        <Link to={'/'}>Contact</Link>
+                        <Link to={'/contact'}>Contact</Link>
                     </div>
                 </div>
             </div>

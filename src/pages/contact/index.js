@@ -14,7 +14,7 @@ const categories = [
     {
         name: 'Order Status',
         image: women_banner,
-        link: '/contact/track-order'
+        link: '/contact/order-status'
     }, {
         name: 'Shipping & Delivery',
         image: women_banner,
