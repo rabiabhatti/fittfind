@@ -29,50 +29,6 @@
     width: 4rem;
     height: 0.2rem;
 }
-.select-container {
-    width: 25%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.select-container p {
-    font-size: 0.65rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-.select-container p img {
-    width: 2rem;
-    height: 0.1rem;
-    margin-right: 5px;
-}
-.react-select-container {
-    width: 58%;
-}
-.select-container>span {
-    font-weight: bold;
-}
-.react-select__control {
-    border: 0 !important;
-}
-.react-select__placeholder {
-    font-size: 0.65rem;
-    font-weight: bold;
-}
-.react-select__indicator-separator {
-    display: none;
-}
-.react-select__indicator {
-    color: #1a1c21 !important;
-}
-.react-select__value-container {
-    padding: 0 !important;
-}
-.react-select__value-container:focus, .react-select__indicator:focus, .react-select__control:focus, .react-select__control, .react-select__control--is-focused, .react-select__control--menu-is-open {
-    border: 0 !important;
-    outline: none !important;
-    box-shadow: none !important;
-}
 .section-products-filters {
     display: flex;
     width: 76.45%;
