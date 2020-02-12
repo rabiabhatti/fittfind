@@ -86,9 +86,8 @@ span.current-slider {
 }
 .section-hero-slider-right-bar>button {
     font-size: 14px;
-    font-weight: 700;
     padding: 1rem 0;
-    color: #b2bac6;
+    font-weight: 700;
 }
 .section-hero-slider-right-bar>button p {
     transform: rotate(90deg);
@@ -292,12 +291,16 @@ span.current-slider {
     margin-bottom: -1rem;
     padding-bottom: 0 !important;
 }
+.section-background {
+    max-width: 100vw;
+    overflow-x: hidden;
+}
 
 
 /*laptops, desktops*/
 @media (min-width: 1025px) and (max-width: 1440px) {
     .section-hero-slider-right-bar {
-        right: -16vw;
+        right: 2vw;
     }
     .sliders-count-container {
         bottom: 60px;
@@ -312,6 +315,25 @@ span.current-slider {
     .section-features .product-desc-container {
         left: 2.9vw;
     }
+    .section-products-slider-bottom-bar {
+        width: 10vw;
+        right: 13vw;
+        margin-top: 0;
+    }
+    img.section-background-fittfind {
+        left: 50vw;
+        margin-top: -36vw;
+    }
+    .section-features>h2 {
+        font-size: 38px;
+    }
+    .section-features>h2>img {
+        top: -11px;
+    }
+    .section-features>h2 {
+        margin-left: 0;
+    }
+    
 }
 
 
