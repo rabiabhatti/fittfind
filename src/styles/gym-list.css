@@ -1,0 +1,29 @@
+.section-gym-list {
+    width: 100%;
+}
+.section-gym-list-filters-container {
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+}
+.section-gym-list-filters {
+    display: flex;
+    width: 75%;
+    padding: 3rem 0;
+    background-color: #fff;
+}
+.section-gym-list-filters-location {
+    margin-left: 2px;
+    font-weight: bold;
+    font-size: 0.65rem;
+    color: hsl(0,0%,50%);
+    text-transform: uppercase;
+}
+.section-gym-list-map-btn {
+    width: 10%;
+    color: #025696;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
