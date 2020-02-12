@@ -130,6 +130,46 @@ span.shop-women-ver>img, span.shop-men-ver>img {
     .section-products-categories {
         background-size: 53.3% 100%;
     }
+    .section-products-women-banner>img, .section-products-men-banner>img {
+        width: 40vw;
+    }
+    button.shop-women-btn>a>img, button.shop-men-btn>a>img {
+        width: 90px;
+        height: 130px;
+    }
+    button.shop-women-btn>a, button.shop-men-btn>a {
+        width: 280px;
+        height: 80px;
+        font-size: 40px;
+    }
+    button.shop-women-btn {
+        left: -13vw;
+    }
+    span.shop-women-ver {
+        top: 3vw;
+        left: -7.5vw;
+    }
+    button.shop-women-btn>a {
+        padding: 20px 20px 20px 10px;
+    }
+    button.shop-men-btn>a {
+        padding: 20px 10px 20px 20px;
+    }
+    .section-products-men-banner>div {
+        right: -13vw;
+    }
+    span.shop-men-ver {
+        top: 3vw;
+        right: -3.5vw;
+    }
+    span.shop-women-ver>img, span.shop-men-ver>img {
+        width: 40px;
+        margin-left: 10px;
+    }
+    .section-products-men-categories {
+        margin-top: 105px;
+        margin-left: 19.3vw;
+    }
 
 }
 
