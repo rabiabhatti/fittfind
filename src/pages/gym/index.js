@@ -136,14 +136,14 @@ export default class Index extends React.Component{
                             <img src={bbc_logo} alt='bbc_logo' />
                         </div>
                     </div>
-                    <div className='section-gym-owners'>
-                        <h2>Gym or studio owner?</h2>
-                        <p>Join the new fitness market and get new customers!</p>
-                        <Link to='/gym/list' className='section-gym-owners-btn'>
-                            GET LISTED
-                            <img src={forwardIcon} alt='forwardIcon' />
-                        </Link>
-                    </div>
+                </div>
+                <div className='section-gym-owners'>
+                    <h2>Gym or studio owner?</h2>
+                    <p>Join the new fitness market and get new customers!</p>
+                    <Link to='/gym/list?page=1' className='section-gym-owners-btn'>
+                        GET LISTED
+                        <img src={forwardIcon} alt='forwardIcon' />
+                    </Link>
                 </div>
             </Wrapper>
         )

@@ -27,3 +27,6 @@
     text-transform: uppercase;
     text-decoration: underline;
 }
+.section-gym-all-list {
+    flex-wrap: wrap;
+}
