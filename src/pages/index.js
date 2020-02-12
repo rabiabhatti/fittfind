@@ -39,10 +39,13 @@ class IndexPage extends React.Component {
                         <div className='section-products-women'>
                             <div className='section-products-women-banner'>
                                 <img src={women_banner} alt='women_banner'/>
-                                <span className='shop-women-ver'><span>Women Shop</span><img src={horizontal_line} alt='horizontal_line'/></span>
-                                <button className='shop-women-btn'>
-                                    <Link to={'/women'}><img src={fit} alt='fit'/><span>Women</span></Link>
-                                </button>
+                                <div>
+                                    <button className='shop-women-btn'>
+                                        <Link to={'/women'}><img src={fit} alt='fit'/><span>Women</span></Link>
+                                    </button>
+                                    <span className='shop-women-ver'><span>Women Shop</span><img src={horizontal_line} alt='horizontal_line'/></span>
+                                </div>
+                                
                             </div>
                             <div className='section-products-men-categories'>
                                 <img src={horizontal_line} alt='horizontal_line'/>
@@ -69,11 +72,13 @@ class IndexPage extends React.Component {
                                 </div>
                             </div>
                             <div className='section-products-men-banner'>
-                                <button className='shop-men-btn'>
-                                    <Link to={'/men'}><span>Men</span><img src={fit} alt='fit'/></Link>
-                                </button>
-                                <span className='shop-men-ver'><span>Men Shop</span><img src={horizontal_line} alt='horizontal_line'/></span>
                                 <img src={men_banner} alt='men_banner'/>
+                                <div>
+                                    <button className='shop-men-btn'>
+                                        <Link to={'/men'}><span>Men</span><img src={fit} alt='fit'/></Link>
+                                    </button>
+                                    <span className='shop-men-ver'><span>Men Shop</span><img src={horizontal_line} alt='horizontal_line'/></span>
+                                </div>
                             </div>
                         </div>
                     </div>

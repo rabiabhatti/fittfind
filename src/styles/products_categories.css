@@ -23,7 +23,7 @@
     display: flex;
 }
 button.shop-women-btn>a, button.shop-men-btn>a {
-    width: 385px;
+    width: 360px;
     color: #fff;
     display: flex;
     height: 100px;
@@ -34,42 +34,43 @@ button.shop-women-btn>a, button.shop-men-btn>a {
     justify-content: space-between;
 }
 button.shop-women-btn>a {
-    padding: 40px 40px 40px 10px;
+    padding: 40px 30px 40px 10px;
 }
 button.shop-men-btn>a {
-    padding: 40px 10px 40px 40px;
+    padding: 40px 10px 30px 40px;
 }
 button.shop-women-btn>a>img, button.shop-men-btn>a>img {
-    width: 140px;
-    height: 200px;
+    width: 120px;
+    height: 160px;
 }
 button.shop-women-btn>a>span, button.shop-men-btn>a>span {
     align-self: center;
 }
 span.shop-women-ver, span.shop-men-ver {
-    width: 100%;
+    width: 170px;
+    height: 25px;
     font-weight: 900;
     transform: rotate(270deg);
 }
 span.shop-women-ver {
-    margin-right: -31vw;
+    top: 5vw;
+    left: -6vw;
+    position: relative;
 }
 span.shop-men-ver {
-    margin-right: -43vw;
-    margin-bottom: -5px;
+    top: 5vw;
+    right: -5vw;
+    position: relative;
 }
 button.shop-women-btn {
     z-index: 2;
-    right: 16vw;
+    left: -12vw;
     height: 100px;
-    margin-top: 16vw;
     position: relative;
 }
 button.shop-men-btn {
     z-index: 2;
-    right: -11vw;
     height: 100px;
-    margin-top: 17vw;
     position: relative;
 }
 span.shop-women-ver>img, span.shop-men-ver>img {
@@ -100,10 +101,36 @@ span.shop-women-ver>img, span.shop-men-ver>img {
     font-weight: 600;
 }
 .section-products-men-categories {
-    margin-top: 150px;
+    margin-top: 120px;
     margin-left: 19.2vw;
 }
 .section-products-women-categories {
     margin-left: 125px;
     margin-bottom: 150px;
 }
+.section-products-women-banner>div, .section-products-men-banner>div {
+    display: flex;
+    position: relative;
+    align-self: center;
+    flex-direction: column;
+}
+.section-products-men-banner {
+    flex-direction: row-reverse;
+}
+.section-products-men-banner>div {
+    right: -12vw;
+}
+
+
+
+
+
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .section-products-categories {
+        background-size: 53.3% 100%;
+    }
+
+}
+
+
