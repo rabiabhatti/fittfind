@@ -292,3 +292,21 @@ span.current-slider {
     margin-bottom: -1rem;
     padding-bottom: 0 !important;
 }
+
+
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .section-hero-slider-right-bar {
+        right: -16vw;
+    }
+    .sliders-count-container {
+        bottom: 60px;
+    }
+    h1.section-Find-release-hero {
+        font-size: 60px;
+    }
+    .section-main-slider-left {
+        margin-top: -19vw;
+        margin-bottom: 6vw;
+    }
+}

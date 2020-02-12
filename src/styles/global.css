@@ -39,12 +39,12 @@ img.section-background-blue-right.women, img.section-background-blue-right.Men {
     margin-top: -10vw;
 }
 img.section-background-fittfind {
+    left: 22vw;
     z-index: -6;
-    right: -10vw;
+    max-width: 65vw;
     margin-top: -30vw;
     position: absolute;
 }
-
 
 .section-impossible {
     display: flex;
