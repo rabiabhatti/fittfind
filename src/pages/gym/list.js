@@ -4,9 +4,10 @@ import Select from 'react-select';
 
 import '../../styles/gym-list.css'
 import { Wrapper, Hero } from '../../components'
-import horizontal_line from "../../images/horizontal_line.png";
-import women_banner from "../../images/women_banner.jpg";
 import forwardIcon from "../../images/forward-icon.png";
+import women_banner from "../../images/women_banner.jpg";
+import backward_icon from '../../images/backward-icon.png';
+import horizontal_line from "../../images/horizontal_line.png";
 
 const facilitiesOptions = [
     { value: 'ALL', label: 'ALL' },
@@ -154,9 +155,19 @@ export default class GymList extends React.Component{
         );
     };
 
+    handlePrevNext = (type) => {
+        const currentPage = window.location.href.slice(window.location.href.length - 1);
+        window.location.href = type === 'next' ? `/gym/list?page=${parseInt(currentPage) + 1}` : `/gym/list?page=${parseInt(currentPage)-1}`;
+    };
+
+    handlePageClick = (p) => {
+        window.location.href = `/gym/list?page=${p+1}`
+    };
+
     render() {
         const { amenityOption, location, facilityOption } = this.state;
         const pages = [0, 1, 2, 3, 4, 5, 6, 7];
+        const currentPage = window.location.href.slice(window.location.href.length - 1);
 
         return (
             <Wrapper name='List Yourself'>
@@ -210,7 +221,7 @@ export default class GymList extends React.Component{
                     {gym_list.map((item, i) =>(
                         <div className='section-single-gym-container' key={i}>
                             <img src={women_banner} alt='women_banner' />
-                            <div className='section-single-gym-desc'>
+                            <Link className='section-single-gym-desc' to='/'>
                                 <div className='section-single-gym-desc-top'>
                                     <h4>{item.number}</h4>
                                     <h5>{item.name}</h5>
@@ -221,16 +232,28 @@ export default class GymList extends React.Component{
                                     <h4>{item.city}</h4>
                                     {item.featured && <h4>Featured</h4>}
                                 </div>
-                            </div>
+                            </Link>
                         </div>
                     ))}
                 </div>
                 <div className='section-gym-list-pages'>
+                    <button disabled={currentPage == 1} onClick={() => this.handlePrevNext('prev')}>
+                        <img src={backward_icon} alt='backward_icon' />
+                        Previous
+                    </button>
                     {pages.map(p => (
-                        <Link to={`/gym/list?page=${p+1}`}>
-                            <button>{p+1}</button>
-                        </Link>
+                        <button
+                            key={p}
+                            className={currentPage == p ? `section-gym-list-current-page` : ''}
+                            onClick={() => this.handlePageClick(p)}
+                        >
+                            {p+1}
+                        </button>
                     ))}
+                    <button onClick={() => this.handlePrevNext('next')} disabled={currentPage == pages.slice(pages.length-1)[0] +1}>
+                        <img src={forwardIcon} alt='forwardIcon' />
+                        Next
+                    </button>
                 </div>
                 <div className='section-gym-owners'>
                     <h2>Gym or studio owner?</h2>

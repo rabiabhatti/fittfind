@@ -30,3 +30,6 @@
 .section-gym-all-list {
     flex-wrap: wrap;
 }
+.section-single-gym-desc {
+    background-image: url("../images/gym_list_desc.png");
+}
