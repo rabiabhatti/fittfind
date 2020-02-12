@@ -98,7 +98,6 @@ span.current-slider {
     color: transparent;
     border-bottom: 3px solid #5a5f69;
 }
-
 .section-features {
     margin-left: 4%;
     padding-top: 12vw;
@@ -114,7 +113,7 @@ span.current-slider {
     margin-right: 15px;
     position: relative;
 }
-.section-features .section-products-slider-container {
+.section-products-slider-container {
     display: flex;
     margin-top: 5vw;
 }

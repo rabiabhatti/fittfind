@@ -93,7 +93,7 @@ class IndexPage extends React.Component {
                     <div className='section-apps-left-right'>
                         <div className='section-apps-left'>
                             <p>Phasellus ut consectetur diam, sed cursus elit. Aenean euismod, lorem sit amet hendrerit porttitor, metus libero placerat lorem, nec euismod mi nibh id mi.<br/><br/>Nam et vestibulum justo. <br/>Suspendisse venenatis nisi nec turpis bibendum fermentum.</p>
-                            <Link to={'/'}>
+                            <Link to={'/app'}>
                                 <span>Find out more</span>
                                 <img src={forwardIcon} alt='forward_icon' />
                             </Link>
