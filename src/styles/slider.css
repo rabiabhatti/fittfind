@@ -77,20 +77,21 @@ span.current-slider {
     flex-direction: column;
 }
 .section-hero-slider-right-bar {
-    top: 1vw;
-    right: -11vw;
-    font-weight: 700;
-    color: #b2bac6;
-    background: none;
+    top: 3%;
+    right: 5%;
+    display: flex;
     position: absolute;
-    transform-origin: 0 0;
-    transform: rotate(90deg);
-    text-transform: uppercase;
+    align-items: center;
+    flex-direction: column;
 }
 .section-hero-slider-right-bar>button {
     font-size: 14px;
     font-weight: 700;
-    padding: 0 25px;
+    padding: 1rem 0;
+    color: #b2bac6;
+}
+.section-hero-slider-right-bar>button p {
+    transform: rotate(90deg);
 }
 .sliders-count-container>div>span.total-dash {
     width: 16px;
@@ -129,7 +130,6 @@ span.current-slider {
     flex-direction: column;
 }
 .section-products-slider-right-bar {
-    top: -7vw;
     width: 10%;
     right: -3vw;
     color: #fff;
@@ -137,18 +137,23 @@ span.current-slider {
     font-weight: 700;
     position: relative;
     align-items: center;
-    flex-direction: row;
-    transform: rotate(90deg);
+    flex-direction: column;
     text-transform: uppercase;
 }
 .section-products-slider-right-bar>p {
-    padding: 0 25px;
+    transform: rotate(90deg);
 }
-.section-products-slider-right-bar>button {
+.section-products-slider-active-page {
     color: #fff;
     font-size: 14px;
     font-weight: 700;
-    padding: 0 25px;
+    padding: 1rem 0;
+}
+.section-products-slider-active-page:first-of-type {
+    padding-top: 2rem !important;
+}
+.section-products-slider-active-page p {
+    transform: rotate(90deg);
 }
 .section-products-slider-bottom-bar {
     right: 8%;
@@ -171,11 +176,9 @@ span.current-slider {
     border: 1px solid #0370b6;
 }
 .section-social-media {
-    margin-top: 8vw;
+    margin-top: 16vw;
     margin-left: 4vw;
-    margin-bottom: -4vw;
 }
-
 .section-social-media>h2 {
     font-size: 50px;
     margin-left: 4vw;
@@ -200,43 +203,49 @@ span.current-slider {
 .section-social-media-slider {
     margin-top: 4vw;
 }
-.section-social-media .section-social-media-slider-left>img:first-child {
+.section-social-media-slider-left>img:first-child {
     margin-bottom: -5vw;
 }
-.section-social-media .section-social-media-slider-left>img:nth-child(2) {
+.section-social-media-slider-left>img:nth-child(2) {
 
 }
-.section-social-media .section-social-media-slider-left>img:nth-child(3) {
+.section-social-media-slider-left>img:nth-child(3) {
     margin-bottom: -4.5vw;
 }
-.section-social-media .section-social-media-slider-left>img:nth-child(4) {
+.section-social-media-slider-left>img:nth-child(4) {
     margin-bottom: 1vw;
 }
-.section-social-media .section-social-media-slider-left>img:nth-child(5) {
+.section-social-media-slider-left>img:nth-child(5) {
     margin-bottom: -5.5vw;
 }
-.section-social-media .section-social-media-slider-left>img {
+.section-social-media-slider-left>img:last-child {
+    box-shadow: 1px 3px 12px -4px #0000008c;
+}
+.section-social-media-slider-left>img {
     width: 20%;
+}
+.section-social-media-slider-left {
+    width: 87%;
 }
 .section-social-media-slider-right {
     position: relative;
+    width: 13%;
 }
 .section-social-media-slider-right-bar {
-    top: 6vw;
     right: -1.3vw;
     display: flex;
-    font-weight: 700;
     position: relative;
     align-items: center;
-    flex-direction: row;
-    transform: rotate(90deg);
-    text-transform: uppercase;
+    flex-direction: column;
 }
 .section-social-media-slider-right-bar>button {
     color: #fff;
     font-size: 14px;
     font-weight: 700;
-    padding: 0 25px;
+    padding: 1rem 0;
+}
+.section-social-media-slider-right-bar>button p {
+    transform: rotate(90deg);
 }
 .section-social-media-slider-right>a {
     left: -10vw;
@@ -254,7 +263,7 @@ span.current-slider {
     right: 50%;
     width: 80%;
     display: flex;
-    margin-top: 21vw;
+    margin-top: 1rem;
     text-align: right;
     position: relative;
     flex-direction: row;
@@ -268,4 +277,18 @@ span.current-slider {
     padding: 1.5rem;
     border-radius: 50%;
     border: 1px solid #fff;
+}
+.active-slider {
+    margin-bottom: -1rem;
+    padding-bottom: 0 !important;
+}
+.section-products-slider-active-page-line {
+    top: -1.2rem;
+    height: 6rem;
+    width: 0.13rem;
+    position: relative;
+}
+.active-products-slider-page {
+    margin-bottom: -1rem;
+    padding-bottom: 0 !important;
 }

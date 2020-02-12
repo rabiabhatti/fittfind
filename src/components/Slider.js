@@ -11,7 +11,9 @@ import slider3 from '../images/home-slider-3.jpg'
 import slider4 from '../images/home-slider-4.jpg'
 import forwardIcon from '../images/forward-icon.png'
 import backwardIcon from '../images/backward-icon.png'
+import vertical_line from '../images/vertical_line.png'
 import instagram_icon from '../images/instagram_icon.png'
+import vertical_line_white from '../images/vertical_line_white.png'
 
 const hero_carousel = [slider1, slider2, slider3, slider4];
 const products_carousel = [product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product];
@@ -90,7 +92,14 @@ class Slider extends React.Component {
                                 <div className='section-hero-slider-right-numbers'>
                                     <div className='section-hero-slider-right-bar'>
                                         {hero_carousel.map((img, i) => (
-                                            <button className={i === heroSliderPosition ? 'active-slider slider-no' : 'slider-no'} key={i} onClick={() => this.heroSliderClick(i)}>0{i+1}</button>
+                                            <button
+                                                key={i}
+                                                onClick={() => this.heroSliderClick(i)}
+                                                className={i === heroSliderPosition ? 'active-slider slider-no' : 'slider-no'}
+                                            >
+                                               <p>0{i+1}</p>
+                                                {i === heroSliderPosition && <img className='section-products-slider-active-page-line' src={vertical_line} alt='vertical_line' />}
+                                            </button>
                                         ))}
                                     </div>
                                     <div className='sliders-count-container'>
@@ -116,8 +125,9 @@ class Slider extends React.Component {
                                     </Link>
                                     <div className='section-social-media-slider-right-bar'>
                                         {social_media_pages.map(i => (
-                                            <button key={i} onClick={() => this.setState({socialSliderPosition: i*4})}>
-                                                0{i+1}
+                                            <button className={`${socialSliderPosition === i*4 && 'active-products-slider-page'}`} key={i} onClick={() => this.setState({socialSliderPosition: i*4})}>
+                                                <p>0{i+1}</p>
+                                                {socialSliderPosition === i*4 && <img className='section-products-slider-active-page-line' src={vertical_line_white} alt='vertical_line_white' />}
                                             </button>
                                         ))}
                                     </div>
@@ -141,7 +151,8 @@ class Slider extends React.Component {
                                         <p>pages</p>
                                         {products_pages.map(i => (
                                             <button className={`section-products-slider-active-page ${productsSliderPosition === i*4 && 'active-products-slider-page'}`} key={i} onClick={() => this.setState({productsSliderPosition: i*4})}>
-                                                0{i+1}
+                                                <p>0{i+1}</p>
+                                                {productsSliderPosition === i*4 && <img className='section-products-slider-active-page-line' src={vertical_line_white} alt='vertical_line_white' />}
                                             </button>
                                         ))}
                                     </div>

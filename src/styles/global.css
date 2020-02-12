@@ -28,9 +28,9 @@ img {
 }
 
 img.section-background-blue-right {
-    right: 0px;
+    right: 0;
     z-index: -5;
-    width: 23.5vw;
+    width: 26.5vw;
     position: absolute;
 }
 img.section-background-blue-right.women, img.section-background-blue-right.Men {
@@ -168,4 +168,35 @@ p, h1, h2, h3, h4, h5{
     border: 0 !important;
     outline: none !important;
     box-shadow: none !important;
+}
+.section-gym-owners {
+    color: #fff;
+    width: 89.6%;
+    margin: 5.7% auto;
+    text-align: center;
+    padding: 150px 300px;
+    background-size: 100% 100%;
+    background-image: url('../images/STUDIO-OWNER-back.png');
+}
+.section-gym-owners>h2 {
+    font-size: 2vw;
+    text-transform: uppercase;
+}
+.section-gym-owners>p {
+    font-size: 22px;
+    padding: 20px 0;
+}
+.section-gym-owners-btn {
+    bottom: 10vw;
+    border: none;
+    color: #fff;
+    text-align: left;
+    font-weight: 600;
+    padding: 15px 25px;
+    border-radius: 25px;
+    background-color: #025696;
+    text-transform: uppercase;
+}
+.section-gym-owners-btn img {
+    margin-left: 90px;
 }
