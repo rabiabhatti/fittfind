@@ -1,31 +1,32 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
-import '../styles/gym.css'
-import { Wrapper, Hero } from '../components'
-import one from '../images/01.png'
-import two from '../images/02.png'
-import three from '../images/03.png'
-import quotes from '../images/quotes.png'
-import women_banner from '../images/women_banner.jpg'
-import backwardIcon from '../images/backward-icon.png'
-import forwardIcon from '../images/forward-icon.png'
-import vertical_line from '../images/vertical_line.png'
-import vertical_line_white from '../images/vertical_line_white.png'
-import gym_feature_1 from '../images/gym-feature-1.png'
-import gym_feature_2 from '../images/gym-feature-2.png'
-import gym_feature_3 from '../images/gym-feature-3.png'
-import horizontal_line from '../images/horizontal_line.png'
-import kickstarter_logo from '../images/kickstarter_logo.png'
-import bbc_logo from '../images/bbc.png'
-import guardian_logo from '../images/guardian.png'
-import techradar_logo from '../images/techradar.png'
-import huffington_post_logo from '../images/huffington-post.png'
-import evening_standard_logo from '../images/evening-standard.png'
-import slider_men from '../images/slider-men.png'
-import gym_motivation_girl from '../images/gym-motivation-girl.png'
+import '../../styles/gym.css'
+import { Wrapper, Hero } from '../../components'
+import one from '../../images/01.png'
+import two from '../../images/02.png'
+import three from '../../images/03.png'
+import quotes from '../../images/quotes.png'
+import women_banner from '../../images/women_banner.jpg'
+import backwardIcon from '../../images/backward-icon.png'
+import forwardIcon from '../../images/forward-icon.png'
+import vertical_line from '../../images/vertical_line.png'
+import vertical_line_white from '../../images/vertical_line_white.png'
+import gym_feature_1 from '../../images/gym-feature-1.png'
+import gym_feature_2 from '../../images/gym-feature-2.png'
+import gym_feature_3 from '../../images/gym-feature-3.png'
+import horizontal_line from '../../images/horizontal_line.png'
+import kickstarter_logo from '../../images/kickstarter_logo.png'
+import bbc_logo from '../../images/bbc.png'
+import guardian_logo from '../../images/guardian.png'
+import techradar_logo from '../../images/techradar.png'
+import huffington_post_logo from '../../images/huffington-post.png'
+import evening_standard_logo from '../../images/evening-standard.png'
+import slider_men from '../../images/slider-men.png'
+import gym_motivation_girl from '../../images/gym-motivation-girl.png'
 
 
-export default class Gym extends React.Component{
+export default class Index extends React.Component{
     render() {
         return (
             <Wrapper name='Gym'>
@@ -138,10 +139,10 @@ export default class Gym extends React.Component{
                     <div className='section-gym-owners'>
                         <h2>Gym or studio owner?</h2>
                         <p>Join the new fitness market and get new customers!</p>
-                        <button>
+                        <Link to='/gym/list' className='section-gym-owners-btn'>
                             GET LISTED
                             <img src={forwardIcon} alt='forwardIcon' />
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </Wrapper>
