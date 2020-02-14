@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import '../styles/product.css'
 import like_fill from '../images/like_fill.png'
 import like_outline from '../images/like_outline.png'
-import product_price_container from '../images/product_price_container.png'
 
 class Product extends React.Component {
     state = {

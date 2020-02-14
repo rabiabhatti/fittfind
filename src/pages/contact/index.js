@@ -32,13 +32,7 @@ const categories = [
 
 
 export default class Contact extends React.Component {
-    state = {
-        hovered: categories[0].name
-    };
-
     render() {
-        const { hovered } = this.state;
-
         return (
             <Wrapper name='Contact'>
                 <Hero>

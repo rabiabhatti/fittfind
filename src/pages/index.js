@@ -6,7 +6,6 @@ import '../styles/products_categories.css'
 import {Wrapper, Hero, Slider, ImpossibleBanner, VideoPopup} from "../components"
 
 import forwardIcon from '../images/forward-icon.png'
-import backwardIcon from '../images/backward-icon.png'
 import women_banner from '../images/women_banner.jpg'
 import men_banner from '../images/men_banner.jpg'
 import app_imag from '../images/app-store-imag.jpg'
