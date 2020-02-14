@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 import '../styles/products_categories.css'
 
-import {Wrapper, Hero, Slider, ImpossibleBanner} from "../components"
+import {Wrapper, Hero, Slider, ImpossibleBanner, VideoPopup} from "../components"
 
 import forwardIcon from '../images/forward-icon.png'
 import backwardIcon from '../images/backward-icon.png'
@@ -19,9 +19,16 @@ import fit from '../images/fit.png'
 import background_imag from '../images/background-blue-imag.jpg'
 
 class IndexPage extends React.Component {
+    state = {
+      show_video: false,
+    };
+
     render() {
+        const { show_video } = this.state;
+
         return (
             <Wrapper name='Home'>
+                {show_video && <VideoPopup handleClose={() => this.setState({ show_video: false })} />}
                 <Hero>
                     <div className="section-main-slider">
                         <Slider type='hero' />
@@ -45,7 +52,7 @@ class IndexPage extends React.Component {
                                     </button>
                                     <span className='shop-women-ver'><span>Women Shop</span><img src={horizontal_line} alt='horizontal_line'/></span>
                                 </div>
-                                
+
                             </div>
                             <div className='section-products-men-categories'>
                                 <img src={horizontal_line} alt='horizontal_line'/>
@@ -105,14 +112,16 @@ class IndexPage extends React.Component {
                         </div>
                         <div className='section-apps-right'>
                             <img className='section-apps-right-img-1' src={app_imag} alt='app_store_imag'/>
-                            <div className='section-apps-right-img-app-store'>
+                            <Link className='section-apps-right-img-app-store' to='/'>
                                 <span>Download on</span>
                                 <img className='section-apps-right-img-store' src={app_store_button_s} alt='app_store_button_s'/>
                                 <span>App store</span>
-                            </div>
+                            </Link>
                             <span className='section-apps-right-span-1'>Download now</span>
                             <img className='section-apps-right-img-2' src={app_video} alt='app_store_video'/>
-                            <img className='section-apps-right-img-play' src={play_button} alt='play_button'/>
+                            <button onClick={() => this.setState({show_video: true})}>
+                                <img className='section-apps-right-img-play' src={play_button} alt='play_button'/>
+                            </button>
                             <span className='section-apps-right-span-2'>watch application movie</span>
                         </div>
                     </div>
