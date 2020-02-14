@@ -7,6 +7,12 @@
     margin: 0 7% 0 0;
     flex-direction: row;
 }
+.section-contact-hero-category-container {
+    width: 25%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .section-contact-hero-category {
     border: 0;
     display: flex;
@@ -36,8 +42,8 @@
     font-size: 0.75rem;
 }
 .section-contact-hero-category img {
-    width: 4rem;
-    height: 0.2rem;
+    width: 2rem;
+    height: 0.11rem;
 }
 .section-contact-hero-category h1 {
     color: #ffffff;

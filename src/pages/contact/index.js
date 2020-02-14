@@ -40,7 +40,7 @@ export default class Contact extends React.Component {
                         <div className='section-contact-hero-top'>
                             <h1>SUPPORT</h1>
                             {categories.map((item, i) => (
-                                <Link to={item.link} key={i} style={{backgroundImage: `url(${item.image})`, width: '25%'}}>
+                                <Link to={item.link} key={i} style={{backgroundImage: `url(${item.image})`}} className='section-contact-hero-category-container'>
                                     <div className='section-contact-hero-category'>
                                         <img src={horizontal_line} alt='horizontal_line' />
                                         <p>{item.name.toUpperCase()}</p>
