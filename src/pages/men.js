@@ -3,12 +3,8 @@ import Select from 'react-select';
 
 import '../styles/women.css'
 import product from '../images/product.jpg'
-import slider1 from "../images/home-slider-1.jpg";
-import slider2 from "../images/home-slider-2.jpg";
-import slider3 from "../images/home-slider-3.jpg";
-import slider4 from "../images/home-slider-4.jpg";
 import women_banner from '../images/women_banner.jpg'
-import horizontal_line from '../images/horizontal_line.png'
+import horizontal_line from '../images/horizontal_line_white.png'
 import background_imag from '../images/background-blue-imag.jpg'
 import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
 
@@ -16,14 +12,18 @@ const products_list = [product, product, product, product, product, product, pro
 
 const categoryOptions = [
     { value: 'Sport bras', label: 'Sport bras' },
+    { value: 'New Release', label: 'New Release' },
+    { value: 'Tank Tops', label: 'Tank Tops' },
     { value: 'Leggings', label: 'Leggings' },
     { value: 'Shorts', label: 'Shorts' },
 ];
+
 const sizeOptions = [
     { value: '38DD', label: '38DD' },
     { value: '40DD', label: '40DD' },
     { value: '34DD', label: '34DD' },
 ];
+
 const collectionOptions = [
     { value: 'Player', label: 'Player' },
     { value: 'Player 2', label: 'Player 2' },
@@ -58,57 +58,51 @@ const categories = [
 
 export default class Men extends React.Component {
     state = {
-        size: '38DD',
-        collection: 'player',
-        sortBy: 'recommended',
-        hovered: categories[0].name,
-        category: categories[1].name,
-        sizeOption: sizeOptions[0].value.toUpperCase(),
-        sortByOption: sortByOptions[0].value.toUpperCase(),
-        categoryOption: categoryOptions[0].value.toUpperCase(),
-        collectionOption: collectionOptions[0].value.toUpperCase(),
+        size: sizeOptions[0].value.toUpperCase(),
+        sortBy: sortByOptions[0].value.toUpperCase(),
+        category: categoryOptions[0].value.toUpperCase(),
+        collection: collectionOptions[0].value.toUpperCase(),
     };
 
     handleCategoryChange = input => {
         this.setState(
-            { categoryOption: input.value.toUpperCase()}
+            { category: input.value.toUpperCase()}
         );
     };
 
     handleSizeChange = input => {
         this.setState(
-            { sizeOption: input.value.toUpperCase()}
+            { size: input.value.toUpperCase()}
         );
     };
     handleCollectionChange = input => {
         this.setState(
-            { collectionOption: input.value.toUpperCase()}
+            { collection: input.value.toUpperCase()}
         );
     };
     handleSortChange = input => {
         this.setState(
-            { sortByOption: input.value.toUpperCase()}
+            { sortBy: input.value.toUpperCase()}
         );
     };
 
     render() {
-        const { categoryOption, sizeOption, collectionOption, sortByOption, hovered } = this.state;
+        const { category, size, collection, sortBy } = this.state;
         return (
             <Wrapper name='Men'>
-            <div className='section-background'>
-                <img className='section-background-blue-right Men' src={background_imag} alt='background_blue_imag'/>
-            </div>
+                <div className='section-background'>
+                    <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag'/>
+                </div>
                 <Hero>
                     <div className='section-products-hero-container'>
                         <div className='section-products-hero'>
                             {categories.map((item, i) => (
-                                <button
-                                    onMouseOver={() => this.setState({ hovered: item.name })}
-                                    className='section-hero-category' key={i} style={hovered === item.name ? { backgroundImage: `url(${item.image})` } : null}
-                                >
-                                    <img src={horizontal_line} alt='horizontal_line' />
-                                    <p>{item.name.toUpperCase()}</p>
-                                </button>
+                                <div className='section-hero-category-container' style={{backgroundImage: `url(${item.image})`}} key={i}>
+                                    <button className={`section-hero-category ${item.name.toUpperCase() === category && 'section-hero-category-active'}`} onClick={() => this.setState({ category: item.name.toUpperCase() })}>
+                                        <img src={horizontal_line} alt='horizontal_line' />
+                                        <p>{item.name.toUpperCase()}</p>
+                                    </button>
+                                </div>
                             ))}
                         </div>
                         <div className='section-products-filters'>
@@ -119,9 +113,9 @@ export default class Men extends React.Component {
                                 </p>
                                 <Select
                                     isDisabled={false}
-                                    value={categoryOption}
+                                    value={category}
                                     options={categoryOptions}
-                                    placeholder={categoryOption}
+                                    placeholder={category}
                                     classNamePrefix="react-select"
                                     className='react-select-container'
                                     onChange={this.handleCategoryChange}
@@ -131,9 +125,9 @@ export default class Men extends React.Component {
                                 <p><img src={horizontal_line} alt='horizontal_line' />SIZE:</p>
                                 <Select
                                     isDisabled={false}
-                                    value={sizeOption}
+                                    value={size}
                                     options={sizeOptions}
-                                    placeholder={sizeOption}
+                                    placeholder={size}
                                     classNamePrefix="react-select"
                                     className='react-select-container'
                                     onChange={this.handleSizeChange}
@@ -143,9 +137,9 @@ export default class Men extends React.Component {
                                 <p><img src={horizontal_line} alt='horizontal_line' />COLLECTION:</p>
                                 <Select
                                     isDisabled={false}
-                                    value={collectionOption}
+                                    value={collection}
                                     options={collectionOptions}
-                                    placeholder={collectionOption}
+                                    placeholder={collection}
                                     classNamePrefix="react-select"
                                     className='react-select-container'
                                     onChange={this.handleCollectionChange}
@@ -155,9 +149,9 @@ export default class Men extends React.Component {
                                 <p><img src={horizontal_line} alt='horizontal_line' />SORT BY:</p>
                                 <Select
                                     isDisabled={false}
-                                    value={sortByOption}
+                                    value={sortBy}
                                     options={sortByOptions}
-                                    placeholder={sortByOption}
+                                    placeholder={sortBy}
                                     classNamePrefix="react-select"
                                     className='react-select-container'
                                     onChange={this.handleSortChange}
@@ -172,7 +166,7 @@ export default class Men extends React.Component {
                     ))}
                 </div>
                 <div className='section-social-media'>
-                <h2><img src={horizontal_line} alt='horizontal_line'/> Follow <span>fitt</span><span>find</span></h2>
+                    <h2><img src={horizontal_line} alt='horizontal_line'/> Follow <span>fitt</span><span>find</span></h2>
                     <Slider type='social_media' />
                 </div>
                 <ImpossibleBanner />

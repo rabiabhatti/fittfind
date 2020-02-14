@@ -10,14 +10,24 @@
     flex-direction: row;
     box-shadow: 27px 19px 32px -10px #00000045;
 }
-.section-hero-category {
+.section-hero-category-container {
     width: 25%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.section-hero-category {
+    width: 100%;
     border: 0;
     display: flex;
     padding: 12vw 0;
     align-items: center;
     flex-direction: column;
-    background-color: #025696;
+    background-color: #191b21;
+    transition: background-color 0.4s ease-in;
+}
+.section-hero-category:hover {
+    background-color: transparent;
 }
 .section-hero-category p {
     color: #ffffff;
@@ -26,8 +36,8 @@
     font-size: 0.75rem;
 }
 .section-hero-category img {
-    width: 4rem;
-    height: 0.2rem;
+    width: 2rem;
+    height: 0.11rem;
 }
 .section-products-filters {
     display: flex;
@@ -45,4 +55,6 @@
     max-width: 350px;
     margin-right: 50px;
 }
-
+.section-hero-category-active {
+    background-color: transparent;
+}
