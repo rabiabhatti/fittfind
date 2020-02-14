@@ -8,7 +8,7 @@ import women_banner from "../../images/women_banner.jpg";
 import contact_feature_3 from '../../images/gym-feature-1.png'
 import contact_feature_2 from '../../images/gym-feature-2.png'
 import contact_feature_1 from '../../images/gym-feature-3.png'
-import horizontal_line from "../../images/horizontal_line.png";
+import horizontal_line from "../../images/horizontal_line_white.png";
 
 const categories = [
     {
