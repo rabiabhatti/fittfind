@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import '../styles/application.css'
-import { Wrapper, Hero, ImpossibleBanner } from '../components'
+import {Wrapper, Hero, ImpossibleBanner, VideoPopup} from '../components'
 import phone_img from '../images/women_banner.jpg'
 import play_video from '../images/youtube_icon.png'
 import vertical_line from '../images/vertical_line.png'
@@ -24,9 +24,14 @@ import iPhone_7_Black_1 from '../images/iPhone7Black1.png'
 import iPhone_7_Black_3 from '../images/iPhone7Black3.png'
 
 export default class Application extends React.Component {
+    state = {
+        show_video: false,
+    };
     render() {
+        const { show_video } = this.state;
         return (
             <Wrapper name={'App'}>
+                {show_video && <VideoPopup handleClose={() => this.setState({ show_video: false })} />}
                 <div className='section-hero-video'>
                     <Hero className='section-hero-application'>
                         <div className='section-hero-application-main'>
@@ -57,7 +62,7 @@ export default class Application extends React.Component {
                             <img src={iPhone_7_Black} alt='iPhone_7_Black' />
                             <div className='section-application-video-col-right-video-container'>
                                 <img className='section-application-video-img' src={video_girl} alt='video_girl' />
-                                <button className='play-video-btn'>
+                                <button className='play-video-btn' onClick={() => this.setState({show_video: true})}>
                                     <img src={play_button} alt='play_video' />
                                 </button>
                                 <p>Watch application movie <img src={horizontal_line_white} alt='horizontal_line_white' /></p>
