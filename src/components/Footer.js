@@ -20,7 +20,7 @@ class Footer extends React.Component {
     };
 
     onEmailChange = (e) => {
-      this.setState({ email: e.target.value })
+      this.setState({ email: e.target.value, placeholder: 'YOUR EMAIL', error: false })
     };
 
     handleNotifiedClick = () => {
