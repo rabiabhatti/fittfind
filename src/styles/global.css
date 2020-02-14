@@ -1,8 +1,9 @@
 * {
     box-sizing: border-box;
 }
-
-
+html {
+    scroll-behavior: smooth;
+}
 @font-face {
     font-family: 'Din-Next-LT-Pro-Black';
     src: url("../fonts/DINCond-Black.otf") format("opentype");
