@@ -25,7 +25,27 @@ import gym_motivation_girl from '../../images/gym-motivation-girl.png'
 
 
 export default class Index extends React.Component{
+    state = {
+      location: 'london'
+    };
+    componentDidMount() {
+        document.addEventListener('keydown', this.handleKeyPress)
+    }
+    componentWillUnmount() {
+        document.removeEventListener('keydown', this.handleKeyPress)
+    }
+
+
+    handleKeyPress = (e) => {
+        const { location } = this.state;
+        if (e.key === 'Enter' && location.length) {
+            window.location.href = `/gym/find-gym?location=${location}`
+        }
+    };
+
+
     render() {
+        const { location } = this.state;
         return (
             <Wrapper name='Gym'>
                 <Hero className='section-hero-gym'>
@@ -38,8 +58,13 @@ export default class Index extends React.Component{
                             <div className='section-hero-gym-main-banner'>
                                 <h1>Find gym in</h1>
                                 <div className='section-hero-gym-main-banner-heading'>
-                                    <span>London</span>
-                                    <span>Enter location <br/>or postcode</span>
+                                    <input
+                                        value={location.toUpperCase()}
+                                        placeholder={location.toUpperCase()}
+                                        className='section-hero-gym-main-banner-input'
+                                        onChange={(text) => this.setState({ location: text.target.value })}
+                                    />
+                                    <span className='section-hero-gym-main-banner-heading-light'>Enter location <br/>or postcode</span>
                                 </div>
                                 <div className='section-hero-gym-kickstarter-ref'>
                                     <p>coming soon on</p>

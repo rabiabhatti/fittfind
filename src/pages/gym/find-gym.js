@@ -9,7 +9,7 @@ const locations = ['london', 'paris', 'new york', 'sydney'];
 
 export default class FundGym extends React.Component {
     state = {
-      location: 'london'
+      location: window.location.href.split('location=')[1]
     };
 
     handleLocationChange = (text) => {
