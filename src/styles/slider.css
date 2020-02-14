@@ -335,7 +335,7 @@ span.current-slider {
     }
     .section-products-slider-right-bar {
         width: 2vw;
-        right: -8vw;
+        right: -6vw;
     }
     .section-social-media-slider-right-bar {
         width: 2vw;
@@ -344,6 +344,9 @@ span.current-slider {
     .section-social-slider-bottom-bar {
         width: 10vw;
         right: 10.3vw;
+    }
+    .section-social-media {
+        margin-top: 6vw;
     }
     
 }
