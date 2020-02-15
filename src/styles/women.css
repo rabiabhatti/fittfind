@@ -22,14 +22,13 @@
     width: 100%;
     border: 0;
     display: flex;
-    width: 17.17vw;
     padding: 12vw 0;
     align-items: center;
     flex-direction: column;
     background-color: #191b21;
     transition: background-color 0.4s ease-in;
 }
-.section-hero-category:hover {
+.section-hero-category:hover, .section-hero-category-active {
     background-color: transparent;
 }
 .section-hero-category p {
