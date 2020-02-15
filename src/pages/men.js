@@ -90,10 +90,10 @@ export default class Men extends React.Component {
         const { category, size, collection, sortBy } = this.state;
         return (
             <Wrapper name='Men'>
-                <div className='section-background'>
-                    <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag'/>
-                </div>
-                <Hero>
+            <div className='section-background'>
+                <img className='section-background-blue-right Men' src={background_imag} alt='background_blue_imag'/>
+            </div>
+                <Hero className='section-products-hero-main'>
                     <div className='section-products-hero-container'>
                         <div className='section-products-hero'>
                             {categories.map((item, i) => (

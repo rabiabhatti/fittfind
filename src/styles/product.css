@@ -47,9 +47,9 @@
 /*    margin-top: 20px;*/
 /*}*/
 .section-product {
-    width: 20%;
-    margin: 0 3% 0 0;
     display: flex;
+    width: 17.17vw;
+    margin: 0 3.5vw 0 0;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -83,7 +83,7 @@
     position: relative;
 }
 .product-desc-container {
-    left: 2rem;
+    left: 4.2rem;
     bottom: 4rem;
     position: relative;
     background-repeat: no-repeat;
@@ -103,4 +103,15 @@
     font-weight: 600;
     color: #025696;
     margin-top: 1rem;
+}
+
+
+
+
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .product-desc-container {
+        left: 3.153rem;
+    }
+
 }

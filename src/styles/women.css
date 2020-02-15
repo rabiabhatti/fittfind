@@ -1,12 +1,14 @@
 .section-products-hero-container {
-    width: 100%;
     display: flex;
+    width: 86vw;
     flex-direction: column;
 }
+.section-products-hero-main {
+    justify-content: unset !important;
+}
 .section-products-hero {
-    width: 90%;
     display: flex;
-    margin: 0 7% 0 0;
+    margin: 0;
     flex-direction: row;
     box-shadow: 27px 19px 32px -10px #00000045;
 }
@@ -20,6 +22,7 @@
     width: 100%;
     border: 0;
     display: flex;
+    width: 17.17vw;
     padding: 12vw 0;
     align-items: center;
     flex-direction: column;
@@ -40,21 +43,29 @@
     height: 0.11rem;
 }
 .section-products-filters {
+    width: 68.7vw;
     display: flex;
-    width: 76.45%;
     padding: 3rem 0;
     background-color: #fff;
 }
 .section-products-list {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 7%;
+    margin-left: 6.95vw;
     flex-direction: row;
 }
 .section-products-list>div>img {
     max-width: 350px;
     margin-right: 50px;
 }
-.section-hero-category-active {
-    background-color: transparent;
+
+
+
+
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .section-products-filters {
+        width: 69.5vw;
+    }
+
 }

@@ -13,6 +13,7 @@ import app_video from '../images/app-store-video.jpg'
 import play_button from '../images/play-button.png'
 import app_store_button_s from '../images/app-store-button-s.png'
 import fittfind from '../images/fittfind.png'
+import fittfind_h from '../images/fittfind_h.png'
 import horizontal_line from '../images/horizontal_line.png'
 import fit from '../images/fit.png'
 import background_imag from '../images/background-blue-imag.jpg'
@@ -97,7 +98,7 @@ class IndexPage extends React.Component {
                     <Slider type='products' />
                 </div>
                 <div className='section-background'>
-                    <img className='section-background-fittfind' src={fittfind} alt='fittfind_imag'/>
+                    <img className='section-background-fittfind' src={fittfind_h} alt='fittfind_imag'/>
                 </div>
                 <div className='section-apps'>
                     <h2 className='section-apps-h2-1'><img src={horizontal_line} alt='horizontal_line'/> Book a personal trainer</h2><h2 className='section-apps-h2-2'>and more with the <span>fitt</span><span>find</span> app</h2>

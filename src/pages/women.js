@@ -93,7 +93,7 @@ export default class Men extends React.Component {
                 <div className='section-background'>
                     <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag'/>
                 </div>
-                <Hero>
+                <Hero className='section-products-hero-main'>
                     <div className='section-products-hero-container'>
                         <div className='section-products-hero'>
                             {categories.map((item, i) => (
