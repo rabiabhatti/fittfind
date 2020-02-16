@@ -43,6 +43,9 @@
     .section-left-bar-text {
         top: 19vw;
     }
+    .section-left-bar {
+        width: 7vw;
+    }
     
 }
 

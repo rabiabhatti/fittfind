@@ -69,3 +69,12 @@ a.section-nav-right-cart>span, span.section-nav-right-currency {
 a.section-nav-right-cart>img {
     height: max-content;
 }
+
+
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .section-header-right {
+        width: 25vw;
+    }
+
+}

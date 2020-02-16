@@ -301,7 +301,11 @@ img.section-apps-right-img-play {
 img.section-apps-right-img-store {
     margin: 0 15px;
 }
-
+h3.section-application-video-col-left-heading>img, .section-application-motivation-banner-left>h3.left-banner-heading>img  {
+    height: 14px;
+    margin-right: 20px;
+    padding-bottom: 11px;
+}
 
 
 
@@ -349,4 +353,69 @@ img.section-apps-right-img-store {
     .section-apps-left>p {
         width: 265px;
     }
+
+    .section-application-video-main {
+        margin-left: 7vw;
+    }
+    .section-hero-application-img {
+        max-width: 86vw;
+        margin-right: 7vw;
+    }
+    .section-hero-application-text>h1 {
+        font-size: 60px;
+    }
+    .section-application-features-col-middle>img {
+        width: 20vw;
+    }
+    .section-application-features {
+        background-size: 250px 100%;
+    }
+    .section-hero-video {
+        background-size: 25vw 100%;
+    }
+    .section-application-video-col-right-video-container {
+        max-height: 690px;
+    }
+    .section-application-video-col-right-video-container>p {
+        right: -8vw;
+        margin-top: -12vw;
+    }
+    h3.section-application-video-col-left-heading>img, .section-application-motivation-banner-left>h3.left-banner-heading>img {
+        height: 13.5px;
+        padding-bottom: 11px;
+    }
+    .section-application-motivation-banner-dialogue {
+        margin-left: -35vw;
+        padding: 150px 100px 150px 100px;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
