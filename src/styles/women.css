@@ -13,16 +13,15 @@
     box-shadow: 27px 19px 32px -10px #00000045;
 }
 .section-hero-category-container {
-    width: 25%;
+    width: 17.2vw;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .section-hero-category {
-    width: 100%;
     border: 0;
     display: flex;
-    width: 17.17vw;
+    width: 17.2vw;
     padding: 12vw 0;
     align-items: center;
     flex-direction: column;
@@ -66,6 +65,9 @@
 @media (min-width: 1025px) and (max-width: 1440px) {
     .section-products-filters {
         width: 69.5vw;
+    }
+    .section-hero-category {
+        width: 17.25vw;
     }
 
 }

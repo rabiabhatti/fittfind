@@ -76,5 +76,8 @@ a.section-nav-right-cart>img {
     .section-header-right {
         width: 25vw;
     }
+    header {
+        margin-bottom: -1px;
+    }
 
 }
