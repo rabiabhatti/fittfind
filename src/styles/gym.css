@@ -199,3 +199,63 @@
     width: 130px;
     height: 100%;
 }
+.section-gym-motivation-banner-desc>h3>img {
+    height: 14px;
+    margin-right: 20px;
+    padding-bottom: 11px;
+}
+
+
+
+
+
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .section-hero-gym-img>img {
+        width: 100%;
+    }
+    .section-gym-features-desc-first {
+        margin-left: unset;
+    }
+    .section-gym-features-list {
+        width: 75%;
+    }
+    .section-gym-motivation-first>img {
+        width: 55vw;
+    }
+    .section-gym-motivation-banner-desc>h3>img {
+        height: 13.5px;
+        padding-bottom: 11px;
+    }
+    .motivation-quotes {
+        padding: 20px 150px 20px 150px;
+    }
+    .section-gym-motivation-banner-slider {
+        width: 65vw;
+        margin: -38vw auto 15vw 24vw;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
