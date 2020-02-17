@@ -1,0 +1,54 @@
+.section-about-us-hero {
+    width: 95vw;
+    max-width: 90vw;
+    margin-right: 4vw;
+    pointer-events: none;
+}
+.section-about-us-hero {
+    width: 95vw;
+    height: 45vw;
+    max-width: 90vw;
+    margin-right: 4vw;
+    padding: 4.5rem 4rem;
+    pointer-events: none;
+    background-size: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url("../images/about-us-hero-img.png");
+}
+a.section-about-us-hero-top {
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+.section-about-us-hero-bottom>img {
+    width: 3px;
+    height: 90px;
+    margin-bottom: 40px;
+}
+a.section-about-us-hero-top>img {
+    right: 2rem;
+    position: relative;
+}
+.section-about-us-hero-bottom {
+    text-align: center;
+}
+.section-about-us-hero-bottom>h4 {
+    font-size: 21px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.section-about-us-hero-bottom>h2 {
+    width: 73%;
+    color: #fff;
+    font-size: 2vw;
+    font-weight: 700;
+    margin: 10px auto;
+    position: relative;
+    text-transform: uppercase;
+}
+.section-about-us-hero-bottom>h4:nth-child(4) {
+    color: #fff;
+    margin-bottom: 50px;
+}

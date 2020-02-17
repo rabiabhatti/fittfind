@@ -5,8 +5,8 @@
     flex-direction: column-reverse;
 }
 .section-left-bar-text {
-    top: 15vw;
     left: 34px;
+    top: 14.6vw;
     font-weight: 700;
     color: #b2bac6;
     background: none;
@@ -35,6 +35,9 @@
 .section-left-bar-btn>img {
     width: 15px;
 }
+.section-shipping-hero-main .section-left-bar-btn {
+    margin-bottom: -20vw;
+}
 
 
 
@@ -42,7 +45,7 @@
 /*laptops, desktops*/
 @media (min-width: 1025px) and (max-width: 1440px) {
     .section-left-bar-text {
-        top: 19vw;
+        top: 19.5vw;
     }
     .section-left-bar {
         width: 7vw;

@@ -2,9 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import '../../styles/about-us.css'
-import forward_icon from '../../images/forward-icon.png'
+import backward_icon from '../../images/backward-icon.png'
 import women_banner from '../../images/women_banner.jpg'
-import vertical_line from '../../images/vertical_line.png'
+import vertical_line_white from '../../images/vertical_line_white.png'
 import horizontal_line from '../../images/horizontal_line.png'
 import { Hero, Wrapper, ImpossibleBanner } from '../../components'
 
@@ -57,15 +57,15 @@ export default class AboutUs extends React.Component{
                 <Hero>
                     <div className='section-about-us-hero'>
                         <Link to='/contact' className='section-about-us-hero-top'>
-                            <img src={forward_icon} alt='forward_icon' />
+                            <img src={backward_icon} alt='forward_icon' />
                             Back to contact
                         </Link>
                         <div className='section-about-us-hero-bottom'>
-                            <img src={vertical_line} alt='vertical_line' />
+                            <img src={vertical_line_white} alt='vertical_line_white' />
                             <h4>About Fittfind</h4>
                             <h2>To provide athletes* with the tools and services to lead the rich, healthy, & fulfilling life.</h2>
                             <h4>*Find & release your inner athlete.</h4>
-                            <img src={vertical_line} alt='vertical_line' />
+                            <img src={vertical_line_white} alt='vertical_line_white' />
                         </div>
                     </div>
                 </Hero>

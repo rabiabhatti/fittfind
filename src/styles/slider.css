@@ -130,7 +130,7 @@ span.current-slider {
 }
 .section-products-slider-right-bar {
     width: 10%;
-    right: -3vw;
+    right: -1vw;
     color: #fff;
     display: flex;
     font-weight: 700;
@@ -231,7 +231,7 @@ span.current-slider {
     width: 13%;
 }
 .section-social-media-slider-right-bar {
-    right: -1.3vw;
+    right: -2.3vw;
     display: flex;
     position: relative;
     align-items: center;

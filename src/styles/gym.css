@@ -64,7 +64,7 @@
     justify-content: space-between;
 }
 .section-gym-features-desc {
-    width: 20%;
+    width: 22%;
 }
 .section-gym-features-desc>h3 {
     font-size: 2vw;
@@ -204,6 +204,11 @@
     margin-right: 20px;
     padding-bottom: 11px;
 }
+.section-gym-features-desc>h3>img {
+    height: 14px;
+    margin-right: 20px;
+    padding-bottom: 11px;
+}
 
 
 
@@ -233,6 +238,11 @@
     .section-gym-motivation-banner-slider {
         width: 65vw;
         margin: -38vw auto 15vw 24vw;
+    }
+    .section-gym-features-desc>h3>img {
+        width: 25%;
+        height: 13.5px;
+        padding-bottom: 11px;
     }
 
 }
