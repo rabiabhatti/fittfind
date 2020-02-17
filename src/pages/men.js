@@ -5,6 +5,7 @@ import '../styles/women.css'
 import product from '../images/product.jpg'
 import women_banner from '../images/women_banner.jpg'
 import horizontal_line from '../images/horizontal_line_white.png'
+import horizontal_line_black from '../images/horizontal_line.png'
 import background_imag from '../images/background-blue-imag.jpg'
 import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
 
@@ -166,7 +167,7 @@ export default class Men extends React.Component {
                     ))}
                 </div>
                 <div className='section-social-media'>
-                    <h2><img src={horizontal_line} alt='horizontal_line'/> Follow <span>fitt</span><span>find</span></h2>
+                    <h2><img src={horizontal_line_black} alt='horizontal_line_black'/> Follow <span>fitt</span><span>find</span></h2>
                     <Slider type='social_media' />
                 </div>
                 <ImpossibleBanner />

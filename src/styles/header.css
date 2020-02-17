@@ -79,5 +79,9 @@ a.section-nav-right-cart>img {
     header {
         margin-bottom: -1px;
     }
+    .section-header-left, .section-header-right {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
 
 }
