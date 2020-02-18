@@ -77,7 +77,7 @@ export default class extends React.Component {
                                 </div>
                                 <div className='row-center'>
                                     {sizes.map((item, i) => (
-                                        <button className={`single-product-size-btn ${item === size && 'selected-size'}`} key={i} onClick={() => this.handleSizeSelect(item)}>{item}</button>
+                                        <button className={`single-product-size-btn ${item === size && 'selected-size'}`} key={i} onClick={() => this.handleSizeSelect(item)}>{item.toUpperCase()}</button>
                                     ))}
                                 </div>
                                 <p className=' section-single-product-handles-text'>Quantity</p>
@@ -110,7 +110,7 @@ export default class extends React.Component {
                                 <img className='section-single-product-hero-middle-bottom-reverse-btn-img' src={forwardIcon} alt='back_button' width={20} />
                             </button>
                             <button onClick={() => this.handleBackNextImage('next')} disabled={product_images_no >= product_images_count.length}>
-                                <img src={forwardIcon} alt='next_button'width={20} />
+                                <img src={forwardIcon} alt='next_button' width={20} />
                             </button>
                         </div>
                     </div>
