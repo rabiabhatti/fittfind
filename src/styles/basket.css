@@ -92,7 +92,8 @@
     width: 75%;
 }
 .heading-light {
-    color: #b2bac6;
+    line-height: 2;
+    color: #5a5f69;
     font-weight: 700;
     font-size: 0.75rem;
 }
