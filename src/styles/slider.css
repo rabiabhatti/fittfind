@@ -26,11 +26,11 @@ img.hero-slide {
 .section-main-slider-left {
     margin-left: 4%;
     margin-top: -22vw;
-    margin-bottom: 10vw;
+    margin-bottom: 5vw;
 }
 h1.section-Find-release-hero {
-    font-size: 78px;
     display: flex;
+    font-size: 125px;
     flex-direction: column;
     text-transform: uppercase;
 }
@@ -44,6 +44,7 @@ button.findFitBtn {
     bottom: 10vw;
     border: none;
     color: #fff;
+    font-size: 13px;
     margin-top: 20px;
     text-align: left;
     font-weight: 600;
@@ -51,9 +52,10 @@ button.findFitBtn {
     border-radius: 25px;
     background-color: #025696;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 }
 button.findFitBtn>img {
-    margin-left: 90px;
+    margin-left: 160px;
 }
 .sliders-count-container {
     bottom: 0;
@@ -67,7 +69,8 @@ button.findFitBtn>img {
     background-color: unset;
 }
 span.current-slider {
-    font-size: 3rem;
+    font-size: 4rem;
+    color: #1a1c21;
     margin-right: 4px;
 }
 .sliders-count-container>div {
@@ -85,9 +88,8 @@ span.current-slider {
     flex-direction: column;
 }
 .section-hero-slider-right-bar>button {
-    font-size: 14px;
+    font-size: 16px;
     padding: 1rem 0;
-    font-weight: 700;
 }
 .section-hero-slider-right-bar>button p {
     transform: rotate(90deg);
@@ -100,17 +102,17 @@ span.current-slider {
 }
 .section-features {
     margin-left: 4%;
-    padding-top: 12vw;
+    padding-top: 10vw;
 }
 .section-features>h2 {
-    font-size: 50px;
+    font-size: 70px;
     margin-left: 4%;
     text-transform: uppercase;
 }
 .section-features>h2>img {
-    top: -17px;
+    top: -20px;
     width: 115px;
-    margin-right: 15px;
+    margin-right: 50px;
     position: relative;
 }
 .section-products-slider-container {
@@ -118,7 +120,7 @@ span.current-slider {
     margin-top: 5vw;
 }
 .section-features .product-desc-container {
-    left: 4rem;
+    left: 4.9rem;
     bottom: 3.9rem;
 }
 .section-features .slider-product:nth-child(4) .section-product-image-container {
@@ -129,7 +131,7 @@ span.current-slider {
     flex-direction: column;
 }
 .section-products-slider-right-bar {
-    width: 10%;
+    width: 9%;
     right: -1vw;
     color: #fff;
     display: flex;
@@ -144,8 +146,7 @@ span.current-slider {
 }
 .section-products-slider-active-page {
     color: #fff;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 16px;
     padding: 1rem 0;
 }
 .section-products-slider-active-page:first-of-type {
@@ -179,18 +180,17 @@ span.current-slider {
     margin-left: 4vw;
 }
 .section-social-media>h2 {
-    font-size: 50px;
+    font-size: 70px;
     margin-left: 4vw;
-    letter-spacing: -2px;
     text-transform: uppercase;
 }
 .section-social-media-slider {
     display: flex;
 }
 .section-social-media>h2>img {
-    top: -17px;
+    top: -20px;
     width: 115px;
-    margin-right: 15px;
+    margin-right: 50px;
     position: relative;
 }
 .section-social-media>h2>span:nth-child(2) {
@@ -204,9 +204,6 @@ span.current-slider {
 }
 .section-social-media-slider-left>img:first-child {
     margin-bottom: -5vw;
-}
-.section-social-media-slider-left>img:nth-child(2) {
-
 }
 .section-social-media-slider-left>img:nth-child(3) {
     margin-bottom: -4.5vw;
@@ -239,9 +236,9 @@ span.current-slider {
 }
 .section-social-media-slider-right-bar>button {
     color: #fff;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 16px;
     padding: 1rem 0;
+    font-weight: 700;
 }
 .section-social-media-slider-right-bar>button p {
     transform: rotate(90deg);
@@ -253,9 +250,16 @@ span.current-slider {
     font-weight: 600;
     position: relative;
     align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+.section-social-media-slider-right>a>span {
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #fff;
 }
 .section-social-media-slider-right>a>img {
     width: 1.5rem;
+    margin-top: -12px;
     margin-right: 10px;
 }
 .section-social-slider-bottom-bar {

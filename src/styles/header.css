@@ -1,6 +1,10 @@
 header {
     display: flex;
     margin-left: 5%;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-header-left, nav.section-nav-left>ul, .section-header {
     display: flex;
@@ -9,7 +13,6 @@ header {
     width: 100%;
 }
 .section-header-left, .section-header-right {
-    font-weight: 900;
     padding-top: 35px;
     padding-bottom: 35px;
 }

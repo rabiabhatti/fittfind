@@ -104,14 +104,14 @@ img.section-application-motivation-banner-girl {
 .section-apps>h2 {
     margin: 0;
     width: 50%;
-    font-size: 50px;
-    letter-spacing: -2px;
+    line-height: 1;
+    font-size: 70px;
     text-transform: uppercase;
 }
 h2.section-apps-h2-1>img {
     top: -17px;
     width: 115px;
-    margin-right: 15px;
+    margin-right: 50px;
     position: relative;
 }
 .section-apps-left>p {
@@ -119,7 +119,9 @@ h2.section-apps-h2-1>img {
     font-size: 16px;
     line-height: 1.6;
     font-weight: 600;
+    color: #5a5f69;
     margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
 }
 h2.section-apps-h2-2>span:first-child {
     color: #055595;
@@ -131,11 +133,15 @@ h2.section-apps-h2-2>span {
     bottom: 10vw;
     border: none;
     color: #fff;
+    font-size: 13px;
+    margin-top: 20px;
     text-align: left;
     font-weight: 600;
     padding: 15px 25px;
     border-radius: 25px;
     background-color: #025696;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-apps-left>a>img {
     margin-left: 80px;
@@ -162,21 +168,21 @@ img.section-apps-right-img-2 {
 }
 span.section-apps-right-span-1 {
     color: #fff;
-    margin-top: -2vw;
-    font-weight: 700;
+    font-size: 16px;
+    margin-top: -3vw;
     margin-left: 31vw;
     position: absolute;
-    -webkit-transform: rotate(270deg);
+    letter-spacing: 2px;
     transform: rotate(90deg);
     text-transform: uppercase;
 }
 span.section-apps-right-span-2 {
-    right: 1.5vw;
+    right: 3vw;
     color: #fff;
+    font-size: 16px;
     margin-top: 16vw;
-    font-weight: 700;
     position: absolute;
-    -webkit-transform: rotate(270deg);
+    letter-spacing: 2px;
     transform: rotate(90deg);
     text-transform: uppercase;
 }
@@ -294,9 +300,11 @@ img.section-apps-right-img-play {
     left: 11vw;
     color: #fff;
     display: flex;
-    font-weight: 600;
+    font-size: 16px;
     position: relative;
+    letter-spacing: 2px;
     align-items: center;
+    text-transform: uppercase;
 }
 img.section-apps-right-img-store {
     margin: 0 15px;
