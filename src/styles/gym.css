@@ -265,6 +265,25 @@
         height: 13.5px;
         padding-bottom: 11px;
     }
+    .section-hero-gym-text>span {
+        font-size: 50px;
+    }
+    .section-hero-gym-main-banner>span, .section-hero-gym-main-banner-input {
+        font-size: 95px;
+    }
+    .section-hero-gym-main-banner-heading {
+        height: 100px;
+        margin-top: 10px;
+    }
+    span.section-hero-gym-main-banner-heading-light {
+        font-size: 11px;
+    }
+    .section-gym-features-desc>h3, .section-gym-motivation-banner-desc>h3, .section-gym-supporters>h3, .section-gym-owners>h2 {
+        font-size: 50px;
+    }
+    .section-gym-owners>p {
+        font-size: 20px;
+    }
 
 }
 

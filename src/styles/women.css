@@ -81,5 +81,11 @@
     .section-hero-category {
         width: 17.25vw;
     }
+    .section-products-filters p {
+        font-size: 12px;
+    }
+    .react-select__placeholder {
+        font-size: 12px;
+    }
 
 }

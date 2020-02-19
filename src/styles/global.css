@@ -225,5 +225,8 @@ button:disabled {
     .section-impossible>img:nth-child(2) {
         margin-top: 25px;
     }
+    .select-container p img {
+        width: 2rem;
+    }
 
 }

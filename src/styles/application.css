@@ -197,7 +197,6 @@ span.section-apps-right-span-2 {
 .section-application-features {
     display: flex;
     padding-top: 8vw;
-    align-items: center;
     justify-content: center;
     background-size: 300px 100%;
     background-position: center;
@@ -217,6 +216,9 @@ span.section-apps-right-span-2 {
 }
 .section-application-features-col-right {
     width: 20%;
+}
+.section-application-features-col-left, .section-application-features-col-right {
+    margin-top: 8vw;
 }
 .section-application-feature>p {
     font-size: 16px;
@@ -393,9 +395,6 @@ h3.section-application-video-col-left-heading>img {
         max-width: 86vw;
         margin-right: 7vw;
     }
-    .section-hero-application-text>h1 {
-        font-size: 60px;
-    }
     .section-application-features-col-middle>img {
         width: 20vw;
     }
@@ -417,8 +416,26 @@ h3.section-application-video-col-left-heading>img {
         padding-bottom: 11px;
     }
     .section-application-motivation-banner-dialogue {
+        font-size: 40px;
         margin-left: -35vw;
-        padding: 150px 100px 150px 100px;
+        padding: 100px 100px 100px 100px;
+    }
+    .section-hero-application-text {
+        font-size: 100px;
+    }
+    h3.section-application-video-col-left-heading {
+        font-size: 50px;
+    }
+    .section-application-video-col-right>img {
+        width: 20vw;
+        margin-top: 50px;
+        margin-right: -55px;
+    }
+    .section-application-features-col-left, .section-application-features-col-right {
+        margin-top: 0;
+    }
+    h3.left-banner-heading {
+        font-size: 50px;
     }
 }
 

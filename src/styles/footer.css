@@ -35,15 +35,16 @@ footer {
     color: #ffffff;
 }
 .footer-wrapper-notified-btn {
-    bottom: 10vw;
     border: none;
     color: #fff;
+    font-size: 13px;
     text-align: left;
     font-weight: 600;
     padding: 15px 25px;
     border-radius: 25px;
     background-color: #025696;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 }
 .footer-wrapper-notified-btn > img {
     margin-left: 90px;
