@@ -1,5 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
+import { Link, graphql } from 'gatsby'
 
 import '../styles/women.css'
 import product from '../images/product.jpg'
@@ -175,3 +176,35 @@ export default class Men extends React.Component {
         );
     }
 }
+
+// export const query = graphql`
+//   query ProductTemplate($id: String!) {
+//     allStrapiProduct {
+//     edges {
+//       node {
+//         id
+//         name
+//         price
+//         gender {
+//           type
+//         }
+//         sizes {
+//           size_name
+//         }
+//         benefits {
+//           benefit
+//         }
+//         details {
+//           detail
+//         }
+//         product_id
+//         description
+//         images {
+//           url
+//         }
+//       }
+//     }
+//     totalCount
+//   }
+//   }
+// `;
