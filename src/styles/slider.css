@@ -310,14 +310,15 @@ span.current-slider {
         bottom: 60px;
     }
     h1.section-Find-release-hero {
-        font-size: 60px;
+        font-size: 100px;
     }
     .section-main-slider-left {
-        margin-top: -19vw;
+        margin-top: -25vw;
         margin-bottom: 6vw;
     }
     .section-features .product-desc-container {
         left: 2.9vw;
+        width: 103.5%;
     }
     .section-products-slider-bottom-bar {
         width: 10vw;
@@ -329,7 +330,7 @@ span.current-slider {
         margin-top: -36vw;
     }
     .section-features>h2 {
-        font-size: 38px;
+        font-size: 50px;
     }
     .section-features>h2>img {
         top: -11px;
@@ -339,7 +340,7 @@ span.current-slider {
     }
     .section-products-slider-right-bar {
         width: 2vw;
-        right: -6vw;
+        right: -5.5vw;
     }
     .section-social-media-slider-right-bar {
         width: 2vw;
@@ -350,7 +351,16 @@ span.current-slider {
         right: 10.3vw;
     }
     .section-social-media {
-        margin-top: 6vw;
+        margin-top: 10vw;
+    }
+    button.findFitBtn>img {
+        margin-left: 100px;
+    }
+    .section-social-media>h2 {
+        font-size: 50px;
+    }
+    .section-social-media-slider-right>a {
+        width: 15vw;
     }
     
 }

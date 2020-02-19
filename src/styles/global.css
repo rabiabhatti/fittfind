@@ -214,3 +214,16 @@ p, h1, h2, h3, h4, h5{
 button:disabled {
     pointer-events: none;
 }
+
+
+
+
+
+
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .section-impossible>img:nth-child(2) {
+        margin-top: 25px;
+    }
+
+}

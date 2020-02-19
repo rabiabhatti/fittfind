@@ -115,5 +115,8 @@
     .product-desc-container {
         left: 3.153rem;
     }
+    .product-name {
+        width: 100%;
+    }
 
 }

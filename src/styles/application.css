@@ -350,7 +350,7 @@ h3.section-application-video-col-left-heading>img {
         margin-left: 4vw;
     }
     .section-apps>h2 {
-        font-size: 38px;
+        font-size: 50px;
     }
     h2.section-apps-h2-1>img {
         top: -11px;
@@ -365,8 +365,8 @@ h3.section-application-video-col-left-heading>img {
         margin-top: -19vw;
     }
     span.section-apps-right-span-1 {
-        margin-top: -1vw;
-        margin-left: 29vw;
+        margin-top: -2vw;
+        margin-left: 30vw;
     }
     img.section-apps-right-img-store {
         width: 30%;
@@ -379,7 +379,7 @@ h3.section-application-video-col-left-heading>img {
         right: -47vw;
     }
     span.section-apps-right-span-2 {
-        right: -0.5vw;
+        right: -0;
         margin-top: 14vw;
     }
     .section-apps-left>p {
