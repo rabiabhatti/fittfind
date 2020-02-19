@@ -14,14 +14,18 @@
     -moz-box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
 }
 .section-hero-application-text {
-    font-size: 2vw;
-    position: relative;
-    margin-top: -16vw;
+    display: flex;
     margin-left: 6vw;
-    margin-bottom: 10vw;
+    font-size: 125px;
+    margin-top: -19vw;
+    position: relative;
+    margin-bottom: 7vw;
+    flex-direction: column;
     text-transform: uppercase;
 }
-
+.section-hero-application-text>span:nth-child(2) {
+    margin-left: 115px;
+}
 .section-application-video-main {
     display: flex;
     margin-top: 8vw;
@@ -29,19 +33,20 @@
     justify-content: space-between;
 }
 .section-application-video-col-left {
-    width: 20%;
+    width: 22%;
     margin-top: 10vw;
 }
 h3.section-application-video-col-left-heading {
-    font-size: 2vw;
     line-height: 1;
+    font-size: 70px;
     text-transform: uppercase;
 }
 p.section-application-video-col-left-text {
     font-size: 16px;
+    padding: 40px 0;
     line-height: 1.6;
     font-weight: 600;
-    padding: 40px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 img.app-store-button-img {
     border-right: 1px solid #a8aebd;
@@ -58,11 +63,13 @@ img.app-store-button-img {
     margin-right: -60px;
 }
 .section-application-video-col-right-video-container>p {
-    right: -85px;
+    right: -110px;
     color: #fff;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 600;
     margin-top: -14vw;
     position: absolute;
+    letter-spacing: 2px;
     transform: rotate(90deg);
     text-transform: uppercase;
 }
@@ -73,11 +80,11 @@ img.app-store-button-img {
     position: absolute;
 }
 
-.section-hero-application-text>h1 {
+.section-hero-application-text>span {
     color: #fff;
     line-height: 1;
 }
-.section-hero-application-text>h1>span {
+.section-hero-application-text>span>span {
     color: #055595;
 }
 .section-application-video-col-right-video-container {
@@ -212,12 +219,19 @@ span.section-apps-right-span-2 {
     width: 20%;
 }
 .section-application-feature>p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
     font-weight: 600;
+    color: #5a5f69;
+    font-family: 'Montserrat', sans-serif;
+}
+.section-application-feature>img {
+    width: 16%;
+    height: 3px;
+    opacity: 0.5;
 }
 .section-application-feature>h4 {
-    font-size: 21px;
+    font-size: 30px;
     text-transform: uppercase;
 }
 .section-application-features-col-middle-stores-links {
@@ -236,10 +250,10 @@ span.section-apps-right-span-2 {
 }
 .section-application-motivation-banner-dialogue {
     color: #fff;
-    font-size: 2vw;
+    font-size: 50px;
     font-weight: 700;
     max-height: 400px;
-    margin-left: -51vw;
+    margin-left: -45vw;
     margin-bottom: 6vw;
     align-self: flex-end;
     background-color: #055595;
@@ -261,21 +275,25 @@ span.section-apps-right-span-2 {
     margin-top: 80px;
 }
 h3.left-banner-heading {
-    font-size: 2vw;
     line-height: 1;
+    font-size: 70px;
     margin-bottom: 50px;
     text-transform: uppercase;
 }
-.left-banner-text>img {
-    padding-bottom: 40px;
+.left-banner-text>img, .right-banner-text>img {
+    width: 17%;
+    height: 3px;
+    margin-bottom: 40px;
 }
 .left-banner-text {
     text-align: right;
 }
 .left-banner-text>p, .right-banner-text>p {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
     font-weight: 600;
+    color: #5a5f69;
+    font-family: 'Montserrat', sans-serif;
 }
 .left-banner-image, .right-banner-image {
     width: 60%;
@@ -309,13 +327,19 @@ img.section-apps-right-img-play {
 img.section-apps-right-img-store {
     margin: 0 15px;
 }
-h3.section-application-video-col-left-heading>img, .section-application-motivation-banner-left>h3.left-banner-heading>img  {
+h3.section-application-video-col-left-heading>img {
     height: 14px;
     margin-right: 20px;
     padding-bottom: 11px;
 }
-
-
+.section-application-motivation-banner-left>h3.left-banner-heading>img {
+    height: 25px;
+    margin-right: 125px;
+    padding-bottom: 22px;
+}
+.section-application-video {
+    margin-bottom: -5vw;
+}
 
 
 

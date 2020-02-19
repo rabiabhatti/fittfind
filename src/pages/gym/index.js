@@ -54,9 +54,9 @@ export default class Index extends React.Component{
                             <img src={slider_men} alt='slider_men' />
                         </div>
                         <div className='section-hero-gym-text'>
-                            <h2>Flexible Gym access</h2>
+                            <span>Flexible Gym access</span>
                             <div className='section-hero-gym-main-banner'>
-                                <h1>Find gym in</h1>
+                                <span>Find gym in</span>
                                 <div className='section-hero-gym-main-banner-heading'>
                                     <input
                                         value={location.toUpperCase()}
@@ -135,7 +135,7 @@ export default class Index extends React.Component{
                         <div className='section-gym-motivation-banner-slider'>
                             <img src={quotes} alt='quotes-img' />
                             <div className='motivation-quotes'>
-                                <p>We're working on our customers to create an innovative solution to fit your fitness needs</p>
+                                <p>"The secret of change is to focus all of your energy, not on fighting the old, but on building the new".</p>
                                 <p>Socrates</p>
                             </div>
                             <div className='motivation-quotes-buttons'>

@@ -145,12 +145,12 @@ p, h1, h2, h3, h4, h5{
     align-items: center;
 }
 .select-container p img {
-    width: 2rem;
-    height: 0.1rem;
-    margin-right: 5px;
+    width: 3rem;
+    height: 2px;
+    margin-right: 10px;
 }
 .react-select-container {
-    width: 58%;
+    width: 50%;
 }
 .select-container>span {
     font-weight: bold;
@@ -186,23 +186,26 @@ p, h1, h2, h3, h4, h5{
     background-image: url('../images/STUDIO-OWNER-back.png');
 }
 .section-gym-owners>h2 {
-    font-size: 2vw;
+    font-size: 70px;
     text-transform: uppercase;
 }
 .section-gym-owners>p {
     font-size: 22px;
-    padding: 20px 0;
+    font-weight: 500;
+    padding: 0 0 45px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-gym-owners-btn {
-    bottom: 10vw;
     border: none;
     color: #fff;
+    font-size: 13px;
     text-align: left;
     font-weight: 600;
     padding: 15px 25px;
     border-radius: 25px;
     background-color: #025696;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-gym-owners-btn img {
     margin-left: 90px;
