@@ -183,6 +183,16 @@ span.shop-women-ver>img, span.shop-men-ver>img {
         background-size: 63vw 70%;
         background-position: 30% 50%;
     }
+    .section-products-women-categories>div>h3, .section-products-men-categories>div>h3 {
+        font-size: 11px;
+    }
+    .section-products-women-categories>div>a, .section-products-men-categories>div>a {
+        font-size: 12px;
+    }
+    .section-products-women-categories>img, .section-products-men-categories>img {
+        height: 10px;
+        padding-top: 8px;
+    }
 
 }
 

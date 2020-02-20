@@ -80,6 +80,7 @@ a.section-nav-right-cart>img {
         width: 25vw;
     }
     header {
+        font-weight: 600;
         margin-bottom: -1px;
     }
     .section-header-left, .section-header-right {

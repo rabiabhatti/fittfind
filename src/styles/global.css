@@ -228,5 +228,7 @@ button:disabled {
     .select-container p img {
         width: 2rem;
     }
-
+    body {
+        font-size: 10px;
+    }
 }

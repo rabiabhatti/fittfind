@@ -87,5 +87,7 @@
     .react-select__placeholder {
         font-size: 12px;
     }
-
+    .section-hero-category p {
+        font-size: 0.75rem;
+    }
 }

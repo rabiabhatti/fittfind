@@ -162,11 +162,11 @@ export default class Men extends React.Component {
                         </div>
                     </div>
                 </Hero>
-                {/*<div className='section-products-list'>*/}
-                {/*    {products_list.map((item, i) => (*/}
-                {/*        <Product key={i} img={item} name='Women hybrid Joggers Black' price='$46.00' id={i} />*/}
-                {/*    ))}*/}
-                {/*</div>*/}
+                <div className='section-products-list'>
+                    {products_list.map((item, i) => (
+                        <Product key={i} img={item} name='Women hybrid Joggers Black' price='$46.00' id={i} />
+                    ))}
+                </div>
                 <div className='section-social-media'>
                 <h2><img src={horizontal_line_black} alt='horizontal_line_black'/> Follow <span>fitt</span><span>find</span></h2>
                     <Slider type='social_media' />
