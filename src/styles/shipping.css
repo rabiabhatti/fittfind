@@ -117,9 +117,21 @@ img.section-shipping-left {
 /*laptops, desktops*/
 @media (min-width: 1025px) and (max-width: 1440px) {
     .section-shipping-hero h1 {
-        font-size: 50px;
+        font-size: 55px;
     }
     .section-shipping-info-right>h2, .section-shipping-faqs-right>h2 {
         font-size: 40px;
+    }
+    .section-shipping-faq-container>h4, .section-shipping-related-questions-right>h2 {
+        font-size: 20px;
+    }
+    .section-shipping-related-questions-right>a {
+        font-size: 13px;
+    }
+    .section-shipping-faq-container>p, .section-shipping-info-right>p, .section-shipping-info-right>table tr>td, .section-shipping-info-right>table tr>th {
+        font-size: 12px;
+    }
+    .section-shipping-hero span {
+        font-size: 10px;
     }
 }
