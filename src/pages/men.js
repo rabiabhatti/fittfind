@@ -3,7 +3,7 @@ import Select from 'react-select';
 
 import '../styles/women.css'
 import product from '../images/product.jpg'
-import women_banner from '../images/women_banner.jpg'
+import men_banner from '../images/men_banner.jpg'
 import horizontal_line from '../images/horizontal_line_white.png'
 import horizontal_line_black from '../images/horizontal_line.png'
 import background_imag from '../images/background-blue-imag.jpg'
@@ -12,17 +12,18 @@ import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
 const products_list = [product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product,product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product];
 
 const categoryOptions = [
-    { value: 'Sport bras', label: 'Sport bras' },
+    { value: 'Compression tops', label: 'Compression tops' },
     { value: 'New Release', label: 'New Release' },
-    { value: 'Tank Tops', label: 'Tank Tops' },
-    { value: 'Leggings', label: 'Leggings' },
-    { value: 'Shorts', label: 'Shorts' },
+    { value: 'Tights', label: 'Tights' },
+    { value: 'Hoodies', label: 'Hoodies' },
+    { value: 'Joggers & sweatpants', label: 'Joggers & sweatpants' },
 ];
 
 const sizeOptions = [
-    { value: '38DD', label: '38DD' },
-    { value: '40DD', label: '40DD' },
-    { value: '34DD', label: '34DD' },
+    { value: 'XS', label: 'XS' },
+    { value: 'S', label: 'S' },
+    { value: 'M', label: 'M' },
+    { value: 'L', label: 'L' },
 ];
 
 const collectionOptions = [
@@ -40,19 +41,19 @@ const sortByOptions = [
 const categories = [
     {
         name: 'New Release',
-        image: women_banner,
+        image: men_banner,
     }, {
-        name: 'Sport Bras',
-        image: women_banner,
+        name: 'Compression tops',
+        image: men_banner,
     },{
-        name: 'Tank Tops',
-        image: women_banner,
+        name: 'Tights',
+        image: men_banner,
     },{
-        name: 'Leggings',
-        image: women_banner,
+        name: 'Hoodies',
+        image: men_banner,
     },{
-        name: 'Shorts',
-        image: women_banner,
+        name: 'Joggers & sweatpants',
+        image: men_banner,
     },
 
 ];
