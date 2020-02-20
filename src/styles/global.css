@@ -231,5 +231,7 @@ button:disabled {
     .section-gym-owners {
         padding: 100px 300px;
     }
-
+    body {
+        font-size: 10px;
+    }
 }
