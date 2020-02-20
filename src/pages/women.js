@@ -1,6 +1,7 @@
 import React from 'react';
+// import Img from 'gatsby-image'
+// import { graphql, Link } from 'gatsby'
 import Select from 'react-select';
-import { Link, graphql } from 'gatsby'
 
 import '../styles/women.css'
 import product from '../images/product.jpg'
@@ -89,19 +90,26 @@ export default class Men extends React.Component {
     };
 
     render() {
+        // const { data } = this.props;
         const { category, size, collection, sortBy } = this.state;
         return (
             <Wrapper name='Women'>
                 <div className='section-background'>
                     <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag'/>
                 </div>
+                {/*{data.allStrapiProduct.edges.map(product => (*/}
+                {/*    <div>*/}
+                {/*       <h2><Link to={`/${product.node.id}`}>{product.node.name}</Link></h2>*/}
+                {/*        <Img fixed={product.node.image.childImageSharp.fixed}/>*/}
+                {/*        <p>{product.node.price}</p>*/}
+                {/*    </div>*/}
+                {/*))}*/}
                 <Hero className='section-products-hero-main'>
                     <div className='section-products-hero-container'>
                         <div className='section-products-hero'>
                             {categories.map((item, i) => (
                                 <div className='section-hero-category-container' style={{backgroundImage: `url(${item.image})`}} key={i}>
-                                    <button className={`section-hero-category ${item.name.toUpperCase() === category && 'section-hero-category-active'}`} onClick={() => this.setState({category: item.name.toUpperCase()})}>
-                                    {/*<Link className={`section-hero-category ${item.name.toUpperCase() === category && 'section-hero-category-active'}`} to={`/women/${item.name.split(' ').join('').toLowerCase()}`}>*/}
+                                    <button className={`section-hero-category ${item.name.toUpperCase() === category && 'section-hero-category-active'}`} onClick={() => this.setState({ category: item.name.toUpperCase() })}>
                                         <img src={horizontal_line} alt='horizontal_line' />
                                         <p>{item.name.toUpperCase()}</p>
                                     </button>
@@ -111,7 +119,7 @@ export default class Men extends React.Component {
                         <div className='section-products-filters'>
                             <div className='select-container'>
                                 <p>
-                                    <img src={horizontal_line_black} alt='horizontal_line' />
+                                    <img src={horizontal_line} alt='horizontal_line' />
                                     CATEGORIES:
                                 </p>
                                 <Select
@@ -125,7 +133,7 @@ export default class Men extends React.Component {
                                 />
                             </div>
                             <div className='select-container'>
-                                <p><img src={horizontal_line_black} alt='horizontal_line' />SIZE:</p>
+                                <p><img src={horizontal_line} alt='horizontal_line' />SIZE:</p>
                                 <Select
                                     isDisabled={false}
                                     value={size}
@@ -137,7 +145,7 @@ export default class Men extends React.Component {
                                 />
                             </div>
                             <div className='select-container'>
-                                <p><img src={horizontal_line_black} alt='horizontal_line' />COLLECTION:</p>
+                                <p><img src={horizontal_line} alt='horizontal_line' />COLLECTION:</p>
                                 <Select
                                     isDisabled={false}
                                     value={collection}
@@ -149,7 +157,7 @@ export default class Men extends React.Component {
                                 />
                             </div>
                             <div className='select-container'>
-                                <p><img src={horizontal_line_black} alt='horizontal_line' />SORT BY:</p>
+                                <p><img src={horizontal_line} alt='horizontal_line' />SORT BY:</p>
                                 <Select
                                     isDisabled={false}
                                     value={sortBy}
@@ -178,34 +186,27 @@ export default class Men extends React.Component {
     }
 }
 
-// export const query = graphql`
-//   query ProductTemplate($id: String!) {
+
+// export const pageQuery = graphql`
+//   query IndexQuery {
 //     allStrapiProduct {
-//     edges {
-//       node {
-//         id
-//         name
-//         price
-//         gender {
-//           type
-//         }
-//         sizes {
-//           size_name
-//         }
-//         benefits {
-//           benefit
-//         }
-//         details {
-//           detail
-//         }
-//         product_id
-//         description
-//         images {
-//           url
-//         }
+//       edges {
+//           node {
+//             id
+//             name
+//             price
+//             images {
+//               childImageSharp {
+//                   fixed(width: 200, height: 125) {
+//                     ...GatsbyImageSharpFixed
+//                   }
+//               }
+//             }
+//             Details
+//             Sizes
+//             Benefits
+//           }
 //       }
 //     }
-//     totalCount
-//   }
 //   }
 // `;

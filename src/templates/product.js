@@ -182,12 +182,14 @@ export const query = graphql`
         images {
              url
         }
+        gender {
+          type
+        }
         categories {
+              name
               collection {
                 name
               }
-              gender
-              name
         }
     }
   }
