@@ -142,4 +142,8 @@
     .section-contact-detail p {
         line-height: 2;
     }
+    .section-contact-hero-bottom {
+        width: 100%;
+        margin: auto;
+    }
 }
