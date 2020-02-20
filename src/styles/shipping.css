@@ -58,8 +58,8 @@ img.section-shipping-left {
     vertical-align: text-top;
 }
 .section-shipping-info-right>table tr>th {
-    color: #000;
-    font-weight: 700;
+    color: #000 !important;
+    font-weight: 700 !important;
 }
 .section-shipping-info-right>table tr>td, .section-shipping-info-right>table tr>th {
     line-height: 1.6;
@@ -114,28 +114,12 @@ img.section-shipping-left {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .section-shipping-hero h1 {
+        font-size: 50px;
+    }
+    .section-shipping-info-right>h2, .section-shipping-faqs-right>h2 {
+        font-size: 40px;
+    }
+}
