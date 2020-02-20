@@ -6,7 +6,7 @@ import like_outline from '../images/like_outline.png'
 import forwardIcon from '../images/forward-icon.png'
 import horizontal_line from '../images/horizontal_line.png'
 import single_product_banner from '../images/women_banner.jpg'
-import {Wrapper, Hero, ImpossibleBanner, Slider} from '../components'
+import {Wrapper, Hero, ImpossibleBanner, Slider, SizeChart} from '../components'
 
 const sizes = ['XS', 'S', 'M', 'L'];
 
@@ -15,6 +15,7 @@ export default class extends React.Component {
         size: null,
         quantity: 1,
         liked: false,
+        showChart: false,
         product_images_no: 1,
     };
 
@@ -52,11 +53,12 @@ export default class extends React.Component {
     };
 
     render() {
-        const { quantity, liked, product_images_no, size } = this.state;
+        const { quantity, liked, product_images_no, size, showChart } = this.state;
         const product_images_count = [1, 2, 3, 4];
 
         return(
             <Wrapper name='Single Product'>
+                {showChart && <SizeChart handleClose={() => this.setState({ showChart: false })}/>}
                 <Hero className='section-single-product-hero'>
                     <div className='section-single-product-hero-left'>
                         <img className='section-single-product-hero-left-line' src={horizontal_line} alt='horizontal_line' />
@@ -70,7 +72,7 @@ export default class extends React.Component {
                                 </div>
                                 <div className='row-center space-between'>
                                     <p className='section-single-product-handles-text'>Size</p>
-                                    <button className='size-chart-btn'>
+                                    <button className='size-chart-btn' onClick={() => this.setState({showChart:true})}>
                                         size & fit
                                         <img src={forwardIcon} alt='forwardIcon' />
                                     </button>
