@@ -43,6 +43,34 @@ exports.createPages = ({ actions, graphql }) => {
         })
     });
 
-    // Query for articles nodes to use in creating pages.
-    return getProducts;
+    const getCategories = makeRequest(graphql, `
+        {
+          allStrapiCategory {
+            edges {
+              node {
+                name
+                gender {
+                  type
+                }
+              }
+            }
+          }
+        }
+    `).then(result => {
+        result.data.allStrapiCategory.edges.forEach(({ node }) => {
+            createPage({
+                path: `/${node.gender.type}/${node.name}`,
+                component: path.resolve(`src/templates/category.js`),
+                context: {
+                    category: node.name,
+                    gender: node.gender.type
+                },
+            })
+        })
+    });
+
+    return Promise.all([
+        getCategories,
+        getProducts,
+    ])
 };
