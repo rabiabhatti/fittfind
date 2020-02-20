@@ -46,7 +46,7 @@
 /*laptops, desktops*/
 @media (min-width: 1025px) and (max-width: 1440px) {
     .section-left-bar-text {
-        top: 10.5vw;
+        top: 11vw;
         font-size: 13px;
     }
     .section-left-bar {
