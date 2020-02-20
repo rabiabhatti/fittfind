@@ -18,8 +18,10 @@
 }
 a.section-about-us-hero-top {
     color: #fff;
-    font-weight: 700;
-    font-size: 0.7rem;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-about-us-hero-bottom>img {
     width: 3px;
@@ -34,15 +36,15 @@ a.section-about-us-hero-top>img {
     text-align: center;
 }
 .section-about-us-hero-bottom>h4 {
-    font-size: 21px;
-    font-weight: 900;
+    font-size: 25px;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 .section-about-us-hero-bottom>h2 {
-    width: 73%;
+    width: 58%;
     color: #fff;
-    font-size: 2vw;
+    font-size: 50px;
+    line-height: 1.2;
     font-weight: 700;
     margin: 10px auto;
     position: relative;
@@ -66,7 +68,7 @@ a.section-about-us-hero-top>img {
     background-image: url("../images/fittfind_h.png");
 }
 .section-about-us-banner-left {
-    width: 35%;
+    width: 33%;
 }
 .section-about-us-banner-right {
     width: 60%;
@@ -82,8 +84,7 @@ a.section-about-us-hero-top>img {
     height: max-content;
 }
 .section-about-us-banner-left h1 {
-    font-size: 50px;
-    letter-spacing: -2px;
+    font-size: 70px;
     text-transform: uppercase;
 }
 .section-about-us-banner-left h1>span {
@@ -98,19 +99,21 @@ a.section-about-us-hero-top>img {
 }
 .section-about-us-banner-left>div>img {
     height: 3px;
-    margin-right: 15px;
+    margin-right: 50px;
 }
 .section-about-us-banner-left p {
     font-size: 16px;
     line-height: 1.6;
     font-weight: 600;
+    color: #5a5f69;
     margin-top: 3.9vw;
+    margin-bottom: 60px;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-about-us-corporates>h2 {
-    font-size: 50px;
+    font-size: 70px;
     margin-bottom: 5vw;
     text-align: center;
-    letter-spacing: -2px;
     text-transform: uppercase;
 }
 .section-about-us-corporates {
@@ -145,19 +148,43 @@ a.section-about-us-hero-top>img {
     margin-left: -50px;
 }
 .section-about-us-corporates-details>div h4 {
-    font-size: 22px;
+    font-size: 30px;
     text-transform: uppercase;
 }
 .section-about-us-corporates-details p {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.6;
     font-weight: 600;
+    color: #5a5f69;
+    font-family: 'Montserrat', sans-serif;
 }
 button.corporates-single-detail-btn {
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.6;
-    font-weight: 600;
+    font-weight: 700;
     color: #055595;
     padding: 15px 0 5px 0;
     border-bottom: 1px solid #055595;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .section-about-us-hero-bottom>h2 {
+        font-size: 40px;
+    }
+    .section-about-us-banner-left h1, .section-about-us-corporates>h2 {
+        font-size: 50px;
+    }
+    .section-about-us-banner-left>div>img {
+        margin-right: 30px;
+    }
+    .section-about-us-banner-right>img {
+        width: 80%;
+        height: 80% !important;
+    }
+    .section-about-us-corporates-details>div h4 {
+        font-size: 25px;
+    }
 }

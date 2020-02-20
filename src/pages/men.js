@@ -109,7 +109,7 @@ export default class Men extends React.Component {
                         <div className='section-products-filters'>
                             <div className='select-container'>
                                 <p>
-                                    <img src={horizontal_line} alt='horizontal_line' />
+                                    <img src={horizontal_line_black} alt='horizontal_line' />
                                     CATEGORIES:
                                 </p>
                                 <Select
@@ -123,7 +123,7 @@ export default class Men extends React.Component {
                                 />
                             </div>
                             <div className='select-container'>
-                                <p><img src={horizontal_line} alt='horizontal_line' />SIZE:</p>
+                                <p><img src={horizontal_line_black} alt='horizontal_line' />SIZE:</p>
                                 <Select
                                     isDisabled={false}
                                     value={size}
@@ -135,7 +135,7 @@ export default class Men extends React.Component {
                                 />
                             </div>
                             <div className='select-container'>
-                                <p><img src={horizontal_line} alt='horizontal_line' />COLLECTION:</p>
+                                <p><img src={horizontal_line_black} alt='horizontal_line' />COLLECTION:</p>
                                 <Select
                                     isDisabled={false}
                                     value={collection}
@@ -147,7 +147,7 @@ export default class Men extends React.Component {
                                 />
                             </div>
                             <div className='select-container'>
-                                <p><img src={horizontal_line} alt='horizontal_line' />SORT BY:</p>
+                                <p><img src={horizontal_line_black} alt='horizontal_line' />SORT BY:</p>
                                 <Select
                                     isDisabled={false}
                                     value={sortBy}

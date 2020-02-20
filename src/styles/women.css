@@ -34,11 +34,11 @@
 .section-hero-category p {
     color: #ffffff;
     margin-top: 2rem;
-    font-weight: bold;
-    font-size: 0.75rem;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-hero-category img {
-    width: 2rem;
+    width: 34px;
     height: 0.11rem;
 }
 .section-products-filters {
@@ -46,17 +46,29 @@
     display: flex;
     padding: 3rem 0;
     background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-products-list {
     display: flex;
     flex-wrap: wrap;
     margin-left: 6.95vw;
     flex-direction: row;
+    margin-bottom: -7vw;
 }
 .section-products-list>div>img {
     max-width: 350px;
     margin-right: 50px;
 }
+.section-products-filters p {
+    font-size: 14px;
+}
+.react-select__placeholder {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 3px;
+    margin-top: -1px;
+}
+
 
 
 
@@ -68,6 +80,12 @@
     }
     .section-hero-category {
         width: 17.25vw;
+    }
+    .section-products-filters p {
+        font-size: 12px;
+    }
+    .react-select__placeholder {
+        font-size: 12px;
     }
 
 }

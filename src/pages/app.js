@@ -34,8 +34,8 @@ export default class Application extends React.Component {
                         <div className='section-hero-application-main'>
                             <img className='section-hero-application-img' src={trainer_banner} alt='trainer_banner' />
                             <div className='section-hero-application-text'>
-                            <h1><span>Find</span> your private</h1>
-                            <h1>personal <span>trainer</span></h1>
+                            <span><span>Find</span> your private</span>
+                            <span>personal <span>trainer</span></span>
                             </div>
                         </div>
                     </Hero>

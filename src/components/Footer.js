@@ -10,6 +10,7 @@ import twitter_icon from '../images/twitter_icon.png'
 import youtube_icon from '../images/youtube_icon.png'
 import facebook_icon from '../images/facebook_icon.png'
 import instagram_icon from '../images/instagram_icon.png'
+import horizontal_line from '../images/horizontal_line_g.png'
 
 class Footer extends React.Component {
     state = {
@@ -93,17 +94,20 @@ class Footer extends React.Component {
                             </div>
                         </div>
                         <div className='col-menu'>
+                            <img src={horizontal_line} alt='horizontal_line'/>
                             <div className='menu-row'>
                                 <h4>Shop</h4>
                                 <Link to={'/women'}>Women</Link>
                                 <Link to={'/men'}>Men</Link>
                             </div>
+                            <img src={horizontal_line} alt='horizontal_line'/>
                             <div className='menu-row'>
                                 <h4>Products</h4>
                                 <Link to={'/'}>Clothing</Link>
                                 <Link to={'/'}>Accessories</Link>
                                 <Link to={'/'}>New Arrivals</Link>
                             </div>
+                            <img src={horizontal_line} alt='horizontal_line'/>
                             <div className='menu-row'>
                                 <h4>Support</h4>
                                 <Link to={'/contact/order-status'}>Track my order</Link>
@@ -111,6 +115,7 @@ class Footer extends React.Component {
                                 <Link to={'/'}>Terms and Conditions</Link>
                                 <Link to={'/'}>Privacy Policy</Link>
                             </div>
+                            <img src={horizontal_line} alt='horizontal_line'/>
                             <div className='menu-row'>
                                 <h4>Company</h4>
                                 <Link to={'/contact/about-us'}>About us</Link>

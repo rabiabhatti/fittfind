@@ -39,7 +39,7 @@ export default class Contact extends React.Component {
                 <Hero>
                     <div className='column-center section-contact-hero'>
                         <div className='section-contact-hero-top'>
-                            <h1>SUPPORT</h1>
+                            <span>SUPPORT</span>
                             {categories.map((item, i) => (
                                 <Link to={item.link} key={i} style={{backgroundImage: `url(${item.image})`}} className='section-contact-hero-category-container'>
                                     <div className='section-contact-hero-category'>
@@ -49,39 +49,39 @@ export default class Contact extends React.Component {
                                 </Link>
                             ))}
                         </div>
-                        <div className='section-contact-hero-bottom column-center'>
-                            <h2>Contact Fittfind</h2>
-                            <div className='section-contact-hero-bottom-features space-between'>
-                                <div className='column-center section-contact-hero-bottom-feature'>
-                                    <div className='column-center section-contact-hero-bottom-feature-img'>
-                                        <img src={contact_feature_1} alt='contact_feature_1' />
-                                    </div>
-                                    <img className='section-contact-hero-bottom-feature-line' src={horizontal_line_c} alt='horizontal_line' />
-                                    <h4>Find and order product</h4>
-                                    <p className='heading-light'>Clothing</p>
-                                    <p className='heading-light'>Accessories</p>
-                                    <p className='heading-light'>New Arrivals</p>
-                                </div>
-                                <div className='column-center section-contact-hero-bottom-feature'>
-                                    <div className='column-center section-contact-hero-bottom-feature-img'>
-                                        <img src={contact_feature_2} alt='contact_feature_2' />
-                                    </div>
-                                    <img className='section-contact-hero-bottom-feature-line' src={horizontal_line_c} alt='horizontal_line' />
-                                    <h4>Order Status</h4>
-                                    <p className='heading-light'>Track my order</p>
-                                </div>
-                                <div className='column-center section-contact-hero-bottom-feature'>
-                                    <div className='column-center section-contact-hero-bottom-feature-img'>
-                                        <img src={contact_feature_3} alt='contact_feature_3' />
-                                    </div>
-                                    <img className='section-contact-hero-bottom-feature-line' src={horizontal_line_c} alt='horizontal_line' />
-                                    <h4>App Support</h4>
-                                    <p className='heading-light'>App coming soon...</p>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </Hero>
+                <div className='section-contact-hero-bottom column-center'>
+                    <h2>Contact Fittfind</h2>
+                    <div className='section-contact-hero-bottom-features space-between'>
+                        <div className='column-center section-contact-hero-bottom-feature'>
+                            <div className='column-center section-contact-hero-bottom-feature-img'>
+                                <img src={contact_feature_1} alt='contact_feature_1' />
+                            </div>
+                            <img className='section-contact-hero-bottom-feature-line' src={horizontal_line_c} alt='horizontal_line' />
+                            <h4>Find and order product</h4>
+                            <p className='heading-light'>Clothing</p>
+                            <p className='heading-light'>Accessories</p>
+                            <p className='heading-light'>New Arrivals</p>
+                        </div>
+                        <div className='column-center section-contact-hero-bottom-feature'>
+                            <div className='column-center section-contact-hero-bottom-feature-img'>
+                                <img src={contact_feature_2} alt='contact_feature_2' />
+                            </div>
+                            <img className='section-contact-hero-bottom-feature-line' src={horizontal_line_c} alt='horizontal_line' />
+                            <h4>Order Status</h4>
+                            <p className='heading-light'>Track my order</p>
+                        </div>
+                        <div className='column-center section-contact-hero-bottom-feature'>
+                            <div className='column-center section-contact-hero-bottom-feature-img'>
+                                <img src={contact_feature_3} alt='contact_feature_3' />
+                            </div>
+                            <img className='section-contact-hero-bottom-feature-line' src={horizontal_line_c} alt='horizontal_line' />
+                            <h4>App Support</h4>
+                            <p className='heading-light'>App coming soon...</p>
+                        </div>
+                    </div>
+                </div>
                 <div className='section-contact-banner column-center'>
                     <img className='section-contact-banner-img' src={contact_banner} alt='contact_banner'/>
                     <div className='section-contact-details column-center'>

@@ -5,25 +5,28 @@
 .section-hero-gym-text {
     color: #fff;
     margin-left: 4vw;
-    margin-top: -12vw;
+    margin-top: -15vw;
     padding-bottom: 2vw;
     text-transform: uppercase;
 }
 .section-hero-gym-main-banner {
     display: flex;
+    margin-top: -25px;
     flex-direction: row;
 }
-.section-hero-gym-text>h2 {
-    font-size: 2vw;
+.section-hero-gym-text>span {
     line-height: 1;
+    font-size: 70px;
 }
-.section-hero-gym-main-banner>h1 {
-    width: 30%;
-    font-size: 4vw;
+.section-hero-gym-main-banner>span {
+    width: 29%;
+    font-size: 125px;
 }
 .section-hero-gym-main-banner-heading {
     width: 35%;
     display: flex;
+    height: 130px;
+    margin-top: 17px;
     align-items: center;
     padding: 0 30px 0 10px;
     background-color: #055595;
@@ -31,26 +34,31 @@
 }
 .section-hero-gym-kickstarter-ref {
     width: 30%;
+    font-weight: 600;
     text-align: right;
     align-self: center;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-hero-gym-main-banner-input {
     border: 0;
+    height: 90px;
     color: #fff;
     background: 0;
-    font-size: 4vw;
     max-width: 75%;
-    font-weight: bold;
+    font-size: 125px;
+    padding-top: 23px;
+    font-family: 'DINNextLTProMediumCond';
 }
 .section-hero-gym-main-banner-input::placeholder {
     color: #ffffff;
 }
 .section-hero-gym-main-banner-heading-light {
     opacity: 0.4;
-    font-weight: 800;
+    line-height: 1;
+    font-size: 13px;
+    font-weight: 600;
     text-align: right;
-    font-size: 0.6rem;
-    line-height: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-gym-features {
     padding-top: 10vw;
@@ -67,26 +75,30 @@
     width: 22%;
 }
 .section-gym-features-desc>h3 {
-    font-size: 2vw;
     line-height: 1;
+    font-size: 70px;
     text-transform: uppercase;
 }
 .section-gym-features-desc>p {
     font-size: 16px;
+    padding: 40px 0;
     line-height: 1.6;
     font-weight: 600;
-    padding: 40px 0;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-gym-features-desc>button {
     bottom: 10vw;
     border: none;
     color: #fff;
+    font-size: 13px;
+    margin-top: 20px;
     text-align: left;
     font-weight: 600;
     padding: 15px 25px;
     border-radius: 25px;
     background-color: #025696;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-gym-features-desc>button>img {
     margin-left: 90px;
@@ -99,8 +111,15 @@
     text-align: center;
 }
 .section-gym-feature-desc>div>h4 {
-    font-size: 22px;
+    font-size: 30px;
     text-transform: uppercase;
+}
+.section-gym-feature-desc>p {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 600;
+    color: #5a5f69;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-gym-feature-desc {
     width: 65%;
@@ -130,8 +149,8 @@
     margin-top: 10vw;
 }
 .section-gym-motivation-banner-desc>h3 {
-    font-size: 2vw;
     line-height: 1;
+    font-size: 70px;
     margin-left: -50px;
     text-transform: uppercase;
 }
@@ -141,26 +160,28 @@
     line-height: 1.6;
     font-weight: 600;
     margin-left: 3vw;
+    font-family: 'Montserrat', sans-serif;
 }
 .motivation-quotes>p:first-child {
-    font-size: 22px;
+    font-size: 30px;
 }
 .section-gym-motivation-banner-slider {
-    width: 70vw;
+    width: 61vw;
     padding: 50px;
     color: #fff;
     font-size: 2vw;
     text-align: center;
     position: relative;
     align-self: flex-end;
-    margin: -30vw auto 15vw 9vw;
     background-color: #055595;
+    margin: -30vw auto 15vw 25vw;
 }
 .motivation-quotes>p:nth-child(2) {
     color: #3d87bf;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     padding-top: 40px;
+    font-family: 'Montserrat', sans-serif;
 }
 .motivation-quotes {
     padding: 20px 250px 20px 250px;
@@ -185,7 +206,7 @@
     margin-right: 5.7%;
 }
 .section-gym-supporters>h3 {
-    font-size: 2vw;
+    font-size: 70px;
     text-align: center;
     text-transform: uppercase;
 }
@@ -243,6 +264,25 @@
         width: 25%;
         height: 13.5px;
         padding-bottom: 11px;
+    }
+    .section-hero-gym-text>span {
+        font-size: 50px;
+    }
+    .section-hero-gym-main-banner>span, .section-hero-gym-main-banner-input {
+        font-size: 95px;
+    }
+    .section-hero-gym-main-banner-heading {
+        height: 100px;
+        margin-top: 10px;
+    }
+    span.section-hero-gym-main-banner-heading-light {
+        font-size: 11px;
+    }
+    .section-gym-features-desc>h3, .section-gym-motivation-banner-desc>h3, .section-gym-supporters>h3, .section-gym-owners>h2 {
+        font-size: 50px;
+    }
+    .section-gym-owners>p {
+        font-size: 20px;
     }
 
 }

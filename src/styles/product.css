@@ -95,11 +95,13 @@
     padding: 1.7rem 0rem 2rem 6.5rem;
 }
 .product-name {
-    font-size: 0.75rem;
-    font-weight: 600;
+    width: 85%;
+    font-size: 13px;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
 }
 .product-price {
-    font-size: 1.1rem;
+    font-size: 20px;
     font-weight: 600;
     color: #025696;
     margin-top: 1rem;
@@ -111,7 +113,12 @@
 /*laptops, desktops*/
 @media (min-width: 1025px) and (max-width: 1440px) {
     .product-desc-container {
-        left: 3.153rem;
+        width: 113%;
+        left: 1.153rem;
+    }
+    .product-name {
+        width: 100%;
+        font-weight: 600;
     }
 
 }

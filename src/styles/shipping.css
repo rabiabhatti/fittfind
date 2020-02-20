@@ -16,13 +16,14 @@
     position: relative;
 }
 .section-shipping-hero span {
-    font-weight: 700;
-    font-size: 0.7rem;
+    font-size: 13px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-shipping-hero h1 {
     left: 1%;
     top: 40%;
-    font-size: 3rem;
+    font-size: 70px;
     font-weight: 700;
     position: relative;
 }
@@ -43,8 +44,8 @@ img.section-shipping-left {
     margin-right: 10px;
 }
 .section-shipping-info-right>h2, .section-shipping-faqs-right>h2 {
-    font-size: 2vw;
     line-height: 1;
+    font-size: 50px;
     margin-bottom: 40px;
     text-transform: uppercase;
 }
@@ -57,29 +58,33 @@ img.section-shipping-left {
     vertical-align: text-top;
 }
 .section-shipping-info-right>table tr>th {
-    font-weight: 900;
-}
-.section-shipping-info-right>table tr>td {
-    font-weight: 600;
+    color: #000 !important;
+    font-weight: 700 !important;
 }
 .section-shipping-info-right>table tr>td, .section-shipping-info-right>table tr>th {
+    line-height: 1.6;
+    font-weight: 600;
+    color: #5a5f69;
+    margin-bottom: 40px;
     padding: 20px 0 20px 20px;
     border-bottom: 1px solid #e4e5e5;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-shipping-info-right>table>thead, .section-shipping-info-right>table tr:nth-child(2) {
     background-color: #f5f5f5;
 }
 .section-shipping-faq-container>h4, .section-shipping-related-questions-right>h2 {
-    font-size: 21px;
+    font-size: 28px;
     font-weight: 900;
     margin-bottom: 20px;
     text-transform: uppercase;
 }
 .section-shipping-faq-container>p, .section-shipping-info-right>p {
-    font-size: 16px;
     line-height: 1.6;
     font-weight: 600;
+    color: #5a5f69;
     margin-bottom: 40px;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-shipping-related-questions-right {
     display: flex;
@@ -92,12 +97,15 @@ img.section-shipping-left {
 }
 .section-shipping-related-questions-right>a {
     font-size: 16px;
+    color: #5a5f69;
     line-height: 1.6;
     font-weight: 600;
     width: max-content;
     margin-bottom: 10px;
     padding-right: 20px;
+    text-transform: uppercase;
     border-bottom: 1px solid black;
+    font-family: 'Montserrat', sans-serif;
 }
 
 
@@ -106,28 +114,12 @@ img.section-shipping-left {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .section-shipping-hero h1 {
+        font-size: 50px;
+    }
+    .section-shipping-info-right>h2, .section-shipping-faqs-right>h2 {
+        font-size: 40px;
+    }
+}

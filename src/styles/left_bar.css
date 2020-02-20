@@ -7,7 +7,7 @@
 .section-left-bar-text {
     left: 34px;
     top: 14.6vw;
-    font-weight: 700;
+    font-size: 16px;
     color: #b2bac6;
     background: none;
     position: absolute;
@@ -26,8 +26,9 @@
     flex-direction: column-reverse;
 }
 .section-left-bar-btn>span {
+    font-size: 16px;
     background: none;
-    font-weight: 700;
+    margin-left: -1px;
     transform-origin: 0 0;
     transform: rotate(270deg);
     text-transform: uppercase;
