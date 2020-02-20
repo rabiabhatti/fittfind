@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import '../styles/single_product.css'
 import like_fill from '../images/like_fill.png'
@@ -6,7 +8,7 @@ import like_outline from '../images/like_outline.png'
 import forwardIcon from '../images/forward-icon.png'
 import horizontal_line from '../images/horizontal_line.png'
 import single_product_banner from '../images/women_banner.jpg'
-import {Wrapper, Hero, ImpossibleBanner, Slider} from '../components'
+import {Wrapper, Hero, ImpossibleBanner, Slider, Image} from '../components'
 
 const sizes = ['XS', 'S', 'M', 'L'];
 
@@ -55,8 +57,13 @@ export default class extends React.Component {
         const { quantity, liked, product_images_no, size } = this.state;
         const product_images_count = [1, 2, 3, 4];
 
+        // console.log(this.props.data.strapiProduct.images.map((i) => (
+        //     <Image imgsrc={i.src} />
+        // )));
+
         return(
             <Wrapper name='Single Product'>
+                {/*{this.props.data.strapiProduct}*/}
                 <Hero className='section-single-product-hero'>
                     <div className='section-single-product-hero-left'>
                         <img className='section-single-product-hero-left-line' src={horizontal_line} alt='horizontal_line' />
@@ -163,3 +170,25 @@ export default class extends React.Component {
         )
     }
 }
+
+
+export const query = graphql`
+  query ProductTemplate($id: String!) {
+    strapiProduct(id: {eq: $id}) {
+        price
+        description
+        product_id
+        name
+        images {
+             url
+        }
+        categories {
+              collection {
+                name
+              }
+              gender
+              name
+        }
+    }
+  }
+`;

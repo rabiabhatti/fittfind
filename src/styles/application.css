@@ -53,8 +53,8 @@ img.app-store-button-img {
 }
 .section-application-video-col-right {
     display: flex;
-    align-items: start;
     margin-right: 2vw;
+    align-items: flex-start;
 }
 .section-application-video-col-right>img {
     z-index: 1;

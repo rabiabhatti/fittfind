@@ -1,5 +1,6 @@
 import React from 'react';
 import Select from 'react-select';
+import { Link, graphql } from 'gatsby'
 
 import '../styles/women.css'
 import product from '../images/product.jpg'
@@ -99,10 +100,10 @@ export default class Men extends React.Component {
                         <div className='section-products-hero'>
                             {categories.map((item, i) => (
                                 <div className='section-hero-category-container' style={{backgroundImage: `url(${item.image})`}} key={i}>
-                                    <button className={`section-hero-category ${item.name.toUpperCase() === category && 'section-hero-category-active'}`} onClick={() => this.setState({ category: item.name.toUpperCase() })}>
+                                    <Link className={`section-hero-category ${item.name.toUpperCase() === category && 'section-hero-category-active'}`} to={`/women/${item.name}`}>
                                         <img src={horizontal_line} alt='horizontal_line' />
                                         <p>{item.name.toUpperCase()}</p>
-                                    </button>
+                                    </Link>
                                 </div>
                             ))}
                         </div>
@@ -161,11 +162,11 @@ export default class Men extends React.Component {
                         </div>
                     </div>
                 </Hero>
-                <div className='section-products-list'>
-                    {products_list.map((item, i) => (
-                        <Product key={i} img={item} name='Women hybrid Joggers Black' price='$46.00' id={i} />
-                    ))}
-                </div>
+                {/*<div className='section-products-list'>*/}
+                {/*    {products_list.map((item, i) => (*/}
+                {/*        <Product key={i} img={item} name='Women hybrid Joggers Black' price='$46.00' id={i} />*/}
+                {/*    ))}*/}
+                {/*</div>*/}
                 <div className='section-social-media'>
                 <h2><img src={horizontal_line_black} alt='horizontal_line_black'/> Follow <span>fitt</span><span>find</span></h2>
                     <Slider type='social_media' />
@@ -175,3 +176,35 @@ export default class Men extends React.Component {
         );
     }
 }
+
+// export const query = graphql`
+//   query ProductTemplate($id: String!) {
+//     allStrapiProduct {
+//     edges {
+//       node {
+//         id
+//         name
+//         price
+//         gender {
+//           type
+//         }
+//         sizes {
+//           size_name
+//         }
+//         benefits {
+//           benefit
+//         }
+//         details {
+//           detail
+//         }
+//         product_id
+//         description
+//         images {
+//           url
+//         }
+//       }
+//     }
+//     totalCount
+//   }
+//   }
+// `;

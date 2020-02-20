@@ -1,4 +1,5 @@
 export * from './Hero';
+export * from './Image';
 export * from './Slider';
 export * from './Header';
 export * from './Footer';
