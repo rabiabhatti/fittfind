@@ -100,10 +100,11 @@ export default class Men extends React.Component {
                         <div className='section-products-hero'>
                             {categories.map((item, i) => (
                                 <div className='section-hero-category-container' style={{backgroundImage: `url(${item.image})`}} key={i}>
-                                    <Link className={`section-hero-category ${item.name.toUpperCase() === category && 'section-hero-category-active'}`} to={`/women/${item.name}`}>
+                                    <button className={`section-hero-category ${item.name.toUpperCase() === category && 'section-hero-category-active'}`} onClick={() => this.setState({category: item.name.toUpperCase()})}>
+                                    {/*<Link className={`section-hero-category ${item.name.toUpperCase() === category && 'section-hero-category-active'}`} to={`/women/${item.name.split(' ').join('').toLowerCase()}`}>*/}
                                         <img src={horizontal_line} alt='horizontal_line' />
                                         <p>{item.name.toUpperCase()}</p>
-                                    </Link>
+                                    </button>
                                 </div>
                             ))}
                         </div>

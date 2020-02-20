@@ -59,7 +59,7 @@ exports.createPages = ({ actions, graphql }) => {
     `).then(result => {
         result.data.allStrapiCategory.edges.forEach(({ node }) => {
             createPage({
-                path: `/${node.gender.type}/${node.name}`,
+                path: `/${node.gender.type}/${node.name.split(' ').join('').toLowerCase()}`,
                 component: path.resolve(`src/templates/category.js`),
                 context: {
                     category: node.name,
