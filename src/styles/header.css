@@ -21,6 +21,11 @@ header {
     background-color: #fff;
     justify-content: space-between;
 }
+.active-nav-link {
+    width: 4rem;
+    top: 2.75rem;
+    position: absolute;
+}
 .section-header-right {
     width: 25%;
     display: flex;
@@ -56,6 +61,9 @@ nav.section-nav-left>ul {
 }
 nav.section-nav-left>ul>li {
     width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 a.section-nav-right-cart {
     display: flex;
