@@ -171,12 +171,6 @@ button.corporates-single-detail-btn {
 
 /*laptops, desktops*/
 @media (min-width: 1025px) and (max-width: 1440px) {
-    .section-about-us-hero-bottom>h2 {
-        font-size: 40px;
-    }
-    .section-about-us-banner-left h1, .section-about-us-corporates>h2 {
-        font-size: 50px;
-    }
     .section-about-us-banner-left>div>img {
         margin-right: 30px;
     }
@@ -184,7 +178,31 @@ button.corporates-single-detail-btn {
         width: 80%;
         height: 80% !important;
     }
+    .section-about-us-hero-bottom>h2 {
+        width: 63%;
+    }
+    .section-about-us-banner-left {
+        width: 35%;
+    }
+    .section-about-us-banner-left h1, .section-about-us-corporates>h2 {
+        font-size: 55px;
+    }
+    .section-about-us-hero-bottom>h2 {
+        font-size: 40px;
+    }
     .section-about-us-corporates-details>div h4 {
         font-size: 25px;
+    }
+    .section-about-us-hero-bottom>h4 {
+        font-size: 18px;
+    }
+    .section-about-us-banner-left p {
+        font-size: 13px;
+    }
+    .section-about-us-corporates-details p, button.corporates-single-detail-btn {
+        font-size: 12px;
+    }
+    a.section-about-us-hero-top {
+        font-size: 10px;
     }
 }

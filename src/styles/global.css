@@ -228,6 +228,9 @@ button:disabled {
     .select-container p img {
         width: 2rem;
     }
+    .section-gym-owners {
+        padding: 100px 300px;
+    }
     body {
         font-size: 10px;
     }

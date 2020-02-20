@@ -46,6 +46,7 @@ p.section-application-video-col-left-text {
     padding: 40px 0;
     line-height: 1.6;
     font-weight: 600;
+    color: #5a5f69;
     font-family: 'Montserrat', sans-serif;
 }
 img.app-store-button-img {
@@ -243,6 +244,7 @@ span.section-apps-right-span-2 {
     color: #fff;
     font-size: 21px;
     margin-bottom: 5px;
+    text-transform: uppercase;
 }
 .section-application-motivation-banner-1 {
     display: flex;
@@ -352,7 +354,7 @@ h3.section-application-video-col-left-heading>img {
         margin-left: 4vw;
     }
     .section-apps>h2 {
-        font-size: 50px;
+        font-size: 55px;
     }
     h2.section-apps-h2-1>img {
         top: -11px;
@@ -367,25 +369,27 @@ h3.section-application-video-col-left-heading>img {
         margin-top: -19vw;
     }
     span.section-apps-right-span-1 {
-        margin-top: -2vw;
-        margin-left: 30vw;
+        margin-top: -1vw;
+        margin-left: 31vw;
     }
     img.section-apps-right-img-store {
         width: 30%;
     }
     .section-apps-right-img-app-store {
         left: 8vw;
+        font-size: 11px;
     }
     img.section-apps-right-img-play {
         width: 80%;
         right: -47vw;
     }
     span.section-apps-right-span-2 {
-        right: -0;
+        right: 2vw;
         margin-top: 14vw;
     }
     .section-apps-left>p {
         width: 265px;
+        font-size: 13px;
     }
 
     .section-application-video-main {
@@ -412,8 +416,9 @@ h3.section-application-video-col-left-heading>img {
         margin-top: -12vw;
     }
     h3.section-application-video-col-left-heading>img, .section-application-motivation-banner-left>h3.left-banner-heading>img {
-        height: 13.5px;
-        padding-bottom: 11px;
+        height: 20.5px;
+        margin-right: 35px;
+        padding-bottom: 18px;
     }
     .section-application-motivation-banner-dialogue {
         font-size: 40px;
@@ -421,21 +426,34 @@ h3.section-application-video-col-left-heading>img {
         padding: 100px 100px 100px 100px;
     }
     .section-hero-application-text {
-        font-size: 100px;
+        font-size: 90px;
     }
-    h3.section-application-video-col-left-heading {
-        font-size: 50px;
+    h3.section-application-video-col-left-heading, h3.left-banner-heading {
+        font-size: 55px;
     }
     .section-application-video-col-right>img {
         width: 20vw;
         margin-top: 50px;
         margin-right: -55px;
     }
-    .section-application-features-col-left, .section-application-features-col-right {
-        margin-top: 0;
+    .section-apps-left>a {
+        font-size: 10px;
+        padding: 13px 25px;
     }
-    h3.left-banner-heading {
-        font-size: 50px;
+    span.section-apps-right-span-1, span.section-apps-right-span-2 {
+        font-size: 11px;
+    }
+    p.section-application-video-col-left-text, .left-banner-text>p, .right-banner-text>p {
+        font-size: 13px;
+    }
+    .section-application-feature>p {
+        font-size: 12px;
+    }
+    .section-application-feature>h4 {
+        font-size: 25px;
+    }
+    .section-application-motivation-banner-2 a>img {
+        width: 150px;
     }
 }
 

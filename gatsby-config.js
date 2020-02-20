@@ -20,19 +20,19 @@ module.exports = {
         path: `${__dirname}/src/fonts/`
       },
     },
-    {
-      resolve: 'gatsby-source-strapi',
-      options: {
-        apiURL: 'http://localhost:1337',
-        contentTypes: [
-          'product',
-          'category',
-          'gender',
-          'user'
-        ],
-        queryLimit: 1000,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-source-strapi',
+    //   options: {
+    //     apiURL: 'http://localhost:1337',
+    //     contentTypes: [
+    //       'product',
+    //       'category',
+    //       'gender',
+    //       'user'
+    //     ],
+    //     queryLimit: 1000,
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

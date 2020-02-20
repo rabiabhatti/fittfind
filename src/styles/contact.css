@@ -131,10 +131,15 @@
         margin-bottom: -10rem;
     }
     .section-contact-hero-top span {
-        font-size: 50px;
-        padding: 10vw 0;
+        padding: 12vw 0 8vw 0;
     }
-    .section-contact-hero-bottom h2, .section-contact-details h2 {
-        font-size: 50px;
+    .section-contact-hero-bottom h2, .section-contact-details h2, .section-contact-hero-top span {
+        font-size: 55px;
+    }
+    .section-contact-hero-category p, .section-contact-hero-bottom-feature h4, .section-contact-detail h4, .heading-light, .section-contact-detail p {
+        font-size: 10px;
+    }
+    .section-contact-detail p {
+        line-height: 2;
     }
 }
