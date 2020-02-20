@@ -352,7 +352,7 @@ h3.section-application-video-col-left-heading>img {
         margin-left: 4vw;
     }
     .section-apps>h2 {
-        font-size: 50px;
+        font-size: 55px;
     }
     h2.section-apps-h2-1>img {
         top: -11px;
@@ -367,25 +367,27 @@ h3.section-application-video-col-left-heading>img {
         margin-top: -19vw;
     }
     span.section-apps-right-span-1 {
-        margin-top: -2vw;
-        margin-left: 30vw;
+        margin-top: -1vw;
+        margin-left: 31vw;
     }
     img.section-apps-right-img-store {
         width: 30%;
     }
     .section-apps-right-img-app-store {
         left: 8vw;
+        font-size: 11px;
     }
     img.section-apps-right-img-play {
         width: 80%;
         right: -47vw;
     }
     span.section-apps-right-span-2 {
-        right: -0;
+        right: 2vw;
         margin-top: 14vw;
     }
     .section-apps-left>p {
         width: 265px;
+        font-size: 13px;
     }
 
     .section-application-video-main {
@@ -436,6 +438,13 @@ h3.section-application-video-col-left-heading>img {
     }
     h3.left-banner-heading {
         font-size: 50px;
+    }
+    .section-apps-left>a {
+        font-size: 10px;
+        padding: 13px 25px;
+    }
+    span.section-apps-right-span-1, span.section-apps-right-span-2 {
+        font-size: 11px;
     }
 }
 
