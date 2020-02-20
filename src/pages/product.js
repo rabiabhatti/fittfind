@@ -7,6 +7,7 @@ import forwardIcon from '../images/forward-icon.png'
 import horizontal_line from '../images/horizontal_line.png'
 import single_product_banner from '../images/women_banner.jpg'
 import {Wrapper, Hero, ImpossibleBanner, Slider} from '../components'
+import background_imag from "../images/background-blue-imag.jpg";
 
 const sizes = ['XS', 'S', 'M', 'L'];
 
@@ -57,6 +58,9 @@ export default class extends React.Component {
 
         return(
             <Wrapper name='Single Product'>
+                <div className='section-background'>
+                    <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag'/>
+                </div>
                 <Hero className='section-single-product-hero'>
                     <div className='section-single-product-hero-left'>
                         <img className='section-single-product-hero-left-line' src={horizontal_line} alt='horizontal_line' />
