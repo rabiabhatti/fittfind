@@ -53,10 +53,7 @@ class Header extends React.Component {
 
     render() {
         const { open_right_bar, show_sign_in_popup, show_register_popup } = this.state;
-        let currentURL = 'men';
-        if (typeof window !== "undefined") {
-            currentURL = window.location.href.split('/')[window.location.href.split('/').length -1];
-        }
+        const currentURL = this.props.path;
 
         return (
             <Fragment>

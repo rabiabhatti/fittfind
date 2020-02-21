@@ -26,8 +26,9 @@ export default class Application extends React.Component {
     };
     render() {
         const { show_video } = this.state;
+        const path = this.props.path.split('/')[this.props.path.split('/').length - 2];
         return (
-            <Wrapper name={'App'}>
+            <Wrapper name={'App'} path={path}>
                 {show_video && <VideoPopup handleClose={() => this.setState({ show_video: false })} />}
                 <div className='section-hero-video'>
                     <Hero className='section-hero-application'>

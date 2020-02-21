@@ -156,18 +156,23 @@ export default class GymList extends React.Component{
     };
 
     handlePrevNext = (type) => {
-        const currentPage = window.location.href.slice(window.location.href.length - 1);
-        window.location.href = type === 'next' ? `/gym/list?page=${parseInt(currentPage) + 1}` : `/gym/list?page=${parseInt(currentPage)-1}`;
+        console.log('clicked')
+        // const currentPage = window.location.href.slice(window.location.href.length - 1);
+        // window.location.href = type === 'next' ? `/gym/list?page=${parseInt(currentPage) + 1}` : `/gym/list?page=${parseInt(currentPage)-1}`;
     };
 
     handlePageClick = (p) => {
-        window.location.href = `/gym/list?page=${p+1}`
+        console.log('clicked')
+        // window.location.href = `/gym/list?page=${p+1}`
     };
 
     render() {
         const { amenityOption, location, facilityOption } = this.state;
         const pages = [0, 1, 2, 3, 4, 5, 6, 7];
-        const currentPage = window.location.href.slice(window.location.href.length - 1);
+        let currentPage = 1;
+        // if (typeof window !== undefined) {
+        //     currentPage = window.location.href.slice(window.location.href.length - 1);
+        // }
 
         return (
             <Wrapper name='List Yourself'>
@@ -237,20 +242,20 @@ export default class GymList extends React.Component{
                     ))}
                 </div>
                 <div className='section-gym-list-pages'>
-                    <button disabled={currentPage == 1} onClick={() => this.handlePrevNext('prev')}>
+                    <button disabled={currentPage === 1} onClick={() => this.handlePrevNext('prev')}>
                         <img src={backward_icon} alt='backward_icon' />
                         Previous
                     </button>
                     {pages.map(p => (
                         <button
                             key={p}
-                            className={currentPage == p ? `section-gym-list-current-page` : ''}
+                            className={currentPage === p ? `section-gym-list-current-page` : ''}
                             onClick={() => this.handlePageClick(p)}
                         >
                             {p+1}
                         </button>
                     ))}
-                    <button onClick={() => this.handlePrevNext('next')} disabled={currentPage == pages.slice(pages.length-1)[0] +1}>
+                    <button onClick={() => this.handlePrevNext('next')} disabled={currentPage === pages.slice(pages.length-1)[0] +1}>
                         <img src={forwardIcon} alt='forwardIcon' />
                         Next
                     </button>
