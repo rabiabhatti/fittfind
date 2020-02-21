@@ -90,3 +90,21 @@
         font-size: 0.75rem;
     }
 }
+
+
+
+/*tablets, ipads (landscape)*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-products-filters {
+        width: 69.5vw;
+    }
+    .section-hero-category {
+        width: 17.25vw;
+    }
+    .section-hero-category, .section-products-filters p, .react-select__placeholder {
+        font-size: 10px;
+    }
+    .react-select__placeholder {
+        top: 51% !important;
+    }
+}

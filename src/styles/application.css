@@ -461,28 +461,123 @@ h3.section-application-video-col-left-heading>img {
 
 
 
+/*tablets, ipads (landscape)*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-apps {
+        margin-left: 4vw;
+    }
+    .section-apps>h2 {
+        width: 55%;
+    }
+    h2.section-apps-h2-1>img {
+        top: -14px;
+        width: 70px;
+        margin-right: 20px;
+    }
+    img.section-apps-right-img-1 {
+        width: 35vw;
+        margin-left: 15px;
+    }
+    img.section-apps-right-img-2 {
+        right: 4vw;
+        width: 42vw;
+        margin-top: -25vw;
+    }
+    span.section-apps-right-span-1 {
+        margin-top: -2vw;
+        margin-left: 30vw;
+    }
+    img.section-apps-right-img-store, img.section-apps-right-img-play {
+        width: 80px;
+    }
+    .section-apps-right-img-app-store {
+        left: 8vw;
+        font-size: 11px;
+    }
+    img.section-apps-right-img-play {
+        top: -11vw;
+        right: -44vw;
+    }
+    span.section-apps-right-span-2 {
+        right: 0;
+        margin-top: 9vw;
+    }
+    .section-apps-left>p {
+        width: 265px;
+        font-size: 13px;
+    }
 
+    .section-application-video-main {
+        margin-left: 7vw;
+    }
+    .section-hero-application-img {
+        max-width: 86vw;
+        margin-right: 7vw;
+    }
+    .section-application-features-col-middle>img {
+        width: 20vw;
+    }
+    .section-application-features {
+        background-size: 250px 100%;
+    }
+    .section-hero-video {
+        background-size: 25vw 100%;
+    }
+    .section-application-video-col-right-video-container {
+        max-height: 690px;
+    }
+    .section-application-video-col-right-video-container>p {
+        right: -8vw;
+        margin-top: -12vw;
+    }
+    h3.section-application-video-col-left-heading>img, .section-application-motivation-banner-left>h3.left-banner-heading>img {
+        height: 20.5px;
+        margin-right: 35px;
+        padding-bottom: 18px;
+    }
+    .section-application-motivation-banner-dialogue {
+        font-size: 40px;
+        margin-left: -35vw;
+        padding: 100px 100px 100px 100px;
+    }
+    .section-hero-application-text {
+        font-size: 90px;
+    }
+    h3.section-application-video-col-left-heading, h3.left-banner-heading {
+        font-size: 55px;
+    }
+    .section-application-video-col-right>img {
+        width: 20vw;
+        margin-top: 50px;
+        margin-right: -55px;
+    }
+    .section-apps-left>a {
+        padding: 13px 25px;
+    }
+    .section-application-motivation-banner-2 a>img {
+        width: 150px;
+    }
+    .section-apps-left>a>img {
+        margin-left: 55px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    .section-apps>h2 {
+        font-size: 45px;
+    }
+    .section-application-feature>h4 {
+        font-size: 25px;
+    }
+    p.section-application-video-col-left-text, .left-banner-text>p, .right-banner-text>p {
+        font-size: 13px;
+    }
+    .section-application-feature>p {
+        font-size: 12px;
+    }
+    span.section-apps-right-span-1, span.section-apps-right-span-2 {
+        font-size: 11px;
+    }
+    .section-apps-left>a {
+        font-size: 10px;
+    }
+}
