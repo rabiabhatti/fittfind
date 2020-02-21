@@ -81,6 +81,7 @@ a.section-nav-right-cart>img {
     }
     header {
         font-size: 10px;
+        font-weight: 600;
         margin-bottom: -1px;
     }
     .section-header-left, .section-header-right {
