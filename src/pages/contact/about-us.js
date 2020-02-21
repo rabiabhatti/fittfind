@@ -84,30 +84,33 @@ export default class AboutUs extends React.Component{
                 <div className='section-about-us-corporates'>
                     <h2><span>fitt</span><span>find</span> corporate details</h2>
                     <div className='section-about-us-corporates-details'>
-                        {corporates_details.map((item, i) => (
-                            <div className='section-about-us-corporates-single-detail' key={i}>
-                                <div style={{ backgroundImage: `url(${two})` }}>
-                                    <h4>{item.title}</h4>
-                                    <img src={horizontal_line} alt='horizontal_line' />
-                                </div>
-                                <div>
-                                    <p>{item.overview}</p>
-                                    {detail !== i+1 &&
+                        {corporates_details.map((item, i) => {
+                            const image = require(`../../images/0${i+1}.png`)
+                            return (
+                                <div className='section-about-us-corporates-single-detail' key={i}>
+                                    <div style={{ backgroundImage: `url(${image})`}}>
+                                        <h4>{item.title}</h4>
+                                        <img src={horizontal_line} alt='horizontal_line' />
+                                    </div>
+                                    <div>
+                                        <p>{item.overview}</p>
+                                        {detail !== i+1 &&
                                         <button className='corporates-single-detail-btn' onClick={() => this.setState({ detail: i+1 })}>
                                             Read more
                                         </button>
-                                    }
-                                </div>
-                                {detail === i+1 &&
+                                        }
+                                    </div>
+                                    {detail === i+1 &&
                                     <div className='section-about-us-corporates-single-detail-desc'>
                                         <p>{item.desc}</p>
                                         <button className='corporates-single-detail-btn' onClick={() => this.setState({ detail: null })}>
                                             Show less
                                         </button>
                                     </div>
-                                }
-                            </div>
-                        ))}
+                                    }
+                                </div>
+                            )
+                        })}
                     </div>
                 </div>
                 <ImpossibleBanner/>

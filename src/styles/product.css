@@ -67,7 +67,7 @@
     margin-top: -3rem;
 }
 .slider-product:nth-child(4) .section-product-image-container {
-    box-shadow: 20px 19px 32px -10px #b2bac6;
+    box-shadow: 20px 19px 32px -10px #1a1c212b;
 }
 .section-product-image-container {
     display: flex;
@@ -126,9 +126,6 @@
     }
 
 }
-
-
-
 
 /*tablets, ipads (landscape)*/
 @media (min-width: 769px) and (max-width: 1024px) {
