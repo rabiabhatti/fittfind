@@ -316,21 +316,77 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*tablets, ipads (landscape)*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-hero-gym-img>img {
+        width: 100%;
+    }
+    .section-gym-features-desc-first {
+        margin-left: unset;
+    }
+    .section-gym-features-list {
+        width: 75%;
+    }
+    .section-gym-motivation-first>img {
+        width: 55vw;
+    }
+    .section-gym-motivation-banner-desc>h3>img {
+        height: 13.5px;
+        padding-bottom: 11px;
+    }
+    .motivation-quotes {
+        padding: 20px 150px 20px 150px;
+    }
+    .section-gym-motivation-banner-slider {
+        width: 65vw;
+        margin: -38vw auto 15vw 24vw;
+    }
+    .section-gym-features-desc>h3>img {
+        width: 25%;
+        height: 13.5px;
+        padding-bottom: 11px;
+    }
+    .section-hero-gym-text>span {
+        font-size: 50px;
+    }
+    .section-hero-gym-main-banner>span, .section-hero-gym-main-banner-input {
+        font-size: 90px;
+    }
+    .section-hero-gym-main-banner-heading {
+        width: 45%;
+        height: 93px;
+        margin-top: 10px;
+    }
+    .section-hero-gym-kickstarter-ref {
+        width: 20%;
+    }
+    .section-hero-gym-kickstarter-ref>img {
+        width: 60%;
+    }
+    .section-gym-features-desc>h3, .section-gym-motivation-banner-desc>h3, .section-gym-supporters>h3, .section-gym-owners>h2 {
+        font-size: 55px;
+    }
+    .section-gym-feature-desc>div>h4 {
+        font-size: 25px;
+    }
+    .section-gym-owners>p {
+        font-size: 17px;
+    }
+    .section-gym-features-desc>p, .section-gym-feature-desc>p, .section-gym-motivation-banner-desc>p {
+        font-size: 13px;
+    }
+    span.section-hero-gym-main-banner-heading-light {
+        font-size: 11px;
+    }
+    .section-hero-gym-kickstarter-ref>p {
+        font-size: 10px;
+    }
+    .section-gym-features-desc>button {
+        font-size: 10px;
+        padding: 13px 25px;
+    }
+    .section-gym-owners-btn {
+        font-size: 10px;
+        padding: 13px 25px;
+    }
+}

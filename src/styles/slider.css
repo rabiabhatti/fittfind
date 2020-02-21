@@ -387,11 +387,88 @@ span.current-slider {
 
 
 
-
-
-
-
-
-
-
-
+/*tablets, ipads (landscape)*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-hero-slider-right-bar {
+        right: 2vw;
+    }
+    .sliders-count-container {
+        bottom: 10px;
+    }
+    .section-main-slider-left {
+        margin-top: -25vw;
+        margin-bottom: 6vw;
+    }
+    .section-features .product-desc-container {
+        left: 2.9vw;
+        width: 103.5%;
+        bottom: 3rem;
+    }
+    .section-products-slider-bottom-bar {
+        width: 10vw;
+        right: 13vw;
+        margin-top: 0;
+    }
+    img.section-background-fittfind {
+        left: 30vw;
+        margin-top: -50vw;
+    }
+    .section-features>h2>img, .section-social-media>h2>img {
+        top: -14px;
+        width: 70px;
+        margin-right: 20px;
+    }
+    .section-features>h2 {
+        margin-left: 0;
+    }
+    .section-products-slider-right-bar {
+        width: 2vw;
+        right: -5.5vw;
+    }
+    .section-social-media-slider-right-bar {
+        width: 2vw;
+        right: -9vw;
+    }
+    .section-social-slider-bottom-bar {
+        width: 10vw;
+        right: 10.3vw;
+        margin-top: 5vw;
+    }
+    .section-social-media {
+        margin-top: 10vw;
+    }
+    button.findFitBtn>img {
+        margin-left: 55px;
+    }
+    .section-social-media-slider-right>a {
+        width: 15vw;
+    }
+    button.findFitBtn {
+        font-size: 10px;
+        padding: 13px 25px;
+    }
+    .section-hero-slider-right-bar>button, .section-products-slider-active-page {
+        font-size: 14px;
+    }
+    .section-social-media-slider-right>a>img {
+        width: 1.1rem;
+        margin-top: -10px;
+        margin-right: 10px;
+    }
+    .section-products-slider-bottom-bar>button, .section-social-slider-bottom-bar>button {
+        padding: 15px;
+    }
+    
+    h1.section-Find-release-hero {
+        font-size: 70px;
+    }
+    .section-features>h2, .section-social-media>h2 {
+        font-size: 45px;
+    }
+    span.current-slider {
+        font-size: 50px;
+    }
+    .section-social-media-slider-right>a>span {
+        font-size: 10px;
+    }
+}

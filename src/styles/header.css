@@ -102,3 +102,34 @@ a.section-nav-right-cart>img {
     }
 
 }
+
+
+
+
+/*tablets, ipads (landscape)*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-header-right {
+        width: 25vw;
+    }
+    header {
+        font-size: 10px;
+        margin-bottom: -1px;
+    }
+    .section-header-left, .section-header-right {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+    .section-logo img {
+        width: 60%;
+    }
+    a.section-nav-right-cart>span>span, span.section-nav-right-currency>span {
+        line-height: 1;
+    }
+    a.section-nav-right-cart>img {
+        height: 15px;
+    }
+    button.section-nav-right-menu>img {
+        width: 15px;
+        height: 10px;
+    }
+}
