@@ -90,17 +90,17 @@ export default class Basket extends React.Component {
                                     <div className='section-basket-single-item-details'>
                                         <div className='section-basket-single-item-headings space-between'>
                                             <h3 className='section-basket-heading'>{item.name}</h3>
-                                            <p className='section-basket-heading basket-heading-light'>Unit price</p>
+                                            <p className='section-basket-heading heading-light'>Unit price</p>
                                             <div className='section-basket-heading'/>
-                                            <p className='section-basket-heading basket-heading-light'>Total</p>
+                                            <p className='section-basket-heading heading-light'>Total</p>
                                             <div className='section-basket-heading'/>
                                         </div>
                                         <div className='section-basket-single-item-desc space-between'>
                                             <div className='section-basket-item-detail'>
                                                <div className='column-start'>
-                                                    <p className='basket-heading-light'>Color</p>
-                                                    <p className='basket-heading-light'>Size</p>
-                                                    <p className='basket-heading-light'>Qty</p>
+                                                    <p className='heading-light'>Color</p>
+                                                    <p className='heading-light'>Size</p>
+                                                    <p className='heading-light'>Qty</p>
                                                 </div>
                                                 <div className='column-start'>
                                                     <p className='section-basket-item-details'>{item.color}</p>
@@ -127,9 +127,9 @@ export default class Basket extends React.Component {
                     <div className='section-basket-place-order'>
                         <div className='space-between'>
                             <div className='column-end'>
-                                <p className='basket-heading-light'>Subtotal</p>
-                                <p className='basket-heading-light'>Shipping from</p>
-                                <p className='basket-heading-light'>Total(including taxes)</p>
+                                <p className='heading-light'>Subtotal</p>
+                                <p className='heading-light'>Shipping from</p>
+                                <p className='heading-light'>Total(including taxes)</p>
                             </div>
                             <div className='column-start'>
                                 <p>$40</p>

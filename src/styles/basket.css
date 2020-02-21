@@ -223,7 +223,11 @@ a.section-basket-hero-back-link>span {
 .heading-light {
     color: #b5b9c5;
 }
-
+.selected--flag--option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 .section-basket-details h3, .section-basket-details h2 {
     text-transform: uppercase;
 }
