@@ -49,7 +49,7 @@ exports.createPages = ({ actions, graphql }) => {
             edges {
               node {
                 name
-                gender {
+                genders {
                   type
                 }
               }
@@ -58,15 +58,17 @@ exports.createPages = ({ actions, graphql }) => {
         }
     `).then(result => {
         result.data.allStrapiCategory.edges.forEach(({ node }) => {
-            console.log('node', node);
-            createPage({
-                path: `/${node.gender.type}/${node.name.split(' ').join('').toLowerCase()}`,
-                component: path.resolve(`src/templates/category.js`),
-                context: {
-                    category: node.name,
-                    gender: node.gender.type
-                },
-            })
+            const category = node;
+            category.genders.map(gender => {
+                createPage({
+                    path: `/${gender.type}/${category.name.split(' ').join('').toLowerCase()}`,
+                    component: path.resolve(`src/templates/category.js`),
+                    context: {
+                        category: category.name,
+                        gender: gender.type
+                    },
+                })
+            });
         })
     });
 
