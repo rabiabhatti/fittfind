@@ -18,9 +18,9 @@ export default class FundGym extends React.Component {
 
     render() {
         let currentURL = 'london';
-        if (typeof window !== "undefined") {
-            currentURL = window.location.href.split('/')[window.location.href.split('/').length -1];
-        }
+        // if (typeof window !== "undefined") {
+        //     currentURL = window.location.href.split('/')[window.location.href.split('/').length -1];
+        // }
         // const { location } = this.state;
 
         return (

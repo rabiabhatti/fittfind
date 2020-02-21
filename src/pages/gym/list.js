@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 import Select from 'react-select';
 
 import '../../styles/gym-list.css'
@@ -161,9 +161,8 @@ export default class GymList extends React.Component{
         // window.location.href = type === 'next' ? `/gym/list?page=${parseInt(currentPage) + 1}` : `/gym/list?page=${parseInt(currentPage)-1}`;
     };
 
-    handlePageClick = (p) => {
-        console.log('clicked')
-        // window.location.href = `/gym/list?page=${p+1}`
+    handlePageClick = async (p) => {
+        await navigate(`/gym/list?page=${p+1}`)
     };
 
     render() {

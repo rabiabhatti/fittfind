@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 
 import '../../styles/gym.css'
 import { Wrapper, Hero } from '../../components'
@@ -36,10 +36,10 @@ export default class Index extends React.Component{
     }
 
 
-    handleKeyPress = (e) => {
+    handleKeyPress = async (e) => {
         const { location } = this.state;
         if (e.key === 'Enter' && location.length) {
-            window.location.href = `/gym/find-gym?location=${location}`
+            await navigate(`/gym/find-gym?location=${location}`)
         }
     };
 
