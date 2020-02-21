@@ -63,9 +63,18 @@
     font-size: 14px;
 }
 .react-select__placeholder {
+    width: 95%;
     font-size: 14px;
     font-weight: 600;
+    overflow: hidden;
     margin-left: 3px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.react-select__menu {
+    right: 0;
+    min-width: 12rem;
+    position: relative;
 }
 
 
