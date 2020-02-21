@@ -4,7 +4,10 @@ import { Link } from 'gatsby'
 import '../styles/slider.css'
 import { Product } from './'
 
-import product from '../images/product.jpg'
+import product_1 from '../images/product-1.jpg'
+import product_2 from '../images/product-2.jpg'
+import product_3 from '../images/product-3.jpg'
+import product_4 from '../images/product-4.jpg'
 import slider1 from '../images/home-slider-1.jpg'
 import slider2 from '../images/home-slider-2.jpg'
 import slider3 from '../images/home-slider-3.jpg'
@@ -16,7 +19,73 @@ import instagram_icon from '../images/instagram_icon.png'
 import vertical_line_white from '../images/vertical_line_white.png'
 
 const hero_carousel = [slider1, slider2, slider3, slider4];
-const products_carousel = [product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product];
+const products_carousel = [
+    {
+       name: 'Women hybrid Joggers Black',
+       price: 45,
+       image: product_1,
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_2
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: product_3
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_4
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: product_3
+    },{
+        name: 'Women hybrid Joggers',
+        price: 100,
+        image: product_4
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_2
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: product_3
+    },{
+       name: 'Women hybrid Joggers Black',
+       price: 45,
+       image: product_1,
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_2
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: product_3
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_4
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: product_3
+    },{
+        name: 'Women hybrid Joggers',
+        price: 100,
+        image: product_4
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_2
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: product_3
+    },
+];
 const social_carousel = [slider1, slider2, slider3, slider4, slider2, slider2, slider2, slider2, slider3, slider3, slider3, slider3];
 
 class Slider extends React.Component {
@@ -145,7 +214,7 @@ class Slider extends React.Component {
                             <div className='section-products-slider'>
                                 <div className='section-products-slider-container'>
                                     {products_carousel.slice(productsSliderPosition, productsSliderPosition + 4).map((item, i) => (
-                                        <Product slider={true} key={i} img={item} name='Women hybrid Joggers Black' price='$46.00' id={i} />
+                                        <Product slider={true} key={i} img={item.image} name={item.name} price={`$${item.price}.00`} id={i} />
                                     ))}
                                     <div className='section-products-slider-right-bar'>
                                         <p>pages</p>
