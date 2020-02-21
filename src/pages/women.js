@@ -3,15 +3,98 @@ import Select from 'react-select';
 import { Link, graphql } from 'gatsby'
 
 import '../styles/women.css'
-import product from '../images/product.jpg'
-import women_banner from '../images/women_banner.jpg'
+import women_category_bras from '../images/women_category_bras.jpg'
+import women_category_shorts from '../images/women_category_shorts.jpg'
+import women_category_leggings from '../images/women_category_leggings.jpg'
+import women_category_tanktops from '../images/women_category_tanktops.jpg'
 import horizontal_line from '../images/horizontal_line_white.png'
 import horizontal_line_black from '../images/horizontal_line.png'
 import background_imag from '../images/background-blue-imag.jpg'
 import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
+import product_1 from "../images/product-1.jpg";
+import product_2 from "../images/product-2.jpg";
+import product_3 from "../images/product-3.jpg";
+import product_4 from "../images/product-4.jpg";
 
-const products_list = [product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product,product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product, product];
-
+const products_list = [
+    {
+        name: 'Women hybrid Joggers Black',
+        price: 45,
+        image: product_1,
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_2
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: product_3
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_4
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: women_category_bras
+    },{
+        name: 'Women hybrid Joggers',
+        price: 100,
+        image: women_category_shorts
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_4
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: women_category_leggings
+    },{
+        name: 'Women hybrid Joggers',
+        price: 100,
+        image: women_category_bras
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_2
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: women_category_shorts
+    },{
+        name: 'Women hybrid Joggers Black',
+        price: 45,
+        image: product_1,
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_2
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: product_3
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_4
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: product_3
+    },{
+        name: 'Women hybrid Joggers',
+        price: 100,
+        image: product_4
+    },{
+        name: 'New! Sport mesh jacket',
+        price: 30,
+        image: product_2
+    },{
+        name: 'Sport mesh jacket',
+        price: 75,
+        image: women_category_shorts
+    },
+];
 const categoryOptions = [
     { value: 'Sport bras', label: 'Sport bras' },
     { value: 'New Release', label: 'New Release' },
@@ -41,19 +124,19 @@ const sortByOptions = [
 const categories = [
     {
         name: 'New Release',
-        image: women_banner,
+        image: women_category_tanktops,
     }, {
         name: 'Sport Bras',
-        image: women_banner,
+        image: women_category_bras,
     },{
         name: 'Tank Tops',
-        image: women_banner,
+        image: women_category_tanktops,
     },{
         name: 'Leggings',
-        image: women_banner,
+        image: women_category_leggings,
     },{
         name: 'Shorts',
-        image: women_banner,
+        image: women_category_shorts,
     },
 
 ];
@@ -166,7 +249,7 @@ export default class Men extends React.Component {
                 </Hero>
                 <div className='section-products-list'>
                     {products_list.map((item, i) => (
-                        <Product key={i} img={item} name='Women hybrid Joggers Black' price='$46.00' id={i} />
+                        <Product key={i} img={item.image} name={item.name} price={`$${item.price}.00`} id={i} />
                     ))}
                 </div>
                 <div className='section-social-media'>
