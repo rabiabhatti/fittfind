@@ -32,7 +32,10 @@ class IndexPage extends React.Component {
                     <div className="section-main-slider">
                         <Slider type='hero' />
                         <div className="section-main-slider-left">
-                            <h1 className="section-Find-release-hero"><span><span>Find</span> & release</span><span>your inner <span>athlete</span></span></h1>
+                            <h1 className="section-Find-release-hero">
+                                <span><span>Find</span> & release</span>
+                                <span>your inner <span>athlete</span></span>
+                            </h1>
                             <button className='findFitBtn'>
                                 Find your fit
                                 <img src={forwardIcon} alt='forward_icon'/>

@@ -161,7 +161,7 @@ class Slider extends React.Component {
                         hero:
                             <div className='section-hero-slider'>
                                 {hero_carousel.map((img, i) => (
-                                    <img key={i} src={img} alt='carousel' className={heroSliderPosition === i ? 'show hero-slide' : 'hide hero-slide'} />
+                                    <img key={i} src={img} alt='carousel' className={`hero-slide ${heroSliderPosition === i ? 'show' : 'hide'}`} />
                                 ))}
                                 <div className='section-hero-slider-right-numbers'>
                                     <div className='section-hero-slider-right-bar'>

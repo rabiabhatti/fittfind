@@ -4,15 +4,18 @@
 .show {
     display: block;
 }
-
-@-webkit-keyframes slide {
-    100% { right: 200px; }
-}
-
 @keyframes slide {
-    100% { right: 200px; }
+    100% { right: 0; }
 }
 
+.hero-slide {
+    z-index: -1;
+    right: -100%;
+    background: blue;
+    position: relative;
+    animation-delay: 1s;
+    animation: slide 1s forwards;
+}
 .section-main-slider {
     width: 100%;
 }
@@ -314,8 +317,8 @@ span.current-slider {
         font-size: 90px;
     }
     .section-main-slider-left {
-        margin-top: -25vw;
         margin-bottom: 6vw;
+        margin-top: -22.55vw;
     }
     .section-features .product-desc-container {
         left: 2.9vw;
