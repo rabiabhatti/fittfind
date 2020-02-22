@@ -227,8 +227,10 @@ span.current-slider {
     width: 87%;
 }
 .section-social-media-slider-right {
-    position: relative;
     width: 13%;
+    max-height: 250px;
+    min-height: 250px;
+    position: relative;
 }
 .section-social-media-slider-right-bar {
     right: -2.3vw;
