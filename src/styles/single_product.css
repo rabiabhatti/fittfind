@@ -14,17 +14,19 @@
 .section-single-product-hero-left-content h1{
     margin: 0;
     z-index: 1;
-    font-size: 2.3rem;
+    color: #1a1c21;
     min-width: 40rem;
-    font-weight: bold;
+    font-size: 3.5rem;
     letter-spacing: -1px;
     text-transform: uppercase;
 }
 .single-product-desc {
     z-index: 1;
+    color: #5a5f6a;
     max-width: 28rem;
-    font-size: 0.9rem;
-    margin: 1rem 0 2rem 0;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-single-product-handles {
     width: 55%;
@@ -37,12 +39,12 @@
 }
 .size-chart-btn {
     border: 0;
-    width: 25%;
+    width: 19%;
     color: #b2bac6;
     display: flex;
     font-weight: bold;
     flex-direction: row;
-    align-items: center;
+    align-items: baseline;
     text-transform: uppercase;
     justify-content: space-between;
 }
@@ -97,6 +99,7 @@
 }
 .section-single-product-hero-middle {
     width: 50%;
+    /*z-index: -1;*/
     display: flex;
     min-height: 90vh;
     flex-direction: column;
@@ -105,6 +108,14 @@
     background-repeat: no-repeat;
     justify-content: space-between;
     padding: 0.5rem 2rem 2rem 2rem;
+}
+.box-shadow {
+    width: 47%;
+    z-index: -1;
+    min-height: 85vh;
+    position: absolute;
+    background-color: transparent;
+    box-shadow: 27px 40px 40px 10px #00000045;
 }
 .section-single-product-hero-middle button {
     border: 0;
@@ -117,13 +128,13 @@
     margin-right: 4px;
 }
 .single-product-like-btn img {
-    width: 1.5rem;
+    width: 1.3rem;
 }
 .section-single-product-hero-right {
     width: 7%;
     height: 100%;
     display: flex;
-    margin-top: 15%;
+    margin-top: 13%;
     align-items: center;
     flex-direction: column;
 }
@@ -133,6 +144,9 @@
     padding: 1rem 0;
     font-size: 0.8rem;
     font-weight: bold;
+
+}
+.single-product-count-btn p {
     transform: rotate(90deg);
 }
 .single-product-hero-right-text {
@@ -143,8 +157,15 @@
     transform: rotate(90deg);
     text-transform: uppercase;
 }
+.section-product-active-page-line {
+    top: -1.2rem;
+    height: 6rem;
+    width: 0.13rem;
+    position: relative;
+}
 .single-product-active-count {
-    text-decoration: line-through;
+    margin-bottom: -1rem;
+    padding-bottom: 0 !important;
 }
 .section-single-product-hero-left-line {
     margin-top: 1.9rem;
@@ -165,19 +186,23 @@
 }
 .section-single-product-details-container {
     display: flex;
+    width: 69.5%;;
+    padding-top: 7%;
     margin-left: 7%;
-    margin-top: 7%;
-    width: 72%;
     flex-direction: row;
+    background-color: #ffffff;
+    justify-content: space-between;
 }
 .section-single-product-details-container div {
-    width: 40%;
-    margin-right: auto;
+    width: 48.2%;
 }
 .section-single-product-details-container h3 {
     font-weight: bolder;
+    font-family: 'Myriad Pro', sans-serif;
 }
 .section-single-product-details-container ul li {
-    font-size: 0.8rem;
-    color: #6c7588;
+    color: #5a5f6a;
+    font-size: 0.65rem;
+    margin-bottom: 3px;
+    font-family: 'Montserrat', sans-serif;
 }

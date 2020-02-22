@@ -2,12 +2,14 @@ import React from 'react'
 
 import '../styles/single_product.css'
 import like_fill from '../images/like_fill.png'
-import like_outline from '../images/like_outline.png'
-import forwardIcon from '../images/forward-icon.png'
+import right_arrow from '../images/right_arrow.png'
+import like_outline from '../images/like_outline_dark.png'
+import forwardIcon from '../images/forward_icon_dark.png'
 import horizontal_line from '../images/horizontal_line.png'
-import single_product_banner from '../images/women_banner.jpg'
+import single_product_banner from '../images/single_product_banner.jpg'
 import {Wrapper, Hero, ImpossibleBanner, Slider} from '../components'
 import background_imag from "../images/background-blue-imag.jpg";
+import vertical_line_white from "../images/vertical_line_white.png";
 
 const sizes = ['XS', 'S', 'M', 'L'];
 
@@ -75,8 +77,8 @@ export default class extends React.Component {
                                 <div className='row-center space-between'>
                                     <p className='section-single-product-handles-text'>Size</p>
                                     <button className='size-chart-btn'>
-                                        size & fit
-                                        <img src={forwardIcon} alt='forwardIcon' />
+                                        <span>size & fit</span>
+                                        <img src={right_arrow} alt='right_arrow' width={5} />
                                     </button>
                                 </div>
                                 <div className='row-center'>
@@ -117,6 +119,7 @@ export default class extends React.Component {
                                 <img src={forwardIcon} alt='next_button' width={20} />
                             </button>
                         </div>
+                        <div className='box-shadow' />
                     </div>
                     <div className='section-single-product-hero-right'>
                         <p className='single-product-hero-right-text'>Images</p>
@@ -126,7 +129,8 @@ export default class extends React.Component {
                                 className={`single-product-count-btn ${count === product_images_no && 'single-product-active-count'}`}
                                 onClick={() => this.setState({product_images_no: count})}
                             >
-                                0{count}
+                                <p>0{count}</p>
+                                {product_images_no === count && <img className='section-product-active-page-line' src={vertical_line_white} alt='vertical_line_white' />}
                             </button>
                         ))}
                     </div>
@@ -135,23 +139,20 @@ export default class extends React.Component {
                     <div className='section-single-product-benefits'>
                         <h3>BENEFITS</h3>
                         <ul>
-                            <li>Jules Verne was a French author who the late nineteenth and early twentieth century.</li>
-                            <li>Follow him on Twitter.</li>
-                            <li>French author who pioneered the genre of science. Follow him on Twitter.</li>
-                            <li>French author wh. Follow him on Twitter.</li>
-                            <li>The genre of science. Follow him on Twitter.</li>
-                            <li>Fiction in the late nineteenth and early twentieth century. Follow him on Twitter.</li>
+                            <li>Dri-FIT Technology helps keep you dry and comfortable</li>
+                            <li>Racerback design allows natural range of motion</li>
+                            <li>Removable padding offers custom shaping</li>
+                            <li>Compression fit for snug support</li>
+                            <li>Flat seams feel smooth against your skin</li>
+                            <li>For medium-impact sports like cycling, dance and cardio classes</li>
                         </ul>
                     </div>
                     <div className='section-single-product-details'>
                         <h3>PRODUCT DETAILS</h3>
                         <ul>
-                            <li>Jules Verne was a French author who the late nineteenth and early twentieth century.</li>
-                            <li>Follow him on Twitter.</li>
-                            <li>French author who pioneered the genre of science. Follow him on Twitter.</li>
-                            <li>French author wh. Follow him on Twitter.</li>
-                            <li>The genre of science. Follow him on Twitter.</li>
-                            <li>Fiction in the late nineteenth and early twentieth century. Follow him on Twitter.</li>
+                            <li>Fabric: Body/lining: Dri-FIT 88% recycled polyester/12% spandex. Bottom hem: <br/>Dri-FIT 86% nylon/14% spandex. Interlining: Dri-FIT 80% polyester/20%<br/> spandex. Pad top/back: Dri-FIT 100% polyester. Pad: 100% polyurethane.</li>
+                            <li>Machine wash</li>
+                            <li>Imported</li>
                         </ul>
                     </div>
                 </div>
