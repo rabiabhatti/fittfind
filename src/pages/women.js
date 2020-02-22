@@ -145,7 +145,7 @@ export default class Men extends React.Component {
     state = {
         size: sizeOptions[0].value.toUpperCase(),
         sortBy: sortByOptions[0].value.toUpperCase(),
-        category: categoryOptions[0].value.toUpperCase(),
+        category: categoryOptions[2].value.toUpperCase(),
         collection: collectionOptions[0].value.toUpperCase(),
     };
 

@@ -181,7 +181,7 @@ span.current-slider {
 }
 .section-social-media>h2 {
     font-size: 70px;
-    margin-left: 4vw;
+    margin-left: 3vw;
     text-transform: uppercase;
 }
 .section-social-media-slider {
@@ -214,7 +214,7 @@ span.current-slider {
 .section-social-media-slider-left>img:nth-child(5) {
     margin-bottom: -5.5vw;
 }
-.section-social-media-slider-left>img:last-child {
+.section-social-media-slider-left>img:last-child, .section-social-media-slider-left>img:nth-child(2) {
     box-shadow: 1px 3px 12px -4px #0000008c;
 }
 .section-social-media-slider-left>img {
@@ -266,10 +266,11 @@ span.current-slider {
     right: 5vw;
     width: 8vw;
     display: flex;
-    margin-top: 7vw;
+    margin-top: 3vw;
     text-align: right;
     position: relative;
     flex-direction: row;
+    align-self: flex-end;
     justify-content: space-between;
 }
 .section-social-slider-bottom-bar>button:disabled {
@@ -323,7 +324,6 @@ span.current-slider {
     .section-products-slider-bottom-bar {
         width: 10vw;
         right: 13vw;
-        margin-top: 0;
     }
     img.section-background-fittfind {
         left: 48vw;
@@ -348,8 +348,8 @@ span.current-slider {
     }
     .section-social-slider-bottom-bar {
         width: 10vw;
-        right: 10.3vw;
-        margin-top: 5vw;
+        right: 12vw;
+        top: 5vw;
     }
     .section-social-media {
         margin-top: 10vw;
@@ -458,7 +458,7 @@ span.current-slider {
     .section-products-slider-bottom-bar>button, .section-social-slider-bottom-bar>button {
         padding: 15px;
     }
-    
+
     h1.section-Find-release-hero {
         font-size: 70px;
     }
