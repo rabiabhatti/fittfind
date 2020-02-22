@@ -134,7 +134,7 @@ export default class Index extends React.Component{
                             </div>
                         </div>
                         <div className='section-gym-motivation-banner-slider'>
-                            <img src={quotes} alt='quotes-img' />
+                            <img src={quotes} alt='quotes-img' width={50} />
                             <div className='motivation-quotes'>
                                 <p>"The secret of change is to focus all of your energy, not on fighting the old, but on building the new".</p>
                                 <p>Socrates</p>
