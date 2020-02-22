@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import '../../styles/contact.css'
 import { Wrapper, Hero } from '../../components'
 import contact_banner from "../../images/contact-banner.png";
-import women_banner from "../../images/women_banner.jpg";
+import contact_banner_1 from "../../images/contact_banner_1.jpg";
 import contact_feature_1 from '../../images/contact-feature-1.png'
 import contact_feature_2 from '../../images/contact-feature-2.png'
 import contact_feature_3 from '../../images/contact-feature-3.png'
@@ -14,19 +14,19 @@ import horizontal_line_c from "../../images/horizontal_line_c.png";
 const categories = [
     {
         name: 'Order Status',
-        image: women_banner,
+        image: contact_banner_1,
         link: '/contact/order-status'
     }, {
         name: 'Shipping & Delivery',
-        image: women_banner,
+        image: contact_banner_1,
         link: '/contact/shipping&delivery'
     },{
         name: 'Returns',
-        image: women_banner,
+        image: contact_banner_1,
         link: '/contact/returns'
     },{
         name: 'Fittfind Corp',
-        image: women_banner,
+        image: contact_banner_1,
         link: '/contact/about-us'
     },
 ];

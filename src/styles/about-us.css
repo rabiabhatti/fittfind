@@ -1,16 +1,9 @@
 .section-about-us-hero {
     width: 95vw;
-    max-width: 90vw;
-    margin-right: 4vw;
-    pointer-events: none;
-}
-.section-about-us-hero {
-    width: 95vw;
     height: 45vw;
     max-width: 90vw;
     margin-right: 6vw;
     padding: 4.5rem 4rem;
-    pointer-events: none;
     background-size: 100%;
     background-position: right;
     background-repeat: no-repeat;
