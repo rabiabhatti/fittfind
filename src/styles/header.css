@@ -30,6 +30,7 @@ header {
     width: 25%;
     display: flex;
     color: #40434b;
+    align-items: center;
     background-color: #1a1c21;
 }
 span.section-nav-right-currency>span:nth-child(2), .section-header-right>a>span>span:nth-child(2) {
