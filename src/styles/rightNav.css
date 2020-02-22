@@ -68,7 +68,6 @@
     font-size: 0.75rem;
     padding-bottom: 0.7rem;
 }
-.section-right-nav-left-text-container ul li:before {
-    content: '✓';
+.section-right-nav-left-text-container ul li img {
     margin-right: 1rem;
 }

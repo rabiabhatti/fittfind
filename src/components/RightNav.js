@@ -1,6 +1,7 @@
 import React from "react"
 
 import  '../styles/rightNav.css'
+import check_mark from '../images/check_mark.png'
 
 function RightNav(props) {
     return (
@@ -21,11 +22,11 @@ function RightNav(props) {
                     <div className='section-right-nav-left-text-container'>
                         <p>Register with Fittfind.com to enjoy personalized services, including:</p>
                         <ul>
-                            <li>Online Order Status</li>
-                            <li>WishList</li>
-                            <li>Exclusive Emails</li>
-                            <li>Save Shipping Addresses</li>
-                            <li>Checkout Preferences</li>
+                            <li><img src={check_mark} alt='check_mark' width={11} />Online Order Status</li>
+                            <li><img src={check_mark} alt='check_mark' width={11} />WishList</li>
+                            <li><img src={check_mark} alt='check_mark' width={11} />Exclusive Emails</li>
+                            <li><img src={check_mark} alt='check_mark' width={11} />Save Shipping Addresses</li>
+                            <li><img src={check_mark} alt='check_mark' width={11} />Checkout Preferences</li>
                         </ul>
                     </div>
                 </div>
