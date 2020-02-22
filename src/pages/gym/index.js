@@ -20,7 +20,7 @@ import guardian_logo from '../../images/guardian.png'
 import techradar_logo from '../../images/techradar.png'
 import huffington_post_logo from '../../images/huffington-post.png'
 import evening_standard_logo from '../../images/evening-standard.png'
-import slider_men from '../../images/slider-men.png'
+import slider_men from '../../images/gym-hero-banner.jpg'
 import gym_motivation_girl from '../../images/gym-motivation-girl.png'
 
 
