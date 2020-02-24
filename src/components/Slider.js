@@ -154,7 +154,6 @@ class Slider extends React.Component {
         for (let j = 0; j < social_carousel.length / 5; j++) {
             social_media_pages.push(j)
         }
-        console.log(socialSliderPosition)
         return (
             <Fragment>
                 {
@@ -226,7 +225,7 @@ class Slider extends React.Component {
                             <div className='section-products-slider'>
                                 <div className='section-products-slider-container row-center'>
                                     {products_pages.map(p => (
-                                        <div className={`section-products-slider-left-bar row-center ${p*4 === productsSliderPosition ? 'section-products-slider-active': 'section-products-slider-hide'}`}>
+                                        <div className={`section-products-slider-left-bar row-center ${p*4 === productsSliderPosition ? 'section-products-slider-active': 'section-products-slider-hide'}`} key={p}>
                                             {products_carousel.slice(p, p + 4).map((item, i) => (
                                                 <Product slider={true} key={i} img={item.image} name={item.name} price={`$${item.price}.00`} id={i} />
                                             ))}
