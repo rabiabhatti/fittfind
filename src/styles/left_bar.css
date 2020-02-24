@@ -46,14 +46,46 @@
 /*laptops, desktops*/
 @media (min-width: 1025px) and (max-width: 1440px) {
     .section-left-bar-text {
-        top: 19.5vw;
+        top: 11vw;
+        font-size: 13px;
     }
     .section-left-bar {
         width: 7vw;
     }
+    .section-left-bar-btn>span {
+        font-size: 13px;
+    }
+    .section-left-bar-btn>img {
+        width: 13px;
+    }
+    .section-left-bar-btn {
+        bottom: 30px;
+    }
     
 }
 
+
+
+
+/*tablets, ipads (landscape)*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-left-bar-text {
+        top: 11vw;
+        font-size: 13px;
+    }
+    .section-left-bar {
+        width: 7vw;
+    }
+    .section-left-bar-btn>span {
+        font-size: 13px;
+    }
+    .section-left-bar-btn>img {
+        width: 13px;
+    }
+    .section-left-bar-btn {
+        bottom: 30px;
+    }
+}
 
 
 

@@ -63,10 +63,18 @@
     font-size: 14px;
 }
 .react-select__placeholder {
+    width: 95%;
     font-size: 14px;
     font-weight: 600;
+    overflow: hidden;
     margin-left: 3px;
-    margin-top: -1px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.react-select__menu {
+    right: 0;
+    min-width: 12rem;
+    position: relative;
 }
 
 
@@ -81,13 +89,31 @@
     .section-hero-category {
         width: 17.25vw;
     }
-    .section-products-filters p {
-        font-size: 12px;
+    .section-hero-category, .section-products-filters p, .react-select__placeholder {
+        font-size: 10px;
     }
     .react-select__placeholder {
-        font-size: 12px;
+        top: 51% !important;
     }
     .section-hero-category p {
         font-size: 0.75rem;
+    }
+}
+
+
+
+/*tablets, ipads (landscape)*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-products-filters {
+        width: 69.5vw;
+    }
+    .section-hero-category {
+        width: 17.25vw;
+    }
+    .section-hero-category, .section-products-filters p, .react-select__placeholder {
+        font-size: 10px;
+    }
+    .react-select__placeholder {
+        top: 51% !important;
     }
 }

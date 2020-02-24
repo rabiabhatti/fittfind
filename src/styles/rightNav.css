@@ -10,6 +10,7 @@
     align-items: flex-end;
     flex-direction: column;
     background-color: #ffffff94;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-right-nav-container {
     right: 0;
@@ -38,6 +39,7 @@
     font-size: 1rem;
     margin-bottom: 1rem;
     border-right: 2px solid #025696;
+    font-family: 'Montserrat', sans-serif;
     transition: color 0.2s ease-in, border-right-color 0.2s ease-in;
 }
 .section-right-nav-left-btns button:hover {
@@ -68,7 +70,6 @@
     font-size: 0.75rem;
     padding-bottom: 0.7rem;
 }
-.section-right-nav-left-text-container ul li:before {
-    content: '✓';
+.section-right-nav-left-text-container ul li img {
     margin-right: 1rem;
 }

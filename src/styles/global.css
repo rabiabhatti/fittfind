@@ -228,7 +228,33 @@ button:disabled {
     .select-container p img {
         width: 2rem;
     }
-    body {
-        font-size: 10px;
+    .section-gym-owners {
+        padding: 100px 300px;
+    }
+
+}
+
+
+
+
+/*tablets, ipads (landscape)*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-impossible>img:nth-child(2) {
+        margin-top: 25px;
+    }
+    .select-container p img {
+        width: 2rem;
+    }
+    .section-gym-owners {
+        padding: 100px 300px;
+    }
+    .section-impossible>img:nth-child(3), .section-impossible>img:nth-child(4) {
+        height: 160px;
+    }
+    .section-impossible>img:nth-child(4) {
+        margin: -160px auto 0 auto;
+    }
+    img.section-background-blue-right {
+        height: 215vw;
     }
 }

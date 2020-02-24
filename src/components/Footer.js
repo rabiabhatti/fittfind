@@ -68,7 +68,7 @@ class Footer extends React.Component {
                     <div className='row-middle'>
                         <div className='col-media'>
                             <Link to={'/'}>
-                                <img src={logo_light} alt='logo_light'/>
+                                <img src={logo_light} alt='logo_light' width={170}/>
                             </Link>
                             <div className='social_media_links row-start'>
                                 <Link to={'/'}>

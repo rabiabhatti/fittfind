@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 
 import '../../styles/gym.css'
 import { Wrapper, Hero } from '../../components'
@@ -20,7 +20,7 @@ import guardian_logo from '../../images/guardian.png'
 import techradar_logo from '../../images/techradar.png'
 import huffington_post_logo from '../../images/huffington-post.png'
 import evening_standard_logo from '../../images/evening-standard.png'
-import slider_men from '../../images/slider-men.png'
+import slider_men from '../../images/gym-hero-banner.jpg'
 import gym_motivation_girl from '../../images/gym-motivation-girl.png'
 
 
@@ -36,18 +36,19 @@ export default class Index extends React.Component{
     }
 
 
-    handleKeyPress = (e) => {
+    handleKeyPress = async (e) => {
         const { location } = this.state;
         if (e.key === 'Enter' && location.length) {
-            window.location.href = `/gym/find-gym?location=${location}`
+            await navigate(`/gym/find-gym?location=${location}`)
         }
     };
 
 
     render() {
         const { location } = this.state;
+        const path = this.props.path.split('/')[this.props.path.split('/').length - 2];
         return (
-            <Wrapper name='Gym'>
+            <Wrapper name='Gym' path={path}>
                 <Hero className='section-hero-gym'>
                     <div className='section-hero-gym-slider'>
                         <div className='section-hero-gym-img'>
@@ -133,7 +134,7 @@ export default class Index extends React.Component{
                             </div>
                         </div>
                         <div className='section-gym-motivation-banner-slider'>
-                            <img src={quotes} alt='quotes-img' />
+                            <img src={quotes} alt='quotes-img' width={50} />
                             <div className='motivation-quotes'>
                                 <p>"The secret of change is to focus all of your energy, not on fighting the old, but on building the new".</p>
                                 <p>Socrates</p>

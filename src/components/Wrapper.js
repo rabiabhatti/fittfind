@@ -19,7 +19,7 @@ function Wrapper(props) {
                 <link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet" />
             </Helmet>
             <main>
-                <Header/>
+                <Header path={props.path}/>
                 {props.children}
                 <Footer/>
             </main>

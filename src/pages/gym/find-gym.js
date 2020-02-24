@@ -9,27 +9,31 @@ const locations = ['london', 'paris', 'new york', 'sydney'];
 
 export default class FundGym extends React.Component {
     state = {
-      location: window.location.href.split('location=')[1]
+      // location: window.location.href.split('location=')[1]
     };
 
-    handleLocationChange = (text) => {
-        this.setState({ location: text })
-    };
+    // handleLocationChange = (text) => {
+    //     this.setState({ location: text })
+    // };
 
     render() {
-        const { location } = this.state;
+        let currentURL = 'london';
+        // if (typeof window !== "undefined") {
+        //     currentURL = window.location.href.split('/')[window.location.href.split('/').length -1];
+        // }
+        // const { location } = this.state;
 
         return (
             <Wrapper name='Find Gym'>
                 <Hero>
                     <Select
                         isDisabled={false}
-                        value={location}
+                        value={currentURL}
                         options={locations}
-                        placeholder={location}
+                        placeholder={currentURL}
                         classNamePrefix="gym-select"
                         className='gym-select-container'
-                        onChange={this.handleLocationChange}
+                        // onChange={this.handleLocationChange}
                     />
                 </Hero>
                 <div className='section-gym-owners'>

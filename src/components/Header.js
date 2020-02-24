@@ -6,6 +6,7 @@ import { RightNav, SignIn, Register } from "./";
 import cart from '../images/cart.png'
 import menu from '../images/menu.png'
 import logo_dark from '../images/logo-dark.png'
+import horizontal_line from '../images/horizontal_line.png'
 
 class Header extends React.Component {
     state = {
@@ -52,6 +53,7 @@ class Header extends React.Component {
 
     render() {
         const { open_right_bar, show_sign_in_popup, show_register_popup } = this.state;
+        const currentURL = this.props.path;
 
         return (
             <Fragment>
@@ -68,18 +70,23 @@ class Header extends React.Component {
                             <nav className='section-nav-left'>
                                 <ul>
                                     <li>
+                                        {currentURL === 'men' && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
                                         <Link to="/men">Men</Link>
                                     </li>
                                     <li>
+                                        {currentURL === 'women' && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
                                         <Link to="/women">Women</Link>
                                     </li>
                                     <li>
+                                        {currentURL === 'app' && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
                                         <Link to="/app">App</Link>
                                     </li>
                                     <li>
+                                        {currentURL === 'gym' && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
                                         <Link to="/gym">Gym</Link>
                                     </li>
                                     <li>
+                                        {currentURL === 'contact' && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
                                         <Link to="/contact">Contact</Link>
                                     </li>
                                 </ul>
