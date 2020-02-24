@@ -224,9 +224,13 @@ class Slider extends React.Component {
                             </div>,
                         products:
                             <div className='section-products-slider'>
-                                <div className='section-products-slider-container'>
-                                    {products_carousel.slice(productsSliderPosition, productsSliderPosition + 4).map((item, i) => (
-                                        <Product className={`${i} ${i >= productsSliderPosition && i < productsSliderPosition + 4 && 'testing' }`} slider={true} key={i} img={item.image} name={item.name} price={`$${item.price}.00`} id={i} />
+                                <div className='section-products-slider-container row-center'>
+                                    {products_pages.map(p => (
+                                        <div className={`section-products-slider-left-bar row-center ${p*4 === productsSliderPosition ? 'section-products-slider-active': 'section-products-slider-hide'}`}>
+                                            {products_carousel.slice(p, p + 4).map((item, i) => (
+                                                <Product slider={true} key={i} img={item.image} name={item.name} price={`$${item.price}.00`} id={i} />
+                                            ))}
+                                        </div>
                                     ))}
                                     <div className='section-products-slider-right-bar'>
                                         <p>pages</p>
