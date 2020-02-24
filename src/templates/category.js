@@ -186,11 +186,11 @@ export default class Category extends React.Component {
 
 export const query = graphql`
               query CategoryQuery ($category: String!, $gender: String!) {
-                    allStrapiCategory(filter: {name: {eq: $category}, genders: {elemMatch: {type: {eq: $gender}}}}) {
+                    allStrapiCategory(filter: {name: {eq: $category}, gender: {type: {eq: $gender}}}) {
                         edges {
                             node {
                                 name
-                                genders {
+                                gender {
                                     type
                                 }
                                 products {
