@@ -154,6 +154,7 @@ class Slider extends React.Component {
         for (let j = 0; j < social_carousel.length / 5; j++) {
             social_media_pages.push(j)
         }
+        console.log(socialSliderPosition)
         return (
             <Fragment>
                 {
@@ -188,9 +189,13 @@ class Slider extends React.Component {
                         social_media:
                             <div className='section-social-media-slider column-start'>
                                 <div className='row-center space-between'>
-                                    <div className='section-social-media-slider-left'>
-                                        {social_carousel.slice(socialSliderPosition, socialSliderPosition + 5).map((item, i)  => (
-                                            <img className={`social-media-img${i}`} src={item} key={i} alt='social_media_image' width={318} />
+                                    <div className='section-social-media-slider-left-container'>
+                                        {social_media_pages.map(p => (
+                                            <div className={`section-social-media-slider-left ${p*5 === socialSliderPosition ? 'section-social-media-slider-active': 'section-social-media-slider-hide'}`} key={p}>
+                                                {social_carousel.slice(p, p + 5).map((item, i)  => (
+                                                    <img src={item} key={i} alt='social_media_image' width={318} />
+                                                ))}
+                                            </div>
                                         ))}
                                     </div>
                                     <div className='section-social-media-slider-right'>
@@ -200,7 +205,7 @@ class Slider extends React.Component {
                                         </Link>
                                         <div className='section-social-media-slider-right-bar'>
                                             {social_media_pages.map(i => (
-                                                <button className={`${socialSliderPosition === i*4 && 'active-products-slider-page'}`} key={i} onClick={() => this.setState({socialSliderPosition: i*5})}>
+                                                <button key={i} onClick={() => this.setState({socialSliderPosition: i*5})}>
                                                     <p>0{i+1}</p>
                                                     {socialSliderPosition === i*5 && <img className='section-products-slider-active-page-line' src={vertical_line_white} alt='vertical_line_white' />}
                                                 </button>
@@ -221,7 +226,7 @@ class Slider extends React.Component {
                             <div className='section-products-slider'>
                                 <div className='section-products-slider-container'>
                                     {products_carousel.slice(productsSliderPosition, productsSliderPosition + 4).map((item, i) => (
-                                        <Product slider={true} key={i} img={item.image} name={item.name} price={`$${item.price}.00`} id={i} />
+                                        <Product className={`${i} ${i >= productsSliderPosition && i < productsSliderPosition + 4 && 'testing' }`} slider={true} key={i} img={item.image} name={item.name} price={`$${item.price}.00`} id={i} />
                                     ))}
                                     <div className='section-products-slider-right-bar'>
                                         <p>pages</p>

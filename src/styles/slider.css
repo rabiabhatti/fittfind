@@ -233,9 +233,25 @@ span.current-slider {
 }
 .section-social-media-slider-left {
     width: 87%;
+    position: absolute;
+}
+.section-social-media-slider-left-container {
+    width: 87%;
+    margin-top: -20rem;
+}
+.section-social-media-slider-active {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 1s both;
+}
+.section-social-media-slider-hide {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeOut 1.5s both;
 }
 .section-social-media-slider-right {
     width: 13%;
+    right: -63rem;
     max-height: 250px;
     min-height: 250px;
     position: relative;
