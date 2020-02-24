@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import '../../styles/about-us.css'
-import two from '../../images/02.png'
 import backward_icon from '../../images/backward-icon.png'
 import about_us_banner_right_1 from '../../images/about-us-banner-right-1.png'
 import about_us_banner_right_2 from '../../images/about-us-banner-right-2.png'
@@ -55,10 +54,10 @@ export default class AboutUs extends React.Component{
         const { detail } = this.state;
 
         return (
-            <Wrapper name='About Us'>
+            <Wrapper name='About Us' location={this.props.location}>
                 <Hero>
                     <div className='section-about-us-hero'>
-                        <Link to='/contact' className='section-about-us-hero-top'>
+                        <Link to='/contact/' className='section-about-us-hero-top'>
                             <img src={backward_icon} alt='forward_icon' />
                             Back to contact
                         </Link>

@@ -34,9 +34,8 @@ const categories = [
 
 export default class Contact extends React.Component {
     render() {
-        const path = this.props.path.split('/')[this.props.path.split('/').length - 2];
         return (
-            <Wrapper name='Contact' path={path}>
+            <Wrapper name='Contact' location={this.props.location}>
                 <Hero>
                     <div className='column-center section-contact-hero'>
                         <div className='section-contact-hero-top'>
@@ -71,7 +70,7 @@ export default class Contact extends React.Component {
                             </div>
                             <img className='section-contact-hero-bottom-feature-line' src={horizontal_line_c} alt='horizontal_line' />
                             <h4>Order Status</h4>
-                            <p className='heading-light'>Track my order</p>
+                            <Link to='/contact/order-status' className='heading-light'>Track my order</Link>
                         </div>
                         <div className='column-center section-contact-hero-bottom-feature'>
                             <div className='column-center section-contact-hero-bottom-feature-img'>

@@ -175,9 +175,8 @@ export default class Men extends React.Component {
     render() {
         // const { data } = this.props;
         const { category, size, collection, sortBy } = this.state;
-        const path = this.props.path.split('/')[this.props.path.split('/').length - 2];
         return (
-            <Wrapper name='Women' path={path}>
+            <Wrapper name='Women' location={this.props.location}>
                 <div className='section-background'>
                     <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag'/>
                 </div>

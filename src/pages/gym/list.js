@@ -155,10 +155,9 @@ export default class GymList extends React.Component{
         );
     };
 
-    handlePrevNext = (type) => {
-        console.log('clicked')
-        // const currentPage = window.location.href.slice(window.location.href.length - 1);
-        // window.location.href = type === 'next' ? `/gym/list?page=${parseInt(currentPage) + 1}` : `/gym/list?page=${parseInt(currentPage)-1}`;
+    handlePrevNext = async (type) => {
+        const currentPage = this.props.location.search.split('=')[this.props.location.search.split('=').length -1];
+        await navigate(`/gym/list?page=${type === 'next' ? parseInt(currentPage) + 1 : parseInt(currentPage) - 1}`)
     };
 
     handlePageClick = async (p) => {
@@ -166,15 +165,11 @@ export default class GymList extends React.Component{
     };
 
     render() {
-        const { amenityOption, location, facilityOption } = this.state;
         const pages = [0, 1, 2, 3, 4, 5, 6, 7];
-        let currentPage = 1;
-        // if (typeof window !== undefined) {
-        //     currentPage = window.location.href.slice(window.location.href.length - 1);
-        // }
-
+        const { amenityOption, location, facilityOption } = this.state;
+        let currentPage = this.props.location.search.split('=')[this.props.location.search.split('=').length -1];
         return (
-            <Wrapper name='List Yourself'>
+            <Wrapper name='List Yourself' location={this.props.location}>
                 <Hero>
                     <div className='column-start section-gym-list'>
                         <div className='section-gym-list-banner'>
@@ -215,7 +210,7 @@ export default class GymList extends React.Component{
                                     />
                                 </div>
                             </div>
-                            <Link to='/gym' className='section-gym-list-map-btn'>
+                            <Link to='/gym/' className='section-gym-list-map-btn'>
                                 Show map
                             </Link>
                         </div>
@@ -241,20 +236,20 @@ export default class GymList extends React.Component{
                     ))}
                 </div>
                 <div className='section-gym-list-pages'>
-                    <button disabled={currentPage === 1} onClick={() => this.handlePrevNext('prev')}>
+                    <button disabled={parseInt(currentPage) === 1} onClick={() => this.handlePrevNext('prev')}>
                         <img src={backward_icon} alt='backward_icon' />
                         Previous
                     </button>
                     {pages.map(p => (
                         <button
                             key={p}
-                            className={currentPage === p ? `section-gym-list-current-page` : ''}
                             onClick={() => this.handlePageClick(p)}
+                            className={currentPage === p ? `section-gym-list-current-page` : ''}
                         >
                             {p+1}
                         </button>
                     ))}
-                    <button onClick={() => this.handlePrevNext('next')} disabled={currentPage === pages.slice(pages.length-1)[0] +1}>
+                    <button onClick={() => this.handlePrevNext('next')} disabled={parseInt(currentPage) === pages.slice(pages.length-1)[0] +1}>
                         <img src={forwardIcon} alt='forwardIcon' />
                         Next
                     </button>

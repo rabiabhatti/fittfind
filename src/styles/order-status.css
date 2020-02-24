@@ -1,0 +1,47 @@
+.section-order-status-form {
+    margin-left: 7%;
+    padding: 3rem 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.section-order-status-form h2, .section-order-status-response-container h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.section-order-status-form-input {
+    display: flex;
+    margin: 1rem 0;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+}
+.section-order-status-form-input label {
+    font-weight: 600;
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+}
+.section-order-status-form-input input {
+    width: 100%;
+    color: #333;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem 0.5rem;
+    border: 1px solid #b2bac6;
+}
+.section-order-status-form-btn {
+    border: 0;
+    color: #fff;
+    min-width: 50%;
+    margin-top: 2rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    border-radius: 20px;
+    padding: 0.8rem 1rem;
+    background-color: #025696;
+    text-transform: uppercase;
+}
+.section-order-status-response-container {
+    width: 60%;
+    margin-left: 7%;
+    padding: 3rem 0;
+    font-family: 'Montserrat', sans-serif;
+}

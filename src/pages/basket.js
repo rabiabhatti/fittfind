@@ -6,7 +6,9 @@ import 'react-flags-select/css/react-flags-select.css';
 import '../styles/basket.css'
 import dhl_icon from '../images/dhl_icon.png'
 import dpd_icon from '../images/dpd_icon.png'
-import women_banner from '../images/women_banner.jpg'
+import product_1 from '../images/product-1.jpg'
+import product_2 from '../images/product-2.jpg'
+import product_3 from '../images/product-5.jpg'
 import forwardIcon from '../images/forward-icon.png'
 import { Wrapper, Hero, BasketInput } from '../components'
 import horizontal_line from '../images/horizontal_line.png'
@@ -17,19 +19,22 @@ const items = [
         color: 'Coral Reef (B35)',
         size: 'S',
         qty: 3,
-        price: '46.00'
+        price: '50.00',
+        image: product_1,
     },{
         name: 'New! sport mesh jacket',
         color: 'Coral Reef (B35)',
         size: 'S',
         qty: 3,
-        price: '46.00'
+        price: '46.00',
+        image: product_2
     },{
         name: 'New! sport mesh jacket',
         color: 'Coral Reef (B35)',
         size: 'S',
         qty: 3,
-        price: '46.00'
+        price: '98.00',
+        image: product_3
     },
 ];
 
@@ -57,13 +62,13 @@ export default class Basket extends React.Component {
 
     onSelectCountry = (countryCode) => {
         this.setState({ country: countryCode })
-    }
+    };
 
     render() {
         const { products_count, firstName, lastName, company, address, city, postCode, deliveryMode, phone } = this.state;
 
         return (
-            <Wrapper name='Basket'>
+            <Wrapper name='Basket' location={this.props.location}>
                 <Hero>
                     <div className='section-basket-hero'>
                         <Link to='/' className='section-basket-hero-back-link'>
@@ -86,7 +91,7 @@ export default class Basket extends React.Component {
                             <h2>My bag</h2>
                             {items.map((item, i) => (
                                 <div className='section-basket-single-item row-center' key={i}>
-                                    <img className='section-basket-single-item-img' src={women_banner} alt='women_banner'/>
+                                    <img className='section-basket-single-item-img' src={item.image} alt='women_banner'/>
                                     <div className='section-basket-single-item-details'>
                                         <div className='section-basket-single-item-headings space-between'>
                                             <h3 className='section-basket-heading'>{item.name}</h3>
@@ -96,7 +101,7 @@ export default class Basket extends React.Component {
                                             <div className='section-basket-heading'/>
                                         </div>
                                         <div className='section-basket-single-item-desc space-between'>
-                                            <div className='section-basket-item-detail'>
+                                            <div className='section-basket-item-detail align-center'>
                                                <div className='column-start'>
                                                     <p className='heading-light'>Color</p>
                                                     <p className='heading-light'>Size</p>

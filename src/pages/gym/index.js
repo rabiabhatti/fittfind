@@ -46,9 +46,8 @@ export default class Index extends React.Component{
 
     render() {
         const { location } = this.state;
-        const path = this.props.path.split('/')[this.props.path.split('/').length - 2];
         return (
-            <Wrapper name='Gym' path={path}>
+            <Wrapper name='Gym' location={this.props.location}>
                 <Hero className='section-hero-gym'>
                     <div className='section-hero-gym-slider'>
                         <div className='section-hero-gym-img'>
