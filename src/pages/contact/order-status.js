@@ -26,7 +26,7 @@ export default class OrderStatus extends React.Component {
     render() {
         const { order_no, status_res } = this.state;
         return (
-            <Wrapper name='Order Status'>
+            <Wrapper name='Order Status' location={this.props.location}>
                 <Hero>
                     <div className='section-shipping-hero'>
                         <Link to='/contact/'>

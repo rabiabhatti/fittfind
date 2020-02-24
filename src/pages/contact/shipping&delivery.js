@@ -9,7 +9,7 @@ import horizontal_line from '../../images/horizontal_line.png'
 export default class ShippingAndDelivery extends React.Component {
     render() {
         return (
-            <Wrapper name='Shipping & Delivery'>
+            <Wrapper name='Shipping & Delivery' location={this.props.location}>
                 <Hero className='section-shipping-hero-main'>
                     <div className='section-shipping-hero'>
                         <Link to='/contact/'>

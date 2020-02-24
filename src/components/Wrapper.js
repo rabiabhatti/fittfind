@@ -2,8 +2,10 @@ import React from 'react';
 import { Helmet } from "react-helmet"
 
 import { Header, Footer} from './'
+import useSiteMetadata from '../hooks/use-site-metadata';
 
 function Wrapper(props) {
+    const { siteURL } = useSiteMetadata();
     return (
         <div className="application">
             <Helmet>
@@ -17,9 +19,10 @@ function Wrapper(props) {
                 <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css?family=Montserrat:800&display=swap" rel="stylesheet" />
                 <link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet" />
+                <link rel="canonical" href={`${siteURL}${props.location.pathname}`} />
             </Helmet>
             <main>
-                <Header path={props.path}/>
+                <Header path={props.location.pathname}/>
                 {props.children}
                 <Footer/>
             </main>

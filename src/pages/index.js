@@ -26,7 +26,7 @@ class IndexPage extends React.Component {
         const { show_video } = this.state;
 
         return (
-            <Wrapper name='Home'>
+            <Wrapper name='Home' location={this.props.location}>
                 {show_video && <VideoPopup handleClose={() => this.setState({ show_video: false })} />}
                 <Hero>
                     <div className="section-main-slider">

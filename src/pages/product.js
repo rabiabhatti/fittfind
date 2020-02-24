@@ -59,7 +59,7 @@ export default class extends React.Component {
         const product_images_count = [1, 2, 3, 4];
 
         return(
-            <Wrapper name='Single Product'>
+            <Wrapper name='Single Product' location={this.props.location}>
                 <div className='section-background'>
                     <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag'/>
                 </div>

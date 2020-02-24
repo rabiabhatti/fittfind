@@ -24,7 +24,7 @@ export default class FundGym extends React.Component {
         // const { location } = this.state;
 
         return (
-            <Wrapper name='Find Gym'>
+            <Wrapper name='Find Gym' location={this.props.location}>
                 <Hero>
                     <Select
                         isDisabled={false}

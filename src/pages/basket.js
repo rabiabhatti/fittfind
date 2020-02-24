@@ -62,13 +62,13 @@ export default class Basket extends React.Component {
 
     onSelectCountry = (countryCode) => {
         this.setState({ country: countryCode })
-    }
+    };
 
     render() {
         const { products_count, firstName, lastName, company, address, city, postCode, deliveryMode, phone } = this.state;
 
         return (
-            <Wrapper name='Basket'>
+            <Wrapper name='Basket' location={this.props.location}>
                 <Hero>
                     <div className='section-basket-hero'>
                         <Link to='/' className='section-basket-hero-back-link'>

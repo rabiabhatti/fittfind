@@ -174,7 +174,7 @@ export default class GymList extends React.Component{
         // }
 
         return (
-            <Wrapper name='List Yourself'>
+            <Wrapper name='List Yourself' location={this.props.location}>
                 <Hero>
                     <div className='column-start section-gym-list'>
                         <div className='section-gym-list-banner'>

@@ -7,7 +7,7 @@ import backward_icon from "../../images/backward-icon.png";
 export default class Returns extends React.Component {
     render() {
         return (
-            <Wrapper name='Returns'>
+            <Wrapper name='Returns' location={this.props.location}>
                 <Hero>
                     <div className='section-shipping-hero'>
                         <Link to='/contact/'>

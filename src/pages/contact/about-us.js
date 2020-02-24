@@ -54,7 +54,7 @@ export default class AboutUs extends React.Component{
         const { detail } = this.state;
 
         return (
-            <Wrapper name='About Us'>
+            <Wrapper name='About Us' location={this.props.location}>
                 <Hero>
                     <div className='section-about-us-hero'>
                         <Link to='/contact/' className='section-about-us-hero-top'>
