@@ -71,23 +71,23 @@ class Header extends React.Component {
                                 <ul>
                                     <li>
                                         {currentURL === 'men' && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
-                                        <Link to="/men">Men</Link>
+                                        <Link to="/men/">Men</Link>
                                     </li>
                                     <li>
                                         {currentURL === 'women' && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
-                                        <Link to="/women">Women</Link>
+                                        <Link to="/women/">Women</Link>
                                     </li>
                                     <li>
                                         {currentURL === 'app' && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
-                                        <Link to="/app">App</Link>
+                                        <Link to="/app/">App</Link>
                                     </li>
                                     <li>
                                         {currentURL === 'gym' && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
-                                        <Link to="/gym">Gym</Link>
+                                        <Link to="/gym/">Gym</Link>
                                     </li>
                                     <li>
                                         {currentURL === 'contact' && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
-                                        <Link to="/contact">Contact</Link>
+                                        <Link to="/contact/">Contact</Link>
                                     </li>
                                 </ul>
                             </nav>

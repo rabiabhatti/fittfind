@@ -97,8 +97,8 @@ class Footer extends React.Component {
                             <img src={horizontal_line} alt='horizontal_line'/>
                             <div className='menu-row'>
                                 <h4>Shop</h4>
-                                <Link to={'/women'}>Women</Link>
-                                <Link to={'/men'}>Men</Link>
+                                <Link to={'/women/'}>Women</Link>
+                                <Link to={'/men/'}>Men</Link>
                             </div>
                             <img src={horizontal_line} alt='horizontal_line'/>
                             <div className='menu-row'>
@@ -111,7 +111,7 @@ class Footer extends React.Component {
                             <div className='menu-row'>
                                 <h4>Support</h4>
                                 <Link to={'/contact/order-status'}>Track my order</Link>
-                                <Link to={'/'}>Support</Link>
+                                <Link to={'/contact/'}>Support</Link>
                                 <Link to={'/'}>Terms and Conditions</Link>
                                 <Link to={'/'}>Privacy Policy</Link>
                             </div>
@@ -120,7 +120,7 @@ class Footer extends React.Component {
                                 <h4>Company</h4>
                                 <Link to={'/contact/about-us'}>About us</Link>
                                 <Link to={'/'}>Press</Link>
-                                <Link to={'/contact'}>Contact</Link>
+                                <Link to={'/contact/'}>Contact</Link>
                             </div>
                         </div>
                     </div>

@@ -12,7 +12,7 @@ export default class ShippingAndDelivery extends React.Component {
             <Wrapper name='Shipping & Delivery'>
                 <Hero className='section-shipping-hero-main'>
                     <div className='section-shipping-hero'>
-                        <Link to='/contact'>
+                        <Link to='/contact/'>
                             <img src={backward_icon} alt='backward_icon' />
                             <span>Back to contact</span>
                         </Link>

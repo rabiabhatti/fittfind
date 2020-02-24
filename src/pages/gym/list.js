@@ -215,7 +215,7 @@ export default class GymList extends React.Component{
                                     />
                                 </div>
                             </div>
-                            <Link to='/gym' className='section-gym-list-map-btn'>
+                            <Link to='/gym/' className='section-gym-list-map-btn'>
                                 Show map
                             </Link>
                         </div>

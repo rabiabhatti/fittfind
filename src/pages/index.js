@@ -50,7 +50,7 @@ class IndexPage extends React.Component {
                                 <img src={women_banner} alt='women_banner'/>
                                 <div>
                                     <button className='shop-women-btn'>
-                                        <Link to={'/women'}><img src={fit} alt='fit'/><span>Women</span></Link>
+                                        <Link to={'/women/'}><img src={fit} alt='fit'/><span>Women</span></Link>
                                     </button>
                                     <span className='shop-women-ver'><span>Women Shop</span><img src={horizontal_line} alt='horizontal_line'/></span>
                                 </div>
@@ -84,7 +84,7 @@ class IndexPage extends React.Component {
                                 <img src={men_banner} alt='men_banner'/>
                                 <div>
                                     <button className='shop-men-btn'>
-                                        <Link to={'/men'}><span>Men</span><img src={fit} alt='fit'/></Link>
+                                        <Link to={'/men/'}><span>Men</span><img src={fit} alt='fit'/></Link>
                                     </button>
                                     <span className='shop-men-ver'><span>Men Shop</span><img src={horizontal_line} alt='horizontal_line'/></span>
                                 </div>
@@ -107,7 +107,7 @@ class IndexPage extends React.Component {
                     <div className='section-apps-left-right'>
                         <div className='section-apps-left'>
                             <p>Phasellus ut consectetur diam, sed cursus elit. Aenean euismod, lorem sit amet hendrerit porttitor, metus libero placerat lorem, nec euismod mi nibh id mi.<br/><br/>Nam et vestibulum justo. <br/>Suspendisse venenatis nisi nec turpis bibendum fermentum.</p>
-                            <Link to={'/app'}>
+                            <Link to={'/app/'}>
                                 <span>Find out more</span>
                                 <img src={forwardIcon} alt='forward_icon' />
                             </Link>
