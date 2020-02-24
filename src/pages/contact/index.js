@@ -71,7 +71,7 @@ export default class Contact extends React.Component {
                             </div>
                             <img className='section-contact-hero-bottom-feature-line' src={horizontal_line_c} alt='horizontal_line' />
                             <h4>Order Status</h4>
-                            <p className='heading-light'>Track my order</p>
+                            <Link to='/contact/order-status' className='heading-light'>Track my order</Link>
                         </div>
                         <div className='column-center section-contact-hero-bottom-feature'>
                             <div className='column-center section-contact-hero-bottom-feature-img'>
