@@ -56,7 +56,7 @@ class Header extends React.Component {
         return (
             <li>
                 {currentURL.includes(name) && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
-                <Link to={name}>{name.split('-').join(' ').toUpperCase()}</Link>
+                <Link to={`/${name}/`}>{name.split('-').join(' ').toUpperCase()}</Link>
             </li>
         )
     };
