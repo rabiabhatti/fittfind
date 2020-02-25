@@ -35,11 +35,14 @@
     position: relative;
 }
 .product-desc-container {
-    left: 4.7rem;
+    left: 4.2rem;
     bottom: 4rem;
     position: relative;
     background-repeat: no-repeat;
     background-image: url("../images/product_price_container.png");
+}
+.section-features a.product-desc-container {
+    left: 4.7rem;
 }
 .product-desc {
     border: 0;

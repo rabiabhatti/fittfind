@@ -12,6 +12,9 @@ header {
 .section-header {
     width: 100%;
 }
+.section-logo img {
+    width: 60%;
+}
 .section-header-left, .section-header-right {
     padding-top: 35px;
     padding-bottom: 35px;
@@ -140,5 +143,8 @@ a.section-nav-right-cart>span, span.section-nav-right-currency {
     button.section-nav-right-menu>img {
         width: 15px;
         height: 10px;
+    }
+    .active-nav-link {
+        top: 2.5rem;
     }
 }

@@ -70,7 +70,7 @@
 /*tablets, ipads (landscape)*/
 @media (min-width: 769px) and (max-width: 1024px) {
     .section-left-bar-text {
-        top: 11vw;
+        top: 15.5vw;
         font-size: 13px;
     }
     .section-left-bar {

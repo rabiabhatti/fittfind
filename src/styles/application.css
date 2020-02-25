@@ -412,8 +412,9 @@ h3.section-application-video-col-left-heading>img {
         max-height: 690px;
     }
     .section-application-video-col-right-video-container>p {
-        right: -8vw;
-        margin-top: -12vw;
+        right: -7vw;
+        font-size: 11px;
+        margin-top: -8vw;
     }
     h3.section-application-video-col-left-heading>img, .section-application-motivation-banner-left>h3.left-banner-heading>img {
         height: 20.5px;
@@ -518,17 +519,18 @@ h3.section-application-video-col-left-heading>img {
         width: 20vw;
     }
     .section-application-features {
-        background-size: 250px 100%;
+        background-size: 195px 100%;
     }
     .section-hero-video {
         background-size: 25vw 100%;
     }
     .section-application-video-col-right-video-container {
-        max-height: 690px;
+        max-height: 495px;
     }
     .section-application-video-col-right-video-container>p {
-        right: -8vw;
-        margin-top: -12vw;
+        right: -10vw;
+        font-size: 11px;
+        margin-top: -10vw;
     }
     h3.section-application-video-col-left-heading>img, .section-application-motivation-banner-left>h3.left-banner-heading>img {
         height: 20.5px;
@@ -536,20 +538,20 @@ h3.section-application-video-col-left-heading>img {
         padding-bottom: 18px;
     }
     .section-application-motivation-banner-dialogue {
-        font-size: 40px;
+        font-size: 27px;
         margin-left: -35vw;
         padding: 100px 100px 100px 100px;
     }
     .section-hero-application-text {
-        font-size: 90px;
+        font-size: 70px;
     }
     h3.section-application-video-col-left-heading, h3.left-banner-heading {
-        font-size: 55px;
+        font-size: 40px;
     }
     .section-application-video-col-right>img {
         width: 20vw;
         margin-top: 50px;
-        margin-right: -55px;
+        margin-right: -40px;
     }
     .section-apps-left>a {
         padding: 13px 25px;
@@ -559,6 +561,9 @@ h3.section-application-video-col-left-heading>img {
     }
     .section-apps-left>a>img {
         margin-left: 55px;
+    }
+    .section-application-video-col-left {
+        width: 32%;
     }
 
     
