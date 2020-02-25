@@ -139,8 +139,8 @@ export default class GymList extends React.Component{
     render() {
         const pages = [0, 1, 2, 3, 4, 5, 6, 7];
         const { amenityOption, location, facilityOption } = this.state;
-        console.log(gym_list.length)
         let currentPage = this.props.location.search.split('=')[this.props.location.search.split('=').length -1];
+        
         return (
             <Wrapper name='List Yourself' location={this.props.location}>
                 <Hero>
@@ -196,7 +196,10 @@ export default class GymList extends React.Component{
                                 {item.featured && <img src={require(`../../images/gym_star.png`)} alt='gym_star' width={50} />}
                                 <img src={require(`../../images/gym_banner_${i+1}.jpg`)} alt='gym_banner' width={200} />
                             </div>
-                            <Link className='section-single-gym-desc' to='/'>
+                            <Link
+                                className='section-single-gym-desc'
+                                to={`/gym/find-gym?name=${item.name.split(' ').join('').split('/').join('').toLowerCase()}&location=${location.toLowerCase()}`}
+                            >
                                 <div className='section-single-gym-desc-top'>
                                     <h4>{item.number}</h4>
                                     <h5>{item.name}</h5>
