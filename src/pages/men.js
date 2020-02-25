@@ -1,19 +1,19 @@
 import React from 'react';
 import Select from 'react-select';
 
-import '../styles/women.css'
-import men_banner from '../images/men_banner.jpg'
-import horizontal_line from '../images/horizontal_line_white.png'
-import horizontal_line_black from '../images/horizontal_line.png'
-import background_imag from '../images/background-blue-imag.jpg'
-import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
+import '../styles/women.css';
 import product_1 from "../images/product-1.jpg";
 import product_2 from "../images/product-2.jpg";
 import product_3 from "../images/product-3.jpg";
 import product_4 from "../images/product-4.jpg";
+import men_banner from '../images/men_banner.jpg';
+import background_imag from '../images/background-blue-imag.jpg';
+import horizontal_line_black from '../images/horizontal_line.png';
+import horizontal_line from '../images/horizontal_line_white.png';
 import women_category_bras from "../images/women_category_bras.jpg";
 import women_category_shorts from "../images/women_category_shorts.jpg";
 import women_category_leggings from "../images/women_category_leggings.jpg";
+import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components";
 
 const products_list = [
     {
@@ -175,9 +175,9 @@ export default class Men extends React.Component {
         const { category, size, collection, sortBy } = this.state;
         return (
             <Wrapper name='Men' location={this.props.location}>
-            <div className='section-background'>
-                <img className='section-background-blue-right Men' src={background_imag} alt='background_blue_imag'/>
-            </div>
+                <div className='section-background'>
+                    <img className='section-background-blue-right Men' src={background_imag} alt='background_blue_imag'/>
+                </div>
                 <Hero className='section-products-hero-main'>
                     <div className='section-products-hero-container'>
                         <div className='section-products-hero'>

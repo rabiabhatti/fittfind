@@ -7,10 +7,11 @@
     align-items: center;
 }
 .section-gym-list-filters {
+    width: 68.7vw;
     display: flex;
-    width: 75%;
     padding: 3rem 0;
     background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
 }
 .section-gym-list-filters-location {
     margin-left: 2px;
@@ -21,7 +22,7 @@
 }
 .section-gym-list-map-btn {
     width: 10%;
-    color: #025696;
+    color: #fff;
     font-weight: 600;
     font-size: 0.75rem;
     text-transform: uppercase;
@@ -31,5 +32,126 @@
     flex-wrap: wrap;
 }
 .section-single-gym-desc {
+    border: 0;
+    left: 4.2rem;
+    bottom: 4rem;
+    display: flex;
+    min-height: 150px;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 20px 20px 50px;
     background-image: url("../images/gym_list_desc.png");
+}
+.section-gym-all-list.row-center {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 6.95vw;
+    flex-direction: row;
+}
+.section-single-gym-container {
+    display: flex;
+    width: 17.2vw;
+    margin: 0 3.5vw 0 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section-single-gym-banner>img {
+    width: 100%;
+}
+img.section-single-gym-star {
+    width: 80px;
+    position: absolute;
+}
+.section-single-gym-desc-top, .section-single-gym-desc-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.section-single-gym-desc-top-two {
+    display: flex;
+}
+.section-single-gym-desc-top-two>h4 {
+    line-height: 1;
+    margin-right: 10px;
+}
+.section-gym-list-banner, .section-gym-list-banner>img {
+    width: 100%;
+}
+.section-gym-list-text {
+    color: #fff;
+    margin-left: 4vw;
+    margin-top: -11vw;
+    padding-bottom: 4vw;
+    text-transform: uppercase;
+}
+.section-gym-list-text-child-one {
+    line-height: 1;
+}
+h2.section-gym-list-text-child-two>span {
+    padding: 10px 20px 0 15px;
+    background-color: #055595;
+}
+.section-gym-list-map-btn {
+    padding: 3rem 0;
+    font-family: 'Montserrat', sans-serif;
+}
+.section-single-gym-desc-middle {
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+.section-single-gym-desc-top-two>h5, .section-single-gym-desc-top>p, .section-single-gym-desc-bottom>h4 {
+    text-transform: uppercase;
+}
+.section-single-gym-desc-top {
+    color: #055595;
+}
+.section-single-gym-desc-bottom>h4:nth-child(2) {
+    color: #fff;
+    padding: 5px 10px 0 10px;
+    background-color: #cfb162;
+}
+.section-single-gym-desc-bottom>h4 {
+    padding-top: 5px;
+}
+.section-gym-list-pages {
+    text-align: center;
+}
+.section-gym-list-pages>button:first-child {
+    width: 100px;
+    margin-right: 60px;
+}
+.section-gym-list-pages>button:first-child>img {
+    margin-right: 20px;
+    margin-bottom: 3px;
+}
+.section-gym-list-pages>button:last-child {
+    width: 100px;
+    margin-left: 60px;
+}
+.section-gym-list-pages>button:last-child>img {
+    margin-left: 20px;
+    margin-bottom: 3px;
+}
+
+
+
+
+
+.section-gym-list-text-child-one {
+    font-size: 70px;
+}
+h2.section-gym-list-text-child-two {
+    font-size: 45px;
+}
+.section-single-gym-desc-top-two>h4 {
+    font-size: 25px;
+}
+.section-single-gym-desc-top-two>h5, .section-single-gym-desc-top>p, .section-single-gym-desc-bottom>h4, .section-gym-list-pages>button {
+    font-size: 17px;
+}
+.section-gym-list-filters p, .section-gym-list-map-btn {
+    font-size: 14px;
+}
+.section-single-gym-desc-middle {
+    font-size: 13px;
 }
