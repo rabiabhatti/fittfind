@@ -143,7 +143,7 @@ span.current-slider {
 }
 .section-products-slider-right-bar {
     width: 9%;
-    left: 95%;
+    left: 92%;
     color: #fff;
     display: flex;
     font-weight: 700;
@@ -187,7 +187,7 @@ span.current-slider {
     border: 1px solid #0370b6;
 }
 .section-social-media {
-    margin-top: 13vw;
+    margin-top: 10vw;
     margin-left: 4vw;
 }
 .section-social-media>h2 {
@@ -253,14 +253,13 @@ span.current-slider {
     animation: fadeOut 1.5s both;
 }
 .section-social-media-slider-right {
-    width: 10%;
     right: 0.2vw;
     max-height: 250px;
     min-height: 250px;
     position: relative;
 }
 .section-social-media-slider-right-bar {
-    right: -2.3vw;
+    right: -5vw;
     display: flex;
     position: relative;
     align-items: center;
@@ -298,7 +297,7 @@ span.current-slider {
     right: 10%;
     width: 8vw;
     display: flex;
-    margin-top: 15vw;
+    margin-top: 12vw;
     text-align: right;
     position: relative;
     flex-direction: row;
@@ -377,7 +376,7 @@ span.current-slider {
     }
     .section-social-media-slider-right-bar {
         width: 2vw;
-        right: -6vw;
+        right: -9vw;
     }
     .section-social-slider-bottom-bar {
         top: 5vw;
@@ -414,6 +413,9 @@ span.current-slider {
         width: 1.1rem;
         margin-top: -10px;
         margin-right: 10px;
+    }
+    .section-social-media-slider-right {
+        width: 5%;
     }
 }
 
@@ -456,12 +458,13 @@ span.current-slider {
         margin-left: 0;
     }
     .section-products-slider-right-bar {
+        left: 96%;
         width: 2vw;
-        right: -5.5vw;
+        right: unset;
     }
     .section-social-media-slider-right-bar {
         width: 2vw;
-        right: -6vw;
+        right: -12.5vw;
     }
     .section-social-slider-bottom-bar {
         width: 10vw;
@@ -475,6 +478,7 @@ span.current-slider {
         margin-left: 55px;
     }
     .section-social-media-slider-right>a {
+        left: -6vw;
         width: 15vw;
     }
     button.findFitBtn {
