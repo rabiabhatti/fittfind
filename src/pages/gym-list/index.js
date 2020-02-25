@@ -129,11 +129,11 @@ export default class GymList extends React.Component{
 
     handlePrevNext = async (type) => {
         const currentPage = this.props.location.search.split('=')[this.props.location.search.split('=').length -1];
-        await navigate(`/gym/list?page=${type === 'next' ? parseInt(currentPage) + 1 : parseInt(currentPage) - 1}`)
+        await navigate(`/gym-list?page=${type === 'next' ? parseInt(currentPage) + 1 : parseInt(currentPage) - 1}`)
     };
 
     handlePageClick = async (p) => {
-        await navigate(`/gym/list?page=${p+1}`)
+        await navigate(`/gym-list?page=${p+1}`)
     };
 
     render() {
@@ -183,7 +183,7 @@ export default class GymList extends React.Component{
                                     />
                                 </div>
                             </div>
-                            <Link to='/gym/' className='section-gym-list-map-btn'>
+                            <Link to='/' className='section-gym-list-map-btn'>
                                 Show map
                             </Link>
                         </div>
@@ -198,7 +198,7 @@ export default class GymList extends React.Component{
                             </div>
                             <Link
                                 className='section-single-gym-desc'
-                                to={`/gym/find-gym?name=${item.name.split(' ').join('').split('/').join('').toLowerCase()}&location=${location.toLowerCase()}`}
+                                to={`/gym-list/find?name=${item.name.split(' ').join('').split('/').join('').toLowerCase()}&location=${location.toLowerCase()}`}
                             >
                                 <div className='section-single-gym-desc-top'>
                                     <h4>{item.number}</h4>
@@ -244,7 +244,7 @@ export default class GymList extends React.Component{
                 <div className='section-gym-owners'>
                     <h2>Gym or studio owner?</h2>
                     <p>Join the new fitness market and get new customers!</p>
-                    <Link to='/gym/list' className='section-gym-owners-btn'>
+                    <Link to='/list-yourself/' className='section-gym-owners-btn'>
                         GET LISTED
                         <img src={forwardIcon} alt='forwardIcon' />
                     </Link>
