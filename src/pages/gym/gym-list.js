@@ -140,9 +140,9 @@ export default class GymList extends React.Component{
         const pages = [0, 1, 2, 3, 4, 5, 6, 7];
         const { amenityOption, location, facilityOption } = this.state;
         let currentPage = this.props.location.search.split('=')[this.props.location.search.split('=').length -1];
-        
+
         return (
-            <Wrapper name='List Yourself' location={this.props.location}>
+            <Wrapper name='List Yourself' location={this.props.location} gymNav={true}>
                 <Hero>
                     <div className='column-start section-gym-list'>
                         <div className='section-gym-list-banner'>
