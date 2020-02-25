@@ -5,8 +5,8 @@ import Select from 'react-select';
 import '../../styles/gym-list.css'
 import { Wrapper, Hero } from '../../components'
 import forwardIcon from "../../images/forward-icon.png";
-import women_banner from "../../images/women_banner.jpg";
-import backward_icon from '../../images/backward-icon.png';
+import forwardIconDark from "../../images/forward_icon_dark.png";
+import backward_icon from '../../images/backward_icon_dark.png';
 import horizontal_line from "../../images/horizontal_line.png";
 
 const facilitiesOptions = [
@@ -105,34 +105,6 @@ const gym_list = [
         desc: 'Beautiful Hollywood Hills home with pool and city views',
         city: 'paris',
         featured: false,
-    },{
-        number: '999',
-        name: 'Fit/day',
-        price: '9',
-        desc: 'Beautiful Hollywood Hills home with pool and city views',
-        city: 'paris',
-        featured: false,
-    },{
-        number: '999',
-        name: 'Fit/day',
-        price: '9',
-        desc: 'Beautiful Hollywood Hills home with pool and city views',
-        city: 'paris',
-        featured: false,
-    },{
-        number: '999',
-        name: 'Fit/day',
-        price: '9',
-        desc: 'Beautiful Hollywood Hills home with pool and city views',
-        city: 'paris',
-        featured: false,
-    },{
-        number: '999',
-        name: 'Fit/day',
-        price: '9',
-        desc: 'Beautiful Hollywood Hills home with pool and city views',
-        city: 'paris',
-        featured: false,
     }
 ];
 
@@ -157,19 +129,20 @@ export default class GymList extends React.Component{
 
     handlePrevNext = async (type) => {
         const currentPage = this.props.location.search.split('=')[this.props.location.search.split('=').length -1];
-        await navigate(`/gym/list?page=${type === 'next' ? parseInt(currentPage) + 1 : parseInt(currentPage) - 1}`)
+        await navigate(`/gym-list?page=${type === 'next' ? parseInt(currentPage) + 1 : parseInt(currentPage) - 1}`)
     };
 
     handlePageClick = async (p) => {
-        await navigate(`/gym/list?page=${p+1}`)
+        await navigate(`/gym-list?page=${p+1}`)
     };
 
     render() {
         const pages = [0, 1, 2, 3, 4, 5, 6, 7];
         const { amenityOption, location, facilityOption } = this.state;
         let currentPage = this.props.location.search.split('=')[this.props.location.search.split('=').length -1];
+
         return (
-            <Wrapper name='List Yourself' location={this.props.location}>
+            <Wrapper name='List Yourself' location={this.props.location} gymNav={true}>
                 <Hero>
                     <div className='column-start section-gym-list'>
                         <div className='section-gym-list-banner'>
@@ -210,7 +183,7 @@ export default class GymList extends React.Component{
                                     />
                                 </div>
                             </div>
-                            <Link to='/gym/' className='section-gym-list-map-btn'>
+                            <Link to='/' className='section-gym-list-map-btn'>
                                 Show map
                             </Link>
                         </div>
@@ -218,9 +191,15 @@ export default class GymList extends React.Component{
                 </Hero>
                 <div className='section-gym-all-list row-center'>
                     {gym_list.map((item, i) =>(
-                        <div className='section-single-gym-container' key={i}>
-                            <img src={women_banner} alt='women_banner' />
-                            <Link className='section-single-gym-desc' to='/'>
+                        <div className='section-single-gym-container' key={i} >
+                            <div className='section-single-gym-banner'>
+                                {item.featured && <img src={require(`../../images/gym_star.png`)} alt='gym_star' width={50} />}
+                                <img src={require(`../../images/gym_banner_${i+1}.jpg`)} alt='gym_banner' width={200} />
+                            </div>
+                            <Link
+                                className='section-single-gym-desc'
+                                to={`/gym-list/find?name=${item.name.split(' ').join('').split('/').join('').toLowerCase()}&location=${location.toLowerCase()}`}
+                            >
                                 <div className='section-single-gym-desc-top'>
                                     <h4>{item.number}</h4>
                                     <h5>{item.name}</h5>
@@ -236,28 +215,36 @@ export default class GymList extends React.Component{
                     ))}
                 </div>
                 <div className='section-gym-list-pages'>
-                    <button disabled={parseInt(currentPage) === 1} onClick={() => this.handlePrevNext('prev')}>
-                        <img src={backward_icon} alt='backward_icon' />
+                    <button
+                        disabled={parseInt(currentPage) === 1}
+                        className='section-gym-list-pages-back-btn'
+                        onClick={() => this.handlePrevNext('prev')}
+                    >
+                        <img src={backward_icon} alt='backward_icon' width={18} />
                         Previous
                     </button>
                     {pages.map(p => (
                         <button
                             key={p}
                             onClick={() => this.handlePageClick(p)}
-                            className={currentPage === p ? `section-gym-list-current-page` : ''}
+                            className={`section-gym-list-page-no-btn ${currentPage === p && `section-gym-list-current-page`}`}
                         >
                             {p+1}
                         </button>
                     ))}
-                    <button onClick={() => this.handlePrevNext('next')} disabled={parseInt(currentPage) === pages.slice(pages.length-1)[0] +1}>
-                        <img src={forwardIcon} alt='forwardIcon' />
+                    <button
+                        className='section-gym-list-pages-forward-btn'
+                        onClick={() => this.handlePrevNext('next')}
+                        disabled={parseInt(currentPage) === pages.slice(pages.length-1)[0] +1}
+                    >
                         Next
+                        <img src={forwardIconDark} alt='forwardIcon' width={18} />
                     </button>
                 </div>
                 <div className='section-gym-owners'>
                     <h2>Gym or studio owner?</h2>
                     <p>Join the new fitness market and get new customers!</p>
-                    <Link to='/gym/list' className='section-gym-owners-btn'>
+                    <Link to='/list-yourself/' className='section-gym-owners-btn'>
                         GET LISTED
                         <img src={forwardIcon} alt='forwardIcon' />
                     </Link>

@@ -20,7 +20,7 @@ export default class FundGym extends React.Component {
         const { location } = this.state;
 
         return (
-            <Wrapper name='Find Gym' location={this.props.location}>
+            <Wrapper name='Find Gym' location={this.props.location} gymNav={true}>
                 <Hero>
                     <Select
                         isDisabled={false}
@@ -35,7 +35,7 @@ export default class FundGym extends React.Component {
                 <div className='section-gym-owners'>
                     <h2>Gym or studio owner?</h2>
                     <p>Join the new fitness market and get new customers!</p>
-                    <Link to='/gym/list?page=1' className='section-gym-owners-btn'>
+                    <Link to='/list-yourself/' className='section-gym-owners-btn'>
                         GET LISTED
                         <img src={forwardIcon} alt='forwardIcon' />
                     </Link>

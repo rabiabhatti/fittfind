@@ -22,7 +22,7 @@ function Wrapper(props) {
                 <link rel="canonical" href={`${siteURL}${props.location.pathname}`} />
             </Helmet>
             <main>
-                <Header path={props.location.pathname}/>
+                <Header path={props.location.pathname} gymNav={props.gymNav}/>
                 {props.children}
                 <Footer/>
             </main>

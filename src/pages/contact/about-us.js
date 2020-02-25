@@ -84,7 +84,7 @@ export default class AboutUs extends React.Component{
                     <h2><span>fitt</span><span>find</span> corporate details</h2>
                     <div className='section-about-us-corporates-details'>
                         {corporates_details.map((item, i) => {
-                            const image = require(`../../images/0${i+1}.png`)
+                            const image = require(`../../images/0${i+1}.png`);
                             return (
                                 <div className='section-about-us-corporates-single-detail' key={i}>
                                     <div style={{ backgroundImage: `url(${image})`}}>

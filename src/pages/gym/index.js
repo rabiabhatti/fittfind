@@ -39,7 +39,7 @@ export default class Index extends React.Component{
     handleKeyPress = async (e) => {
         const { location } = this.state;
         if (e.key === 'Enter' && location.length) {
-            await navigate(`/gym/find-gym?location=${location}`)
+            await navigate(`/gym-list?location=${location}`)
         }
     };
 
@@ -163,7 +163,7 @@ export default class Index extends React.Component{
                 <div className='section-gym-owners'>
                     <h2>Gym or studio owner?</h2>
                     <p>Join the new fitness market and get new customers!</p>
-                    <Link to='/gym/list?page=1' className='section-gym-owners-btn'>
+                    <Link to='/list-yourself/' className='section-gym-owners-btn'>
                         GET LISTED
                         <img src={forwardIcon} alt='forwardIcon' />
                     </Link>
