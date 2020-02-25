@@ -78,9 +78,9 @@ a.section-nav-right-cart>span, span.section-nav-right-currency {
     display: flex;
     flex-direction: column;
 }
-a.section-nav-right-cart>img {
+/* a.section-nav-right-cart>img {
     height: max-content;
-}
+} */
 
 
 
@@ -90,7 +90,6 @@ a.section-nav-right-cart>img {
     }
     header {
         font-size: 10px;
-        font-weight: 600;
         margin-bottom: -1px;
     }
     .section-header-left, .section-header-right {

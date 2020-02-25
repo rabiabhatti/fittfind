@@ -30,8 +30,8 @@ img.hero-slide {
     width: 82%;
 }
 .section-hero-slider {
+    min-height: 53vw;
     text-align: right;
-    min-height: 112vh;
     text-align: -webkit-right;
 }
 .section-main-slider-left {
@@ -130,10 +130,6 @@ span.current-slider {
     display: flex;
     margin-top: 5vw;
 }
-.section-features .product-desc-container {
-    left: 4.9rem;
-    bottom: 3.9rem;
-}
 .section-features .slider-product:nth-child(4) .section-product-image-container {
     box-shadow: none;
 }
@@ -174,7 +170,7 @@ span.current-slider {
     right: 10%;
     width: 8vw;
     display: flex;
-    margin-top: 5vw;
+    margin-top: 15vw;
     text-align: right;
     position: relative;
     flex-direction: row;
@@ -217,6 +213,9 @@ span.current-slider {
 .section-social-media-slider {
     margin-top: 4vw;
 }
+.section-social-media-slider.column-start>div:first-child {
+    width: 99%;
+}
 .section-social-media-slider-left>img:first-child {
     margin-bottom: -5vw;
 }
@@ -254,8 +253,8 @@ span.current-slider {
     animation: fadeOut 1.5s both;
 }
 .section-social-media-slider-right {
-    width: 13%;
-    right: -63rem;
+    width: 10%;
+    right: 0.2vw;
     max-height: 250px;
     min-height: 250px;
     position: relative;
@@ -296,10 +295,10 @@ span.current-slider {
     margin-right: 10px;
 }
 .section-social-slider-bottom-bar {
-    right: 5vw;
+    right: 10%;
     width: 8vw;
     display: flex;
-    margin-top: 3vw;
+    margin-top: 15vw;
     text-align: right;
     position: relative;
     flex-direction: row;
@@ -338,7 +337,7 @@ span.current-slider {
 /*laptops, desktops*/
 @media (min-width: 1025px) and (max-width: 1440px) {
     .section-hero-slider-right-bar {
-        right: 2vw;
+        right: 3.3vw;
     }
     .sliders-count-container {
         bottom: -10px;
@@ -357,7 +356,7 @@ span.current-slider {
     .section-products-slider-bottom-bar {
         top: 3vw;
         width: 10vw;
-        right: 13vw;
+        right: 12vw;
     }
     img.section-background-fittfind {
         left: 48vw;
@@ -378,12 +377,13 @@ span.current-slider {
     }
     .section-social-media-slider-right-bar {
         width: 2vw;
-        right: -9vw;
+        right: -6vw;
     }
     .section-social-slider-bottom-bar {
+        top: 5vw;
         width: 10vw;
         right: 12vw;
-        top: 5vw;
+        margin-top: 2vw;
     }
     .section-social-media {
         margin-top: 10vw;
@@ -441,7 +441,7 @@ span.current-slider {
     .section-products-slider-bottom-bar {
         width: 10vw;
         right: 13vw;
-        margin-top: 0;
+        margin-top: 5vw;
     }
     img.section-background-fittfind {
         left: 30vw;
@@ -461,7 +461,7 @@ span.current-slider {
     }
     .section-social-media-slider-right-bar {
         width: 2vw;
-        right: -9vw;
+        right: -6vw;
     }
     .section-social-slider-bottom-bar {
         width: 10vw;

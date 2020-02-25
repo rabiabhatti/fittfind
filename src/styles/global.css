@@ -231,6 +231,9 @@ button:disabled {
     .section-gym-owners {
         padding: 100px 300px;
     }
+    img.section-background-blue-right {
+        width: 25.3vw;
+    }
 
 }
 
