@@ -56,8 +56,30 @@ class Header extends React.Component {
         return (
             <li>
                 {currentURL.includes(name) && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
-                <Link to={name}>{name.toUpperCase()}</Link>
+                <Link to={name}>{name.split('-').join(' ').toUpperCase()}</Link>
             </li>
+        )
+    };
+
+    getGymNav = () => {
+        return (
+            <ul>
+                {this.renderNavLink('gym-list')}
+                {this.renderNavLink('help')}
+                {this.renderNavLink('list-yourself')}
+                {this.renderNavLink('contact')}
+            </ul>
+        )
+    };
+    getProductsNav = () => {
+        return (
+            <ul>
+                {this.renderNavLink('men')}
+                {this.renderNavLink('women')}
+                {this.renderNavLink('app')}
+                {this.renderNavLink('gym')}
+                {this.renderNavLink('contact')}
+            </ul>
         )
     };
 
@@ -77,13 +99,11 @@ class Header extends React.Component {
                                 </Link>
                             </div>
                             <nav className='section-nav-left'>
-                                <ul>
-                                    {this.renderNavLink('men')}
-                                    {this.renderNavLink('women')}
-                                    {this.renderNavLink('app')}
-                                    {this.renderNavLink('gym')}
-                                    {this.renderNavLink('contact')}
-                                </ul>
+                                {this.props.gymNav ?
+                                    this.getGymNav()
+                                :
+                                    this.getProductsNav()
+                                }
                             </nav>
                         </div>
                         <div className='section-header-right'>
