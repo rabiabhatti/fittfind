@@ -231,6 +231,9 @@ button:disabled {
     .section-gym-owners {
         padding: 100px 300px;
     }
+    img.section-background-blue-right {
+        width: 25.3vw;
+    }
 
 }
 
@@ -239,14 +242,18 @@ button:disabled {
 
 /*tablets, ipads (landscape)*/
 @media (min-width: 769px) and (max-width: 1024px) {
+    nav.section-nav-left {
+        width: 55%;
+    }
     .section-impossible>img:nth-child(2) {
         margin-top: 25px;
     }
     .select-container p img {
-        width: 2rem;
+        width: 1rem;
+        margin-right: 5px;
     }
     .section-gym-owners {
-        padding: 100px 300px;
+        padding: 70px 100px;
     }
     .section-impossible>img:nth-child(3), .section-impossible>img:nth-child(4) {
         height: 160px;
@@ -256,5 +263,9 @@ button:disabled {
     }
     img.section-background-blue-right {
         height: 215vw;
+        width: 24.8vw;
+    }
+    .react-select-container {
+        width: 49%;
     }
 }
