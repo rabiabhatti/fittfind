@@ -242,6 +242,9 @@ button:disabled {
 
 /*tablets, ipads (landscape)*/
 @media (min-width: 769px) and (max-width: 1024px) {
+    nav.section-nav-left {
+        width: 55%;
+    }
     .section-impossible>img:nth-child(2) {
         margin-top: 25px;
     }
@@ -260,6 +263,7 @@ button:disabled {
     }
     img.section-background-blue-right {
         height: 215vw;
+        width: 24.8vw;
     }
     .react-select-container {
         width: 49%;

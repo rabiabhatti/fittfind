@@ -105,7 +105,7 @@
 /*tablets, ipads (landscape)*/
 @media (min-width: 769px) and (max-width: 1024px) {
     .section-products-filters {
-        width: 69.5vw;
+        width: 68.2vw;
     }
     .section-hero-category {
         width: 17.25vw;
