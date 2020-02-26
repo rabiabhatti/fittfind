@@ -140,7 +140,7 @@ h2.section-gym-list-text-child-two>span {
 .section-gym-list-text-child-one {
     font-size: 70px;
 }
-h2.section-gym-list-text-child-two {
+.section-gym-list-text-child-two {
     font-size: 45px;
 }
 .section-single-gym-desc-top-two>h4 {
@@ -154,4 +154,47 @@ h2.section-gym-list-text-child-two {
 }
 .section-single-gym-desc-middle {
     font-size: 13px;
+}
+
+
+
+
+
+
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .section-gym-list-filters {
+        width: 68vw;
+    }
+    .section-single-gym-desc {
+        width: 280px;
+        left: 1.1rem;
+        min-height: 140px;
+    }
+
+
+    .section-gym-list-text-child-one {
+        font-size: 55px;
+    }
+    .section-gym-list-text-child-two {
+        font-size: 40px;
+    }
+    .section-single-gym-desc-top-two>h4 {
+        font-size: 20px;
+    }
+    .section-single-gym-desc-top-two>h5, .section-single-gym-desc-top>p, .section-single-gym-desc-bottom>h4, .section-gym-list-pages>button {
+        font-size: 14px;
+    }
+    .section-gym-list-filters p, .section-gym-list-map-btn, .section-gym-list-filters .react-select-container, .section-gym-list-filters-location, .section-gym-list-filters .react-select__placeholder, .section-single-gym-desc-middle {
+        font-size: 11px;
+    }
+
+}
+
+
+
+
+/*tablets, ipads (landscape)*/
+@media (min-width: 769px) and (max-width: 1024px) {
+
 }
