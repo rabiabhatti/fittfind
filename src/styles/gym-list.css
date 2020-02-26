@@ -214,6 +214,9 @@ h2.section-gym-list-text-child-two>span {
     .section-single-gym-desc-top-two>h4 {
         padding-top: 4px;
     }
+    h2.section-gym-list-text-child-two>span {
+        padding: 5px 20px 0 15px;
+    }
 
 
     .section-gym-list-text-child-one {
