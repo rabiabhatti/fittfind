@@ -26,7 +26,7 @@ header {
 }
 .active-nav-link {
     width: 5rem;
-    top: 2.75rem;
+    top: 3.3rem;
     position: absolute;
 }
 .section-header-right {
@@ -111,6 +111,9 @@ a.section-nav-right-cart>span, span.section-nav-right-currency {
     button.section-nav-right-menu>img {
         width: 15px;
         height: 10px;
+    }
+    .active-nav-link {
+        top: 2.7rem;
     }
 
 }

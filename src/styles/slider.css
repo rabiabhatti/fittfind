@@ -253,7 +253,7 @@ span.current-slider {
     animation: fadeOut 1.5s both;
 }
 .section-social-media-slider-right {
-    right: 0.2vw;
+    right: 2.1vw;
     max-height: 250px;
     min-height: 250px;
     position: relative;
@@ -390,25 +390,6 @@ span.current-slider {
     button.findFitBtn>img {
         margin-left: 100px;
     }
-    .section-social-media>h2 {
-        font-size: 55px;
-    }
-    .section-social-media-slider-right>a {
-        width: 15vw;
-    }
-    button.findFitBtn {
-        font-size: 10px;
-        padding: 13px 25px;
-    }
-    span.current-slider {
-        font-size: 50px;
-    }
-    .section-hero-slider-right-bar>button, .section-products-slider-active-page {
-        font-size: 14px;
-    }
-    .section-social-media-slider-right>a>span {
-        font-size: 11px;
-    }
     .section-social-media-slider-right>a>img {
         width: 1.1rem;
         margin-top: -10px;
@@ -416,6 +397,30 @@ span.current-slider {
     }
     .section-social-media-slider-right {
         width: 5%;
+        right: 8.1vw;
+    }
+    button.findFitBtn {
+        padding: 13px 25px;
+    }
+
+
+    .section-social-media>h2 {
+        font-size: 55px;
+    }
+    span.current-slider {
+        font-size: 50px;
+    }
+    .section-social-media-slider-right>a {
+        width: 15vw;
+    }
+    .section-hero-slider-right-bar>button, .section-products-slider-active-page {
+        font-size: 14px;
+    }
+    .section-social-media-slider-right>a>span {
+        font-size: 11px;
+    }
+    button.findFitBtn {
+        font-size: 10px;
     }
 }
 
@@ -482,7 +487,6 @@ span.current-slider {
         width: 15vw;
     }
     button.findFitBtn {
-        font-size: 10px;
         padding: 13px 25px;
     }
     .section-hero-slider-right-bar>button, .section-products-slider-active-page {
@@ -496,6 +500,9 @@ span.current-slider {
     .section-products-slider-bottom-bar>button, .section-social-slider-bottom-bar>button {
         padding: 15px;
     }
+    .section-social-media-slider-right {
+        right: 0.2vw;
+    }    
 
     h1.section-Find-release-hero {
         font-size: 70px;
@@ -506,7 +513,7 @@ span.current-slider {
     span.current-slider {
         font-size: 50px;
     }
-    .section-social-media-slider-right>a>span {
+    .section-social-media-slider-right>a>span, button.findFitBtn {
         font-size: 10px;
     }
 }
