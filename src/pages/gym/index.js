@@ -25,10 +25,12 @@ import gym_motivation_girl from '../../images/gym-motivation-girl.png'
 
 
 export default class Index extends React.Component{
+    ref = null;
     state = {
       location: 'london'
     };
     componentDidMount() {
+        this.ref.focus();
         document.addEventListener('keydown', this.handleKeyPress)
     }
     componentWillUnmount() {
@@ -59,6 +61,7 @@ export default class Index extends React.Component{
                                 <span>Find gym in</span>
                                 <div className='section-hero-gym-main-banner-heading'>
                                     <input
+                                        ref={(ele) => this.ref=ele}
                                         value={location.toUpperCase()}
                                         placeholder={location.toUpperCase()}
                                         className='section-hero-gym-main-banner-input'

@@ -125,7 +125,7 @@ a.section-about-us-hero-top>img {
     flex-wrap: wrap;
 }
 .section-about-us-corporates-details>div {
-    width: 27%;
+    width: 29%;
     margin-bottom: 3vw;
     margin-right: 3.2vw;
 }
@@ -160,6 +160,9 @@ button.corporates-single-detail-btn {
     border-bottom: 1px solid #055595;
     font-family: 'Montserrat', sans-serif;
 }
+.section-about-us-corporates-details>div:nth-child(3), .section-about-us-corporates-details>div:nth-child(6), .section-about-us-corporates-details>div:nth-child(9), .section-about-us-corporates-details>div:nth-child(12), .section-about-us-corporates-details>div:nth-child(15), .section-about-us-corporates-details>div:nth-child(18), .section-about-us-corporates-details>div:nth-child(21), .section-about-us-corporates-details>div:nth-child(24) {
+    margin-right: 0;
+}
 
 
 /*laptops, desktops*/
@@ -177,6 +180,13 @@ button.corporates-single-detail-btn {
     .section-about-us-banner-left {
         width: 35%;
     }
+    .section-about-us-corporates-details>div img {
+        width: 70px;
+        max-height: 2px;
+        margin-left: -25px;
+    }
+
+
     .section-about-us-banner-left h1, .section-about-us-corporates>h2 {
         font-size: 55px;
     }
@@ -206,26 +216,42 @@ button.corporates-single-detail-btn {
 /*tablets, ipads (landscape)*/
 @media (min-width: 769px) and (max-width: 1024px) {
     .section-about-us-banner-left>div>img {
+        width: 25%;
+        height: 12.5px;
         margin-right: 30px;
+        padding-bottom: 10px;
     }
     .section-about-us-banner-right>img {
         width: 80%;
-        height: 80% !important;
+        height: 70% !important;
     }
     .section-about-us-hero-bottom>h2 {
-        width: 63%;
+        width: 70%;
     }
     .section-about-us-banner-left {
-        width: 35%;
+        width: 37%;
     }
+    .section-about-us-corporates-details>div img {
+        width: 70px;
+        max-height: 2px;
+        margin-left: -25px;
+    }
+    .section-about-us-hero-bottom>h4:nth-child(4) {
+        margin-bottom: 25px;
+    }
+    .section-about-us-hero-bottom>img {
+        margin-bottom: 20px;
+    }
+
+
     .section-about-us-banner-left h1, .section-about-us-corporates>h2 {
-        font-size: 55px;
-    }
-    .section-about-us-hero-bottom>h2 {
         font-size: 40px;
     }
+    .section-about-us-hero-bottom>h2 {
+        font-size: 30px;
+    }
     .section-about-us-corporates-details>div h4 {
-        font-size: 25px;
+        font-size: 20px;
     }
     .section-about-us-hero-bottom>h4 {
         font-size: 18px;

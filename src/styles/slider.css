@@ -30,8 +30,8 @@ img.hero-slide {
     width: 82%;
 }
 .section-hero-slider {
+    min-height: 53vw;
     text-align: right;
-    min-height: 112vh;
     text-align: -webkit-right;
 }
 .section-main-slider-left {
@@ -130,10 +130,6 @@ span.current-slider {
     display: flex;
     margin-top: 5vw;
 }
-.section-features .product-desc-container {
-    left: 4.9rem;
-    bottom: 3.9rem;
-}
 .section-features .slider-product:nth-child(4) .section-product-image-container {
     box-shadow: none;
 }
@@ -147,7 +143,7 @@ span.current-slider {
 }
 .section-products-slider-right-bar {
     width: 9%;
-    left: 95%;
+    left: 92%;
     color: #fff;
     display: flex;
     font-weight: 700;
@@ -174,7 +170,7 @@ span.current-slider {
     right: 10%;
     width: 8vw;
     display: flex;
-    margin-top: 5vw;
+    margin-top: 15vw;
     text-align: right;
     position: relative;
     flex-direction: row;
@@ -191,7 +187,7 @@ span.current-slider {
     border: 1px solid #0370b6;
 }
 .section-social-media {
-    margin-top: 13vw;
+    margin-top: 10vw;
     margin-left: 4vw;
 }
 .section-social-media>h2 {
@@ -216,6 +212,9 @@ span.current-slider {
 }
 .section-social-media-slider {
     margin-top: 4vw;
+}
+.section-social-media-slider.column-start>div:first-child {
+    width: 99%;
 }
 .section-social-media-slider-left>img:first-child {
     margin-bottom: -5vw;
@@ -254,14 +253,13 @@ span.current-slider {
     animation: fadeOut 1.5s both;
 }
 .section-social-media-slider-right {
-    width: 13%;
-    right: -63rem;
+    right: 2.1vw;
     max-height: 250px;
     min-height: 250px;
     position: relative;
 }
 .section-social-media-slider-right-bar {
-    right: -2.3vw;
+    right: -5vw;
     display: flex;
     position: relative;
     align-items: center;
@@ -296,10 +294,10 @@ span.current-slider {
     margin-right: 10px;
 }
 .section-social-slider-bottom-bar {
-    right: 5vw;
+    right: 10%;
     width: 8vw;
     display: flex;
-    margin-top: 3vw;
+    margin-top: 12vw;
     text-align: right;
     position: relative;
     flex-direction: row;
@@ -338,7 +336,7 @@ span.current-slider {
 /*laptops, desktops*/
 @media (min-width: 1025px) and (max-width: 1440px) {
     .section-hero-slider-right-bar {
-        right: 2vw;
+        right: 3.3vw;
     }
     .sliders-count-container {
         bottom: -10px;
@@ -357,7 +355,7 @@ span.current-slider {
     .section-products-slider-bottom-bar {
         top: 3vw;
         width: 10vw;
-        right: 13vw;
+        right: 12vw;
     }
     img.section-background-fittfind {
         left: 48vw;
@@ -381,9 +379,10 @@ span.current-slider {
         right: -9vw;
     }
     .section-social-slider-bottom-bar {
+        top: 5vw;
         width: 10vw;
         right: 12vw;
-        top: 5vw;
+        margin-top: 2vw;
     }
     .section-social-media {
         margin-top: 10vw;
@@ -391,18 +390,28 @@ span.current-slider {
     button.findFitBtn>img {
         margin-left: 100px;
     }
+    .section-social-media-slider-right>a>img {
+        width: 1.1rem;
+        margin-top: -10px;
+        margin-right: 10px;
+    }
+    .section-social-media-slider-right {
+        width: 5%;
+        right: 8.1vw;
+    }
+    button.findFitBtn {
+        padding: 13px 25px;
+    }
+
+
     .section-social-media>h2 {
         font-size: 55px;
     }
-    .section-social-media-slider-right>a {
-        width: 15vw;
-    }
-    button.findFitBtn {
-        font-size: 10px;
-        padding: 13px 25px;
-    }
     span.current-slider {
         font-size: 50px;
+    }
+    .section-social-media-slider-right>a {
+        width: 15vw;
     }
     .section-hero-slider-right-bar>button, .section-products-slider-active-page {
         font-size: 14px;
@@ -410,10 +419,8 @@ span.current-slider {
     .section-social-media-slider-right>a>span {
         font-size: 11px;
     }
-    .section-social-media-slider-right>a>img {
-        width: 1.1rem;
-        margin-top: -10px;
-        margin-right: 10px;
+    button.findFitBtn {
+        font-size: 10px;
     }
 }
 
@@ -441,7 +448,7 @@ span.current-slider {
     .section-products-slider-bottom-bar {
         width: 10vw;
         right: 13vw;
-        margin-top: 0;
+        margin-top: 5vw;
     }
     img.section-background-fittfind {
         left: 30vw;
@@ -456,12 +463,13 @@ span.current-slider {
         margin-left: 0;
     }
     .section-products-slider-right-bar {
+        left: 96%;
         width: 2vw;
-        right: -5.5vw;
+        right: unset;
     }
     .section-social-media-slider-right-bar {
         width: 2vw;
-        right: -9vw;
+        right: -12.5vw;
     }
     .section-social-slider-bottom-bar {
         width: 10vw;
@@ -475,10 +483,10 @@ span.current-slider {
         margin-left: 55px;
     }
     .section-social-media-slider-right>a {
+        left: -6vw;
         width: 15vw;
     }
     button.findFitBtn {
-        font-size: 10px;
         padding: 13px 25px;
     }
     .section-hero-slider-right-bar>button, .section-products-slider-active-page {
@@ -492,6 +500,9 @@ span.current-slider {
     .section-products-slider-bottom-bar>button, .section-social-slider-bottom-bar>button {
         padding: 15px;
     }
+    .section-social-media-slider-right {
+        right: 0.2vw;
+    }    
 
     h1.section-Find-release-hero {
         font-size: 70px;
@@ -502,7 +513,10 @@ span.current-slider {
     span.current-slider {
         font-size: 50px;
     }
-    .section-social-media-slider-right>a>span {
+    .section-social-media-slider-right>a>span, button.findFitBtn {
         font-size: 10px;
+    }
+    .section-main-slider .hero-slide {
+        max-height: 558px;
     }
 }

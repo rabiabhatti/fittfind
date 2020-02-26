@@ -1,13 +1,15 @@
-import React from 'react'
-import { Link, navigate } from 'gatsby'
+import React from 'react';
+import { Link, navigate } from 'gatsby';
 import Select from 'react-select';
 
-import '../../styles/gym-list.css'
-import { Wrapper, Hero } from '../../components'
+import '../../styles/gym-list.css';
+import { Wrapper, Hero } from '../../components';
 import forwardIcon from "../../images/forward-icon.png";
-import forwardIconDark from "../../images/forward_icon_dark.png";
-import backward_icon from '../../images/backward_icon_dark.png';
 import horizontal_line from "../../images/horizontal_line.png";
+import backward_icon from '../../images/backward_icon_dark.png';
+import background_imag from '../../images/background-blue-imag.jpg';
+import forwardIconDark from "../../images/forward_icon_dark.png";
+import gym_list_hero_img from "../../images/gym-list-hero-img.png";
 
 const facilitiesOptions = [
     { value: 'ALL', label: 'ALL' },
@@ -143,11 +145,17 @@ export default class GymList extends React.Component{
 
         return (
             <Wrapper name='List Yourself' location={this.props.location} gymNav={true}>
+                <div className='section-background'>
+                    <img className='section-background-blue-right Men' src={background_imag} alt='background_blue_imag'/>
+                </div>
                 <Hero>
                     <div className='column-start section-gym-list'>
                         <div className='section-gym-list-banner'>
-                            <h1>Flexible gym & studio access:#find&release</h1>
-                            <h2>Safely access over <span>1000 gyms & studios</span></h2>
+                            <img src={gym_list_hero_img} alt='gym-list-hero-img' />
+                        </div>
+                        <div className='section-gym-list-text'>
+                            <h1 className='section-gym-list-text-child-one'>Flexible gym & studio access:#find&release</h1>
+                            <h2 className='section-gym-list-text-child-two'>Safely access over <span>1000 gyms & studios</span></h2>
                         </div>
                         <div className='space-between section-gym-list-filters-container'>
                             <div className='section-gym-list-filters'>
@@ -193,7 +201,7 @@ export default class GymList extends React.Component{
                     {gym_list.map((item, i) =>(
                         <div className='section-single-gym-container' key={i} >
                             <div className='section-single-gym-banner'>
-                                {item.featured && <img src={require(`../../images/gym_star.png`)} alt='gym_star' width={50} />}
+                                {item.featured && <img className='section-single-gym-star' src={require(`../../images/gym_star.png`)} alt='gym_star' width={50} />}
                                 <img src={require(`../../images/gym_banner_${i+1}.jpg`)} alt='gym_banner' width={200} />
                             </div>
                             <Link
@@ -201,8 +209,10 @@ export default class GymList extends React.Component{
                                 to={`/gym-list/find?name=${item.name.split(' ').join('').split('/').join('').toLowerCase()}&location=${location.toLowerCase()}`}
                             >
                                 <div className='section-single-gym-desc-top'>
-                                    <h4>{item.number}</h4>
-                                    <h5>{item.name}</h5>
+                                    <div className='section-single-gym-desc-top-two'>
+                                        <h4>{item.number}</h4>
+                                        <h5>{item.name}</h5>
+                                    </div>
                                     <p>${item.price}</p>
                                 </div>
                                 <p className='section-single-gym-desc-middle'>{item.desc}</p>
