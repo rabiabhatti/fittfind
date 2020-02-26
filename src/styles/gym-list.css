@@ -202,7 +202,7 @@ h2.section-gym-list-text-child-two>span {
     .section-single-gym-desc {
         left: 0.5rem;
         width: 204px;
-        min-height: 120px;
+        min-height: 100px;
         padding: 10px 10px 10px 40px;
     }
     .section-single-gym-desc-top>p {
@@ -220,6 +220,12 @@ h2.section-gym-list-text-child-two>span {
     }
     .section-single-gym-desc-bottom>h4, .section-single-gym-desc-bottom>h4:nth-child(2) {
         padding-top: 4px;
+    }
+    .section-single-gym-desc-top-two>h5 {
+        max-width: 99px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 
 
