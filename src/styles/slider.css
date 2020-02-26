@@ -516,4 +516,7 @@ span.current-slider {
     .section-social-media-slider-right>a>span, button.findFitBtn {
         font-size: 10px;
     }
+    .section-main-slider .hero-slide {
+        max-height: 558px;
+    }
 }
