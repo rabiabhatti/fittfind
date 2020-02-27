@@ -131,11 +131,11 @@ export default class GymList extends React.Component{
 
     handlePrevNext = async (type) => {
         const currentPage = this.props.location.search.split('=')[this.props.location.search.split('=').length -1];
-        await navigate(`/gym-list?page=${type === 'next' ? parseInt(currentPage) + 1 : parseInt(currentPage) - 1}`)
+        await navigate(`/gym-list${this.props.location.search.split('&')[0]}&page=${type === 'next' ? parseInt(currentPage) + 1 : parseInt(currentPage) - 1}`)
     };
 
     handlePageClick = async (p) => {
-        await navigate(`/gym-list?page=${p+1}`)
+        await navigate(`/gym-list${this.props.location.search.split('&')[0]}&page=${p+1}`)
     };
 
     render() {
