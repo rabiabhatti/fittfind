@@ -105,9 +105,9 @@ a.section-nav-right-cart>span, span.section-nav-right-currency {
     a.section-nav-right-cart>span>span, span.section-nav-right-currency>span {
         line-height: 1;
     }
-    a.section-nav-right-cart>img {
-        height: 15px;
-    }
+    /*a.section-nav-right-cart>img {*/
+    /*    height: 15px;*/
+    /*}*/
     button.section-nav-right-menu>img {
         width: 15px;
         height: 10px;

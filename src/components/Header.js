@@ -112,7 +112,7 @@ class Header extends React.Component {
                                 <span>USD</span>
                             </span>
                             <Link to="/basket"  className='section-nav-right-cart'>
-                                <img src={cart} alt='Cart icon' width={25} height={25} />
+                                <img src={cart} alt='Cart icon' width={25} />
                                 <span>
                                 <span>Basket</span>
                                 <span>Empty</span>
