@@ -3,7 +3,7 @@ import React from 'react'
 import '../styles/single_product.css'
 import like_fill from '../images/like_fill.png'
 import right_arrow from '../images/right_arrow.png'
-import like_outline from '../images/like_outline_dark.png'
+import like_outline from '../images/like_outline.png'
 import forwardIcon from '../images/forward_icon_dark.png'
 import horizontal_line from '../images/horizontal_line.png'
 import single_product_banner from '../images/single_product_banner.jpg'
@@ -61,6 +61,7 @@ export default class extends React.Component {
 
         return (
             <Wrapper name='Single Product' location={this.props.location}>
+                {showChart && <SizeChart handleClose={() => this.setState({ showChart: false })} />}
                 <div className='section-background'>
                     <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag' />
                 </div>
@@ -77,7 +78,7 @@ export default class extends React.Component {
                                 </div>
                                 <div className='row-center space-between'>
                                     <p className='section-single-product-handles-text'>Size</p>
-                                    <button className='size-chart-btn'>
+                                    <button className='size-chart-btn' onClick={() => this.setState({ showChart: true })}>
                                         <span>size & fit</span>
                                         <img src={right_arrow} alt='right_arrow' width={5} />
                                     </button>
@@ -99,7 +100,8 @@ export default class extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className='section-single-product-hero-middle' style={{ backgroundImage: `url(${single_product_banner})` }}>
+                    <div className='section-single-product-hero-middle'>
+                        <img src={single_product_banner} alt='single_product_banner' className='section-single-product-hero-middle-banner' />
                         <div className='section-single-product-hero-middle-top'>
                             <button className='single-product-like-btn' onClick={this.handleLikePress}>
                                 <img src={liked ? like_fill : like_outline} alt='like_icon' />
