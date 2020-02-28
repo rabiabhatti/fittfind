@@ -13,6 +13,7 @@ import gym_weight_equipment from '../../images/gym-feature-1.png'
 import gym_lockers from '../../images/gym-feature-3.png'
 import gym_special_machines from '../../images/gym-feature-3.png'
 import gym_healthy_snacks from '../../images/gym-feature-3.png'
+import find_gym_hero_img from '../../images/find-gym-hero-img.png'
 import gym_cardiovascular_equipment from '../../images/gym-feature-2.png'
 import backwardIcon from "../../images/backward-icon.png";
 
@@ -93,6 +94,7 @@ export default class FundGym extends React.Component {
             <Wrapper name='Find Gym' location={this.props.location} gymNav={true}>
                 <Hero>
                     <div className='section-find-gym-hero'>
+                        <img src={find_gym_hero_img} alt='find_gym_hero_img' />
                         <Select
                             isDisabled={false}
                             value={location}

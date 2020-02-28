@@ -1,15 +1,42 @@
 .section-find-gym-hero {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-width: 93%;
-    min-height: 60vh;
     display: flex;
-    align-items: center;
-    background-image: url("../images/gym-list-hero-img.png");
+    flex-direction: column;
 }
-.section-find-gym-facility-desc-anchor {
-    color: #025696;
-    font-weight: bold;
-    font-size: 1rem;
+.section-find-gym-hero, .section-find-gym-hero>img {
+    width: 100%;
+}
+.section-find-gym-hero .gym-select-container {
+    left: 5vw;
+    top: -12vw;
+    width: 12vw;
+    position: relative;
+}
+.section-find-gym-hero .gym-select-container .gym-select__control {
+    border: unset;
+    border-radius: unset;
+    background-color: #055595;
+}
+.section-find-gym-hero .gym-select-container .gym-select__control .gym-select__placeholder {
+    color: #fff;
+    text-transform: uppercase;
+}
+.section-find-gym-hero .gym-select-container .gym-select__control span.gym-select__indicator-separator {
+    display: none;
+}
+.section-find-gym-hero .gym-select-container .gym-select__control .gym-select__indicator>svg {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+}
+.section-find-gym-hero .gym-select-container .gym-select__control .gym-select__value-container {
+    height: 60px;
+    margin-top: 6px;
+    padding-left: 40px;
+}
+
+
+
+
+.section-find-gym-hero .gym-select-container .gym-select__control .gym-select__placeholder {
+    font-size: 45px;
 }
