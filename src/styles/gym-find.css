@@ -40,3 +40,49 @@
 .section-find-gym-hero .gym-select-container .gym-select__control .gym-select__placeholder {
     font-size: 45px;
 }
+
+
+
+
+
+
+/*laptops, desktops*/
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .section-find-gym-hero .gym-select-container .gym-select__control .gym-select__value-container {
+        height: 50px;
+        padding-left: 30px;
+    }
+
+
+
+    .section-find-gym-hero .gym-select-container .gym-select__control .gym-select__placeholder {
+        font-size: 35px;
+    }
+    
+}
+
+
+
+
+/*tablets, ipads (landscape)*/
+@media (min-width: 769px) and (max-width: 1024px) {
+    .section-find-gym-hero .gym-select-container .gym-select__control .gym-select__value-container {
+        height: 35px;
+        padding-left: 20px;
+    }
+    .section-find-gym-hero .gym-select-container {
+        width: 12vw;
+    }
+    .section-find-gym-hero .gym-select-container .gym-select__control .gym-select__indicator>svg {
+        width: 20px;
+        height: 20px;
+    }
+
+
+
+
+    .section-find-gym-hero .gym-select-container .gym-select__control .gym-select__placeholder {
+        font-size: 25px;
+    }
+    
+}
