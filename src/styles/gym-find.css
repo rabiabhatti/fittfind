@@ -1,0 +1,15 @@
+.section-find-gym-hero {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 93%;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background-image: url("../images/gym-list-hero-img.png");
+}
+.section-find-gym-facility-desc-anchor {
+    color: #025696;
+    font-weight: bold;
+    font-size: 1rem;
+}

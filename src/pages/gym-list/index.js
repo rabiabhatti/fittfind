@@ -206,7 +206,7 @@ export default class GymList extends React.Component{
                             </div>
                             <Link
                                 className='section-single-gym-desc'
-                                to={`/gym-list/find?name=${item.name.split(' ').join('').split('/').join('').toLowerCase()}&location=${location.toLowerCase()}`}
+                                to={`/gym-list/find?name=${item.name.split(' ').join('-').split('/').join('-').toLowerCase()}&location=${location.toLowerCase()}`}
                             >
                                 <div className='section-single-gym-desc-top'>
                                     <div className='section-single-gym-desc-top-two'>

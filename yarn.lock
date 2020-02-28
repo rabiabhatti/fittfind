@@ -2798,6 +2798,7 @@ babel-preset-gatsby@^0.2.29:
     gatsby-core-utils "^1.0.28"
 
 babel-register@^6.26.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
+  name babel-runtime
   version "6.26.0"
   resolved "https://registry.yarnpkg.com/babel-runtime/-/babel-runtime-6.26.0.tgz#965c7058668e82b55d7bfe04ff2337bc8b5647fe"
   integrity sha1-llxwWGaOgrVde/4E/yM3vItWR/4=
@@ -12286,6 +12287,13 @@ react-select@^3.0.8:
     react-input-autosize "^2.2.2"
     react-transition-group "^2.2.1"
 
+react-show-more@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-show-more/-/react-show-more-2.0.0.tgz#16e021c918083baf64648fa75ae515be136d0986"
+  integrity sha512-PlB/Ni+w0WVFmvQIqF6x6AElix51O73LbHOIzvPLyWXK8fwEz7+ES+vw7+EC/Taw0NZ3LGkwaHslpMiUh+1bQw==
+  dependencies:
+    react-truncate "^2.3.0"
+
 react-side-effect@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-1.2.0.tgz#0e940c78faba0c73b9b0eba9cd3dda8dfb7e7dae"
@@ -12302,6 +12310,11 @@ react-transition-group@^2.2.1:
     loose-envify "^1.4.0"
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
+
+react-truncate@^2.3.0:
+  version "2.4.0"
+  resolved "https://registry.yarnpkg.com/react-truncate/-/react-truncate-2.4.0.tgz#3cf5ff09ab86f93e3c078d359f4de6d75aa60510"
+  integrity sha512-3QW11/COYwi6iPUaunUhl06DW5NJBJD1WkmxW5YxqqUu6kvP+msB3jfoLg8WRbu57JqgebjVW8Lknw6T5/QZdA==
 
 react@^16.12.0, react@^16.8.0:
   version "16.12.0"
