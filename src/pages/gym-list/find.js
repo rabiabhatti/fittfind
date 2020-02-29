@@ -10,6 +10,7 @@ import horizontal_line from '../../images/horizontal_line.png'
 import profile_img from "../../images/forward-icon.png";
 import forwardIcon from "../../images/forward-icon.png";
 import gym_weight_equipment from '../../images/gym-feature-1.png'
+import background_imag from '../../images/background-blue-image.jpg';
 import gym_lockers from '../../images/gym-feature-3.png'
 import gym_special_machines from '../../images/gym-feature-3.png'
 import gym_healthy_snacks from '../../images/gym-feature-3.png'
@@ -92,6 +93,9 @@ export default class FundGym extends React.Component {
 
         return (
             <Wrapper name='Find Gym' location={this.props.location} gymNav={true}>
+                <div className='section-background'>
+                    <img className='section-background-blue-right-gym-find' src={background_imag} alt='background_blue_imag'/>
+                </div>
                 <Hero>
                     <div className='section-find-gym-hero'>
                         <img src={find_gym_hero_img} alt='find_gym_hero_img' />
@@ -113,11 +117,11 @@ export default class FundGym extends React.Component {
                             Show map
                         </Link>
                     </div>
-                    <div className='section-find-gym-desc-container space-between'>
+                    <div className='section-find-gym-desc-container'>
                         <div className='section-find-gym-about-container'>
                             <h2>About</h2>
-                            <p>Create flexible sizes for an image that stretches to fill its container. E.g. for a container whose max width is 800px, the automatic sizes would be: 200px, 400px, 800px, 1200px and 1600px – enough to provide close to the optimal image size for every device size / screen resolution. If you want more control over which sizes are output you can use the srcSetBreakpoints parameter. Once you’ve queried for a fluid image to retrieve its data, you can pass that data into the Img component.</p>
-                            <p>Create flexible sizes for an image that stretches to fill its container. E.g. for a container whose max width is 800px, the automatic sizes would be: 200px, 400px, 800px, 1200px and 1600px – enough to provide close to the optimal image size for every device size / screen resolution. If you want more control over which sizes are output you can use the srcSetBreakpoints parameter. Once you’ve queried for a fluid image to retrieve its data, you can pass that data into the Img component.</p>
+                            <p>Our Athletic Group Training zones contain a number of unique items of movement based equipment providing you a bespoke location and training environment to support you in achieving your performance goals. Equipment in this area can include (but is not limited to): Prowlers, Hurdles, Tyres, Ankoor, Bungee, sprint track and an infra red timing gate.</p>
+                            <p>This versatile kit is also incorporated into a series of group workouts (knows as AGT workouts), so you can come and try out the equipment and new way of training with like minded members. The exercises contained in Athletic Group Training (AGT) combines various performance based exercises with gym based disciplines and movements which are inherent to improving athletic performance. Classes are designed to achieve maximum results in minimal time.</p>
                         </div>
                         <div className='section-find-gym-scrolling-entries-container'>
                             {scrolling_entries.map((item, i) => (
@@ -138,7 +142,6 @@ export default class FundGym extends React.Component {
                                     <img src={require(`../../images/gym_banner_${i+1}.jpg`)} alt='gym_banner' width={200} />
                                     <div className='section-find-gym-facility-content'>
                                         <div className='section-find-gym-facility-content-heading'>
-                                            <img src={horizontal_line} alt='horizontal_line' />
                                             <h3>{item.name}</h3>
                                             <h4>{item.price}</h4>
                                         </div>
