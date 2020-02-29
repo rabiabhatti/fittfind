@@ -53,10 +53,14 @@ class Header extends React.Component {
 
     renderNavLink = (name) => {
         const currentURL = this.props.path.split('/');
+        let link = name;
+        if (name === 'women' || link === 'men') {
+            link = `/${link}/new-release/`
+        }
         return (
             <li>
                 {currentURL.includes(name) && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
-                <Link to={`/${name}/`}>{name.split('-').join(' ').toUpperCase()}</Link>
+                <Link to={`/${link}/`}>{name.split('-').join(' ').toUpperCase()}</Link>
             </li>
         )
     };
