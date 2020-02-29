@@ -356,6 +356,7 @@ span.current-slider {
         top: 3vw;
         width: 10vw;
         right: 12vw;
+        margin-top: 10vw;
     }
     img.section-background-fittfind {
         left: 48vw;
@@ -502,7 +503,7 @@ span.current-slider {
     }
     .section-social-media-slider-right {
         right: 0.2vw;
-    }    
+    }
 
     h1.section-Find-release-hero {
         font-size: 70px;
