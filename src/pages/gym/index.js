@@ -41,7 +41,7 @@ export default class Index extends React.Component{
     handleKeyPress = async (e) => {
         const { location } = this.state;
         if (e.key === 'Enter' && location.length) {
-            await navigate(`/gym-list?location=${location}`)
+            await navigate(`/gym-list?location=${location}&page=1`)
         }
     };
 
