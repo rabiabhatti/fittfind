@@ -4,9 +4,9 @@ import {graphql, navigate} from 'gatsby'
 import '../styles/single_product.css'
 import like_fill from '../images/like_fill.png'
 import { STRAPI_SERVER_URL } from '../../common'
-import forwardIcon from '../images/forward-icon.png'
 import right_arrow from "../images/right_arrow.png";
 import like_outline from '../images/like_outline.png'
+import forwardIcon from '../images/forward_icon_dark.png'
 import horizontal_line from '../images/horizontal_line.png'
 import background_imag from "../images/background-blue-imag.jpg";
 import vertical_line_white from "../images/vertical_line_white.png";
@@ -131,10 +131,10 @@ export default class extends React.Component {
                             />
                         ))}
                         <div className='section-single-product-hero-middle-bottom'>
-                            <button onClick={() => this.handleBackNextImage('back')} disabled={product_images_no === 1}>
+                            <button onClick={() => this.handleBackNextImage('back')} disabled={product_images_no === 1} style={{ opacity: product_images_no === 1 ? '0.2': '1' }}>
                                 <img className='section-single-product-hero-middle-bottom-reverse-btn-img' src={forwardIcon} alt='back_button' width={20} />
                             </button>
-                            <button onClick={() => this.handleBackNextImage('next')} disabled={product_images_no >= product_images_count.length}>
+                            <button onClick={() => this.handleBackNextImage('next')} disabled={product_images_no >= product_images_count.length}  style={{ opacity: product_images_no >= product_images_count.length ? '0.2': '1' }}>
                                 <img src={forwardIcon} alt='next_button' width={20} />
                             </button>
                         </div>
