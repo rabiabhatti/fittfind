@@ -1,12 +1,12 @@
 import React from 'react'
 import {Link} from "gatsby";
-import Select from 'react-select';
+// import Select from 'react-select';
 import ShowMore from 'react-show-more';
 
 import '../../styles/gym-find.css'
 import five_stars from '../../images/gym_star.png'
 import { Wrapper, Hero } from '../../components'
-import horizontal_line from '../../images/horizontal_line.png'
+// import horizontal_line from '../../images/horizontal_line.png'
 import profile_img from "../../images/forward-icon.png";
 import forwardIcon from "../../images/forward-icon.png";
 import gym_weight_equipment from '../../images/gym_weight_equipment.png'
@@ -19,7 +19,7 @@ import find_gym_hero_img from '../../images/find-gym-hero-img.png'
 import gym_cardiovascular_equipment from '../../images/gym_cardiovascular_equipment.png'
 import backwardIcon from "../../images/backward-icon.png";
 
-const locations = ['london', 'paris', 'new york', 'sydney'];
+// const locations = ['london', 'paris', 'new york', 'sydney'];
 const scrolling_entries = ['About', 'Facilities', 'Amenities', 'Opening hours', 'Price'];
 const amenities = [
     {
@@ -87,6 +87,11 @@ export default class FundGym extends React.Component {
         this.setState({ location: text })
     };
 
+    handleContentScroll = (id) => {
+        const ele = document.getElementById(id.toLowerCase().split(' ').join('-'));
+        ele.scrollIntoView();
+    };
+
     render() {
         const { location } = this.state;
         const nameChunk = this.props.location.search.split('&')[0].split('=');
@@ -100,15 +105,15 @@ export default class FundGym extends React.Component {
                 <Hero>
                     <div className='section-find-gym-hero'>
                         <img src={find_gym_hero_img} alt='find_gym_hero_img' />
-                        <Select
-                            isDisabled={false}
-                            value={location}
-                            options={locations}
-                            placeholder={location}
-                            classNamePrefix="gym-select"
-                            className='gym-select-container'
-                            onChange={this.handleLocationChange}
-                        />
+                        {/*<Select*/}
+                        {/*    isDisabled={false}*/}
+                        {/*    value={location}*/}
+                        {/*    options={locations}*/}
+                        {/*    placeholder={location}*/}
+                        {/*    classNamePrefix="gym-select"*/}
+                        {/*    className='gym-select-container'*/}
+                        {/*    onChange={this.handleLocationChange}*/}
+                        {/*/>*/}
                     </div>
                 </Hero>
                 <div className='section-find-gym-content'>
@@ -126,15 +131,19 @@ export default class FundGym extends React.Component {
                         </div>
                         <div className='section-find-gym-scrolling-entries-container'>
                             {scrolling_entries.map((item, i) => (
-                                <div className='section-find-gym-scrolling-first-entry row-center'>
-                                    <button key={i} className='section-find-gym-scrolling-entry-btn'>
+                                <div className='section-find-gym-scrolling-first-entry row-center' key={i}>
+                                    <button
+                                        key={i}
+                                        className='section-find-gym-scrolling-entry-btn'
+                                        onClick={() => this.handleContentScroll(item)}
+                                    >
                                         {item}
                                     </button>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <div className='section-find-gym-facilities column-start'>
+                    <div className='section-find-gym-facilities column-start' id='facilities'>
                         <h2>Facilities</h2>
                         <div className='section-find-gym-facilities-container'>
                             {facilities.map((item, i) => (
@@ -145,7 +154,7 @@ export default class FundGym extends React.Component {
                                             <h3>{item.name}</h3>
                                             <h4>{item.price}</h4>
                                         </div>
-                                        <p className='section-find-gym-facility-desc'>
+                                        <div className='section-find-gym-facility-desc'>
                                             <ShowMore
                                                 lines={1}
                                                 more='Show more'
@@ -154,13 +163,13 @@ export default class FundGym extends React.Component {
                                             >
                                                 {item.desc}
                                             </ShowMore>
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    <div className='section-find-gym-amenities'>
+                    <div className='section-find-gym-amenities' id='amenities'>
                         <h2>Amenities</h2>
                         <div>
                             {amenities.map((item, i) => (
@@ -171,7 +180,7 @@ export default class FundGym extends React.Component {
                             ))}
                         </div>
                     </div>
-                    <div className='section-find-gym-reviews'>
+                    <div className='section-find-gym-reviews' id='reviews'>
                         <h2>Reviews</h2>
                         <div className='section-find-gym-reviews-top-container'>
                             <div className='section-find-gym-reviews-top-left'>
@@ -218,7 +227,7 @@ export default class FundGym extends React.Component {
                             </button>
                         </div>
                     </div>
-                    <div>
+                    <div id='opening-hours' className='section-find-gym-opening-hours'>
                         <h2>Opening hours</h2>
                         <table>
                             <tbody>
@@ -253,6 +262,9 @@ export default class FundGym extends React.Component {
                             </tbody>
                         </table>
                         <p>Club opening hours and class times may vary on bank holidays. Please check these times displayed in-club when planning your visit</p>
+                    </div>
+                    <div id='price'>
+
                     </div>
                 </div>
                 <div className='section-gym-owners'>
