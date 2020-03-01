@@ -9,11 +9,14 @@ import { Wrapper, Hero } from '../../components'
 import horizontal_line from '../../images/horizontal_line.png'
 import profile_img from "../../images/forward-icon.png";
 import forwardIcon from "../../images/forward-icon.png";
-import gym_weight_equipment from '../../images/gym-feature-1.png'
-import gym_lockers from '../../images/gym-feature-3.png'
-import gym_special_machines from '../../images/gym-feature-3.png'
-import gym_healthy_snacks from '../../images/gym-feature-3.png'
-import gym_cardiovascular_equipment from '../../images/gym-feature-2.png'
+import gym_weight_equipment from '../../images/gym_weight_equipment.png'
+import background_imag from '../../images/background-blue-image.jpg';
+import gym_weight_equipment_s from '../../images/gym_weight_equipment_s.png'
+import gym_lockers from '../../images/gym_lockers.png'
+import gym_special_machines from '../../images/gym_special_machines.png'
+import gym_healthy_snacks from '../../images/gym_healthy_snacks.png'
+import find_gym_hero_img from '../../images/find-gym-hero-img.png'
+import gym_cardiovascular_equipment from '../../images/gym_cardiovascular_equipment.png'
 import backwardIcon from "../../images/backward-icon.png";
 
 const locations = ['london', 'paris', 'new york', 'sydney'];
@@ -30,7 +33,7 @@ const amenities = [
         image: gym_special_machines,
     },{
         name: 'Weight equipment',
-        image: gym_weight_equipment,
+        image: gym_weight_equipment_s,
     },{
         name: 'Lockers',
         image: gym_lockers,
@@ -91,8 +94,12 @@ export default class FundGym extends React.Component {
 
         return (
             <Wrapper name='Find Gym' location={this.props.location} gymNav={true}>
+                <div className='section-background'>
+                    <img className='section-background-blue-right-gym-find' src={background_imag} alt='background_blue_imag'/>
+                </div>
                 <Hero>
                     <div className='section-find-gym-hero'>
+                        <img src={find_gym_hero_img} alt='find_gym_hero_img' />
                         <Select
                             isDisabled={false}
                             value={location}
@@ -111,16 +118,15 @@ export default class FundGym extends React.Component {
                             Show map
                         </Link>
                     </div>
-                    <div className='section-find-gym-desc-container space-between'>
+                    <div className='section-find-gym-desc-container'>
                         <div className='section-find-gym-about-container'>
                             <h2>About</h2>
-                            <p>Create flexible sizes for an image that stretches to fill its container. E.g. for a container whose max width is 800px, the automatic sizes would be: 200px, 400px, 800px, 1200px and 1600px – enough to provide close to the optimal image size for every device size / screen resolution. If you want more control over which sizes are output you can use the srcSetBreakpoints parameter. Once you’ve queried for a fluid image to retrieve its data, you can pass that data into the Img component.</p>
-                            <p>Create flexible sizes for an image that stretches to fill its container. E.g. for a container whose max width is 800px, the automatic sizes would be: 200px, 400px, 800px, 1200px and 1600px – enough to provide close to the optimal image size for every device size / screen resolution. If you want more control over which sizes are output you can use the srcSetBreakpoints parameter. Once you’ve queried for a fluid image to retrieve its data, you can pass that data into the Img component.</p>
+                            <p>Our Athletic Group Training zones contain a number of unique items of movement based equipment providing you a bespoke location and training environment to support you in achieving your performance goals. Equipment in this area can include (but is not limited to): Prowlers, Hurdles, Tyres, Ankoor, Bungee, sprint track and an infra red timing gate.</p>
+                            <p>This versatile kit is also incorporated into a series of group workouts (knows as AGT workouts), so you can come and try out the equipment and new way of training with like minded members. The exercises contained in Athletic Group Training (AGT) combines various performance based exercises with gym based disciplines and movements which are inherent to improving athletic performance. Classes are designed to achieve maximum results in minimal time.</p>
                         </div>
                         <div className='section-find-gym-scrolling-entries-container'>
                             {scrolling_entries.map((item, i) => (
                                 <div className='section-find-gym-scrolling-first-entry row-center'>
-                                    {i === 0 && <img src={horizontal_line} alt='horizontal_line' />}
                                     <button key={i} className='section-find-gym-scrolling-entry-btn'>
                                         {item}
                                     </button>
@@ -136,7 +142,6 @@ export default class FundGym extends React.Component {
                                     <img src={require(`../../images/gym_banner_${i+1}.jpg`)} alt='gym_banner' width={200} />
                                     <div className='section-find-gym-facility-content'>
                                         <div className='section-find-gym-facility-content-heading'>
-                                            <img src={horizontal_line} alt='horizontal_line' />
                                             <h3>{item.name}</h3>
                                             <h4>{item.price}</h4>
                                         </div>
@@ -160,8 +165,8 @@ export default class FundGym extends React.Component {
                         <div>
                             {amenities.map((item, i) => (
                                 <div key={i} className='section-find-gym-single-amenity'>
+                                    <img src={item.image} alt={item.name} width={50} />
                                     <h4>{item.name}</h4>
-                                    <img src={item.image} alt={item.image} width={50} />
                                 </div>
                             ))}
                         </div>
