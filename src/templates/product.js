@@ -107,9 +107,6 @@ export default class extends React.Component {
                         </div>
                     </div>
                     <div className='section-single-product-hero-middle'>
-                        {product.images.map(img => (
-                            <img src={`${STRAPI_SERVER_URL}${img.url}`} alt='single_product_banner' className='section-single-product-hero-middle-banner' />
-                        ))}
                         <div className='section-single-product-hero-middle-top'>
                             <button className='single-product-like-btn' onClick={this.handleLikePress}>
                                 <img src={liked ? like_fill : like_outline} alt='like_icon' />
@@ -122,6 +119,9 @@ export default class extends React.Component {
                                 </div>
                             </div>
                         </div>
+                        {product.images.map(img => (
+                            <img src={`${STRAPI_SERVER_URL}${img.url}`} alt='single_product_banner' className='section-single-product-hero-middle-banner' />
+                        ))}
                         <div className='section-single-product-hero-middle-bottom'>
                             <button onClick={() => this.handleBackNextImage('back')} disabled={product_images_no === 1}>
                                 <img className='section-single-product-hero-middle-bottom-reverse-btn-img' src={forwardIcon} alt='back_button' width={20} />
