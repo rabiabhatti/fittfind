@@ -1,18 +1,16 @@
 import React from 'react'
-import {Link, graphql, navigate} from 'gatsby'
-import Img from 'gatsby-image'
+import {graphql, navigate} from 'gatsby'
 
 import '../styles/single_product.css'
 import like_fill from '../images/like_fill.png'
 import { STRAPI_SERVER_URL } from '../../common'
 import forwardIcon from '../images/forward-icon.png'
+import right_arrow from "../images/right_arrow.png";
 import like_outline from '../images/like_outline.png'
 import horizontal_line from '../images/horizontal_line.png'
-import single_product_banner from '../images/women_banner.jpg'
-import {Wrapper, Hero, ImpossibleBanner, Slider, Image, SizeChart} from '../components'
 import background_imag from "../images/background-blue-imag.jpg";
-import right_arrow from "../images/right_arrow.png";
 import vertical_line_white from "../images/vertical_line_white.png";
+import {Wrapper, Hero, ImpossibleBanner, Slider, SizeChart} from '../components'
 
 const sizes = ['XS', 'S', 'M', 'L'];
 
