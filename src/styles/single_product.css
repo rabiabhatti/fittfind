@@ -20,6 +20,24 @@
     letter-spacing: -1px;
     text-transform: uppercase;
 }
+@keyframes fadeIn {
+    from { opacity: 0; visibility: hidden; }
+    to {opacity: 1; visibility: visible;}
+}
+@keyframes fadeOut {
+    from { opacity: 1; visibility: visible; }
+    to {opacity: 0; visibility: hidden;}
+}
+.hide_single_product_banner {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeOut 1.5s both;
+}
+.show_single_product_banner {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 1s both;
+}
 .single-product-desc {
     z-index: 1;
     color: #5a5f6a;
