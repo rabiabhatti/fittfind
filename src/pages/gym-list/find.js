@@ -142,8 +142,11 @@ export default class FundGym extends React.Component {
                                     <img src={require(`../../images/gym_banner_${i+1}.jpg`)} alt='gym_banner' width={200} />
                                     <div className='section-find-gym-facility-content'>
                                         <div className='section-find-gym-facility-content-heading'>
-                                            <h3>{item.name}</h3>
-                                            <h4>{item.price}</h4>
+                                            <img src={horizontal_line} alt='horizontal_line' />
+                                            <div>
+                                                <h3>{item.name}</h3>
+                                                <h4>{item.price}</h4>
+                                            </div>
                                         </div>
                                         <p className='section-find-gym-facility-desc'>
                                             <ShowMore
