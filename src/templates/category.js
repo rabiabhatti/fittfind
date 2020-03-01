@@ -16,6 +16,7 @@ import women_category_bras from "../images/women_category_bras.jpg";
 import women_category_shorts from "../images/women_category_shorts.jpg";
 import women_category_leggings from "../images/women_category_leggings.jpg";
 import women_category_tanktops from "../images/women_category_tanktops.jpg";
+import women_new_release_banner from "../images/women_new_release_banner.jpg";
 import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
 
 const products_list = [
@@ -134,7 +135,7 @@ const men_categoryOptions = [
 const women_categories = [
     {
         name: 'New Release',
-        image: women_category_tanktops,
+        image: women_new_release_banner,
     }, {
         name: 'Sport Bras',
         image: women_category_bras,
@@ -287,7 +288,7 @@ export default class Category extends React.Component {
                 </Hero>
                 <div className='section-products-list'>
                     {this.props.data.allStrapiCategory.edges[0].node.products.map((product, i) => (
-                        <Product key={i} img={`${STRAPI_SERVER_URL}/${product.images[0].url}`} name={product.name} price={`$${product.price}.00`} id={i} />
+                        <Product key={i} img={`${STRAPI_SERVER_URL}/${product.images[0].url}`} name={product.name} price={`$${product.price}.00`} id={product.id} />
                     ))}
                     {products_list.map((item, i) => (
                         <Product key={i} img={item.image} name={item.name} price={`$${item.price}.00`} />
