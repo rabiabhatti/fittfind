@@ -40,8 +40,12 @@ img.section-background-blue-right-gym-find {
     width: 23.5vw;
     position: absolute;
 }
-.section-find-gym-heading-container.space-between, .section-find-gym-desc-container, .section-find-gym-facilities.column-start>h2, .section-find-gym-amenities>h2 {
+.section-find-gym-heading-container.space-between, .section-find-gym-desc-container, .section-find-gym-facilities.column-start>h2 {
     margin-left: 10vw;
+}
+.section-find-gym-amenities>h2 {
+    margin-left: 10vw;
+    margin-bottom: 20px;
 }
 .section-find-gym-heading-container.space-between>h1 {
     line-height: 1;
@@ -119,35 +123,27 @@ img.section-background-blue-right-gym-find {
 }
 .section-find-gym-amenities>h2 {
     padding-top: 50px;
-    margin-bottom: -35px;
 }
 .section-find-gym-amenities>div {
-    width: 60vw;
+    width: 69vw;
     display: flex;
     flex-wrap: wrap;
     margin-left: 6.95vw;
     flex-direction: row;
-    justify-content: space-between;
 }
 .section-find-gym-single-amenity {
-    width: 380px;
-    padding-top: 70px;
-    text-align: center;
-}
-.section-find-gym-single-amenity:first-child {
-    margin-left: -5vw;
-}
-.section-find-gym-single-amenity:last-child {
-    margin-right: -5vw;
-}
-.section-find-gym-single-amenity:nth-child(3) {
-    margin-right: 5vw;
-}
-.section-find-gym-single-amenity:nth-child(4) {
-    margin-left: 5vw;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+    justify-content: center;
 }
 .section-find-gym-single-amenity>h4 {
+    width: 32%;
     padding-top: 10px;
+}
+.section-find-gym-single-amenity>img {
+    margin-right: 35px;
 }
 .section-find-gym-facility-desc>div>span>span>span>span, .section-find-gym-facility-desc>div {
     display: flex;
@@ -216,17 +212,13 @@ img.section-background-blue-right-gym-find {
 .section-find-gym-facility-content-heading h3, button.section-find-gym-scrolling-entry-btn {
     font-size: 25px;
 }
-
-.section-find-gym-single-amenity>h4 {
-    font-size: 20px;
-}
 .section-find-gym-facility-content-heading h4 {
     font-size: 17px;
 }
 .section-find-gym-about-container>p {
     font-size: 16px;
 }
-.section-find-gym-facility-desc {
+.section-find-gym-facility-desc, .section-find-gym-single-amenity>h4 {
     font-size: 14px;
 }
 

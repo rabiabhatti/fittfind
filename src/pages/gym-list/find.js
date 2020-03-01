@@ -10,7 +10,7 @@ import horizontal_line from '../../images/horizontal_line.png'
 import profile_img from "../../images/forward-icon.png";
 import forwardIcon from "../../images/forward-icon.png";
 import gym_weight_equipment from '../../images/gym_weight_equipment.png'
-import background_imag from '../../images/background-blue-image.jpg';
+import background_imag from '../../images/background-blue-imag.jpg';
 import gym_weight_equipment_s from '../../images/gym_weight_equipment_s.png'
 import gym_lockers from '../../images/gym_lockers.png'
 import gym_special_machines from '../../images/gym_special_machines.png'
