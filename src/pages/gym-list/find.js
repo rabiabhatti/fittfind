@@ -9,13 +9,14 @@ import { Wrapper, Hero } from '../../components'
 import horizontal_line from '../../images/horizontal_line.png'
 import profile_img from "../../images/forward-icon.png";
 import forwardIcon from "../../images/forward-icon.png";
-import gym_weight_equipment from '../../images/gym-feature-1.png'
+import gym_weight_equipment from '../../images/gym_weight_equipment.png'
 import background_imag from '../../images/background-blue-image.jpg';
-import gym_lockers from '../../images/gym-feature-3.png'
-import gym_special_machines from '../../images/gym-feature-3.png'
-import gym_healthy_snacks from '../../images/gym-feature-3.png'
+import gym_weight_equipment_s from '../../images/gym_weight_equipment_s.png'
+import gym_lockers from '../../images/gym_lockers.png'
+import gym_special_machines from '../../images/gym_special_machines.png'
+import gym_healthy_snacks from '../../images/gym_healthy_snacks.png'
 import find_gym_hero_img from '../../images/find-gym-hero-img.png'
-import gym_cardiovascular_equipment from '../../images/gym-feature-2.png'
+import gym_cardiovascular_equipment from '../../images/gym_cardiovascular_equipment.png'
 import backwardIcon from "../../images/backward-icon.png";
 
 const locations = ['london', 'paris', 'new york', 'sydney'];
@@ -32,7 +33,7 @@ const amenities = [
         image: gym_special_machines,
     },{
         name: 'Weight equipment',
-        image: gym_weight_equipment,
+        image: gym_weight_equipment_s,
     },{
         name: 'Lockers',
         image: gym_lockers,
@@ -126,7 +127,6 @@ export default class FundGym extends React.Component {
                         <div className='section-find-gym-scrolling-entries-container'>
                             {scrolling_entries.map((item, i) => (
                                 <div className='section-find-gym-scrolling-first-entry row-center'>
-                                    {i === 0 && <img src={horizontal_line} alt='horizontal_line' />}
                                     <button key={i} className='section-find-gym-scrolling-entry-btn'>
                                         {item}
                                     </button>
@@ -165,8 +165,8 @@ export default class FundGym extends React.Component {
                         <div>
                             {amenities.map((item, i) => (
                                 <div key={i} className='section-find-gym-single-amenity'>
+                                    <img src={item.image} alt={item.name} width={50} />
                                     <h4>{item.name}</h4>
-                                    <img src={item.image} alt={item.image} width={50} />
                                 </div>
                             ))}
                         </div>

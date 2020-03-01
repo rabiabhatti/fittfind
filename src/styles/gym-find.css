@@ -40,7 +40,7 @@ img.section-background-blue-right-gym-find {
     width: 23.5vw;
     position: absolute;
 }
-.section-find-gym-heading-container.space-between, .section-find-gym-desc-container, .section-find-gym-facilities.column-start>h2 {
+.section-find-gym-heading-container.space-between, .section-find-gym-desc-container, .section-find-gym-facilities.column-start>h2, .section-find-gym-amenities>h2 {
     margin-left: 10vw;
 }
 .section-find-gym-heading-container.space-between>h1 {
@@ -86,17 +86,18 @@ img.section-background-blue-right-gym-find {
     background-image: url(../images/gym_list_desc.png);
 }
 .section-find-gym-scrolling-entries-container {
+    top: -3vw;
     border: 0;
     left: 4.2rem;
-    bottom: 4rem;
     display: flex;
     min-height: 150px;
     position: relative;
+    margin-bottom: -3vw;
     flex-direction: column;
     background-size: 100% 100%;
-    padding: 20px 20px 20px 50px;
     background-repeat: no-repeat;
     justify-content: space-between;
+    padding: 100px 105px 100px 125px;
     background-image: url(../images/gym_find_desc.png);
 }
 .section-find-gym-facility-content-heading {
@@ -110,7 +111,43 @@ img.section-background-blue-right-gym-find {
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
 }
-
+.section-find-gym-scrolling-entry-btn {
+    line-height: 2;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.section-find-gym-amenities>h2 {
+    padding-top: 50px;
+    margin-bottom: -35px;
+}
+.section-find-gym-amenities>div {
+    width: 60vw;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 6.95vw;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.section-find-gym-single-amenity {
+    width: 380px;
+    padding-top: 70px;
+    text-align: center;
+}
+.section-find-gym-single-amenity:first-child {
+    margin-left: -5vw;
+}
+.section-find-gym-single-amenity:last-child {
+    margin-right: -5vw;
+}
+.section-find-gym-single-amenity:nth-child(3) {
+    margin-right: 5vw;
+}
+.section-find-gym-single-amenity:nth-child(4) {
+    margin-left: 5vw;
+}
+.section-find-gym-single-amenity>h4 {
+    padding-top: 10px;
+}
 .section-find-gym-facility-desc>div>span>span>span>span {
     display: flex;
     flex-direction: column;
@@ -134,7 +171,6 @@ img.section-background-blue-right-gym-find {
     padding: 20px 0;
     font-weight: 600;
     color: #5a5f69;
-    font-family: 'Montserrat', sans-serif;
 }
 
 .section-find-gym-map-btn {
@@ -144,10 +180,14 @@ img.section-background-blue-right-gym-find {
     color: #ffffff;
     position: relative;
     text-transform: uppercase;
+}
+
+
+.section-find-gym-single-amenity>h4, .section-find-gym-map-btn, .section-find-gym-about-container>p {
     font-family: 'Montserrat', sans-serif;
 }
 
-.section-find-gym-heading-container.space-between>h1, .section-find-gym-about-container>h2, .section-find-gym-facilities.column-start>h2, .section-find-gym-facility-content-heading>h3 {
+.section-find-gym-heading-container.space-between>h1, .section-find-gym-about-container>h2, .section-find-gym-facilities.column-start>h2, .section-find-gym-facility-content-heading>h3, .section-find-gym-amenities>h2 {
     text-transform: uppercase;
 }
 
@@ -156,14 +196,18 @@ img.section-background-blue-right-gym-find {
 .section-find-gym-heading-container.space-between>h1 {
     font-size: 70px;
 }
-.section-find-gym-about-container>h2, .section-find-gym-facilities.column-start>h2 {
+.section-find-gym-about-container>h2, .section-find-gym-facilities.column-start>h2, .section-find-gym-amenities>h2 {
     font-size: 50px;
 }
 .section-find-gym-hero .gym-select-container .gym-select__control .gym-select__placeholder {
     font-size: 45px;
 }
-.section-find-gym-facility-content-heading>h3 {
+.section-find-gym-facility-content-heading>h3, button.section-find-gym-scrolling-entry-btn {
     font-size: 25px;
+}
+
+.section-find-gym-single-amenity>h4 {
+    font-size: 20px;
 }
 .section-find-gym-facility-content-heading>h4 {
     font-size: 17px;
@@ -174,7 +218,6 @@ img.section-background-blue-right-gym-find {
 .section-find-gym-facility-desc {
     font-size: 14px;
 }
-
 
 
 
