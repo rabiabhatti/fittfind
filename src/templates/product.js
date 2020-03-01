@@ -110,7 +110,7 @@ export default class extends React.Component {
                     </div>
                     <div className='section-single-product-hero-middle'>
                         {product.images.map(img => (
-                            <img src={`${STRAPI_SERVER_URL}/${img.url}`} alt='single_product_banner' className='section-single-product-hero-middle-banner' />
+                            <img src={`${STRAPI_SERVER_URL}${img.url}`} alt='single_product_banner' className='section-single-product-hero-middle-banner' />
                         ))}
                         <div className='section-single-product-hero-middle-top'>
                             <button className='single-product-like-btn' onClick={this.handleLikePress}>
