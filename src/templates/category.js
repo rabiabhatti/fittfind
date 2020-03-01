@@ -4,19 +4,19 @@ import {Link, graphql, navigate} from 'gatsby'
 
 import '../styles/women.css'
 import { STRAPI_SERVER_URL } from '../../common'
-import horizontal_line from '../images/horizontal_line_white.png'
-import horizontal_line_black from '../images/horizontal_line.png'
-import background_imag from '../images/background-blue-imag.jpg'
-import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
 import product_1 from "../images/product-1.jpg";
 import product_2 from "../images/product-2.jpg";
 import product_3 from "../images/product-3.jpg";
 import product_4 from "../images/product-4.jpg";
+import men_banner from "../images/men_banner.jpg";
+import horizontal_line from '../images/horizontal_line_white.png'
+import horizontal_line_black from '../images/horizontal_line.png'
+import background_imag from '../images/background-blue-imag.jpg'
 import women_category_bras from "../images/women_category_bras.jpg";
 import women_category_shorts from "../images/women_category_shorts.jpg";
 import women_category_leggings from "../images/women_category_leggings.jpg";
 import women_category_tanktops from "../images/women_category_tanktops.jpg";
-import men_banner from "../images/men_banner.jpg";
+import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
 
 const products_list = [
     {
@@ -290,7 +290,7 @@ export default class Category extends React.Component {
                         <Product key={i} img={`${STRAPI_SERVER_URL}/${product.images[0].url}`} name={product.name} price={`$${product.price}.00`} id={i} />
                     ))}
                     {products_list.map((item, i) => (
-                        <Product key={i} img={item.image} name={item.name} price={`$${item.price}.00`} id={i} />
+                        <Product key={i} img={item.image} name={item.name} price={`$${item.price}.00`} />
                     ))}
                 </div>
                 <div className='section-social-media'>

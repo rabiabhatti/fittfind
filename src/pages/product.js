@@ -6,10 +6,10 @@ import right_arrow from '../images/right_arrow.png'
 import like_outline from '../images/like_outline.png'
 import forwardIcon from '../images/forward_icon_dark.png'
 import horizontal_line from '../images/horizontal_line.png'
-import single_product_banner from '../images/single_product_banner.jpg'
-import { Wrapper, Hero, ImpossibleBanner, Slider, SizeChart } from '../components'
 import background_imag from "../images/background-blue-imag.jpg";
 import vertical_line_white from "../images/vertical_line_white.png";
+import single_product_banner from '../images/single_product_banner.jpg'
+import { Wrapper, Hero, ImpossibleBanner, Slider, SizeChart } from '../components'
 
 const sizes = ['XS', 'S', 'M', 'L'];
 
