@@ -5,7 +5,7 @@ import ShowMore from 'react-show-more';
 
 import '../../styles/gym-find.css'
 import five_stars from '../../images/gym_five_star.png'
-import { Wrapper, Hero } from '../../components'
+import { Wrapper, Hero, ImpossibleBanner } from '../../components'
 import horizontal_line from '../../images/horizontal_line.png'
 import profile_img from "../../images/profile_img.png";
 import forwardIcon from "../../images/forward-icon.png";
@@ -17,7 +17,7 @@ import gym_special_machines from '../../images/gym_special_machines.png'
 import gym_healthy_snacks from '../../images/gym_healthy_snacks.png'
 import find_gym_hero_img from '../../images/find-gym-hero-img.png'
 import gym_cardiovascular_equipment from '../../images/gym_cardiovascular_equipment.png'
-import backwardIcon from "../../images/backward-icon.png";
+import find_gym_map from "../../images/find-gym-map.png";
 
 const locations = ['london', 'paris', 'new york', 'sydney'];
 const scrolling_entries = ['About', 'Facilities', 'Amenities', 'Opening hours', 'Price'];
@@ -226,50 +226,46 @@ export default class FundGym extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div>
+                    <div className='section-find-gym-hours-map'>
                         <h2>Opening hours</h2>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>Monday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Tuesday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Wednesday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Thursday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Friday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Saturday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Sunday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div className='section-find-gym-hours-map-content'>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Monday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tuesday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wednesday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thursday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saturday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sunday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <img src={find_gym_map} alt='find_gym_map' />
+                        </div>
                     </div>
                 </div>
-                <div className='section-gym-owners'>
-                    <h2>Gym or studio owner?</h2>
-                    <p>Join the new fitness market and get new customers!</p>
-                    <Link to='/list-yourself/' className='section-gym-owners-btn'>
-                        GET LISTED
-                        <img src={forwardIcon} alt='forwardIcon' />
-                    </Link>
-                </div>
+                <ImpossibleBanner />
             </Wrapper>
         )
     }
