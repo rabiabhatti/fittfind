@@ -4,20 +4,20 @@ import Select from 'react-select';
 import ShowMore from 'react-show-more';
 
 import '../../styles/gym-find.css'
-import five_stars from '../../images/gym_star.png'
-import { Wrapper, Hero } from '../../components'
+import five_stars from '../../images/gym_five_star.png'
+import { Wrapper, Hero, ImpossibleBanner } from '../../components'
 import horizontal_line from '../../images/horizontal_line.png'
-import profile_img from "../../images/forward-icon.png";
+import profile_img from "../../images/profile_img.png";
 import forwardIcon from "../../images/forward-icon.png";
 import gym_weight_equipment from '../../images/gym_weight_equipment.png'
-import background_imag from '../../images/background-blue-image.jpg';
+import background_imag from '../../images/background-blue-imag.jpg';
 import gym_weight_equipment_s from '../../images/gym_weight_equipment_s.png'
 import gym_lockers from '../../images/gym_lockers.png'
 import gym_special_machines from '../../images/gym_special_machines.png'
 import gym_healthy_snacks from '../../images/gym_healthy_snacks.png'
 import find_gym_hero_img from '../../images/find-gym-hero-img.png'
 import gym_cardiovascular_equipment from '../../images/gym_cardiovascular_equipment.png'
-import backwardIcon from "../../images/backward-icon.png";
+import find_gym_map from "../../images/find-gym-map.png";
 
 const locations = ['london', 'paris', 'new york', 'sydney'];
 const scrolling_entries = ['About', 'Facilities', 'Amenities', 'Opening hours', 'Price'];
@@ -142,14 +142,17 @@ export default class FundGym extends React.Component {
                                     <img src={require(`../../images/gym_banner_${i+1}.jpg`)} alt='gym_banner' width={200} />
                                     <div className='section-find-gym-facility-content'>
                                         <div className='section-find-gym-facility-content-heading'>
-                                            <h3>{item.name}</h3>
-                                            <h4>{item.price}</h4>
+                                            <img src={horizontal_line} alt='horizontal_line' />
+                                            <div>
+                                                <h3>{item.name}</h3>
+                                                <h4>{item.price}</h4>
+                                            </div>
                                         </div>
                                         <p className='section-find-gym-facility-desc'>
                                             <ShowMore
                                                 lines={1}
-                                                more='Show more'
-                                                less='Show less'
+                                                more='more'
+                                                less='less'
                                                 anchorClass='section-find-gym-facility-desc-anchor'
                                             >
                                                 {item.desc}
@@ -172,9 +175,9 @@ export default class FundGym extends React.Component {
                         </div>
                     </div>
                     <div className='section-find-gym-reviews'>
-                        <h2>Reviews</h2>
                         <div className='section-find-gym-reviews-top-container'>
                             <div className='section-find-gym-reviews-top-left'>
+                                <h2>Reviews</h2>
                                 <h3>4.5</h3>
                                 <p>Overall</p>
                                 <img src={five_stars} alt='five_stars' />
@@ -203,66 +206,66 @@ export default class FundGym extends React.Component {
                             </table>
                         </div>
                         <div className='section-find-gym-reviews-bottom-container'>
-                            <button className='section-find-gym-reviews-bottom-left-btn'>
-                                <img src={backwardIcon} alt='back_button' />
-                            </button>
                             <div className='section-find-gym-reviews-bottom-content'>
-                                <img src={five_stars} alt='five_stars' />
-                                <img src={profile_img} alt='profile_img' />
-                                <p>Blast your core in just 30 minutes. Designed to get you fit and ripped whilst having fun! Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
-                                <h4>Lucy Lui</h4>
-                                <p>Fitness lover</p>
+                                <div className='section-find-gym-reviews-bottom-left'>
+                                    <img src={profile_img} alt='profile_img' />
+                                    <img src={five_stars} alt='five_stars' />
+                                    <h4>Lucy Liu</h4>
+                                    <p>Fitness lover</p>
+                                </div>
+                                <p className='section-find-gym-reviews-bottom-right'>Where do I start, this gym is what I think about when I think of the perfect gym. It started with the location and excellent breeze coming off the ocean. It quickly moved to the awesome energy and knowledge that you get from the trainers here, they are eager to help and will to take time with you.</p>
                             </div>
-                            <button className='section-find-gym-reviews-bottom-right-btn'>
-                                <img src={forwardIcon} alt='next_button' />
-                            </button>
+                            <div className='section-find-gym-reviews-bottom-content'>
+                                <div className='section-find-gym-reviews-bottom-left'>
+                                    <img src={profile_img} alt='profile_img' />
+                                    <img src={five_stars} alt='five_stars' />
+                                    <h4>Lucy Liu</h4>
+                                    <p>Fitness lover</p>
+                                </div>
+                                <p className='section-find-gym-reviews-bottom-right'>Where do I start, this gym is what I think about when I think of the perfect gym. It started with the location and excellent breeze coming off the ocean. It quickly moved to the awesome energy and knowledge that you get from the trainers here, they are eager to help and will to take time with you.</p>
+                            </div>
                         </div>
                     </div>
-                    <div>
+                    <div className='section-find-gym-hours-map'>
                         <h2>Opening hours</h2>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td>Monday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Tuesday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Wednesday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Thursday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Friday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Saturday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                                <tr>
-                                    <td>Sunday</td>
-                                    <td>06:00 - 22:00</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p>Club opening hours and class times may vary on bank holidays. Please check these times displayed in-club when planning your visit</p>
+                        <div className='section-find-gym-hours-map-content'>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>Monday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tuesday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Wednesday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Thursday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Friday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Saturday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sunday</td>
+                                        <td>06:00 - 22:00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <img src={find_gym_map} alt='find_gym_map' />
+                        </div>
                     </div>
                 </div>
-                <div className='section-gym-owners'>
-                    <h2>Gym or studio owner?</h2>
-                    <p>Join the new fitness market and get new customers!</p>
-                    <Link to='/list-yourself/' className='section-gym-owners-btn'>
-                        GET LISTED
-                        <img src={forwardIcon} alt='forwardIcon' />
-                    </Link>
-                </div>
+                <ImpossibleBanner />
             </Wrapper>
         )
     }
