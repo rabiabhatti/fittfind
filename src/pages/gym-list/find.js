@@ -89,7 +89,7 @@ export default class FundGym extends React.Component {
 
     handleContentScroll = (id) => {
         const ele = document.getElementById(id.toLowerCase().split(' ').join('-'));
-        ele.scrollIntoView();
+        ele.scrollIntoView({ block: 'end',  behavior: 'smooth' });
     };
 
     render() {
