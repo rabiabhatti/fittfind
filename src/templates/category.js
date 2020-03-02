@@ -288,7 +288,7 @@ export default class Category extends React.Component {
                 </Hero>
                 <div className='section-products-list'>
                     {this.props.data.allStrapiCategory.edges[0].node.products.map((product, i) => (
-                        <Product key={i} img={`/${product.images[0].url}`} name={product.name} price={`$${product.price}.00`} id={product.id} />
+                        <Product key={i} img={`${product.images[0].url}`} name={product.name} price={`$${product.price}.00`} id={product.id} />
                     ))}
                     {products_list.map((item, i) => (
                         <Product key={i} img={item.image} name={item.name} price={`$${item.price}.00`} />

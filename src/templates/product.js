@@ -124,7 +124,7 @@ export default class extends React.Component {
                             <img
                                 key={img.url}
                                 alt='single_product_banner'
-                                src={`/${img.url}`}
+                                src={`${img.url}`}
                                 className={`section-single-product-hero-middle-banner ${product_images_no === i+1 ? 'show_single_product_banner': 'hide_single_product_banner'}`}
                             />
                         ))}
