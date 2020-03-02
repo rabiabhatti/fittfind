@@ -159,7 +159,7 @@ export default class FundGym extends React.Component {
                                         </div>
                                         <div className='section-find-gym-facility-desc'>
                                             <ShowMore
-                                                lines={1}
+                                                lines={2}
                                                 more='more'
                                                 less='less'
                                                 anchorClass='section-find-gym-facility-desc-anchor'
