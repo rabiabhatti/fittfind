@@ -62,11 +62,9 @@ export default class extends React.Component {
 
     render() {
         const { quantity, liked, product_images_no, size, showChart } = this.state;
-        // const product_images_count = [1, 2, 3, 4];
         const product = this.props.data.strapiProduct;
         const product_images_count = [];
         product.images.map((img, i) => product_images_count.push(i+1));
-        console.log(product_images_no)
 
         return(
             <Wrapper name='Single Product' location={this.props.location}>
@@ -126,7 +124,7 @@ export default class extends React.Component {
                             <img
                                 key={img.url}
                                 alt='single_product_banner'
-                                src={`${STRAPI_SERVER_URL}${img.url}`}
+                                src={`/${img.url}`}
                                 className={`section-single-product-hero-middle-banner ${product_images_no === i+1 ? 'show_single_product_banner': 'hide_single_product_banner'}`}
                             />
                         ))}
