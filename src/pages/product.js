@@ -3,13 +3,13 @@ import React from 'react'
 import '../styles/single_product.css'
 import like_fill from '../images/like_fill.png'
 import right_arrow from '../images/right_arrow.png'
-import like_outline from '../images/like_outline_dark.png'
+import like_outline from '../images/like_outline.png'
 import forwardIcon from '../images/forward_icon_dark.png'
 import horizontal_line from '../images/horizontal_line.png'
-import single_product_banner from '../images/single_product_banner.jpg'
-import {Wrapper, Hero, ImpossibleBanner, Slider} from '../components'
 import background_imag from "../images/background-blue-imag.jpg";
 import vertical_line_white from "../images/vertical_line_white.png";
+import single_product_banner from '../images/single_product_banner.jpg'
+import { Wrapper, Hero, ImpossibleBanner, Slider, SizeChart } from '../components'
 
 const sizes = ['XS', 'S', 'M', 'L'];
 
@@ -18,12 +18,13 @@ export default class extends React.Component {
         size: null,
         quantity: 1,
         liked: false,
+        showChart: false,
         product_images_no: 1,
     };
 
     handleReduceQuantity = () => {
         const { quantity } = this.state;
-        if (quantity <=1) {
+        if (quantity <= 1) {
             return null
         } else {
             this.setState({ quantity: quantity - 1 })
@@ -38,11 +39,11 @@ export default class extends React.Component {
     handleBackNextImage = (type) => {
         if (type === 'next') {
             this.setState(prevState => {
-                return {product_images_no: prevState.product_images_no + 1}
+                return { product_images_no: prevState.product_images_no + 1 }
             })
         } else {
             this.setState(prevState => {
-                return {product_images_no: prevState.product_images_no - 1}
+                return { product_images_no: prevState.product_images_no - 1 }
             })
         }
     };
@@ -55,13 +56,14 @@ export default class extends React.Component {
     };
 
     render() {
-        const { quantity, liked, product_images_no, size } = this.state;
+        const { quantity, liked, product_images_no, size, showChart } = this.state;
         const product_images_count = [1, 2, 3, 4];
 
-        return(
+        return (
             <Wrapper name='Single Product' location={this.props.location}>
+                {showChart && <SizeChart handleClose={() => this.setState({ showChart: false })} />}
                 <div className='section-background'>
-                    <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag'/>
+                    <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag' />
                 </div>
                 <Hero className='section-single-product-hero'>
                     <div className='section-single-product-hero-left'>
@@ -76,7 +78,7 @@ export default class extends React.Component {
                                 </div>
                                 <div className='row-center space-between'>
                                     <p className='section-single-product-handles-text'>Size</p>
-                                    <button className='size-chart-btn'>
+                                    <button className='size-chart-btn' onClick={() => this.setState({ showChart: true })}>
                                         <span>size & fit</span>
                                         <img src={right_arrow} alt='right_arrow' width={5} />
                                     </button>
@@ -98,7 +100,8 @@ export default class extends React.Component {
                             </div>
                         </div>
                     </div>
-                    <div className='section-single-product-hero-middle' style={{ backgroundImage: `url(${single_product_banner})` }}>
+                    <div className='section-single-product-hero-middle'>
+                        <img src={single_product_banner} alt='single_product_banner' className='section-single-product-hero-middle-banner' />
                         <div className='section-single-product-hero-middle-top'>
                             <button className='single-product-like-btn' onClick={this.handleLikePress}>
                                 <img src={liked ? like_fill : like_outline} alt='like_icon' />
@@ -127,7 +130,7 @@ export default class extends React.Component {
                             <button
                                 key={count}
                                 className={`single-product-count-btn ${count === product_images_no && 'single-product-active-count'}`}
-                                onClick={() => this.setState({product_images_no: count})}
+                                onClick={() => this.setState({ product_images_no: count })}
                             >
                                 <p>0{count}</p>
                                 {product_images_no === count && <img className='section-product-active-page-line' src={vertical_line_white} alt='vertical_line_white' />}
@@ -150,7 +153,7 @@ export default class extends React.Component {
                     <div className='section-single-product-details'>
                         <h3>PRODUCT DETAILS</h3>
                         <ul>
-                            <li>Fabric: Body/lining: Dri-FIT 88% recycled polyester/12% spandex. Bottom hem: <br/>Dri-FIT 86% nylon/14% spandex. Interlining: Dri-FIT 80% polyester/20%<br/> spandex. Pad top/back: Dri-FIT 100% polyester. Pad: 100% polyurethane.</li>
+                            <li>Fabric: Body/lining: Dri-FIT 88% recycled polyester/12% spandex. Bottom hem: <br />Dri-FIT 86% nylon/14% spandex. Interlining: Dri-FIT 80% polyester/20%<br /> spandex. Pad top/back: Dri-FIT 100% polyester. Pad: 100% polyurethane.</li>
                             <li>Machine wash</li>
                             <li>Imported</li>
                         </ul>

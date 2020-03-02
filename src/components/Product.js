@@ -26,7 +26,7 @@ class Product extends React.Component {
                         <img src={liked ? like_fill : like_outline} alt='like_icon' />
                     </button>
                 </div>
-                <Link className='product-desc-container' to={`product?id=${id}`}>
+                <Link className='product-desc-container' to={`${id ? `/product_id=${id}` : `product?id=1`}`}>
                     <button className='product-desc'>
                         <p className='product-name'>{name}</p>
                         <p className='product-price'>{price}</p>

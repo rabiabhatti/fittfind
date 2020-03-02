@@ -50,7 +50,7 @@ class IndexPage extends React.Component {
                                 <img src={women_banner} alt='women_banner'/>
                                 <div>
                                     <button className='shop-women-btn'>
-                                        <Link to={'/women/'}><img src={fit} alt='fit'/><span>Women</span></Link>
+                                        <Link to={'/women/new-release/'}><img src={fit} alt='fit'/><span>Women</span></Link>
                                     </button>
                                     <span className='shop-women-ver'><span>Women Shop</span><img src={horizontal_line} alt='horizontal_line'/></span>
                                 </div>
@@ -60,11 +60,11 @@ class IndexPage extends React.Component {
                                 <img src={horizontal_line} alt='horizontal_line'/>
                                 <div>
                                     <h3>Men Categories</h3>
-                                    <Link to={`/men?category=new`}>New Releases</Link>
-                                    <Link to={`/men?category=compressiontops`}>Compression Tops</Link>
-                                    <Link to={`/men?category=tights`}>Tights</Link>
-                                    <Link to={`/men?category=hoodies`}>Hoodies</Link>
-                                    <Link to={`/men?category=joggers&sweatpants`}>Joggers and sweatpants</Link>
+                                    <Link to={`/men/new-release/`}>New Releases</Link>
+                                    <Link to={`/men/compression-tops/`}>Compression Tops</Link>
+                                    <Link to={`/men/tights/`}>Tights</Link>
+                                    <Link to={`/men/hoodies/`}>Hoodies</Link>
+                                    <Link to={`/men/joggers-and-sweatpants/`}>Joggers and sweatpants</Link>
                                 </div>
                             </div>
                         </div>
@@ -73,18 +73,18 @@ class IndexPage extends React.Component {
                                 <img src={horizontal_line} alt='horizontal_line'/>
                                 <div>
                                     <h3>Women Categories</h3>
-                                    <Link to={`/women?category=new`}>New Releases</Link>
-                                    <Link to={`/women?category=sportsbras`}>Sports Bras</Link>
-                                    <Link to={`/women?category=tanktops`}>Tank tops</Link>
-                                    <Link to={`/women?category=leggings`}>Leggings</Link>
-                                    <Link to={`/women?category=shorts`}>Shorts</Link>
+                                    <Link to={`/women/new-release/`}>New Releases</Link>
+                                    <Link to={`/women/sports-bras/`}>Sports Bras</Link>
+                                    <Link to={`/women/tank-tops/`}>Tank tops</Link>
+                                    <Link to={`/women/leggings/`}>Leggings</Link>
+                                    <Link to={`/women/shorts/`}>Shorts</Link>
                                 </div>
                             </div>
                             <div className='section-products-men-banner'>
                                 <img src={men_banner} alt='men_banner'/>
                                 <div>
                                     <button className='shop-men-btn'>
-                                        <Link to={'/men/'}><span>Men</span><img src={fit} alt='fit'/></Link>
+                                        <Link to={'/men/rew-release/'}><span>Men</span><img src={fit} alt='fit'/></Link>
                                     </button>
                                     <span className='shop-men-ver'><span>Men Shop</span><img src={horizontal_line} alt='horizontal_line'/></span>
                                 </div>
