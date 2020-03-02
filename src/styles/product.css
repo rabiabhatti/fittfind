@@ -32,9 +32,9 @@
 .product-like-btn {
     top: 1rem;
     border: 0;
-    right: 2.5rem;
+    right: 1rem;
     min-width: 2rem;
-    position: relative;
+    position: absolute;
     align-self: flex-start;
 }
 .product-desc-container {
