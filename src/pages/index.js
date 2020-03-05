@@ -84,7 +84,7 @@ class IndexPage extends React.Component {
                                 <img src={men_banner} alt='men_banner'/>
                                 <div>
                                     <button className='shop-men-btn'>
-                                        <Link to={'/men/rew-release/'}><span>Men</span><img src={fit} alt='fit'/></Link>
+                                        <Link to={'/men/new-release/'}><span>Men</span><img src={fit} alt='fit'/></Link>
                                     </button>
                                     <span className='shop-men-ver'><span>Men Shop</span><img src={horizontal_line} alt='horizontal_line'/></span>
                                 </div>
