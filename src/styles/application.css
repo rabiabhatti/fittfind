@@ -117,7 +117,7 @@ img.section-application-motivation-banner-girl {
     text-transform: uppercase;
 }
 h2.section-apps-h2-1>img {
-    top: -17px;
+    top: -22px;
     width: 115px;
     margin-right: 50px;
     position: relative;
@@ -331,15 +331,10 @@ img.section-apps-right-img-play {
 img.section-apps-right-img-store {
     margin: 0 15px;
 }
-h3.section-application-video-col-left-heading>img {
-    height: 14px;
+.section-application-video-col-left-heading>img, .section-application-motivation-banner-left>h3.left-banner-heading>img {
+    top: -20px;
+    position: relative;
     margin-right: 20px;
-    padding-bottom: 11px;
-}
-.section-application-motivation-banner-left>h3.left-banner-heading>img {
-    height: 25px;
-    margin-right: 125px;
-    padding-bottom: 22px;
 }
 .section-application-video {
     margin-bottom: -5vw;

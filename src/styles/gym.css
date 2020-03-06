@@ -221,15 +221,10 @@
     width: 130px;
     height: 100%;
 }
-.section-gym-motivation-banner-desc>h3>img {
-    height: 14px;
+.section-gym-features-desc>h3>img, .section-gym-motivation-banner-desc>h3>img {
+    top: -20px;
+    position: relative;
     margin-right: 20px;
-    padding-bottom: 11px;
-}
-.section-gym-features-desc>h3>img {
-    height: 14px;
-    margin-right: 20px;
-    padding-bottom: 11px;
 }
 
 

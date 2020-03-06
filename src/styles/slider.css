@@ -27,10 +27,10 @@
     width: 100%;
 }
 img.hero-slide {
-    width: 82%;
+    width: 76.6%;
 }
 .section-hero-slider {
-    min-height: 53vw;
+    min-height: 50vw;
     text-align: right;
     text-align: -webkit-right;
 }
@@ -275,7 +275,7 @@ span.current-slider {
     transform: rotate(90deg);
 }
 .section-social-media-slider-right>a {
-    left: -10vw;
+    left: -8vw;
     color: #fff;
     display: flex;
     font-weight: 600;

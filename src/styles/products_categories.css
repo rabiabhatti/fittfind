@@ -78,9 +78,9 @@ button.shop-men-btn {
 }
 span.shop-women-ver>img, span.shop-men-ver>img {
     width: 50px;
-    height: 4px;
+    height: 6px;
     margin-left: 10px;
-    padding-bottom: 2px;
+    padding-bottom: 4px;
 }
 .section-products-women-categories, .section-products-men-categories {
     width: 17vw;
@@ -88,9 +88,9 @@ span.shop-women-ver>img, span.shop-men-ver>img {
 }
 .section-products-women-categories>img, .section-products-men-categories>img {
     width: 35%;
-    height: 15px;
+    height: 12px;
     margin-right: 15px;
-    padding-top: 12px;
+    padding-top: 10px;
 }
 .section-products-women-categories>div, .section-products-men-categories>div {
     display: flex;
@@ -107,7 +107,7 @@ span.shop-women-ver>img, span.shop-men-ver>img {
 }
 .section-products-men-categories {
     margin-top: 120px;
-    margin-left: 19.45vw;
+    margin-left: 19.25vw;
 }
 .section-products-women-categories {
     margin-left: 125px;
