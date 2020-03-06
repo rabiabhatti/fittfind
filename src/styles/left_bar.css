@@ -94,20 +94,23 @@
 /*tablets, ipads*/
 @media (min-width: 426px) and (max-width: 768px) {
     .section-left-bar-text {
-        top: 15.5vw;
-        font-size: 13px;
+        top: 15.8vw;
+        font-size: 10px;
+    }
+    .section-left-bar-btn>span {
+        font-size: 10px;
+    }
+    .section-left-bar-btn>img {
+        width: 10px;
     }
     .section-left-bar {
         width: 7vw;
     }
-    .section-left-bar-btn>span {
-        font-size: 13px;
-    }
-    .section-left-bar-btn>img {
-        width: 13px;
-    }
     .section-left-bar-btn {
         bottom: 30px;
+    }
+    .section-left-bar-btn, .section-left-bar-text {
+        left: 20px;
     }
 }
 

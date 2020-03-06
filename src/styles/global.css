@@ -276,9 +276,11 @@ button:disabled {
 /*tablets, ipads*/
 @media (min-width: 426px) and (max-width: 768px) {
     nav.section-nav-left {
-        width: 55% !important;
+        width: 75% !important;
     }
     .section-impossible>img:nth-child(2) {
+        left: 30vw;
+        width: 40vw;
         margin-top: 25px;
     }
     .select-container p img {

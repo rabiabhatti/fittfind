@@ -536,9 +536,10 @@ span.current-slider {
 /*tablets, ipads*/
 @media (min-width: 426px) and (max-width: 768px) {
     .section-hero-slider-right-bar {
-        right: 2vw;
+        right: 3vw;
     }
     .sliders-count-container {
+        right: 15px;
         bottom: 10px;
     }
     .section-main-slider-left {
@@ -549,40 +550,39 @@ span.current-slider {
         width: 76.7%;
     }
     .section-features .product-desc-container {
-        left: 2.9vw !important;
-        width: 103.5%;
         bottom: 3rem;
+        width: 112.5%;
+        left: 10px !important;
     }
-    .section-products-slider-bottom-bar {
-        width: 10vw;
-        right: 13vw;
-        margin-top: 5vw;
+    .section-products-slider-bottom-bar, .section-social-slider-bottom-bar {
+        right: 8vw;
+        width: 15vw;
+        margin-top: 0;
     }
     img.section-background-fittfind {
         left: 30vw;
         margin-top: -50vw;
     }
     .section-features>h2>img, .section-social-media>h2>img {
-        top: -14px;
+        top: -9px;
         width: 70px;
-        margin-right: 20px;
+        margin-right: 10px;
     }
     .section-features>h2 {
         margin-left: 0;
     }
     .section-products-slider-right-bar {
-        left: 96%;
+        left: 95%;
         width: 2vw;
         right: unset;
     }
     .section-social-media-slider-right-bar {
+        top: 4vw;
         width: 2vw;
-        right: -12.5vw;
+        right: -16.5vw;
     }
     .section-social-slider-bottom-bar {
-        width: 10vw;
-        right: 10.3vw;
-        margin-top: 5vw;
+        margin-top: -65px !important;
     }
     .section-social-media {
         margin-top: 10vw;
@@ -591,8 +591,8 @@ span.current-slider {
         margin-left: 55px;
     }
     .section-social-media-slider-right>a {
-        left: -6vw;
-        width: 15vw;
+        left: -2vw;
+        width: 20vw;
     }
     button.findFitBtn {
         padding: 13px 25px;
@@ -609,22 +609,42 @@ span.current-slider {
         padding: 15px;
     }
     .section-social-media-slider-right {
+        top: -13vw;
         right: 0.2vw;
     }
+    .section-main-slider .hero-slide {
+        max-height: 390px;
+    }
+    .section-hero-slider {
+        min-height: 49vw;
+    }
+
+    .section-social-media-slider {
+        margin-top: 9vw;
+    }
+    .section-social-media-slider-left>img {
+        width: 25%;
+    }
+    .section-social-media-slider-active>img:last-child {
+        display: none;
+    }
+
+    .section-products-slider-container {
+        margin-top: 0;
+    }
+
+
 
     h1.section-Find-release-hero {
-        font-size: 70px;
-    }
-    .section-features>h2, .section-social-media>h2 {
-        font-size: 45px;
+        font-size: 50px;
     }
     span.current-slider {
-        font-size: 50px;
+        font-size: 40px;
+    }
+    .section-features>h2, .section-social-media>h2 {
+        font-size: 30px;
     }
     .section-social-media-slider-right>a>span, button.findFitBtn {
         font-size: 10px;
-    }
-    .section-main-slider .hero-slide {
-        max-height: 558px;
     }
 }

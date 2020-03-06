@@ -159,7 +159,7 @@ a.section-nav-right-cart>span, span.section-nav-right-currency {
 /*tablets, ipads*/
 @media (min-width: 426px) and (max-width: 768px) {
     .section-header-right {
-        width: 25vw;
+        width: 30vw;
     }
     header {
         font-size: 10px;
@@ -170,12 +170,13 @@ a.section-nav-right-cart>span, span.section-nav-right-currency {
         padding-bottom: 30px;
     }
     .section-logo img {
-        width: 60%;
+        width: 75%;
     }
     a.section-nav-right-cart>span>span, span.section-nav-right-currency>span {
         line-height: 1;
     }
     a.section-nav-right-cart>img {
+        width: 17px;
         height: 15px;
     }
     button.section-nav-right-menu>img {

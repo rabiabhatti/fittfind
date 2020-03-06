@@ -284,20 +284,21 @@ span.shop-women-ver>img, span.shop-men-ver>img {
         width: 40vw;
     }
     button.shop-women-btn>a>img, button.shop-men-btn>a>img {
-        width: 70px;
-        height: 80px;
+        width: 55px;
+        height: 55px;
     }
     button.shop-women-btn>a, button.shop-men-btn>a {
-        height: 55px;
-        width: 190px;
-        font-size: 40px;
+        height: 40px;
+        width: 150px;
+        font-size: 30px;
     }
     button.shop-women-btn {
-        left: -13vw;
+        top: -5vw;
+        left: -14vw;
     }
     span.shop-women-ver {
-        top: -0.5vw;
-        left: -9.5vw;
+        top: -5.5vw;
+        left: -12.5vw;
     }
     button.shop-women-btn>a, button.shop-men-btn>a {
         padding: 0 10px;
@@ -306,13 +307,16 @@ span.shop-women-ver>img, span.shop-men-ver>img {
         right: -13vw;
     }
     span.shop-men-ver {
-        top: 0vw;
-        right: -0.5vw;
+        top: -6vw;
+        right: -1vw;
+    }
+    button.shop-men-btn {
+        top: -5vw;
+        right: -2vw;
     }
     span.shop-women-ver>img, span.shop-men-ver>img {
         width: 20px;
-        height: 3px;
-        margin-bottom: 1px;
+        height: 1.5px;
     }
     .section-products-men-categories {
         margin-top: 105px;
@@ -332,10 +336,10 @@ span.shop-women-ver>img, span.shop-men-ver>img {
         margin-bottom: -6px;
     }
     .section-products-women-categories {
-        margin-left: 60px;
+        margin-left: 0;
     }
     .section-products-women-categories, .section-products-men-categories {
-        width: 20vw;
+        width: 24vw;
     }
     .section-products-women-categories>img, .section-products-men-categories>img {
         width: 25%;

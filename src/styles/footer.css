@@ -179,12 +179,22 @@ input.footer-wrapper-notified-input {
         max-width: 94vw;
     }
     .footer-wrapper-notified-btn>img {
-        margin-left: 55px;
+        margin-left: 20px;
     }
     .footer-wrapper>.row-top {
         padding: 30px 0;
     }
     .footer-wrapper>.row-middle {
         padding: 40px 0;
+    }
+    .col-menu>img {
+        height: 2px;
+        margin-right: 10px;
+    }
+    .footer-wrapper-notified-input {
+        width: 43%;
+    }
+    .footer-wrapper>.row-top>p:first-child {
+        width: 32%;
     }
 }

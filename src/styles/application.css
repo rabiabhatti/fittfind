@@ -590,10 +590,11 @@ img.section-apps-right-img-store {
         margin-left: 4vw;
     }
     .section-apps>h2 {
-        width: 55%;
+        width: 65%;
     }
     h2.section-apps-h2-1>img {
-        top: -14px;
+        top: -9px;
+        height: 2px;
         width: 70px;
         margin-right: 20px;
     }
@@ -607,23 +608,23 @@ img.section-apps-right-img-store {
         margin-top: -25vw;
     }
     span.section-apps-right-span-1 {
-        margin-top: -2vw;
-        margin-left: 30vw;
+        margin-top: -4vw;
+        margin-left: 29vw;
     }
     img.section-apps-right-img-store, img.section-apps-right-img-play {
         width: 80px;
     }
     .section-apps-right-img-app-store {
-        left: 8vw;
+        left: 4vw;
         font-size: 11px;
     }
     img.section-apps-right-img-play {
-        top: -11vw;
-        right: -44vw;
+        top: -14vw;
+        right: -39vw;
     }
     span.section-apps-right-span-2 {
-        right: 0;
-        margin-top: 9vw;
+        right: -2vw;
+        margin-top: 6vw;
     }
     .section-apps-left>p {
         width: 265px;
@@ -663,12 +664,6 @@ img.section-apps-right-img-store {
         margin-left: -35vw;
         padding: 100px 100px 100px 100px;
     }
-    .section-hero-application-text {
-        font-size: 70px;
-    }
-    h3.section-application-video-col-left-heading, h3.left-banner-heading {
-        font-size: 40px;
-    }
     .section-application-video-col-right>img {
         width: 20vw;
         margin-top: 50px;
@@ -688,8 +683,14 @@ img.section-apps-right-img-store {
     }
 
     
+    .section-hero-application-text {
+        font-size: 50px;
+    }
     .section-apps>h2 {
-        font-size: 45px;
+        font-size: 30px;
+    }
+    h3.section-application-video-col-left-heading, h3.left-banner-heading {
+        font-size: 40px;
     }
     .section-application-feature>h4 {
         font-size: 25px;
