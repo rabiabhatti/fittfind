@@ -184,7 +184,6 @@ export default class FundGym extends React.Component {
                         </div>
                     </div>
                     <div className='section-find-gym-reviews' id='reviews'>
-                        <h2>Reviews</h2>
                         <div className='section-find-gym-reviews-top-container'>
                             <div className='section-find-gym-reviews-top-left'>
                                 <h2>Reviews</h2>

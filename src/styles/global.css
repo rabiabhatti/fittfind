@@ -242,7 +242,7 @@ button:disabled {
 /*tablets, ipads (landscape)*/
 @media (min-width: 769px) and (max-width: 1024px) {
     nav.section-nav-left {
-        width: 55%;
+        width: 55% !important;
     }
     .section-impossible>img:nth-child(2) {
         margin-top: 25px;
