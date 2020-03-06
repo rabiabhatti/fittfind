@@ -91,6 +91,30 @@
 
 
 
+/*tablets, ipads*/
+@media (min-width: 426px) and (max-width: 768px) {
+    .section-left-bar-text {
+        top: 15.5vw;
+        font-size: 13px;
+    }
+    .section-left-bar {
+        width: 7vw;
+    }
+    .section-left-bar-btn>span {
+        font-size: 13px;
+    }
+    .section-left-bar-btn>img {
+        width: 13px;
+    }
+    .section-left-bar-btn {
+        bottom: 30px;
+    }
+}
+
+
+
+
+
 
 
 

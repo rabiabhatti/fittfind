@@ -529,3 +529,102 @@ span.current-slider {
         max-height: 558px;
     }
 }
+
+
+
+
+/*tablets, ipads*/
+@media (min-width: 426px) and (max-width: 768px) {
+    .section-hero-slider-right-bar {
+        right: 2vw;
+    }
+    .sliders-count-container {
+        bottom: 10px;
+    }
+    .section-main-slider-left {
+        margin-top: -25vw;
+        margin-bottom: 6vw;
+    }
+    img.hero-slide {
+        width: 76.7%;
+    }
+    .section-features .product-desc-container {
+        left: 2.9vw !important;
+        width: 103.5%;
+        bottom: 3rem;
+    }
+    .section-products-slider-bottom-bar {
+        width: 10vw;
+        right: 13vw;
+        margin-top: 5vw;
+    }
+    img.section-background-fittfind {
+        left: 30vw;
+        margin-top: -50vw;
+    }
+    .section-features>h2>img, .section-social-media>h2>img {
+        top: -14px;
+        width: 70px;
+        margin-right: 20px;
+    }
+    .section-features>h2 {
+        margin-left: 0;
+    }
+    .section-products-slider-right-bar {
+        left: 96%;
+        width: 2vw;
+        right: unset;
+    }
+    .section-social-media-slider-right-bar {
+        width: 2vw;
+        right: -12.5vw;
+    }
+    .section-social-slider-bottom-bar {
+        width: 10vw;
+        right: 10.3vw;
+        margin-top: 5vw;
+    }
+    .section-social-media {
+        margin-top: 10vw;
+    }
+    button.findFitBtn>img {
+        margin-left: 55px;
+    }
+    .section-social-media-slider-right>a {
+        left: -6vw;
+        width: 15vw;
+    }
+    button.findFitBtn {
+        padding: 13px 25px;
+    }
+    .section-hero-slider-right-bar>button, .section-products-slider-active-page {
+        font-size: 14px;
+    }
+    .section-social-media-slider-right>a>img {
+        width: 1.1rem;
+        margin-top: -10px;
+        margin-right: 10px;
+    }
+    .section-products-slider-bottom-bar>button, .section-social-slider-bottom-bar>button {
+        padding: 15px;
+    }
+    .section-social-media-slider-right {
+        right: 0.2vw;
+    }
+
+    h1.section-Find-release-hero {
+        font-size: 70px;
+    }
+    .section-features>h2, .section-social-media>h2 {
+        font-size: 45px;
+    }
+    span.current-slider {
+        font-size: 50px;
+    }
+    .section-social-media-slider-right>a>span, button.findFitBtn {
+        font-size: 10px;
+    }
+    .section-main-slider .hero-slide {
+        max-height: 558px;
+    }
+}

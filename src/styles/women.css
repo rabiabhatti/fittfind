@@ -117,3 +117,22 @@
         top: 51% !important;
     }
 }
+
+
+
+
+/*tablets, ipads*/
+@media (min-width: 426px) and (max-width: 768px) {
+    .section-products-filters {
+        width: 68.2vw;
+    }
+    .section-hero-category {
+        width: 17.25vw;
+    }
+    .section-hero-category, .section-products-filters p, .react-select__placeholder {
+        font-size: 10px;
+    }
+    .react-select__placeholder {
+        top: 51% !important;
+    }
+}

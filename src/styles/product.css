@@ -88,8 +88,44 @@
 
 }
 
+
+
+
+
 /*tablets, ipads (landscape)*/
 @media (min-width: 769px) and (max-width: 1024px) {
+    .product-desc-container {
+        width: 110%;
+        left: 1.153rem;
+        background-size: 100% 100%;
+
+    }
+    .product-name {
+        width: 98%;
+        font-size: 10px;
+        font-weight: 800;
+    }
+    .product-desc {
+        padding: 1rem 0 1rem 4rem;
+    }
+    .section-features .product-desc-container {
+        background-size: 100% 90%;
+    }
+    .slider-product {
+        height: 17rem;
+    }
+
+    .product-price {
+        font-size: 16px;
+    }
+}
+
+
+
+
+
+/*tablets, ipads*/
+@media (min-width: 426px) and (max-width: 768px) {
     .product-desc-container {
         width: 110%;
         left: 1.153rem;

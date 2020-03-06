@@ -272,3 +272,74 @@ span.shop-women-ver>img, span.shop-men-ver>img {
         padding-top: 6px;
     }
 }
+
+
+
+/*tablets, ipads*/
+@media (min-width: 426px) and (max-width: 768px) {
+    .section-products-categories {
+        background-size: 53.3% 100%;
+    }
+    .section-products-women-banner>img, .section-products-men-banner>img {
+        width: 40vw;
+    }
+    button.shop-women-btn>a>img, button.shop-men-btn>a>img {
+        width: 70px;
+        height: 80px;
+    }
+    button.shop-women-btn>a, button.shop-men-btn>a {
+        height: 55px;
+        width: 190px;
+        font-size: 40px;
+    }
+    button.shop-women-btn {
+        left: -13vw;
+    }
+    span.shop-women-ver {
+        top: -0.5vw;
+        left: -9.5vw;
+    }
+    button.shop-women-btn>a, button.shop-men-btn>a {
+        padding: 0 10px;
+    }
+    .section-products-men-banner>div {
+        right: -13vw;
+    }
+    span.shop-men-ver {
+        top: 0vw;
+        right: -0.5vw;
+    }
+    span.shop-women-ver>img, span.shop-men-ver>img {
+        width: 20px;
+        height: 3px;
+        margin-bottom: 1px;
+    }
+    .section-products-men-categories {
+        margin-top: 105px;
+        margin-left: 19.3vw;
+    }
+    .section-products-categories>div {
+        background-size: 63vw 70%;
+        background-position: 5% 37%;
+    }
+    .section-products-women-categories>div>h3, .section-products-men-categories>div>h3, span.shop-women-ver, span.shop-men-ver {
+        font-size: 10px;
+    }
+    .section-products-women-categories>div>a, .section-products-men-categories>div>a {
+        font-size: 11px;
+    }
+    button.shop-women-btn>a>span, button.shop-men-btn>a>span {
+        margin-bottom: -6px;
+    }
+    .section-products-women-categories {
+        margin-left: 60px;
+    }
+    .section-products-women-categories, .section-products-men-categories {
+        width: 20vw;
+    }
+    .section-products-women-categories>img, .section-products-men-categories>img {
+        width: 25%;
+        height: 8px;
+        padding-top: 6px;
+    }
+}
