@@ -632,6 +632,10 @@ span.current-slider {
     .section-products-slider-container {
         margin-top: 0;
     }
+    .section-products-slider-active-page-line {
+        right: -1.5px;
+        height: 3rem;
+    }
 
 
 

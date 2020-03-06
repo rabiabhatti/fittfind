@@ -135,4 +135,7 @@
     .react-select__placeholder {
         top: 51% !important;
     }
+    .section-hero-category p {
+        height: 13px;
+    }
 }

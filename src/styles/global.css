@@ -284,8 +284,7 @@ button:disabled {
         margin-top: 25px;
     }
     .select-container p img {
-        width: 1rem;
-        margin-right: 5px;
+        display: none;
     }
     .section-gym-owners {
         padding: 70px 100px;
@@ -298,9 +297,9 @@ button:disabled {
     }
     img.section-background-blue-right {
         height: 215vw;
-        width: 24.8vw;
+        width: 28.1vw;
     }
     .react-select-container {
-        width: 49%;
+        width: 60%;
     }
 }
