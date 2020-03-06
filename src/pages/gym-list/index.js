@@ -199,15 +199,12 @@ export default class GymList extends React.Component{
                 </Hero>
                 <div className='section-gym-all-list row-center'>
                     {gym_list.map((item, i) =>(
-                        <div className='section-single-gym-container' key={i} >
+                        <Link className='section-single-gym-container' key={i} to={`/gym-list/find?name=${item.name.split(' ').join('-').split('/').join('-').toLowerCase()}&location=${location.toLowerCase()}`} >
                             <div className='section-single-gym-banner'>
                                 {item.featured && <img className='section-single-gym-star' src={require(`../../images/gym_star.png`)} alt='gym_star' width={50} />}
                                 <img src={require(`../../images/gym_banner_${i+1}.jpg`)} alt='gym_banner' width={200} />
                             </div>
-                            <Link
-                                className='section-single-gym-desc'
-                                to={`/gym-list/find?name=${item.name.split(' ').join('-').split('/').join('-').toLowerCase()}&location=${location.toLowerCase()}`}
-                            >
+                            <div className='section-single-gym-desc'>
                                 <div className='section-single-gym-desc-top'>
                                     <div className='section-single-gym-desc-top-two'>
                                         <h4>{item.number}</h4>
@@ -220,8 +217,8 @@ export default class GymList extends React.Component{
                                     <h4>{item.city}</h4>
                                     {item.featured && <h4>Featured</h4>}
                                 </div>
-                            </Link>
-                        </div>
+                            </div>
+                        </Link>
                     ))}
                 </div>
                 <div className='section-gym-list-pages'>
