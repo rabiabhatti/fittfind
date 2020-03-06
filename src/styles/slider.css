@@ -341,6 +341,9 @@ span.current-slider {
     .sliders-count-container {
         bottom: -10px;
     }
+    img.hero-slide {
+        width: 75.15%;
+    }
     h1.section-Find-release-hero {
         font-size: 90px;
     }
@@ -353,10 +356,12 @@ span.current-slider {
         width: 103.5%;
     }
     .section-products-slider-bottom-bar {
-        top: 3vw;
         width: 10vw;
         right: 12vw;
         margin-top: 10vw;
+    }
+    .section-social-media>h2>img {
+        top: -14px;
     }
     img.section-background-fittfind {
         left: 48vw;
@@ -441,8 +446,11 @@ span.current-slider {
         margin-top: -25vw;
         margin-bottom: 6vw;
     }
+    img.hero-slide {
+        width: 76.7%;
+    }
     .section-features .product-desc-container {
-        left: 2.9vw;
+        left: 2.9vw !important;
         width: 103.5%;
         bottom: 3rem;
     }

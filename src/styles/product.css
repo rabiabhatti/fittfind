@@ -67,6 +67,9 @@
 
 /*laptops, desktops*/
 @media (min-width: 1025px) and (max-width: 1440px) {
+    .section-features a.product-desc-container {
+        left: 2.6rem;
+    }
     .product-desc-container {
         width: 113%;
         left: 1.153rem;

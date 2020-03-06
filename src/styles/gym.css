@@ -245,10 +245,6 @@
     .section-gym-motivation-first>img {
         width: 55vw;
     }
-    .section-gym-motivation-banner-desc>h3>img {
-        height: 13.5px;
-        padding-bottom: 11px;
-    }
     .motivation-quotes {
         padding: 20px 150px 20px 150px;
     }
@@ -257,9 +253,11 @@
         margin: -38vw auto 15vw 24vw;
     }
     .section-gym-features-desc>h3>img {
+        top: -17px;
         width: 25%;
-        height: 13.5px;
-        padding-bottom: 11px;
+    }
+    .section-gym-motivation-banner-desc>h3>img {
+        top: -17px;
     }
     .section-hero-gym-text>span {
         font-size: 50px;
@@ -326,8 +324,7 @@
         width: 55vw;
     }
     .section-gym-motivation-banner-desc>h3>img {
-        height: 13.5px;
-        padding-bottom: 11px;
+        top: -13px;
     }
     .motivation-quotes {
         padding: 20px 50px 20px 50px;
@@ -338,9 +335,8 @@
         margin: -38vw auto 15vw 24vw;
     }
     .section-gym-features-desc>h3>img {
+        top: -13px;
         width: 25%;
-        height: 13.5px;
-        padding-bottom: 11px;
     }
     .motivation-quotes>p:nth-child(2) {
         padding-top: 20px;

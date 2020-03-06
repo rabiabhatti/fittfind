@@ -77,10 +77,10 @@ button.shop-men-btn {
     position: relative;
 }
 span.shop-women-ver>img, span.shop-men-ver>img {
+    top: -4px;
     width: 50px;
-    height: 6px;
     margin-left: 10px;
-    padding-bottom: 4px;
+    position: relative;
 }
 .section-products-women-categories, .section-products-men-categories {
     width: 17vw;
@@ -172,7 +172,6 @@ span.shop-women-ver>img, span.shop-men-ver>img {
     }
     span.shop-women-ver>img, span.shop-men-ver>img {
         width: 40px;
-        margin-left: 10px;
     }
     .section-products-men-categories {
         margin-top: 105px;

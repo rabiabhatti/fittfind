@@ -149,5 +149,6 @@ a.section-nav-right-cart>span, span.section-nav-right-currency {
     }
     .active-nav-link {
         top: 2.5rem;
+        width: 3rem;
     }
 }

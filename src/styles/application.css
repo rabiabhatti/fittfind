@@ -352,7 +352,7 @@ img.section-apps-right-img-store {
         font-size: 55px;
     }
     h2.section-apps-h2-1>img {
-        top: -11px;
+        top: -14px;
     }
     img.section-apps-right-img-1 {
         width: 35vw;
@@ -412,9 +412,8 @@ img.section-apps-right-img-store {
         margin-top: -8vw;
     }
     h3.section-application-video-col-left-heading>img, .section-application-motivation-banner-left>h3.left-banner-heading>img {
-        height: 20.5px;
-        margin-right: 35px;
-        padding-bottom: 18px;
+        top: -17px;
+        margin-right: 15px;
     }
     .section-application-motivation-banner-dialogue {
         font-size: 40px;
@@ -528,9 +527,8 @@ img.section-apps-right-img-store {
         margin-top: -10vw;
     }
     h3.section-application-video-col-left-heading>img, .section-application-motivation-banner-left>h3.left-banner-heading>img {
-        height: 20.5px;
+        top: -13px;
         margin-right: 35px;
-        padding-bottom: 18px;
     }
     .section-application-motivation-banner-dialogue {
         font-size: 27px;
