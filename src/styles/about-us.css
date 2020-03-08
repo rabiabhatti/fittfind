@@ -274,14 +274,14 @@ button.corporates-single-detail-btn {
 /*tablets, ipads*/
 @media (min-width: 426px) and (max-width: 768px) {
     .section-about-us-banner-left>div>img {
-        width: 25%;
-        height: 12.5px;
-        margin-right: 30px;
-        padding-bottom: 10px;
+        top: -4px;
+        height: 2px;
+        width: 70px;
+        margin-right: 20px;
+        position: relative;
     }
     .section-about-us-banner-right>img {
         width: 80%;
-        height: 70% !important;
     }
     .section-about-us-hero-bottom>h2 {
         width: 70%;
@@ -298,27 +298,64 @@ button.corporates-single-detail-btn {
         margin-bottom: 25px;
     }
     .section-about-us-hero-bottom>img {
-        margin-bottom: 20px;
+        width: 2px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    .section-about-us-hero {
+        padding: 1rem 3rem;
+    }
+    .section-about-us-banner-right {
+        margin-bottom: -10vw;
+        flex-direction: column;
+    }
+    .section-about-us-banner-right>img:first-child {
+        margin-top: -4vw;
+    }
+    .section-about-us-banner-right>img:nth-child(2) {
+        top: -17vw;
+        right: -11vw;
+        height: unset;
+        max-height: unset;
+        position: relative;
+        margin-top: unset;
+    }
+    .section-about-us-corporates {
+        margin-top: 0;
+    }
+    .section-about-us-corporates>h2 {
+        margin-bottom: 1vw;
+    }
+    .section-about-us-corporates-details {
+        width: 80%;
+    }
+    .section-about-us-corporates-details>div {
+        width: 28%;
+        margin-right: 5vw;
+    }
+    .section-about-us-corporates-details>div>div:first-child {
+        background-size: 4vw 3vw;
+        background-position: 6% 70%;
     }
 
 
     .section-about-us-banner-left h1, .section-about-us-corporates>h2 {
-        font-size: 40px;
-    }
-    .section-about-us-hero-bottom>h2 {
         font-size: 30px;
     }
+    .section-about-us-hero-bottom>h2 {
+        font-size: 25px;
+    }
     .section-about-us-corporates-details>div h4 {
-        font-size: 20px;
+        font-size: 15px;
     }
     .section-about-us-hero-bottom>h4 {
-        font-size: 18px;
+        font-size: 15px;
     }
     .section-about-us-banner-left p {
-        font-size: 13px;
+        font-size: 11px;
     }
     .section-about-us-corporates-details p, button.corporates-single-detail-btn {
-        font-size: 12px;
+        font-size: 10px;
     }
     a.section-about-us-hero-top {
         font-size: 10px;

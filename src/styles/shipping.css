@@ -166,20 +166,42 @@ img.section-shipping-left {
 
 /*tablets, ipads*/
 @media (min-width: 426px) and (max-width: 768px) {
+    .section-shipping-hero>a {
+        top: -6vw;
+        position: relative;
+    }
+    .section-shipping-info, .section-shipping-faqs, .section-shipping-related-questions {
+        width: 65vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    img.section-shipping-left {
+        top: 11px;
+        height: 2px;
+        width: 50px;
+        margin-top: 0;
+        margin-right: 20px;
+        margin-left: -70px;
+        position: relative;
+    }
+
+
+
+
     .section-shipping-hero h1 {
-        font-size: 55px;
+        font-size: 50px;
     }
     .section-shipping-info-right>h2, .section-shipping-faqs-right>h2 {
-        font-size: 40px;
+        font-size: 30px;
     }
     .section-shipping-faq-container>h4, .section-shipping-related-questions-right>h2 {
-        font-size: 20px;
+        font-size: 16px;
     }
     .section-shipping-related-questions-right>a {
-        font-size: 13px;
+        font-size: 9px;
     }
     .section-shipping-faq-container>p, .section-shipping-info-right>p, .section-shipping-info-right>table tr>td, .section-shipping-info-right>table tr>th {
-        font-size: 12px;
+        font-size: 10px;
     }
     .section-shipping-hero span {
         font-size: 10px;
