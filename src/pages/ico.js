@@ -2,6 +2,8 @@ import React from 'react'
 import {Link} from "gatsby";
 
 import '../styles/ico.css'
+import ethereum from "../images/ethereum.png";
+import bitcoin from "../images/bitcoin.png";
 import quotes from "../images/quotes.png";
 import forwardIcon from '../images/forward-icon.png'
 import backwardIcon from '../images/backward-icon.png'
@@ -10,6 +12,7 @@ import paper_plane_icon from '../images/paper_plane.png'
 import alpha_preview_icon from '../images/alpha_preview.png'
 import ico_hero_banner from '../images/ico_hero_banner.png'
 import horizontal_line from '../images/horizontal_line.png'
+import ico_crypto_banner from '../images/ico_crypto_banner.jpg'
 import vertical_line from '../images/vertical_line_white.png'
 import { Wrapper, Hero, ImpossibleBanner} from "../components";
 import find_gym_hero_img from "../images/find-gym-hero-img.png";
@@ -124,6 +127,17 @@ export default class Help extends React.Component {
                             <p>{item.desc}</p>
                         </div>
                     ))}
+                </div>
+                <div className='section-ico_crypto_container  row-center space-between'>
+                    <div className='section-ico_crypto-left'>
+                        <h2>Crypto specific sportswear</h2>
+                        <p>Fittfind is a technology driven corporation engaged in the design, development and marketing of Elite sports wear.<br/>Purchase Bitcoin sportswear using Bitcoin only.</p>
+                        <div className='row-center'>
+                            <img src={bitcoin} alt='bitcoin' width={20} />
+                            <img src={ethereum} alt='ethereum' width={20} />
+                        </div>
+                    </div>
+                    <img className='section-ico_crypto-right' src={ico_crypto_banner} alt='ico_crypto_banner' width={300}/>
                 </div>
                 <ImpossibleBanner />
             </Wrapper>
