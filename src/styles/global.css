@@ -211,9 +211,28 @@ p, h1, h2, h3, h4, h5{
 }
 
 button:disabled {
+    opacity: 0.3;
     pointer-events: none;
 }
 
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeOut 1.5s both;
+}
+.show {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 1s both;
+}
+@keyframes fadeIn {
+    from { opacity: 0; visibility: hidden; }
+    to {opacity: 1; visibility: visible;}
+}
+@keyframes fadeOut {
+    from { opacity: 1; visibility: visible; }
+    to {opacity: 0; visibility: hidden;}
+}
 
 
 
