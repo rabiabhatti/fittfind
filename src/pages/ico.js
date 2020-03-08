@@ -45,6 +45,18 @@ export default class Help extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div>
+                    <div>
+
+                    </div>
+                    <div>
+                        <h2>Fittfind platform</h2>
+                        <p>Fittfind enables users to overcome the difficulty to find the right personal trainer & facility, manage all end to end transactions, send messages and menage schedules, features to make fitness work for you!<br/><br/>Be the first to test ans review our alpha Preview, Fittfind is always looking for athletes to test products in the gym and on the field</p>
+                        <button>
+                            
+                        </button>
+                    </div>
+                </div>
                 <ImpossibleBanner />
             </Wrapper>
         )
