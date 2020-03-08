@@ -7,7 +7,6 @@ import bitcoin from "../images/bitcoin.png";
 import ethereum from "../images/ethereum.png";
 import dapp_icon from "../images/dapp_icon.png";
 import forwardIcon from '../images/forward-icon.png'
-import app_imag from "../images/app-store-imag.jpg";
 import ico_banner_2 from '../images/ico_banner_2.jpg'
 import backwardIcon from '../images/backward-icon.png'
 import paper_plane_icon from '../images/paper_plane.png'

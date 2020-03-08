@@ -1,6 +1,5 @@
 import React from 'react';
 import Select from 'react-select';
-import { Link, graphql } from 'gatsby'
 
 import '../styles/women.css'
 import women_category_bras from '../images/women_category_bras.jpg'

@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from "gatsby";
 import ShowMore from 'react-show-more';
 
 import '../../styles/gym-find.css'
