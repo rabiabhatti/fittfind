@@ -21,7 +21,7 @@ function Wrapper(props) {
                 <link href="https://fonts.googleapis.com/css?family=Montserrat:900&display=swap" rel="stylesheet" />
                 <link rel="canonical" href={`${siteURL}${props.location.pathname}`} />
             </Helmet>
-            <main>
+            <main className={props.className}>
                 <Header path={props.location.pathname} gymNav={props.gymNav}/>
                 {props.children}
                 <Footer/>

@@ -2,20 +2,22 @@ import React from 'react'
 import {Link} from "gatsby";
 
 import '../styles/ico.css'
-import ethereum from "../images/ethereum.png";
-import bitcoin from "../images/bitcoin.png";
 import quotes from "../images/quotes.png";
+import bitcoin from "../images/bitcoin.png";
+import ethereum from "../images/ethereum.png";
+import dapp_icon from "../images/dapp_icon.png";
 import forwardIcon from '../images/forward-icon.png'
-import backwardIcon from '../images/backward-icon.png'
+import app_imag from "../images/app-store-imag.jpg";
 import ico_banner_2 from '../images/ico_banner_2.jpg'
+import backwardIcon from '../images/backward-icon.png'
 import paper_plane_icon from '../images/paper_plane.png'
-import alpha_preview_icon from '../images/alpha_preview.png'
 import ico_hero_banner from '../images/ico_hero_banner.png'
 import horizontal_line from '../images/horizontal_line.png'
-import ico_crypto_banner from '../images/ico_crypto_banner.jpg'
+import alpha_preview_icon from '../images/alpha_preview.png'
 import vertical_line from '../images/vertical_line_white.png'
+import ico_crypto_banner from '../images/ico_crypto_banner.jpg'
 import { Wrapper, Hero, ImpossibleBanner} from "../components";
-import find_gym_hero_img from "../images/find-gym-hero-img.png";
+import app_store_button_s from "../images/app-store-button-s.png";
 import alpha_preview_banner from '../images/alpha_preview_banner.png'
 
 const features = [
@@ -56,7 +58,7 @@ export default class Help extends React.Component {
         const dashboard_images_no = [1, 2, 3, 4, 5];
 
         return (
-            <Wrapper name='ICO' location={this.props.location} gymNav={true}>
+            <Wrapper name='ICO' location={this.props.location} className='section-ico' >
                 <Hero>
                     <div className='section-find-gym-hero'>
                         <img src={ico_hero_banner} alt='ico_hero_banner' />
@@ -79,7 +81,7 @@ export default class Help extends React.Component {
                                 Fittfind vision
                             </h2>
                             <p>A world where everyone has the opportunity to find and release their inner athlete.</p>
-                            <Link to='/'>Read our vision paper</Link>
+                            <Link to='/' className='section-ico-btn'>Read our vision paper</Link>
                         </div>
                         <div className='section-ico-vision-bottom'>
                             <img src={quotes} alt='quotes-img' width={50} />
@@ -93,7 +95,7 @@ export default class Help extends React.Component {
                     <div className='section-ico-platform-left'>
                         <h2>Fittfind platform</h2>
                         <p>Fittfind enables users to overcome the difficulty to find the right personal trainer & facility, manage all end to end transactions, send messages and menage schedules, features to make fitness work for you!<br/><br/>Be the first to test ans review our alpha Preview, Fittfind is always looking for athletes to test products in the gym and on the field</p>
-                        <button className='section-ico-platform-left-btn row-center'>
+                        <button className='section-ico-btn row-center'>
                             <img src={alpha_preview_icon} alt='alpha_preview_icon' width={20} />
                             Alpha preview
                         </button>
@@ -138,6 +140,29 @@ export default class Help extends React.Component {
                         </div>
                     </div>
                     <img className='section-ico_crypto-right' src={ico_crypto_banner} alt='ico_crypto_banner' width={300}/>
+                </div>
+                <div className='row-center section-ico-app-container'>
+                    <div className='section-ico-app-left'>
+                        <Link className='row-center space-between' to='/'>
+                            <span>Download on</span>
+                            <img width={100} src={app_store_button_s} alt='app_store_button_s'/>
+                            <span>App store</span>
+                        </Link>
+                    </div>
+                    <div className='section-ico-app-right'>
+                        <h2>
+                            <img src={horizontal_line} alt='horizontal_line'/>Fitness
+                        </h2>
+                        <h2>on the blockchain</h2>
+                        <p>In the same manner Uber is the largest trans-portation company that owns no vehicles and Airbnb the largest hotel company that owns no real estate, Fittfind is on its way to becoming the largest health and fitness institution that controls no gyms or studios.<br/>We empower freelancers Fitness professionals and business to join our decentralized fitness marketplace. Fitness fanatics can discover each over, browse gyms listings, make bookings, leave ratings and reviews, and much more.</p>
+                        <div className='row-center space-between'>
+                            <button className='section-ico-btn row-center'>
+                                <img src={dapp_icon} alt='dapp_icon' width={9} />
+                                <span>Dapp preview</span>
+                            </button>
+                            <Link to='/' className='section-ico-btn'>Read our vision paper</Link>
+                        </div>
+                    </div>
                 </div>
                 <ImpossibleBanner />
             </Wrapper>
