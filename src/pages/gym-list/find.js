@@ -1,25 +1,22 @@
 import React from 'react'
 import { Link } from "gatsby";
-// import Select from 'react-select';
 import ShowMore from 'react-show-more';
 
 import '../../styles/gym-find.css'
-import five_stars from '../../images/gym_five_star.png'
-import { Wrapper, Hero, ImpossibleBanner } from '../../components'
-import horizontal_line from '../../images/horizontal_line.png'
-import profile_img from "../../images/profile_img.png";
-import forwardIcon from "../../images/forward-icon.png";
-import gym_weight_equipment from '../../images/gym_weight_equipment.png'
-import background_imag from '../../images/background-blue-imag.jpg';
-import gym_weight_equipment_s from '../../images/gym_weight_equipment_s.png'
 import gym_lockers from '../../images/gym_lockers.png'
-import gym_special_machines from '../../images/gym_special_machines.png'
-import gym_healthy_snacks from '../../images/gym_healthy_snacks.png'
-import find_gym_hero_img from '../../images/find-gym-hero-img.png'
-import gym_cardiovascular_equipment from '../../images/gym_cardiovascular_equipment.png'
+import five_stars from '../../images/gym_five_star.png'
+import profile_img from "../../images/profile_img.png";
 import find_gym_map from "../../images/find-gym-map.png";
+import horizontal_line from '../../images/horizontal_line.png'
+import { Wrapper, Hero, ImpossibleBanner } from '../../components'
+import find_gym_hero_img from '../../images/find-gym-hero-img.png'
+import background_imag from '../../images/background-blue-imag.jpg';
+import gym_healthy_snacks from '../../images/gym_healthy_snacks.png'
+import gym_weight_equipment from '../../images/gym_weight_equipment.png'
+import gym_special_machines from '../../images/gym_special_machines.png'
+import gym_weight_equipment_s from '../../images/gym_weight_equipment_s.png'
+import gym_cardiovascular_equipment from '../../images/gym_cardiovascular_equipment.png'
 
-// const locations = ['london', 'paris', 'new york', 'sydney'];
 const scrolling_entries = ['About', 'Facilities', 'Amenities', 'Opening hours', 'Price'];
 const amenities = [
     {
@@ -79,13 +76,6 @@ const facilities = [
 ];
 
 export default class FundGym extends React.Component {
-    state = {
-        location: this.props.location.search.split('=')[this.props.location.search.split('=').length - 1]
-    };
-
-    handleLocationChange = (text) => {
-        this.setState({ location: text })
-    };
 
     handleContentScroll = (id) => {
         const ele = document.getElementById(id.toLowerCase().split(' ').join('-'));
@@ -93,7 +83,6 @@ export default class FundGym extends React.Component {
     };
 
     render() {
-        const { location } = this.state;
         const nameChunk = this.props.location.search.split('&')[0].split('=');
         const name = nameChunk[nameChunk.length - 1].split('-').join(' ');
 
@@ -105,23 +94,15 @@ export default class FundGym extends React.Component {
                 <Hero>
                     <div className='section-find-gym-hero'>
                         <img src={find_gym_hero_img} alt='find_gym_hero_img' />
-                        {/*<Select*/}
-                        {/*    isDisabled={false}*/}
-                        {/*    value={location}*/}
-                        {/*    options={locations}*/}
-                        {/*    placeholder={location}*/}
-                        {/*    classNamePrefix="gym-select"*/}
-                        {/*    className='gym-select-container'*/}
-                        {/*    onChange={this.handleLocationChange}*/}
-                        {/*/>*/}
                     </div>
                 </Hero>
                 <div className='section-find-gym-content'>
                     <div className='section-find-gym-heading-container space-between'>
                         <h1>{name.toUpperCase()}</h1>
-                        <Link to='/' className='section-find-gym-map-btn'>
-                            Show map
-                        </Link>
+                        <button className='section-find-gym-map-btn' onClick={() => this.handleContentScroll('find_gym_map')}>
+                            <span>Show map</span>
+                            <div/>
+                        </button>
                     </div>
                     <div className='section-find-gym-desc-container'>
                         <div className='section-find-gym-about-container'>
@@ -129,18 +110,21 @@ export default class FundGym extends React.Component {
                             <p>Our Athletic Group Training zones contain a number of unique items of movement based equipment providing you a bespoke location and training environment to support you in achieving your performance goals. Equipment in this area can include (but is not limited to): Prowlers, Hurdles, Tyres, Ankoor, Bungee, sprint track and an infra red timing gate.</p>
                             <p>This versatile kit is also incorporated into a series of group workouts (knows as AGT workouts), so you can come and try out the equipment and new way of training with like minded members. The exercises contained in Athletic Group Training (AGT) combines various performance based exercises with gym based disciplines and movements which are inherent to improving athletic performance. Classes are designed to achieve maximum results in minimal time.</p>
                         </div>
-                        <div className='section-find-gym-scrolling-entries-container'>
-                            {scrolling_entries.map((item, i) => (
-                                <div className='section-find-gym-scrolling-first-entry row-center' key={i}>
-                                    <button
-                                        key={i}
-                                        className='section-find-gym-scrolling-entry-btn'
-                                        onClick={() => this.handleContentScroll(item)}
-                                    >
-                                        {item}
-                                    </button>
-                                </div>
-                            ))}
+                        <div className='row-start'>
+                            <div className='section-find-gym-scrolling-entries-left-line' />
+                            <div className='section-find-gym-scrolling-entries-container'>
+                                {scrolling_entries.map((item, i) => (
+                                    <div className='section-find-gym-scrolling-first-entry row-center' key={i}>
+                                        <button
+                                            key={i}
+                                            className='section-find-gym-scrolling-entry-btn'
+                                            onClick={() => this.handleContentScroll(item)}
+                                        >
+                                            {item.toUpperCase()}
+                                        </button>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
                     <div className='section-find-gym-facilities column-start' id='facilities'>
@@ -159,7 +143,7 @@ export default class FundGym extends React.Component {
                                         </div>
                                         <div className='section-find-gym-facility-desc'>
                                             <ShowMore
-                                                lines={1}
+                                                lines={3}
                                                 more='more'
                                                 less='less'
                                                 anchorClass='section-find-gym-facility-desc-anchor'
@@ -270,7 +254,7 @@ export default class FundGym extends React.Component {
                                     </tr>
                                 </tbody>
                             </table>
-                            <img src={find_gym_map} alt='find_gym_map' />
+                            <img src={find_gym_map} alt='find_gym_map' id='find_gym_map' />
                         </div>
                     </div>
                     <div id='price'>
