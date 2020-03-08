@@ -252,11 +252,14 @@ h2.section-gym-list-text-child-two>span {
 /*tablets, ipads*/
 @media (min-width: 426px) and (max-width: 768px) {
     .section-gym-list-filters {
-        width: 68vw;
+        width: 65.3vw;
+    }
+    .section-gym-list-map-btn {
+        margin-right: 4vw;
     }
     .section-single-gym-desc {
         left: 0.5rem;
-        width: 204px;
+        width: 228px;
         min-height: 100px;
         padding: 10px 10px 10px 40px;
     }
@@ -281,6 +284,15 @@ h2.section-gym-list-text-child-two>span {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+    }
+    .section-single-gym-container {
+        width: 27.2vw;
+    }
+    .section-gym-list-pages>button:last-child {
+        margin-left: 15px;
+    }
+    .section-gym-list-pages>button:first-child {
+        margin-right: 15px;
     }
 
 

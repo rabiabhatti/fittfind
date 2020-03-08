@@ -515,22 +515,42 @@ div#opening-hours {
         width: 20px;
         height: 20px;
     }
+    .section-find-gym-facility {
+        width: 26.2vw;
+    }
+    .section-find-gym-reviews-top-right td>img {
+        width: 80%;
+    }
+    .section-find-gym-reviews-top-container {
+        width: 85vw;
+    }
+    .section-find-gym-reviews-bottom-content {
+        width: 30vw;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .section-find-gym-hours-map-content>img {
+        width: 54.3vw;
+        height: 220px;
+        margin-top: unset;
+    }
 
 
     .section-find-gym-scrolling-entries-container {
-        padding: 70px 105px 70px 125px;
+        padding: 70px 70px 70px 65px;
     }
     .section-find-gym-reviews-top-left {
         padding: 20px 0;
     }
     .section-find-gym-reviews-top-right {
-        height: 233px;
-        padding: 50px 80px 50px 50px;
+        height: 205px;
+        padding: 50px 30px 50px 30px;
     }
     .section-find-gym-hours-map-content {
         width: auto;
     }
     .section-find-gym-hours-map-content table {
+        width: 30%;
         margin-left: 2%;
     }
     .section-find-gym-hours-map-content>img {
@@ -556,44 +576,69 @@ div#opening-hours {
         left: 5%;
     }
     .section-find-gym-facility-content-heading {
-        min-height: 100px;
+        min-height: 85px;
+        padding: 20px 20px 0 20px;
     }
     .section-find-gym-facility-content {
-        left: 2.2rem;
+        left: 1.65rem;
     }
     .section-find-gym-facility-content-heading img {
         margin-top: 9px;
         margin-left: -4.8vw;
     }
     .section-find-gym-reviews-bottom-left {
-        margin-right: 10px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .section-find-gym-reviews-bottom-right {
+        width: 100%;
+    }
+    .section-find-gym-reviews-bottom-left>img {
+        width: fit-content;
+    }
+    .section-find-gym-facility-desc {
+        top: 45px;
+    }
+    .section-find-gym-facility:first-child .section-find-gym-facility-desc, .section-find-gym-facility:nth-child(2) .section-find-gym-facility-desc, .section-find-gym-facility:nth-child(3) .section-find-gym-facility-desc {
+        z-index: 3;
+    }
+    .section-find-gym-facility:nth-child(4) .section-find-gym-facility-desc, .section-find-gym-facility:nth-child(5) .section-find-gym-facility-desc, .section-find-gym-facility:nth-child(6) .section-find-gym-facility-desc {
+        z-index: 2;
+    }
+    .section-find-gym-single-amenity {
+        width: 33%;
+    }
+    .section-find-gym-reviews-top-left {
+        width: 25%;
     }
 
 
 
     .section-find-gym-reviews-top-left>h3 {
-        font-size: 90px;
+        font-size: 70px;
     }
     .section-find-gym-heading-container.space-between>h1 {
-        font-size: 40px;
+        font-size: 30px;
     }
     .section-find-gym-facilities.column-start>h2, .section-find-gym-amenities>h2, .section-find-gym-hours-map>h2, div#opening-hours h2, .section-find-gym-hero .gym-select-container .gym-select__control .gym-select__placeholder {
-        font-size: 35px;
+        font-size: 25px;
     }
     .section-find-gym-reviews-top-left>h2 {
-        font-size: 30px;
+        font-size: 25px;
     }
     .section-find-gym-hero .gym-select-container .gym-select__control .gym-select__placeholder {
         font-size: 25px;
     }
     .section-find-gym-about-container>h2 {
-        font-size: 25px;
+        font-size: 20px;
     }
     .section-find-gym-facility-content-heading h4 {
         font-size: 17px;
     }
     .section-find-gym-facility-content-heading h3, button.section-find-gym-scrolling-entry-btn {
-        font-size: 16px;
+        font-size: 12px;
     }
     .section-find-gym-about-container>p, .section-find-gym-reviews-top-right td, .section-find-gym-reviews-bottom-left>h4, .section-find-gym-hours-map-content table td, .section-find-gym-facility-desc, .section-find-gym-reviews-top-left>p, .section-find-gym-reviews-bottom-right {
         font-size: 11px;
