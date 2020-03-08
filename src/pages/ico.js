@@ -15,6 +15,22 @@ import { Wrapper, Hero, ImpossibleBanner} from "../components";
 import find_gym_hero_img from "../images/find-gym-hero-img.png";
 import alpha_preview_banner from '../images/alpha_preview_banner.png'
 
+const features = [
+    {
+        name: 'privacy',
+        desc: 'Cryptograp cally secured',
+    },{
+        name: 'proprietary gamification interface',
+        desc: 'Intrinsically motivate users to workout',
+    },{
+        name: 'trust',
+        desc: 'Trusted, immutable peer reviews',
+    },{
+        name: 'security',
+        desc: 'Verified user security through Know Your Customer (KYC)',
+    },
+];
+
 export default class Help extends React.Component {
     state = {
       current_slider_position: 1,
@@ -99,6 +115,15 @@ export default class Help extends React.Component {
                             <img src={forwardIcon} alt='next_button' />
                         </button>
                     </div>
+                </div>
+                <div className='section-ico-features-container row-center space-between'>
+                    {features.map((item, i) => (
+                        <div key={i} className='section-ico-feature'>
+                            <img src={require(`../images/ico_feature_${i+1}.png`)} alt={`../images/ico_feature_${i+1}.png`} />
+                            <h4>{item.name.toUpperCase()}</h4>
+                            <p>{item.desc}</p>
+                        </div>
+                    ))}
                 </div>
                 <ImpossibleBanner />
             </Wrapper>
