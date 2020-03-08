@@ -164,6 +164,20 @@ export default class Help extends React.Component {
                         </div>
                     </div>
                 </div>
+                <div className='section-ico-gym-banner row-center space-between'>
+                    <div className='column-end'>
+                        <h2>Gym or</h2>
+                        <h2>studio owner?</h2>
+                    </div>
+                    <div className='column-start'>
+                        <p>Want to become a partner in the Fittfind community?</p>
+                        <p>Personal trainers, gyms, fitness canters, nutritionists, and other industry professionals are invited and encouraged to submit and application now.</p>
+                        <Link to='/list-yourself/' className='section-gym-owners-btn'>
+                            GET LISTED
+                            <img src={forwardIcon} alt='forwardIcon' />
+                        </Link>
+                    </div>
+                </div>
                 <ImpossibleBanner />
             </Wrapper>
         )
