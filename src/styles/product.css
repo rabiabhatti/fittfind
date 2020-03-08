@@ -128,7 +128,7 @@
 @media (min-width: 426px) and (max-width: 768px) {
     .product-desc-container {
         width: 110%;
-        left: 1.153rem;
+        left: 0.85rem;
         background-size: 100% 100%;
 
     }
