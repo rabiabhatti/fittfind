@@ -1,0 +1,24 @@
+.section-loading-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #2b2d34;
+}
+.section-loading-fifth-portion {
+    width: 25vw;
+    position: relative;
+    background-color: #025696;
+
+}
+.loading {
+    top: 100%;
+    height: 0;
+    animation: full_screen 1s both;
+}
+.loaded {
+    top: 0;
+    height: 100vh;
+}
+@keyframes full_screen {
+    from { height: 0; top: 100%}
+    to {height: 100vh; top: 0}
+}
