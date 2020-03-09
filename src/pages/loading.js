@@ -39,8 +39,11 @@ export default class Loading extends React.Component {
         const w_sections= [20, 40, 60, 80, 100];
 
         return (
-            <div>
+            <div className='section-loading'>
                 <div className='section-loading-container space-between row-center'>
+                    <div className='section-loading-major-percentage'>
+                        <p>{loaded}</p>
+                    </div>
                     {w_sections.map(s => (
                         <div className={`section-loading-fifth-portion ${loaded <= s && loaded > s-20 && 'loading'} ${loaded > s && 'loaded'} ${loaded === 100 && 'loaded'}`} key={s}/>
                     ))}

@@ -1,13 +1,19 @@
 .section-loading-container {
+    top: 0;
+    left: 0;
     width: 100vw;
+    z-index: -100;
     height: 100vh;
+    overflow: hidden;
+    max-height: 100vh;
+    position: absolute;
     background-color: #2b2d34;
 }
 .section-loading-fifth-portion {
     width: 25vw;
     position: relative;
     background-color: #025696;
-
+    z-index: -3;
 }
 .loading {
     top: 100%;
@@ -21,4 +27,14 @@
 @keyframes full_screen {
     from { height: 0; top: 100%}
     to {height: 100vh; top: 0}
+}
+.section-loading-major-percentage {
+    top: -82%;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    font-size: 85rem;
+    color: #ffffff0a;
+    text-align: center;
+    position: absolute;
 }
