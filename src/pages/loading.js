@@ -1,6 +1,7 @@
 import React from 'react'
 
 import '../styles/loading.css'
+import logo_light from "../images/logo_light.png";
 
 const height = window.innerHeight;
 
@@ -40,13 +41,30 @@ export default class Loading extends React.Component {
 
         return (
             <div className='section-loading'>
-                <div className='section-loading-container space-between row-center'>
+                <div className='section-loading-background space-between row-center'>
                     <div className='section-loading-major-percentage'>
                         <p>{loaded}</p>
                     </div>
                     {w_sections.map(s => (
                         <div className={`section-loading-fifth-portion ${loaded <= s && loaded > s-20 && 'loading'} ${loaded > s && 'loaded'} ${loaded === 100 && 'loaded'}`} key={s}/>
                     ))}
+                </div>
+                <div className='space-between section-loading-main-content'>
+                    <p className='section-loading-left-slogan'>Find & release your inner athlete</p>
+                    <div className='section-loading-minor-headings'>
+                        <div className='section-loading-top-minor-heading-container'>
+                            <h2 className='section-loading-minor-heading'>{loaded}%</h2>
+                            <div className='section-loading-top-minor-heading-line' />
+                        </div>
+                        <h2 className='section-loading-minor-heading'>LOADING</h2>
+                    </div>
+                    <div className='align-center section-loading-logo-container'>
+                        <img src={logo_light} alt='logo_light' className='section-loading-logo'/>
+                    </div>
+                    <div className='space-between section-loading-right-slogan'>
+                        <p>+</p>
+                        <p className=''>Find & release your inner athlete</p>
+                    </div>
                 </div>
             </div>
 
