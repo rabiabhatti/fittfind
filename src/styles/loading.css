@@ -53,8 +53,8 @@
 }
 .section-loading-logo-container {
     align-self: center;
-    position: relative;
-    left: 10%;
+    position: absolute;
+    left: 40%;
 }
 .section-loading-logo {
     width: 40%;
@@ -79,8 +79,25 @@
     align-self: flex-end;
 }
 .section-loading-minor-headings {
+    left: 100px;
+    position: absolute;
     align-self: flex-end;
 }
 .section-loading-left-slogan {
-    width: 5vw;
+    top: 25%;
+    left: -3%;
+    position: absolute;
+    transform: rotate(270deg);
+    text-transform: uppercase;
+}
+.section-loading-left-slogan-cover {
+    width: 3.5rem;
+    height: 250px;
+    position: absolute;
+    background-color: #025696;
+    animation: cover_slogan 3s both;
+}
+@keyframes cover_slogan {
+    from { height: 250px}
+    to {height: 0}
 }
