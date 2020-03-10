@@ -10,7 +10,9 @@ export default class Loading extends React.Component {
     };
 
     componentDidMount() {
-        this.updatePercentage()
+        this.timeOut = setTimeout(() => {
+            this.updatePercentage()
+        }, 1000)
     }
 
     updatePercentage = () => {
@@ -31,6 +33,7 @@ export default class Loading extends React.Component {
 
     componentWillUnmount() {
         clearInterval(this.timer);
+        clearTimeout(this.timeOut)
     }
 
     render() {
@@ -48,12 +51,10 @@ export default class Loading extends React.Component {
                     ))}
                 </div>
                 <div className='space-between section-loading-main-content'>
-                    {loaded > 20 &&
-                        <div className='section-loading-left-slogan-container'>
-                            <span className='section-loading-left-slogan'>Find & release your inner athlete</span>
-                            <div className='section-loading-left-slogan-cover' />
-                        </div>
-                    }
+                    <div className='section-loading-left-slogan-container'>
+                        <span className='section-loading-left-slogan'>Find & release your inner athlete</span>
+                        <div className='section-loading-left-slogan-cover' />
+                    </div>
                     <div className='section-loading-minor-headings'>
                         <div className='section-loading-top-minor-heading-container'>
                             <h2 className='section-loading-minor-heading'>{loaded}%</h2>
@@ -64,12 +65,13 @@ export default class Loading extends React.Component {
                     <div className='align-center section-loading-logo-container'>
                         <img src={logo_light} alt='logo_light' className='section-loading-logo'/>
                     </div>
-                    {loaded > 20 &&
-                        <div className='space-between section-loading-right-slogan'>
-                            <p>+</p>
-                            <p className=''>Find & release your inner athlete</p>
+                    <div className='space-between section-loading-right-slogan-container'>
+                        <p>&#726;</p>
+                        <div>
+                            <span className='section-loading-right-slogan'>Find & release your inner athlete</span>
+                            <div className='section-loading-right-slogan-cover' />
                         </div>
-                    }
+                    </div>
                 </div>
             </div>
 

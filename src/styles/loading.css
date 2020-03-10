@@ -47,31 +47,36 @@
 .section-loading-minor-heading {
     font-size: 5rem;
 }
-.section-loading-right-slogan {
+.section-loading-right-slogan-container {
     height: 100vh;
     flex-direction: column;
 }
 .section-loading-logo-container {
+    top: 40%;
+    left: 40%;
+    height: 0;
+    overflow: hidden;
     align-self: center;
     position: absolute;
-    left: 40%;
+    animation: show_logo 1s both;
 }
 .section-loading-logo {
-    width: 40%;
+    width: 30%;
 }
 .section-loading-top-minor-heading-line {
-    width: 80%;
+    width: 200px;
     height: 4px;
     background-color: #ffffff;
 }
 .section-loading-top-minor-heading-container {
-    left: 7rem;
+    left: 6rem;
     display: flex;
+    width: 280px;
     position: relative;
     flex-direction: column;
 }
 .section-loading-top-minor-heading-container .section-loading-minor-heading {
-    left: 5%;
+    right: 7%;
     bottom: 1rem;
     height: 4.5rem;
     overflow: hidden;
@@ -79,25 +84,58 @@
     align-self: flex-end;
 }
 .section-loading-minor-headings {
-    left: 100px;
+    width: 0;
+    left: 60px;
     position: absolute;
     align-self: flex-end;
+    overflow: hidden;
+    animation: increase_width 3s both;
 }
 .section-loading-left-slogan {
-    top: 25%;
+    top: 20%;
     left: -3%;
     position: absolute;
     transform: rotate(270deg);
     text-transform: uppercase;
 }
+.section-loading-right-slogan {
+    position: absolute;
+    bottom: 20%;
+    right: -3%;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+}
+.section-loading-right-slogan-cover {
+    height: 250px;
+    bottom: 0;
+    right: 1%;
+    width: 3.5rem;
+    position: absolute;
+    background-color: #2b2d34;
+    animation: cover_slogan 2s both;
+}
 .section-loading-left-slogan-cover {
     width: 3.5rem;
     height: 250px;
     position: absolute;
-    background-color: #025696;
-    animation: cover_slogan 3s both;
+    background-color: #2b2d34;
+    animation: cover_slogan 2s both;
+}
+.section-loading-right-slogan-container p {
+    top: 2%;
+    right: 2.5%;
+    font-size: 2rem;
+    position: absolute;
 }
 @keyframes cover_slogan {
     from { height: 250px}
     to {height: 0}
+}
+@keyframes increase_width {
+    from { width: 0; overflow: hidden}
+    to {width: 500px; overflow: visible}
+}
+@keyframes show_logo {
+    from { height: 0;}
+    to {height: 38px;}
 }
