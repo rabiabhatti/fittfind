@@ -36,10 +36,37 @@ export default function AboutUs (props) {
                     </div>
                 </div>
             </Hero>
-            <div className='section-about-us-banner'>
+            <div className='section-about-us-banner row-center'>
                 <div className='section-about-us-banner-left'>
                     <div><img src={horizontal_line} alt='horizontal_line' /><h1>About <span>fitt</span><span>find</span></h1></div>
-                    <p>Phasellus ut consectetur diam, sed cursus elit. Aenean euismod, lorem sit amet hendrerit porttitor, metus libero placerat lorem, nec euismod mi nibh id mi.<br/><br/>Nam et vestibulum justo. Suspendisse venenatis nisi nec turpis bibendum fermentum.<br/><br/>Nullam hendrerit, mi at dictum vehicula, lacus ex pretium ligula, sit amet elementum enim magna quis odio. Aliquam id dapibus tellus, dictum bibendum sem. Vestibulum vel viverra felis, ac hendrerit turpis.<br/><br/>Phasellus ut consectetur diam, sed cursus elit. Aenean euismod, lorem sit amet hendrerit porttitor, metus libero placerat lorem, nec euismod mi nibh id mi.<br/><br/>Nam et vestibulum justo. Suspendisse venenatis nisi nec turpis bibendum fermentum.</p>
+                    <p>
+                        Fittfind is a technology driven corporation engaged in the design, development and marketing of Elite sportswear.
+                        We believe that as long as you have a pulse, there’s there is an inner
+                        athlete waiting to emerge. Our mission is to provide our athletes with the tools and services
+                        they need to lead a rich, healthy, and fulfilling life. <br/><br/>From our redefined sportswear to our advanced mobile app, FittFind connects you to a pool
+                        of with the personal trainers, physio therapists, nutritionists, gyms, and studios they seek to
+                        build and sustain a fit and healthy lifestyle.
+                        <br/><br/>
+                        We’re not just selling tee shirts and sneakers – we’re changing the way that athletes, trainers,
+                        and gyms find and connect with one another in order to achieve great superior physical fitness and mental well-being.
+                        <br/><br/>
+                        With our home base located in the beautiful city of London, we’re providing athletes around the world with an easy and effective way to connect to fitness.
+                        Whether you’re in the UK, New York, or Mozambique,
+                        our mobile app is a connection to the world of fitness, making it easy to find the trainer or gym where you can best develop your inner athlete.
+                        <br/><br/>
+                        All of our products are designed and developed in house, then manufactured in top-quality
+                        factories in order to provide our athletes with superior products at competitive prices. We
+                        know that everyone has it in them to become a great athlete, and we’re dedicated to giving you
+                        the tools and products needed to smash that goal and achieve that dream. With great fitness
+                        you can achieve your true potential, and we’re dedicated to making our athletes all they can be
+                        – inside and out.
+                        <br/><br/>
+                        Our innovative new fitness app took the 2017-2018 title of Best Growth Business at the annual
+                        Flare awards in Hatfield, England. Recognized for our advanced digital software and streamlined
+                        way of connecting fitness clients with trainers, gyms, and other professionals, we’re quickly
+                        making our mark on the industry. Our 2Fs logo, as well as our “Find & Release” trademark is
+                        fast becoming recognized by leading industry professionals and athletes everywhere.
+                    </p>
                 </div>
                 <div className='section-about-us-banner-right'>
                     <img src={about_us_banner_right_1} alt='about_us_banner_right_1' />
