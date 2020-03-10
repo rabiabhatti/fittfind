@@ -53,7 +53,7 @@ export default class Help extends React.Component {
     };
 
     render() {
-        const { current_slider_position } = this.state
+        const { current_slider_position } = this.state;
         const dashboard_images_no = [1, 2, 3, 4, 5];
 
         return (
