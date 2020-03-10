@@ -144,21 +144,26 @@ a.section-about-us-hero-top>img {
     font-size: 30px;
     text-transform: uppercase;
 }
-.section-about-us-corporates-details p {
+.section-about-us-corporates-single-detail-p {
     font-size: 15px;
     line-height: 1.6;
     font-weight: 600;
     color: #5a5f69;
     font-family: 'Montserrat', sans-serif;
 }
-button.corporates-single-detail-btn {
+.corporates-single-detail-btn {
+    width: 5rem;
     font-size: 15px;
     line-height: 1.6;
     font-weight: 700;
+    display: block;
     color: #055595;
     padding: 15px 0 5px 0;
     border-bottom: 1px solid #055595;
     font-family: 'Montserrat', sans-serif;
+}
+.section-about-us-corporates-single-detail-link {
+    color: #025696;
 }
 .section-about-us-corporates-details>div:nth-child(3), .section-about-us-corporates-details>div:nth-child(6), .section-about-us-corporates-details>div:nth-child(9), .section-about-us-corporates-details>div:nth-child(12), .section-about-us-corporates-details>div:nth-child(15), .section-about-us-corporates-details>div:nth-child(18), .section-about-us-corporates-details>div:nth-child(21), .section-about-us-corporates-details>div:nth-child(24) {
     margin-right: 0;
@@ -202,7 +207,7 @@ button.corporates-single-detail-btn {
     .section-about-us-banner-left p {
         font-size: 13px;
     }
-    .section-about-us-corporates-details p, button.corporates-single-detail-btn {
+    .section-about-us-corporates-single-detail-p, .corporates-single-detail-btn {
         font-size: 12px;
     }
     a.section-about-us-hero-top {
@@ -259,7 +264,7 @@ button.corporates-single-detail-btn {
     .section-about-us-banner-left p {
         font-size: 13px;
     }
-    .section-about-us-corporates-details p, button.corporates-single-detail-btn {
+    .section-about-us-corporates-single-detail-p, .corporates-single-detail-btn {
         font-size: 12px;
     }
     a.section-about-us-hero-top {
@@ -354,7 +359,7 @@ button.corporates-single-detail-btn {
     .section-about-us-banner-left p {
         font-size: 11px;
     }
-    .section-about-us-corporates-details p, button.corporates-single-detail-btn {
+    .section-about-us-corporates-single-detail-p, .corporates-single-detail-btn {
         font-size: 10px;
     }
     a.section-about-us-hero-top {
