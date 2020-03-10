@@ -9,7 +9,7 @@ import horizontal_line from "../../images/horizontal_line.png";
 import backward_icon from '../../images/backward_icon_dark.png';
 import background_imag from '../../images/background-blue-imag.jpg';
 import forwardIconDark from "../../images/forward_icon_dark.png";
-import gym_list_hero_img from "../../images/gym-list-hero-img.png";
+import gym_list_hero_img from "../../images/gym-list-hero-img.jpg";
 
 const facilitiesOptions = [
     { value: 'ALL', label: 'ALL' },
@@ -150,9 +150,6 @@ export default class GymList extends React.Component{
                 </div>
                 <Hero>
                     <div className='column-start section-gym-list'>
-                        <div className='section-gym-list-banner'>
-                            <img src={gym_list_hero_img} alt='gym-list-hero-img' />
-                        </div>
                         <div className='section-gym-list-text'>
                             <h1 className='section-gym-list-text-child-one'>Flexible gym & studio access:#find&release</h1>
                             <h2 className='section-gym-list-text-child-two'>Safely access over <span>1000 gyms & studios</span></h2>

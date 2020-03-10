@@ -79,10 +79,19 @@ img.section-single-gym-star {
 }
 .section-gym-list-text {
     color: #fff;
-    margin-left: 4vw;
-    margin-top: -11vw;
+    width: 100%;
+    display: flex;
+    min-height: 34rem;
+    padding-left: 4vw;
     padding-bottom: 4vw;
+    flex-direction: column;
+    background-size: cover;
+    align-items: flex-start;
+    justify-content: flex-end;
     text-transform: uppercase;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/gym-list-hero-img.jpg");
 }
 .section-gym-list-text-child-one {
     line-height: 1;
