@@ -13,7 +13,7 @@ import seven from '../../images/07.png'
 import eight from '../../images/08.png'
 import backward_icon from '../../images/backward-icon.png'
 import about_us_banner_right_1 from '../../images/about-us-banner-right-1.png'
-import about_us_banner_right_2 from '../../images/about-us-banner-right-2.png'
+import about_us_banner_right_2 from '../../images/about-us-banner-right-2.jpg'
 import vertical_line_white from '../../images/vertical_line_white.png'
 import horizontal_line from '../../images/horizontal_line.png'
 import { Hero, Wrapper, ImpossibleBanner } from '../../components'
@@ -36,7 +36,7 @@ export default function AboutUs (props) {
                     </div>
                 </div>
             </Hero>
-            <div className='section-about-us-banner row-center'>
+            <div className='section-about-us-banner row-center space-between'>
                 <div className='section-about-us-banner-left'>
                     <div><img src={horizontal_line} alt='horizontal_line' /><h1>About <span>fitt</span><span>find</span></h1></div>
                     <p>
@@ -69,7 +69,7 @@ export default function AboutUs (props) {
                     </p>
                 </div>
                 <div className='section-about-us-banner-right'>
-                    <img src={about_us_banner_right_1} alt='about_us_banner_right_1' />
+                    {/*<img src={about_us_banner_right_1} alt='about_us_banner_right_1' />*/}
                     <img src={about_us_banner_right_2} alt='about_us_banner_right_2' />
                 </div>
             </div>
