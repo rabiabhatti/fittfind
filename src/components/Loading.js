@@ -3,10 +3,10 @@ import React from 'react'
 import '../styles/loading.css'
 import logo_light from "../images/logo_light.png";
 
-export default class Loading extends React.Component {
+class Loading extends React.Component {
     state = {
-      loaded: 0,
-      totalTime: 5,
+        loaded: 0,
+        totalTime: this.props.totalTime,
     };
 
     componentDidMount() {
@@ -78,3 +78,5 @@ export default class Loading extends React.Component {
         )
     }
 }
+
+export { Loading }

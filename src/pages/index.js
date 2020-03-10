@@ -3,27 +3,41 @@ import { Link } from "gatsby"
 
 import '../styles/products_categories.css'
 
-import {Wrapper, Hero, Slider, ImpossibleBanner, VideoPopup} from "../components"
+import {Wrapper, Hero, Slider, ImpossibleBanner, VideoPopup, Loading} from "../components"
 
+import fit from '../images/fit.png'
+import men_banner from '../images/men_banner.jpg'
+import fittfind_h from '../images/fittfind_h.png'
+import app_imag from '../images/app-store-imag.jpg'
+import play_button from '../images/play-button.png'
 import forwardIcon from '../images/forward-icon.png'
 import women_banner from '../images/women_banner.jpg'
-import men_banner from '../images/men_banner.jpg'
-import app_imag from '../images/app-store-imag.jpg'
 import app_video from '../images/app-store-video.jpg'
-import play_button from '../images/play-button.png'
-import app_store_button_s from '../images/app-store-button-s.png'
-import fittfind_h from '../images/fittfind_h.png'
 import horizontal_line from '../images/horizontal_line.png'
-import fit from '../images/fit.png'
+import app_store_button_s from '../images/app-store-button-s.png'
 import background_imag from '../images/background-blue-imag.jpg'
 
 class IndexPage extends React.Component {
     state = {
       show_video: false,
+      show_loading: true,
     };
 
+    componentDidMount() {
+        this.timeOut = setTimeout(() => {
+            this.setState({ show_loading: false })
+        }, 5000)
+    }
+
+    componentWillUnmount() {
+        clearTimeout(this.timeOut)
+    }
+
     render() {
-        const { show_video } = this.state;
+        const { show_video, show_loading } = this.state;
+        if (show_loading) {
+            return <Loading totalTime={3} />
+        }
 
         return (
             <Wrapper name='Home' location={this.props.location}>
