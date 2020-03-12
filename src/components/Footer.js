@@ -111,7 +111,7 @@ class Footer extends React.Component {
                             <div className='menu-row'>
                                 <h4>Support</h4>
                                 <Link to={'/contact/order-status'}>Track my order</Link>
-                                <Link to={'/contact/'}>Support</Link>
+                                <Link to={'/contact#contact'}>Support</Link>
                                 <Link to={'/'}>Terms and Conditions</Link>
                                 <Link to={'/'}>Privacy Policy</Link>
                             </div>

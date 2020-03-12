@@ -9,7 +9,7 @@ import horizontal_line from "../../images/horizontal_line.png";
 import backward_icon from '../../images/backward_icon_dark.png';
 import background_imag from '../../images/background-blue-imag.jpg';
 import forwardIconDark from "../../images/forward_icon_dark.png";
-import gym_list_hero_img from "../../images/gym-list-hero-img.jpg";
+// import gym_list_hero_img from "../../images/gym-list-hero-img.jpg";
 
 const facilitiesOptions = [
     { value: 'ALL', label: 'ALL' },
