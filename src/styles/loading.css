@@ -60,9 +60,6 @@
     position: absolute;
     animation: show_logo 1s both;
 }
-.section-loading-logo {
-    width: 30%;
-}
 .section-loading-top-minor-heading-line {
     width: 200px;
     height: 4px;
@@ -137,5 +134,5 @@
 }
 @keyframes show_logo {
     from { height: 0;}
-    to {height: 38px;}
+    to {height: 98px;}
 }

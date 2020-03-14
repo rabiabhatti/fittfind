@@ -1,7 +1,7 @@
 import React from 'react'
 
 import '../styles/loading.css'
-import logo_light from "../images/logo_light.png";
+import logo_light from "../images/loading-logo.png";
 
 class Loading extends React.Component {
     state = {
