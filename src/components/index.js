@@ -6,6 +6,7 @@ export * from './Footer';
 export * from './LeftBar';
 export * from './Wrapper';
 export * from './Product';
+export * from './Payment';
 export * from './Loading';
 export * from './RightNav';
 export * from './BasketInput';

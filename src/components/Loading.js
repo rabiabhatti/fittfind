@@ -74,7 +74,6 @@ class Loading extends React.Component {
                     </div>
                 </div>
             </div>
-
         )
     }
 }
