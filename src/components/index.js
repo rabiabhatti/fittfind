@@ -10,6 +10,7 @@ export * from './Loading';
 export * from './RightNav';
 export * from './BasketInput';
 export * from './Popup/SignIn';
+export * from './UserAttribute';
 export * from './Popup/Register';
 export * from './Popup/VideoPopup';
 export * from './Popup/NewsLetter';
