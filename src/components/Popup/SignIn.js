@@ -32,10 +32,10 @@ class SignIn extends React.Component {
     };
 
     render() {
-        const { name, email, password } = this.state;
+        const { email, password } = this.state;
         const { handleClose } = this.props;
 
-        const enable = name !== '' && password !== '' && email !== '';
+        const enable = password !== '' && email !== '';
 
         return (
             <Popup title="Sign In" handleClose={handleClose}>

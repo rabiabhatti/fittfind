@@ -91,6 +91,9 @@ button {
 button:focus, input:focus {
     outline: none;
 }
+.full-width {
+    width: 100%;
+}
 .row-center {
     display: flex;
     flex-direction: row;
@@ -211,9 +214,28 @@ p, h1, h2, h3, h4, h5{
 }
 
 button:disabled {
+    opacity: 0.3;
     pointer-events: none;
 }
 
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    animation: fadeOut 1.5s both;
+}
+.show {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeIn 1s both;
+}
+@keyframes fadeIn {
+    from { opacity: 0; visibility: hidden; }
+    to {opacity: 1; visibility: visible;}
+}
+@keyframes fadeOut {
+    from { opacity: 1; visibility: visible; }
+    to {opacity: 0; visibility: hidden;}
+}
 
 
 
@@ -242,7 +264,7 @@ button:disabled {
 /*tablets, ipads (landscape)*/
 @media (min-width: 769px) and (max-width: 1024px) {
     nav.section-nav-left {
-        width: 55%;
+        width: 55% !important;
     }
     .section-impossible>img:nth-child(2) {
         margin-top: 25px;
@@ -266,5 +288,40 @@ button:disabled {
     }
     .react-select-container {
         width: 49%;
+    }
+}
+
+
+
+
+
+/*tablets, ipads*/
+@media (min-width: 426px) and (max-width: 768px) {
+    nav.section-nav-left {
+        width: 75% !important;
+    }
+    .section-impossible>img:nth-child(2) {
+        left: 30vw;
+        width: 40vw;
+        margin-top: 25px;
+    }
+    .select-container p img {
+        display: none;
+    }
+    .section-gym-owners {
+        padding: 70px 100px;
+    }
+    .section-impossible>img:nth-child(3), .section-impossible>img:nth-child(4) {
+        height: 160px;
+    }
+    .section-impossible>img:nth-child(4) {
+        margin: -160px auto 0 auto;
+    }
+    img.section-background-blue-right {
+        height: 215vw;
+        width: 28.1vw;
+    }
+    .react-select-container {
+        width: 60%;
     }
 }

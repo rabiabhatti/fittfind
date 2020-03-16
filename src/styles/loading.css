@@ -1,0 +1,138 @@
+.section-loading-background {
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: -100;
+    height: 100vh;
+    overflow: hidden;
+    max-height: 100vh;
+    position: absolute;
+    background-color: #2b2d34;
+}
+.section-loading-fifth-portion {
+    width: 25vw;
+    position: relative;
+    background-color: #025696;
+    z-index: -3;
+}
+.loading {
+    top: 100%;
+    height: 0;
+    animation: full_screen 1s both;
+}
+.loaded {
+    top: 0;
+    height: 100vh;
+}
+@keyframes full_screen {
+    from { height: 0; top: 100%}
+    to {height: 100vh; top: 0}
+}
+.section-loading-major-percentage {
+    top: -82%;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    font-size: 85rem;
+    color: #ffffff0a;
+    text-align: center;
+    position: absolute;
+}
+.section-loading-main-content {
+    display: flex;
+    color: #ffffff;
+    flex-direction: row;
+    height: 100vh;
+}
+.section-loading-minor-heading {
+    font-size: 5rem;
+}
+.section-loading-right-slogan-container {
+    height: 100vh;
+    flex-direction: column;
+}
+.section-loading-logo-container {
+    top: 40%;
+    left: 40%;
+    height: 0;
+    overflow: hidden;
+    align-self: center;
+    position: absolute;
+    animation: show_logo 1s both;
+}
+.section-loading-top-minor-heading-line {
+    width: 200px;
+    height: 4px;
+    background-color: #ffffff;
+}
+.section-loading-top-minor-heading-container {
+    left: 6rem;
+    display: flex;
+    width: 280px;
+    position: relative;
+    flex-direction: column;
+}
+.section-loading-top-minor-heading-container .section-loading-minor-heading {
+    right: 7%;
+    bottom: 1rem;
+    height: 4.5rem;
+    overflow: hidden;
+    position: relative;
+    align-self: flex-end;
+}
+.section-loading-minor-headings {
+    width: 0;
+    left: 60px;
+    position: absolute;
+    align-self: flex-end;
+    overflow: hidden;
+    animation: increase_width 3s both;
+}
+.section-loading-left-slogan {
+    top: 20%;
+    left: -3%;
+    position: absolute;
+    transform: rotate(270deg);
+    text-transform: uppercase;
+}
+.section-loading-right-slogan {
+    position: absolute;
+    bottom: 20%;
+    right: -3%;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+}
+.section-loading-right-slogan-cover {
+    height: 250px;
+    bottom: 0;
+    right: 1%;
+    width: 3.5rem;
+    position: absolute;
+    background-color: #2b2d34;
+    animation: cover_slogan 2s both;
+}
+.section-loading-left-slogan-cover {
+    width: 3.5rem;
+    height: 250px;
+    position: absolute;
+    background-color: #2b2d34;
+    animation: cover_slogan 2s both;
+}
+.section-loading-right-slogan-container p {
+    top: 2%;
+    right: 2.5%;
+    font-size: 2rem;
+    position: absolute;
+}
+@keyframes cover_slogan {
+    from { height: 250px}
+    to {height: 0}
+}
+@keyframes increase_width {
+    from { width: 0; overflow: hidden}
+    to {width: 500px; overflow: visible}
+}
+@keyframes show_logo {
+    from { height: 0;}
+    to {height: 98px;}
+}

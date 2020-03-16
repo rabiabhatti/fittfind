@@ -103,7 +103,6 @@
     text-transform: uppercase;
 }
 .section-contact-details-container {
-    width: 60%;
     font-family: 'Montserrat', sans-serif;
 }
 .section-contact-detail p {
@@ -170,5 +169,56 @@
     }
     .section-contact-hero-bottom-feature:nth-child(3)>div>img {
         width: 85px;
+    }
+}
+
+
+
+
+/*tablets, ipads*/
+@media (min-width: 426px) and (max-width: 768px) {
+    .section-contact-details {
+        top: -7rem;
+        padding: 1rem 0;
+        margin-bottom: -5rem;
+    }
+    .section-contact-hero-top span {
+        padding: 12vw 0 8vw 0;
+    }
+    .section-contact-detail p {
+        line-height: 2;
+    }
+    .section-contact-hero-bottom-feature:nth-child(3)>div>img {
+        width: 50px;
+    }
+    .column-center.section-contact-hero-bottom-feature-img>img {
+        width: 60px;
+    }
+    .section-contact-hero-bottom-features>div:first-child>div>img {
+        width: 70px;
+    }
+    .column-center.section-contact-hero-bottom-feature-img {
+        height: 100px;
+    }
+    .section-contact-hero-bottom {
+        padding: 5% 0;
+    }
+    .section-contact-hero-bottom-features, .section-contact-details {
+        width: 70%;
+    }
+    .section-contact-hero-bottom-feature {
+        padding: 0;
+    }
+    .section-contact-details-container {
+        width: 90%;
+    }
+
+
+    
+    .section-contact-hero-bottom h2, .section-contact-details h2, .section-contact-hero-top span {
+        font-size: 30px;
+    }
+    .section-contact-hero-category p, .section-contact-hero-bottom-feature h4, .section-contact-detail h4, .heading-light, .section-contact-detail p {
+        font-size: 10px;
     }
 }

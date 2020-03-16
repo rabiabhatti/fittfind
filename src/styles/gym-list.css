@@ -79,10 +79,19 @@ img.section-single-gym-star {
 }
 .section-gym-list-text {
     color: #fff;
-    margin-left: 4vw;
-    margin-top: -11vw;
+    width: 100%;
+    display: flex;
+    min-height: 34rem;
+    padding-left: 4vw;
     padding-bottom: 4vw;
+    flex-direction: column;
+    background-size: cover;
+    align-items: flex-start;
+    justify-content: flex-end;
     text-transform: uppercase;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../images/gym-list-hero-img.jpg");
 }
 .section-gym-list-text-child-one {
     line-height: 1;
@@ -226,6 +235,73 @@ h2.section-gym-list-text-child-two>span {
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+    }
+
+
+    .section-gym-list-text-child-one {
+        font-size: 40px;
+    }
+    .section-gym-list-text-child-two {
+        font-size: 25px;
+    }
+    .section-single-gym-desc-top-two>h4 {
+        font-size: 15px
+    }
+    .section-single-gym-desc-top-two>h5, .section-single-gym-desc-top>p, .section-single-gym-desc-bottom>h4, .section-gym-list-pages>button {
+        font-size: 14px;
+    }
+    .section-gym-list-filters p, .section-gym-list-map-btn, .section-gym-list-filters .react-select-container, .section-gym-list-filters-location, .section-gym-list-filters .react-select__placeholder, .section-single-gym-desc-middle {
+        font-size: 10px;
+    }
+}
+
+
+
+
+/*tablets, ipads*/
+@media (min-width: 426px) and (max-width: 768px) {
+    .section-gym-list-filters {
+        width: 65.3vw;
+    }
+    .section-gym-list-map-btn {
+        margin-right: 4vw;
+    }
+    .section-single-gym-desc {
+        left: 0.5rem;
+        width: 228px;
+        min-height: 100px;
+        padding: 10px 10px 10px 40px;
+    }
+    .section-single-gym-desc-top>p {
+        margin-left: 10px;
+    }
+    .section-single-gym-desc-top-two>h4 {
+        padding-top: 4px;
+    }
+    h2.section-gym-list-text-child-two>span {
+        padding: 5px 20px 0 15px;
+    }
+    p.section-single-gym-desc-middle {
+        max-height: 31px;
+        overflow-y: hidden;
+    }
+    .section-single-gym-desc-bottom>h4, .section-single-gym-desc-bottom>h4:nth-child(2) {
+        padding-top: 4px;
+    }
+    .section-single-gym-desc-top-two>h5 {
+        max-width: 99px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+    .section-single-gym-container {
+        width: 27.2vw;
+    }
+    .section-gym-list-pages>button:last-child {
+        margin-left: 15px;
+    }
+    .section-gym-list-pages>button:first-child {
+        margin-right: 15px;
     }
 
 

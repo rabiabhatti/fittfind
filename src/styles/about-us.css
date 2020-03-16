@@ -7,7 +7,7 @@
     background-size: 100%;
     background-position: right;
     background-repeat: no-repeat;
-    background-image: url("../images/about-us-hero-img.png");
+    background-image: url("../images/about-us-hero-img.jpg");
 }
 a.section-about-us-hero-top {
     color: #fff;
@@ -64,13 +64,13 @@ a.section-about-us-hero-top>img {
     width: 33%;
 }
 .section-about-us-banner-right {
-    width: 60%;
-    display: flex;
+    /*width: 60%;*/
+    /*display: flex;*/
 }
 .section-about-us-banner-right>img:first-child {
-    z-index: 2;
-    margin-top: 8vw;
-    margin-right: -28.5vw;
+    /*z-index: 2;*/
+    /*margin-top: 8vw;*/
+    /*margin-right: -28.5vw;*/
 }
 .section-about-us-banner-right>img:nth-child(2) {
     margin-top: -8vw;
@@ -144,21 +144,26 @@ a.section-about-us-hero-top>img {
     font-size: 30px;
     text-transform: uppercase;
 }
-.section-about-us-corporates-details p {
+.section-about-us-corporates-single-detail-p {
     font-size: 15px;
     line-height: 1.6;
     font-weight: 600;
     color: #5a5f69;
     font-family: 'Montserrat', sans-serif;
 }
-button.corporates-single-detail-btn {
+.corporates-single-detail-btn {
+    width: 5rem;
     font-size: 15px;
     line-height: 1.6;
     font-weight: 700;
+    display: block;
     color: #055595;
     padding: 15px 0 5px 0;
     border-bottom: 1px solid #055595;
     font-family: 'Montserrat', sans-serif;
+}
+.section-about-us-corporates-single-detail-link {
+    color: #025696;
 }
 .section-about-us-corporates-details>div:nth-child(3), .section-about-us-corporates-details>div:nth-child(6), .section-about-us-corporates-details>div:nth-child(9), .section-about-us-corporates-details>div:nth-child(12), .section-about-us-corporates-details>div:nth-child(15), .section-about-us-corporates-details>div:nth-child(18), .section-about-us-corporates-details>div:nth-child(21), .section-about-us-corporates-details>div:nth-child(24) {
     margin-right: 0;
@@ -171,8 +176,8 @@ button.corporates-single-detail-btn {
         margin-right: 30px;
     }
     .section-about-us-banner-right>img {
-        width: 80%;
-        height: 80% !important;
+        /*width: 80%;*/
+        /*height: 80% !important;*/
     }
     .section-about-us-hero-bottom>h2 {
         width: 63%;
@@ -202,7 +207,7 @@ button.corporates-single-detail-btn {
     .section-about-us-banner-left p {
         font-size: 13px;
     }
-    .section-about-us-corporates-details p, button.corporates-single-detail-btn {
+    .section-about-us-corporates-single-detail-p, .corporates-single-detail-btn {
         font-size: 12px;
     }
     a.section-about-us-hero-top {
@@ -259,8 +264,103 @@ button.corporates-single-detail-btn {
     .section-about-us-banner-left p {
         font-size: 13px;
     }
-    .section-about-us-corporates-details p, button.corporates-single-detail-btn {
+    .section-about-us-corporates-single-detail-p, .corporates-single-detail-btn {
         font-size: 12px;
+    }
+    a.section-about-us-hero-top {
+        font-size: 10px;
+    }
+}
+
+
+
+
+
+/*tablets, ipads*/
+@media (min-width: 426px) and (max-width: 768px) {
+    .section-about-us-banner-left>div>img {
+        top: -4px;
+        height: 2px;
+        width: 70px;
+        margin-right: 20px;
+        position: relative;
+    }
+    .section-about-us-banner-right>img {
+        width: 80%;
+    }
+    .section-about-us-hero-bottom>h2 {
+        width: 70%;
+    }
+    .section-about-us-banner-left {
+        width: 37%;
+    }
+    .section-about-us-corporates-details>div img {
+        width: 70px;
+        max-height: 2px;
+        margin-left: -25px;
+    }
+    .section-about-us-hero-bottom>h4:nth-child(4) {
+        margin-bottom: 25px;
+    }
+    .section-about-us-hero-bottom>img {
+        width: 2px;
+        height: 40px;
+        margin-bottom: 10px;
+    }
+    .section-about-us-hero {
+        padding: 1rem 3rem;
+    }
+    .section-about-us-banner-right {
+        /*margin-bottom: -10vw;*/
+        /*flex-direction: column;*/
+    }
+    .section-about-us-banner-right>img:first-child {
+        margin-top: -4vw;
+    }
+    .section-about-us-banner-right>img:nth-child(2) {
+        top: -17vw;
+        right: -11vw;
+        height: unset;
+        max-height: unset;
+        position: relative;
+        margin-top: unset;
+    }
+    .section-about-us-corporates {
+        margin-top: 0;
+    }
+    .section-about-us-corporates>h2 {
+        margin-bottom: 1vw;
+    }
+    .section-about-us-corporates-details {
+        width: 80%;
+    }
+    .section-about-us-corporates-details>div {
+        width: 28%;
+        margin-right: 5vw;
+    }
+    .section-about-us-corporates-details>div>div:first-child {
+        background-size: 4vw 3vw;
+        background-position: 6% 70%;
+    }
+
+
+    .section-about-us-banner-left h1, .section-about-us-corporates>h2 {
+        font-size: 30px;
+    }
+    .section-about-us-hero-bottom>h2 {
+        font-size: 25px;
+    }
+    .section-about-us-corporates-details>div h4 {
+        font-size: 15px;
+    }
+    .section-about-us-hero-bottom>h4 {
+        font-size: 15px;
+    }
+    .section-about-us-banner-left p {
+        font-size: 11px;
+    }
+    .section-about-us-corporates-single-detail-p, .corporates-single-detail-btn {
+        font-size: 10px;
     }
     a.section-about-us-hero-top {
         font-size: 10px;

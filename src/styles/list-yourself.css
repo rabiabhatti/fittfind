@@ -1,0 +1,48 @@
+.section-gym-dashboard-user-strength-bar {
+    width: 13vw;
+    height: 8px;
+    border-radius: 6px;
+    background-color: rgb(236 237 240);
+}
+.section-gym-dashboard-user-strength-bar-fill {
+    height: 8px;
+    border-radius: 6px;
+    background-color: #025696;
+}
+.section-gym-dashboard-user-single-att-container {
+    width: 30vw;
+}
+.section-gym-dashboard-user-single-att {
+    width: 100%;
+    height: 8px;
+    border-radius: 6px;
+    z-index: -2;
+    background-color: rgb(236 237 240);
+}
+.section-gym-dashboard-user-single-att-fill {
+    height: 8px;
+    border-radius: 6px;
+    background-color: rgb(191 195 204);
+}
+.section-gym-dashboard-user-single-att-positive {
+    color: rgb(64 198 102);
+}
+.section-gym-dashboard-user-single-att-negative {
+    color: rgb(223 35 45);
+}
+.section-gym-dashboard-user-single-att-addition {
+    height: 8px;
+    border-radius: 0 6px 6px 0;
+    position: relative;
+    left: -3px;
+    z-index: -1;
+    background-color: rgb(64 198 102);
+}
+.section-gym-dashboard-user-single-att-subtraction {
+    height: 8px;
+    border-radius: 0 6px 6px 0;
+    position: relative;
+    left: -3px;
+    z-index: -1;
+    background-color: rgb(225 49 56);
+}

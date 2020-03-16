@@ -82,6 +82,7 @@ class Header extends React.Component {
                 {this.renderNavLink('women')}
                 {this.renderNavLink('app')}
                 {this.renderNavLink('gym')}
+                {this.renderNavLink('ico')}
                 {this.renderNavLink('contact')}
             </ul>
         )

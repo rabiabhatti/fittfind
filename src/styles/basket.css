@@ -328,3 +328,30 @@ a.section-basket-hero-back-link>span {
         font-size: 10px;
     }
 }
+
+
+
+/*tablets, ipads*/
+@media (min-width: 426px) and (max-width: 768px) {
+    .section-basket-hero-products-count h1 {
+        font-size: 55px;
+    }
+    .section-basket-details h2 {
+        font-size: 40px;
+    }
+    .section-basket-heading:first-child, .section-basket-item-detail:first-child {
+        font-size: 24px;
+    }
+    .section-basket-hero-products-count p, .section-basket-heading:nth-child(3)>button, .section-basket-item-detail:nth-child(3)>button {
+        font-size: 23px;
+    }
+    .section-basket-single-item-price, .section-basket-details h4 {
+        font-size: 20px;
+    }
+    .section-basket-heading:nth-child(3), .section-basket-item-detail:nth-child(3) {
+        font-size: 18px;
+    }
+    .heading-light, .section-basket-item-details, .space-between>.column-start>p, .section-basket-place-order-btn, .section-basket-address-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p, .flag-select .selected--flag--option, .remember-card-text, a.section-basket-hero-back-link>span, .section-basket-address-select, .country-label {
+        font-size: 10px;
+    }
+}

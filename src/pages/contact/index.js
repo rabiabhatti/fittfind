@@ -82,7 +82,7 @@ export default class Contact extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className='section-contact-banner column-center'>
+                <div id='contact' className='section-contact-banner column-center'>
                     <img className='section-contact-banner-img' src={contact_banner} alt='contact_banner'/>
                     <div className='section-contact-details column-center'>
                         <h2>Contact Fittfind</h2>
