@@ -146,7 +146,7 @@ export default class Help extends React.Component {
                                 <h2>ACHIEVEMENTS</h2>
                                 <div className='section-gym-dashboard-user-achievements-list'>
                                     {user.achievements.map((achievement, i) => (
-                                        <div className='section-gym-dashboard-user-single-achievement'>
+                                        <div className='section-gym-dashboard-user-single-achievement' key={i}>
                                             <img src={achievement_badge} alt='achievement_badge' />
                                             <h4>{achievement.title.toUpperCase()}</h4>
                                             <p>{achievement.desc}</p>
