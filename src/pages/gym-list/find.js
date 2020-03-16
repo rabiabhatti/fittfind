@@ -98,9 +98,8 @@ export default class FundGym extends React.Component {
                 <div className='section-find-gym-content'>
                     <div className='section-find-gym-heading-container space-between'>
                         <h1>{name.toUpperCase()}</h1>
-                        <button className='section-find-gym-map-btn' onClick={() => this.handleContentScroll('find_gym_map')}>
-                            <span>Show map</span>
-                            <div/>
+                        <button className='section-find-gym-map-btn' onClick={() => this.handleContentScroll('show map')}>
+                            Show map
                         </button>
                     </div>
                     <div className='section-find-gym-desc-container'>
@@ -253,7 +252,7 @@ export default class FundGym extends React.Component {
                                     </tr>
                                 </tbody>
                             </table>
-                            <img src={find_gym_map} alt='find_gym_map' id='find_gym_map' />
+                            <img src={find_gym_map} alt='find_gym_map' id='show-map' />
                         </div>
                     </div>
                     <div id='price'>

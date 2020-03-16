@@ -34,11 +34,11 @@ export default class Popup extends React.Component {
   };
 
   render() {
-    const { children, handleClose, title } = this.props;
+    const { children, handleClose, title, sizeChart } = this.props;
 
     return ReactDOM.createPortal(
       <div className='section-popup column-center'>
-        <div  className='section-popup-content'>
+        <div  className={`section-popup-content ${sizeChart && 'sizeChartPopup'}`}>
           <button onClick={handleClose} className='section-popup-close-btn'>&#10005;</button>
           <h3>{title}</h3>
           {children}

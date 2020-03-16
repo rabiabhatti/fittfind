@@ -65,7 +65,7 @@ export default class Basket extends React.Component {
     };
 
     render() {
-        const { products_count, firstName, lastName, company, address, city, postCode, deliveryMode, phone } = this.state;
+        const { products_count, firstName, lastName, company, address, city, postCode, phone } = this.state;
 
         return (
             <Wrapper name='Basket' location={this.props.location}>

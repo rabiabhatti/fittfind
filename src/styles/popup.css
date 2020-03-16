@@ -20,6 +20,11 @@
     flex-direction: column;
     background-color: #fff;
 }
+.sizeChartPopup {
+    top: 10% !important;
+    width: 44% !important;
+    min-height: auto !important;
+}
 .section-popup-close-btn {
     font-weight: 700;
     font-size: 1.1rem;

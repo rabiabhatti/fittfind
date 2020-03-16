@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Fittfind`,
+    description: `Fittfind is the first truly decentralised fitness platform which provides a unique and pioneering online lead generation service to the Health and Fitness sector. We use Blockchain technology to greatly enhance security and privacy, signifi-cantly improve user experience, and intrinsically motivate users to workout, while creating an economic ecosystem that advances the economic prosperity of freelance fitness professionals’, gyms, boutique studios & the consumer.`,
+    author: `https://github.com/rabiabhatti`,
     siteURL: 'http://localhost:8000/'
   },
   plugins: [
@@ -21,19 +21,19 @@ module.exports = {
         path: `${__dirname}/src/fonts/`
       },
     },
-    // {
-    //   resolve: 'gatsby-source-strapi',
-    //   options: {
-    //     apiURL: 'http://localhost:1337',
-    //     contentTypes: [
-    //       'product',
-    //       'category',
-    //       'gender',
-    //       'user'
-    //     ],
-    //     queryLimit: 1000,
-    //   },
-    // },
+    {
+      resolve: 'gatsby-source-strapi',
+      options: {
+        apiURL: 'http://localhost:1337',
+        contentTypes: [
+          'product',
+          'category',
+          'gender',
+          'user'
+        ],
+        queryLimit: 1000,
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

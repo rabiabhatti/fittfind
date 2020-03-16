@@ -13,6 +13,7 @@ export * from './BasketInput';
 export * from './Popup/SignIn';
 export * from './UserAttribute';
 export * from './Popup/Register';
+export * from './Popup/SizeChart';
 export * from './Popup/VideoPopup';
 export * from './Popup/NewsLetter';
 export * from './ImpossibleBanner';
