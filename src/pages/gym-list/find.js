@@ -98,8 +98,9 @@ export default class FundGym extends React.Component {
                 <div className='section-find-gym-content'>
                     <div className='section-find-gym-heading-container space-between'>
                         <h1>{name.toUpperCase()}</h1>
-                        <button className='section-find-gym-map-btn' onClick={() => this.handleContentScroll('show map')}>
-                            Show map
+                        <button className='section-find-gym-map-btn' onClick={() => this.handleContentScroll('find_gym_map')}>
+                            <span>Show map</span>
+                            <div/>
                         </button>
                     </div>
                     <div className='section-find-gym-desc-container'>
