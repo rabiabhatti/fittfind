@@ -56,6 +56,8 @@ class Header extends React.Component {
         let link = name;
         if (name === 'women' || link === 'men') {
             link = `/${link}/new-release/`
+        } else if (name === 'app') {
+            link = '/application/'
         }
         return (
             <li>
