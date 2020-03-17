@@ -15,6 +15,16 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-apollo',
+      options: {
+        uri: 'http://localhost:1337/graphql'
+      }
+    },
+    {
+      resolve: `gatsby-plugin-create-client-paths`,
+      options: { prefixes: [`/app/*`] },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: "fonts",
