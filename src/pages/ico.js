@@ -16,6 +16,7 @@ import alpha_preview_icon from '../images/alpha_preview.png'
 import vertical_line from '../images/vertical_line_white.png'
 import ico_crypto_banner from '../images/ico_crypto_banner.jpg'
 import { Wrapper, Hero, ImpossibleBanner} from "../components";
+import background_imag from '../images/background-blue-imag.jpg'
 import app_store_button_s from "../images/app-store-button-s.png";
 import alpha_preview_banner from '../images/alpha_preview_banner.png'
 
@@ -60,9 +61,12 @@ export default class Help extends React.Component {
             <Wrapper name='ICO' location={this.props.location} className='section-ico' >
                 <Hero>
                     <div className='section-find-gym-hero'>
-                        <img src={ico_hero_banner} alt='ico_hero_banner' />
+                        <img className='section-ico-hero-img' src={ico_hero_banner} alt='ico_hero_banner' />
                     </div>
                 </Hero>
+                <div className='section-background'>
+                    <img className='section-background-blue-right' src={background_imag} alt='background_blue_imag'/>
+                </div>
                 <div className='section-ico-main-heading-container'>
                     <h1 className='section-ico-main-heading'>Fittfind - A next-generation sports <br /> and fitness lead generation service</h1>
                     <p>Fittfind is building The World's First Decentralized Fitness Lead Generation Service for the health and fitness sector. Fittfind is a journeying to become the world's first leading decentralized Health and fitness solution and global leader in the sporting goods industry.</p>
@@ -73,7 +77,7 @@ export default class Help extends React.Component {
                 </div>
                 <div className='section-ico-vision-container'>
                     <img className='section-ico-vision-img' src={ico_banner_2} alt='ico_banner_2' width={300} />
-                    <div className='column-center section-ico-vision-content'>
+                    <div className='section-ico-vision-content'>
                         <div className='section-ico-vision-top'>
                             <h2>
                                 <img src={horizontal_line} alt='horizontal_line' />
@@ -86,7 +90,7 @@ export default class Help extends React.Component {
                             <img src={quotes} alt='quotes-img' width={50} />
                             <h3>Fittfind is building The World's First Decentralized Fitness Lead Generation Service for the health and fitness sector. Fittfind is a journeying to become the world's first leading decentralized Health and fitness solution and global leader in the sporting goods industry</h3>
                             <p>FITTFIND team</p>
-                            <img src={vertical_line} alt='vertical_line'  />
+                            <img className='section-ico-line-bottom' src={vertical_line} alt='vertical_line'  />
                         </div>
                     </div>
                 </div>

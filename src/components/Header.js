@@ -55,7 +55,7 @@ class Header extends React.Component {
         const currentURL = this.props.path.split('/');
         let link = name;
         if (name === 'women' || link === 'men') {
-            link = `/${link}/new-release/`
+            link = `/women/`
         }
         return (
             <li>

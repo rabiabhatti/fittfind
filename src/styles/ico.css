@@ -81,16 +81,146 @@
     width: 30%;
 }
 .section-ico-btn {
-    color: #ffffff;
+    border: none;
+    color: #fff;
+    font-size: 13px;
+    text-align: left;
     font-weight: 600;
-    font-size: 10px;
-    text-align: center;
+    padding: 15px 25px;
     border-radius: 25px;
-    padding: 0.8rem 1rem;
-    text-transform: uppercase;
     background-color: #025696;
+    text-transform: uppercase;
     font-family: 'Montserrat', sans-serif;
 }
 .section-ico-btn img {
     margin-right: 0.6rem;
+}
+img.section-ico-hero-img {
+    width: 95vw;
+    max-width: 90vw;
+    margin-right: 4vw;
+    pointer-events: none;
+    box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
+    -webkit-box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
+    -moz-box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
+}
+.section-ico-main-heading-container {
+    margin-top: 75px;
+    margin-left: 10vw;
+    margin-bottom: 40px;
+}
+h1.section-ico-main-heading {
+    line-height: 1;
+}
+.section-ico-main-heading-container>p {
+    width: 47vw;
+    padding: 20px 0;
+    line-height: 1.6;
+    color: #5a5f69;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+a.section-ico-main-heading-btn {
+    color: #5a5f69;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: 2px solid #7a818f;
+}
+a.section-ico-main-heading-btn>img {
+    margin-right: 15px;
+    margin-bottom: -3px;
+}
+.section-ico-vision-container {
+    display: flex;
+    margin-top: 6vw;
+    margin-left: 5.7%;
+}
+img.section-ico-vision-img {
+    width: 37vw;
+}
+.section-ico-vision-content {
+    margin-top: 9vw;
+}
+.section-ico-vision-top {
+    width: 30vw;
+}
+.section-ico-vision-top>h2 {
+    line-height: 1;
+    margin-left: -50px;
+}
+.section-ico-vision-top>p, a.section-ico-btn {
+    margin-left: 3vw;
+}
+.section-ico-vision-top>p {
+    padding: 40px 0;
+    color: #5a5f69;
+    line-height: 1.6;
+}
+.section-ico-vision-bottom {
+    width: 67vw;
+    color: #fff;
+    margin-top: 8vw;
+    margin-left: -27vw;
+    text-align: center;
+    position: relative;
+    padding: 50px 185px;
+    background-color: #055595;
+    box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
+    -webkit-box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
+    -moz-box-shadow: 15px 9px 24px -8px rgba(0,0,0,0.37);
+}
+.section-ico-vision-bottom>h3 {
+    line-height: 1.2;
+}
+.section-ico-vision-bottom>img:first-child {
+    margin-bottom: 40px;
+}
+.section-ico-vision-bottom>p {
+    color: #3d87bf;
+    padding-top: 40px;
+}
+img.section-ico-line-bottom {
+    padding-top: 40px;
+}
+
+
+
+
+.section-ico-vision-top>h2>img {
+    top: -8px;
+    position: relative;
+    margin-right: 45px;
+}
+
+
+
+h1.section-ico-main-heading, a.section-ico-main-heading-btn, .section-ico-vision-top>h2 {
+    text-transform: uppercase;
+}
+
+a.section-ico-main-heading-btn, .section-ico-vision-bottom>p {
+    font-weight: 600;
+}
+.section-ico-main-heading-container>p, .section-ico-vision-top>p {
+    font-weight: 500;
+}
+
+
+.section-ico-main-heading-container>p, a.section-ico-main-heading-btn, .section-ico-vision-top>p, .section-ico-vision-bottom>p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+h1.section-ico-main-heading, .section-ico-vision-top>h2 {
+    font-size: 70px;
+}
+.section-ico-vision-bottom>h3 {
+    font-size: 38px;
+}
+.section-ico-main-heading-container>p, .section-ico-vision-top>p {
+    font-size: 16px;
+}
+a.section-ico-main-heading-btn, .section-ico-vision-bottom>p {
+    font-size: 14px;
 }
