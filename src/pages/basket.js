@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
+// import gql from "graphql-tag";
+// import { Query } from "react-apollo";
 import ReactFlagsSelect from 'react-flags-select';
 import 'react-flags-select/css/react-flags-select.css';
 
@@ -13,6 +15,31 @@ import forwardIcon from '../images/forward-icon.png'
 import { Wrapper, Hero, BasketInput } from '../components'
 import horizontal_line from '../images/horizontal_line.png'
 
+// const APOLLO_QUERY = gql`
+//   {
+//     categories {
+//         name
+//     }
+//   }
+// `;
+//
+// export default () => {
+//     return (
+//         <Query query={APOLLO_QUERY}>
+//             {({ loading, error, data }) => {
+//                 if (loading) return "Loading...";
+//                 if (error) return `Error! ${error.message}`;
+//
+//                 return (
+//                     data.categories.map(item => (
+//                         <p>{item.name}</p>
+//                     ))
+//                 );
+//             }}
+//         </Query>
+//     );
+// };
+//
 const items = [
     {
         name: 'New! sport mesh jacket',

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Wrapper, Hero, ImpossibleBanner} from "../components";
+import { Wrapper, Hero, ImpossibleBanner, Image} from "../components";
 
 export default class Help extends React.Component {
     render() {
@@ -8,7 +8,7 @@ export default class Help extends React.Component {
             <Wrapper name='Help' location={this.props.location} gymNav={true}>
                 <Hero>
                     <div className='section-shipping-hero'>
-                        <h1>Help</h1>
+                        <Image imgsrc='dhl_icon.png' />
                     </div>
                 </Hero>
                 <ImpossibleBanner />

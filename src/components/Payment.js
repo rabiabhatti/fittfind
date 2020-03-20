@@ -11,7 +11,7 @@ class PaymentComponent extends React.Component {
         loaded: 0,
     };
     render() {
-        const { loaded } = this.state;
+        // const { loaded } = this.state;
 
         return (
             <Fragment>

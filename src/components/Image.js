@@ -18,24 +18,24 @@ class Image extends React.Component {
         return (
             <StaticQuery
                 query={graphql`
-          query {
-            allImageSharp {
-              edges {
-                node {
-                  fluid(maxWidth: 1200) {
-                    ...GatsbyImageSharpFluid
+                  query {
+                    allImageSharp {
+                      edges {
+                        node {
+                          fluid(maxWidth: 2000) {
+                            ...GatsbyImageSharpFluid
+                          }
+                        }
+                      }
+                    }
                   }
-                }
-              }
-            }
-          }
-        `}
+                `}
                 render={data => {
                     return (
                         <Img fluid={data.allImageSharp.edges.find((element) => {
                             // Match string after final slash
-                            return (element.node.fluid.src.split('/').pop() === this.props.imgsrc);
-                        }).node.fluid} />
+                            return (element.node.fluid.src.split('/').pop() === this.props.imgSrc);
+                        }).node.fluid} alt={this.props.imgSrc} className={this.props.className} />
                     )
                 }}
             />
