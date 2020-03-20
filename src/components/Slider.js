@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 
 import '../styles/slider.css'
 import { Product } from './'
@@ -8,13 +8,8 @@ import product_1 from '../images/product-1.jpg'
 import product_2 from '../images/product-2.jpg'
 import product_3 from '../images/product-3.jpg'
 import product_4 from '../images/product-4.jpg'
-import slider1 from '../images/home-slider-1.jpg'
-import slider2 from '../images/home-slider-2.jpg'
-import slider3 from '../images/home-slider-3.jpg'
-import slider4 from '../images/home-slider-4.jpg'
 import forwardIcon from '../images/forward-icon.png'
 import backwardIcon from '../images/backward-icon.png'
-import vertical_line from '../images/vertical_line.png'
 import instagram_icon from '../images/instagram_icon.png'
 import vertical_line_white from '../images/vertical_line_white.png'
 import social_media_slider_1 from '../images/social_media_slider-1.jpg'
@@ -23,7 +18,6 @@ import social_media_slider_4 from '../images/social_media_slider-4.jpg'
 import social_media_slider_3 from '../images/social_media_slider-3.jpg'
 import social_media_slider_5 from '../images/social_media_slider-5.jpg'
 
-const hero_carousel = [slider1, slider2, slider3, slider4];
 const products_carousel = [
     {
        name: 'Women hybrid Joggers Black',
@@ -95,29 +89,9 @@ const social_carousel = [social_media_slider_1, social_media_slider_2, social_me
 
 class Slider extends React.Component {
     state = {
-        heroSliderPosition: 0,
         socialSliderPosition: 0,
         productsSliderPosition: 0,
     };
-
-    componentDidMount() {
-        if (this.props.type === 'hero') {
-            this.countdown = setInterval(() => {
-                this.setState(prevState => {
-                    return {heroSliderPosition: (prevState.heroSliderPosition + 1) % (hero_carousel.length || 1)}
-                })
-            }, 5000)
-        }
-    }
-
-    componentWillUnmount() {
-        clearInterval(this.countdown);
-    }
-
-    heroSliderClick = (no) => {
-        this.setState({heroSliderPosition: no})
-    };
-
 
     handleBackNextProducts = (type) => {
         if (type === 'next') {
@@ -145,7 +119,7 @@ class Slider extends React.Component {
 
     render() {
         const { type } = this.props;
-        const { heroSliderPosition, productsSliderPosition, socialSliderPosition } = this.state;
+        const { productsSliderPosition, socialSliderPosition } = this.state;
         const products_pages = [];
         const social_media_pages = [];
         for (let i = 0; i < products_carousel.length / 4; i++) {
@@ -154,37 +128,11 @@ class Slider extends React.Component {
         for (let j = 0; j < social_carousel.length / 5; j++) {
             social_media_pages.push(j)
         }
+
         return (
             <Fragment>
                 {
                     {
-                        hero:
-                            <div className='section-hero-slider'>
-                                {hero_carousel.map((img, i) => (
-                                    <img key={i} src={img} alt='carousel' className={`hero-slide ${heroSliderPosition === i ? 'show' : 'hide'}`} />
-                                ))}
-                                <div className='section-hero-slider-right-numbers'>
-                                    <div className='section-hero-slider-right-bar'>
-                                        {hero_carousel.map((img, i) => (
-                                            <button
-                                                key={i}
-                                                onClick={() => this.heroSliderClick(i)}
-                                                className={i === heroSliderPosition ? 'active-slider slider-no' : 'slider-no'}
-                                            >
-                                               <p>0{i+1}</p>
-                                                {i === heroSliderPosition && <img className='section-products-slider-active-page-line' src={vertical_line} alt='vertical_line' />}
-                                            </button>
-                                        ))}
-                                    </div>
-                                    <div className='sliders-count-container'>
-                                        <span className='current-slider'>0{heroSliderPosition + 1}</span>
-                                        <div>
-                                            <span className='total-dash'>_</span>
-                                            <span className='total-sliders'>0{hero_carousel.length}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>,
                         social_media:
                             <div className='section-social-media-slider column-start'>
                                 <div className='row-center space-between'>

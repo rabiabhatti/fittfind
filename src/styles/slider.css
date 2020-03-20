@@ -1,13 +1,13 @@
 .hero-slide {
     right: 0;
     z-index: -1;
-    position: absolute;
+    position: absolute !important;
 }
 .section-main-slider {
     z-index: 1;
     width: 100%;
 }
-img.hero-slide {
+.hero-slide {
     width: 76.6%;
 }
 .section-hero-slider {
@@ -322,7 +322,7 @@ span.current-slider {
     .sliders-count-container {
         bottom: -10px;
     }
-    img.hero-slide {
+    .hero-slide {
         width: 75.15%;
     }
     h1.section-Find-release-hero {
@@ -427,7 +427,7 @@ span.current-slider {
         margin-top: -25vw;
         margin-bottom: 6vw;
     }
-    img.hero-slide {
+    .hero-slide {
         width: 76.7%;
     }
     .section-features .product-desc-container {
@@ -527,7 +527,7 @@ span.current-slider {
         margin-top: -25vw;
         margin-bottom: 6vw;
     }
-    img.hero-slide {
+    .hero-slide {
         width: 76.7%;
     }
     .section-features .product-desc-container {

@@ -1,9 +1,9 @@
 import React from "react"
-import { Link } from "gatsby"
+import {graphql, Link} from "gatsby"
 
 import '../styles/products_categories.css'
 
-import {Wrapper, Hero, Slider, ImpossibleBanner, VideoPopup, Loading} from "../components"
+import {Wrapper, Hero, Slider, ImpossibleBanner, VideoPopup, Loading, Image, HomeSlider} from "../components"
 
 import fit from '../images/fit.png'
 import men_banner from '../images/men_banner.jpg'
@@ -35,16 +35,16 @@ class IndexPage extends React.Component {
 
     render() {
         const { show_video, show_loading } = this.state;
-        if (show_loading) {
-            return <Loading totalTime={3} />
-        }
+        // if (show_loading) {
+        //     return <Loading totalTime={3} />
+        // }
 
         return (
             <Wrapper name='Home' location={this.props.location}>
                 {show_video && <VideoPopup handleClose={() => this.setState({ show_video: false })} />}
                 <Hero>
                     <div className="section-main-slider">
-                        <Slider type='hero' />
+                        <HomeSlider home_carousel={this.props.data} />
                         <div className="section-main-slider-left">
                             <h1 className="section-Find-release-hero">
                                 <span><span>Find</span> & release</span>
@@ -61,7 +61,7 @@ class IndexPage extends React.Component {
                     <div>
                         <div className='section-products-women'>
                             <div className='section-products-women-banner'>
-                                <img src={women_banner} alt='women_banner'/>
+                                <Image imgSrc='women_banner.jpg' className='section-products-women-banner-img' />
                                 <div>
                                     <button className='shop-women-btn'>
                                         <Link to={'/women/new-release/'}><img src={fit} alt='fit'/><span>Women</span></Link>
@@ -95,6 +95,7 @@ class IndexPage extends React.Component {
                                 </div>
                             </div>
                             <div className='section-products-men-banner'>
+                                <Image imgSrc='men_banner.jpg' className='section-products-men-banner-img' />
                                 <img src={men_banner} alt='men_banner'/>
                                 <div>
                                     <button className='shop-men-btn'>
@@ -151,5 +152,28 @@ class IndexPage extends React.Component {
         )
     }
 }
+
+export const query = graphql`
+  query {
+    mobileImage: allImageSharp(filter: {fluid: {src: {regex: "/home-slider/"}}}) {
+          edges {
+            node {
+              fluid(maxWidth: 500, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+          }
+      }
+    } 
+    desktopImage: allImageSharp(filter: {fluid: {src: {regex: "/home-slider/"}}}) {
+          edges {
+            node {
+              fluid(maxWidth: 1382, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+          }
+        }
+    }
+  }
+`;
 
 export default IndexPage

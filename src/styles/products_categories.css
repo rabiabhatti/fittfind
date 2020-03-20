@@ -138,7 +138,7 @@ span.shop-women-ver>img, span.shop-men-ver>img {
     .section-products-women-categories {
         margin-left: 115px;
     }
-    .section-products-women-banner>img, .section-products-men-banner>img {
+    .section-products-women-banner-img, .section-products-men-banner-img {
         width: 40vw;
     }
     button.shop-women-btn>a>img, button.shop-men-btn>a>img {
@@ -209,7 +209,7 @@ span.shop-women-ver>img, span.shop-men-ver>img {
     .section-products-categories {
         background-size: 53.3% 100%;
     }
-    .section-products-women-banner>img, .section-products-men-banner>img {
+    .section-products-women-banner-img, .section-products-men-banner-img {
         width: 40vw;
     }
     button.shop-women-btn>a>img, button.shop-men-btn>a>img {
@@ -280,7 +280,7 @@ span.shop-women-ver>img, span.shop-men-ver>img {
     .section-products-categories {
         background-size: 53.3% 100%;
     }
-    .section-products-women-banner>img, .section-products-men-banner>img {
+    .section-products-women-banner-img, .section-products-men-banner-img {
         width: 40vw;
     }
     button.shop-women-btn>a>img, button.shop-men-btn>a>img {

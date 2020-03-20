@@ -9,6 +9,7 @@ export * from './Product';
 export * from './Payment';
 export * from './Loading';
 export * from './RightNav';
+export * from './HomeSlider';
 export * from './BasketInput';
 export * from './Popup/SignIn';
 export * from './UserAttribute';
