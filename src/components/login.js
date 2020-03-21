@@ -1,48 +1,54 @@
-import * as React from 'react'
+import React, { useState } from 'react'
+import gql from "graphql-tag";
+import { useMutation } from '@apollo/react-hooks';
 
 import { BasketInput } from './.'
+import {useEventListener} from '../helper'
 
-class SignIn extends React.Component {
-    state = {
-        name: '',
-        email: '',
-        password: '',
-    };
-
-    componentDidMount() {
-        document.addEventListener('keydown', this.handleKeyPress)
-    }
-    componentWillUnmount() {
-        document.removeEventListener('keydown', this.handleKeyPress)
-    }
-
-    handleKeyPress = (e) => {
-        if (e.key === 'Enter') {
-            localStorage.setItem('token', 'hello');
+const LOGIN_MUTATION = gql`
+ mutation Login($input: UsersPermissionsLoginInput!) {
+    login (input: $input) {
+        jwt
+        user {
+          username
+          email
+          id
         }
-    };
+      }
+  }
+  
+`;
 
-    _onChange = (event) => {
-        const value = event.target.value;
-        const name = event.target.name;
-        this.setState({
-            [name]: value
-        });
-    };
+export default () => {
+    // const handleKeyPress = (e) => {
+    //     console.log(e)
+    //     // if (e.key === 'Enter') {
+    //     // }
+    // };
 
-    render() {
-        const { email, password } = this.state;
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [login, { data }] = useMutation(LOGIN_MUTATION);
+    const enable = password !== '' && email !== '';
 
-        const enable = password !== '' && email !== '';
+    // useEventListener('keydown', handleKeyPress());
 
-        return (
-            <div>
-                <BasketInput className='section-basket-address-input' title='Email' name='email' width={100} onChange={this._onChange} value={email} />
-                <BasketInput className='section-basket-address-input' title='Password' name='password' width={100} onChange={this._onChange} value={password} />
-                <button className='section-popup-btn' disabled={!enable}>Sign In</button>
-            </div>
-        )
-    }
-}
+    console.log(data && data.login);
 
-export default SignIn
+
+
+    return (
+        <div className='column-center' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
+            <BasketInput className='section-basket-address-input' title='Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} />
+            <BasketInput type='password' className='section-basket-address-input' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} />
+            <button
+                disabled={!enable}
+                className='section-popup-btn'
+                style={{width: '100%', fontSize: '0.85rem'}}
+                onClick={() => login({ variables: { input: {identifier: email, password: password } } })}
+            >
+                Sign In
+            </button>
+        </div>
+    )
+};

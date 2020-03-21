@@ -2,7 +2,7 @@ import React from 'react'
 import Img from "gatsby-image"
 
 import '../styles/slider.css'
-import { isBrowser } from '../../common'
+import { isBrowser } from '../helper'
 import vertical_line from "../images/vertical_line.png";
 
 const hero_carousel = [1, 2, 3, 4];
