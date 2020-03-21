@@ -18,7 +18,7 @@ const LOGIN_MUTATION = gql`
   
 `;
 
-export default () => {
+const Login = () => {
 
     const [email, setEmail] = useState("");
     const [loading, setLoading] = useState(false);
@@ -28,7 +28,7 @@ export default () => {
 
     const handleKeyPress = useCallback( (e) => {
         if (e.key === 'Enter') {
-            e.preventDefault()
+            e.preventDefault();
             handleLogin()
         }
     }, [email, password]);
@@ -69,3 +69,5 @@ export default () => {
         </div>
     )
 };
+
+export { Login }
