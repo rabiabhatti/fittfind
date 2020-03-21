@@ -1,25 +1,30 @@
 .section-ico h2, .section-ico h1 {
     display: flex;
-    font-size: 55px;
     align-items: center;
-    text-transform: uppercase;
 }
 .section-ico-platform-container {
-    background-color: #2b2d34;
     color: #ffffff;
+    margin-right: 4vw;
+    background-color: #1a1c21;
 }
 .section-ico-platform-left {
     width: 34%;
+    margin-left: 10vw;
 }
 .section-ico-platform-left-btn {
     color: #ffffff;
 }
+.section-ico-platform-container {
+    height: 40vw;
+}
 .section-ico-platform-right {
    width: 60%;
+   height: 40vw;
 }
 .section-ico-platform-right-slider {
     width: 100%;
-    min-height: 500px;
+    min-height: 700px;
+    margin-top: -60px;
 }
 .section-ico-platform-right:hover .section-ico-platform-right-btn {
     opacity: 1;
@@ -32,19 +37,26 @@
 }
 .section-ico-platform-right-btn {
     opacity: 0;
-    color: #ffffff;
     z-index: 2;
     padding: 1rem;
+    color: #ffffff;
+    position: relative;
     border-radius: 50%;
     border: 1px solid #ffffff;
     background-color: transparent;
     transition: opacity 0.3s ease-in;
 }
+.section-ico-platform-right.row-center>button:first-child {
+    right: -50px;
+}
+.section-ico-platform-right.row-center>button:nth-child(3) {
+    left: -90px;
+}
 .ico_slider_indicator {
     height: 7px;
     width: 7px;
-    border-radius: 50%;
     margin: 0 5px;
+    border-radius: 50%;
     background-color: #ffffffb8;
     transition: width 0.3s ease-in, border-radius 0.3s ease-in, background-color 0.3s ease-in;
 }
@@ -57,36 +69,42 @@
     width: 100%;
 }
 .section-ico-platform-right-slider-img {
+    height: 675px;
     position: absolute;
-    height: 500px;
+    margin-left: -130px;
 }
 .section-ico-app-left {
-    width: 500px;
+    width: 699px;
     height: 700px;
     color: #ffffff;
     position: relative;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url("../images/app-store-imag.jpg");
+    background-image: url("../images/ico_app_banner.jpg");
 }
 .section-ico-app-left a {
-    top: 70%;
-    left: 15%;
+    top: 77%;
+    left: 25%;
     width: 50%;
     position: relative;
     text-transform: uppercase;
 }
 .section-ico-app-right {
-    width: 30%;
+    width: 25vw;
+    margin-left: 80px;
+}
+.section-ico-app-right>h2>img {
+    top: -5px;
+    position: relative;
+    margin-right: 55px;
 }
 .section-ico-btn {
     border: none;
     color: #fff;
-    font-size: 13px;
     text-align: left;
     font-weight: 600;
-    padding: 15px 25px;
+    padding: 15px 35px;
     border-radius: 25px;
     background-color: #025696;
     text-transform: uppercase;
@@ -148,7 +166,7 @@ img.section-ico-vision-img {
     line-height: 1;
     margin-left: -50px;
 }
-.section-ico-vision-top>p, a.section-ico-btn {
+.section-ico-vision-top>p {
     margin-left: 3vw;
 }
 .section-ico-vision-top>p {
@@ -182,45 +200,131 @@ img.section-ico-vision-img {
 img.section-ico-line-bottom {
     padding-top: 40px;
 }
-
-
-
-
+.section-ico-platform-left>p {
+    padding: 20px 0;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+.section-ico-features-container {
+    width: 70vw;
+    margin-left: 5.7%;
+}
+.section-ico-features-container {
+    width: 70vw;
+    margin-top: 3vw;
+    margin-left: 5.7%;
+    justify-content: unset;
+}
+.section-ico-feature {
+    width: 25%;
+    text-align: center;
+}
+.section-ico-feature>img {
+    height: 65px;
+}
+.section-ico-feature>h4 {
+    width: 60%;
+    line-height: 1;
+    margin-top: 20px;
+    min-height: 45px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+.section-ico-features-container.row-center.space-between {
+    align-items: unset;
+}
+.section-ico-feature>p {
+    width: 75%;
+    margin: 0 auto;
+}
+.section-ico_crypto_container {
+    width: 75vw;
+    margin-top: 3vw;
+    margin-left: 5.7%;
+}
+.section-ico_crypto-left {
+    width: 25vw;
+}
+.ico.section-background>img.section-background-blue-right {
+    top: 0;
+    height: 300vw;
+}
+.section-ico-app-container {
+    width: 75vw;
+    margin-left: 5.7%;
+}
 .section-ico-vision-top>h2>img {
     top: -8px;
     position: relative;
     margin-right: 45px;
 }
+.section-ico_crypto-left>p, .section-ico-app-right>p {
+    padding: 30px 0;
+    line-height: 1.6;
+    color: #5a5f69;
+}
+.section-ico-app-left>a>span {
+    letter-spacing: 2px;
+}
+.section-ico-gym-banner {
+    width: 60vw;
+    margin-top: 4vw;
+    margin-left: 5.7%;
+}
+.section-ico-gym-banner .column-start {
+    width: 65%;
+}
+.section-ico-gym-banner .column-start>p {
+    line-height: 1.5;
+    color: #5a5f69;
+}
+.section-ico-gym-banner.row-center.space-between {
+    align-items: unset;
+}
+.section-gym-owners-btn {
+    margin-top: 25px;
+}
 
 
 
-h1.section-ico-main-heading, a.section-ico-main-heading-btn, .section-ico-vision-top>h2 {
+.section-ico_crypto-left>h2, .section-ico-app-right>h2, .section-ico-gym-banner h2 {
+    line-height: 1;
+}
+
+h1.section-ico-main-heading, a.section-ico-main-heading-btn, .section-ico h2, .section-ico h1, .section-ico-app-left>a>span {
     text-transform: uppercase;
 }
 
 a.section-ico-main-heading-btn, .section-ico-vision-bottom>p {
     font-weight: 600;
 }
-.section-ico-main-heading-container>p, .section-ico-vision-top>p {
+.section-ico-main-heading-container>p, .section-ico-vision-top>p, .section-ico-feature>p, .section-ico_crypto-left>p, .section-ico-app-right>p, .section-ico-gym-banner .column-start>p {
     font-weight: 500;
+}
+.section-ico-platform-left>p {
+    font-weight: 400;
 }
 
 
-.section-ico-main-heading-container>p, a.section-ico-main-heading-btn, .section-ico-vision-top>p, .section-ico-vision-bottom>p {
+.section-ico-main-heading-container>p, a.section-ico-main-heading-btn, .section-ico-vision-top>p, .section-ico-vision-bottom>p, .section-ico-platform-left>p, .section-ico-feature>p, .section-ico_crypto-left>p, .section-ico-app-right>p {
     font-family: 'Montserrat', sans-serif;
 }
 
 
 
-h1.section-ico-main-heading, .section-ico-vision-top>h2 {
+h1.section-ico-main-heading, .section-ico h2, .section-ico h1 {
     font-size: 70px;
 }
 .section-ico-vision-bottom>h3 {
     font-size: 38px;
 }
-.section-ico-main-heading-container>p, .section-ico-vision-top>p {
+.section-ico-feature>h4, .section-ico-gym-banner .column-start>p {
+    font-size: 22px;
+}
+.section-ico-main-heading-container>p, .section-ico-vision-top>p, .section-ico-platform-left>p, .section-ico-feature>p, .section-ico_crypto-left>p, .section-ico-app-right>p, .section-ico-app-left>a>span {
     font-size: 16px;
 }
-a.section-ico-main-heading-btn, .section-ico-vision-bottom>p {
+a.section-ico-main-heading-btn, .section-ico-vision-bottom>p, .section-ico-btn {
     font-size: 14px;
 }

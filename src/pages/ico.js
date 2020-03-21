@@ -64,7 +64,7 @@ export default class Help extends React.Component {
                         <img className='section-ico-hero-img' src={ico_hero_banner} alt='ico_hero_banner' />
                     </div>
                 </Hero>
-                <div className='section-background'>
+                <div className='ico section-background'>
                     <img className='section-background-blue-right' src={background_imag} alt='background_blue_imag'/>
                 </div>
                 <div className='section-ico-main-heading-container'>
@@ -138,11 +138,11 @@ export default class Help extends React.Component {
                         <h2>Crypto specific sportswear</h2>
                         <p>Fittfind is a technology driven corporation engaged in the design, development and marketing of Elite sports wear.<br/>Purchase Bitcoin sportswear using Bitcoin only.</p>
                         <div className='row-center'>
-                            <img src={bitcoin} alt='bitcoin' width={20} />
-                            <img src={ethereum} alt='ethereum' width={20} />
+                            <img src={bitcoin} alt='bitcoin'/>
+                            <img src={ethereum} alt='ethereum'/>
                         </div>
                     </div>
-                    <img className='section-ico_crypto-right' src={ico_crypto_banner} alt='ico_crypto_banner' width={300}/>
+                    <img className='section-ico_crypto-right' src={ico_crypto_banner} alt='ico_crypto_banner'/>
                 </div>
                 <div className='row-center section-ico-app-container'>
                     <div className='section-ico-app-left'>
@@ -157,7 +157,7 @@ export default class Help extends React.Component {
                             <img src={horizontal_line} alt='horizontal_line'/>Fitness
                         </h2>
                         <h2>on the blockchain</h2>
-                        <p>In the same manner Uber is the largest trans-portation company that owns no vehicles and Airbnb the largest hotel company that owns no real estate, Fittfind is on its way to becoming the largest health and fitness institution that controls no gyms or studios.<br/>We empower freelancers Fitness professionals and business to join our decentralized fitness marketplace. Fitness fanatics can discover each over, browse gyms listings, make bookings, leave ratings and reviews, and much more.</p>
+                        <p>In the same manner Uber is the largest trans-portation company that owns no vehicles and Airbnb the largest hotel company that owns no real estate, Fittfind is on its way to becoming the largest health and fitness institution that controls no gyms or studios.<br/><br/>We empower freelancers Fitness professionals and business to join our decentralized fitness marketplace. Fitness fanatics can discover each over, browse gyms listings, make bookings, leave ratings and reviews, and much more.</p>
                         <div className='row-center space-between'>
                             <button className='section-ico-btn row-center'>
                                 <img src={dapp_icon} alt='dapp_icon' width={9} />

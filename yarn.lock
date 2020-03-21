@@ -6922,10 +6922,10 @@ gatsby-source-filesystem@^2.1.40:
     valid-url "^1.0.9"
     xstate "^4.7.2"
 
-gatsby-source-strapi@^0.0.10:
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/gatsby-source-strapi/-/gatsby-source-strapi-0.0.10.tgz#a41477ddcccff8c634062e85c5df8f0eab42043e"
-  integrity sha512-PcOR9zq2ptdo4gOSjUbBm71DY52RCTJNzcpearFHwQJim00hWDBRWsIC/dOj4i/yhcsYIfCerQJEqCUmHmFW3w==
+gatsby-source-strapi@^0.0.11:
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/gatsby-source-strapi/-/gatsby-source-strapi-0.0.11.tgz#9e26f19b559128ecfee140b7829b823ace07f5db"
+  integrity sha512-6q0Tv4YJOad0BNn+E3xSnLcgtGgIBmlQDakiAJXBLwNXNyM4YQx5h8tUoAfTTKZEhBMBiJci42Q3qZvWpcQixg==
   dependencies:
     axios "^0.18.0"
     gatsby-node-helpers "^0.3.0"
