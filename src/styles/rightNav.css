@@ -34,7 +34,7 @@
     flex-direction: column;
     align-items: flex-end;
 }
-.section-right-nav-left-btns button {
+.section-right-nav-left-btns a, .section-right-nav-left-btns button {
     color: #ffffff33;
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -42,7 +42,7 @@
     font-family: 'Montserrat', sans-serif;
     transition: color 0.2s ease-in, border-right-color 0.2s ease-in;
 }
-.section-right-nav-left-btns button:hover {
+.section-right-nav-left-btns a:hover, .section-right-nav-left-btns button:hover {
     color: #ffffff;
     border-right: 2px solid #ffffff;
 }

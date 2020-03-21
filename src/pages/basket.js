@@ -39,7 +39,7 @@ import horizontal_line from '../images/horizontal_line.png'
 //         </Query>
 //     );
 // };
-//
+
 const items = [
     {
         name: 'New! sport mesh jacket',

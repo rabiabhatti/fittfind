@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from 'gatsby'
 
 import  '../styles/rightNav.css'
 import check_mark from '../images/check_mark.png'
@@ -9,12 +10,12 @@ function RightNav(props) {
             <div className='section-right-nav-container space-between'>
                 <div className='section-right-nav-left'>
                     <div className='section-right-nav-left-btns'>
-                        <button onClick={props.handleSignInClick}>
+                        <Link to='/app/login'>
                             Sign In
-                        </button>
-                        <button onClick={props.handleRegisterClick}>
+                        </Link>
+                        <Link to='/app/register'>
                             Create an Account
-                        </button>
+                        </Link>
                         <button>
                             Guest
                         </button>

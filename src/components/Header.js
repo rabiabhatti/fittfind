@@ -2,17 +2,15 @@ import React, { Fragment } from "react"
 import { Link } from "gatsby"
 
 import  '../styles/header.css';
+import { RightNav } from "./";
 import cart from '../images/cart.png';
 import menu from '../images/menu.png';
-import { RightNav, SignIn, Register } from "./";
 import logo_dark from '../images/logo-dark.png';
 import horizontal_line from '../images/horizontal_line.png';
 
 class Header extends React.Component {
     state = {
         open_right_bar: false,
-        show_sign_in_popup: false,
-        show_register_popup: false,
     };
 
     closeRightBar = () => {
@@ -36,19 +34,6 @@ class Header extends React.Component {
         } else if (open_right_bar && !firedOnSelf) {
             this.setState({ open_right_bar: false })
         }
-    };
-
-    handleSignInClick = () => {
-        this.setState({
-            open_right_bar: false,
-            show_sign_in_popup: true
-        })
-    };
-    handleRegisterClick = () => {
-        this.setState({
-            open_right_bar: false,
-            show_register_popup: true
-        })
     };
 
     renderNavLink = (name) => {
@@ -91,12 +76,10 @@ class Header extends React.Component {
     };
 
     render() {
-        const { open_right_bar, show_sign_in_popup, show_register_popup } = this.state;
+        const { open_right_bar } = this.state;
 
         return (
             <Fragment>
-                {show_sign_in_popup && <SignIn handleClose={() => this.setState({ show_sign_in_popup: false })} />}
-                {show_register_popup && <Register handleClose={() => this.setState({ show_register_popup: false })} />}
                 <header>
                     <div className='section-header'>
                         <div className='section-header-left'>
@@ -132,7 +115,7 @@ class Header extends React.Component {
                     </div>
                 </header>
                 {!!open_right_bar &&
-                    <RightNav onCloseClick={this.closeRightBar} handleSignInClick={this.handleSignInClick} handleRegisterClick={this.handleRegisterClick} />
+                    <RightNav onCloseClick={this.closeRightBar} />
                 }
             </Fragment>
         );
