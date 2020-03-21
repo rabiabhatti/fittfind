@@ -1,9 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import gql from "graphql-tag";
 import { useMutation } from '@apollo/react-hooks';
 
 import { BasketInput } from './.'
-import {useEventListener} from '../helper'
 
 const LOGIN_MUTATION = gql`
  mutation Login($input: UsersPermissionsLoginInput!) {
@@ -20,21 +19,41 @@ const LOGIN_MUTATION = gql`
 `;
 
 export default () => {
-    // const handleKeyPress = (e) => {
-    //     console.log(e)
-    //     // if (e.key === 'Enter') {
-    //     // }
-    // };
 
     const [email, setEmail] = useState("");
+    const [loading, setLoading] = useState(false);
     const [password, setPassword] = useState("");
     const [login, { data }] = useMutation(LOGIN_MUTATION);
     const enable = password !== '' && email !== '';
+    const didMountRef = useRef(false);
 
-    // useEventListener('keydown', handleKeyPress());
+    const handleKeyPress = useCallback( (e) => {
+        e.preventDefault();
+        if (e.key === 'Enter') {
+            handleLogin()
+        }
+    }, [email, password]);
 
-    console.log(data && data.login);
+    const handleLogin = async () => {
+        setLoading(true);
+        await login({ variables: { input: {identifier: email, password: password}}})
+    };
 
+    useEffect(() => {
+        window.addEventListener("keydown", handleKeyPress);
+        return () => {
+            window.removeEventListener("keydown", handleKeyPress);
+        };
+    }, [handleKeyPress]);
+
+    useEffect(() => {
+        if (didMountRef.current) {
+            if (data.login) {
+                setLoading(false);
+                console.log(data.login, loading)
+            }
+        } else didMountRef.current = true
+    }, [data]);
 
 
     return (
@@ -43,11 +62,11 @@ export default () => {
             <BasketInput type='password' className='section-basket-address-input' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} />
             <button
                 disabled={!enable}
+                onClick={handleLogin}
                 className='section-popup-btn'
                 style={{width: '100%', fontSize: '0.85rem'}}
-                onClick={() => login({ variables: { input: {identifier: email, password: password } } })}
             >
-                Sign In
+                Login
             </button>
         </div>
     )
