@@ -4,7 +4,7 @@ import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { useMutation } from '@apollo/react-hooks';
 
 import { BasketInput } from './.'
-import { toggleDarkMode } from '../state/app'
+import { addUser } from '../state/auth'
 
 const LOGIN_MUTATION = gql`
  mutation Login($input: UsersPermissionsLoginInput!) {
@@ -21,8 +21,8 @@ const LOGIN_MUTATION = gql`
 `;
 
 export default () => {
-    const {isDarkMode} = useSelector(state => ({
-        isDarkMode: state.app.isDarkMode
+    const { user } = useSelector(state => ({
+        user: state.auth.user
     }), shallowEqual);
     const dispatch = useDispatch();
 
@@ -46,8 +46,7 @@ export default () => {
         login({ variables: { input: {identifier: email, password: password}}}).then((res) => {
             if (res.data.login) {
                 setLoading(false);
-                dispatch(toggleDarkMode(true));
-                console.log(res.data.login, loading)
+                dispatch(addUser(res.data.login));
             }
         }).catch(error => {
             console.log(error);
@@ -62,7 +61,7 @@ export default () => {
         };
     }, [handleKeyPress]);
 
-    console.log(isDarkMode)
+    console.log(user);
 
     return (
         <div className='column-center' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
