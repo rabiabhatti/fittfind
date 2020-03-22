@@ -1,7 +1,8 @@
 import React, {Fragment} from "react"
 import { Router } from "@reach/router"
 
-import {LeftBar, Login, Register, PrivateRoute} from "../components"
+import Login from '../components/Login'
+import  {LeftBar, Register, PrivateRoute} from "../components"
 
 
 const App = () => {

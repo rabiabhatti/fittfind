@@ -37,7 +37,6 @@ const Register = () => {
     const handleRegister =  () => {
         setLoading(true);
         register({ variables: { input: {email, password, username}}}).then((res) => {
-            console.log('res', res)
             if (res.data.register) {
                 setLoading(false);
                 console.log(res.data.register, loading)

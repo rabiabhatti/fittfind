@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import gql from "graphql-tag";
+import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { useMutation } from '@apollo/react-hooks';
 
 import { BasketInput } from './.'
+import { toggleDarkMode } from '../state/app'
 
 const LOGIN_MUTATION = gql`
  mutation Login($input: UsersPermissionsLoginInput!) {
@@ -18,12 +20,18 @@ const LOGIN_MUTATION = gql`
   
 `;
 
-const Login = () => {
+export default () => {
+    const {isDarkMode} = useSelector(state => ({
+        isDarkMode: state.app.isDarkMode
+    }), shallowEqual);
+    const dispatch = useDispatch();
 
     const [email, setEmail] = useState("");
     const [loading, setLoading] = useState(false);
     const [password, setPassword] = useState("");
+
     const [login] = useMutation(LOGIN_MUTATION);
+
     const enable = password !== '' && email !== '';
 
     const handleKeyPress = useCallback( (e) => {
@@ -34,11 +42,11 @@ const Login = () => {
     }, [email, password]);
 
     const handleLogin =  () => {
-
         setLoading(true);
         login({ variables: { input: {identifier: email, password: password}}}).then((res) => {
             if (res.data.login) {
                 setLoading(false);
+                dispatch(toggleDarkMode(true));
                 console.log(res.data.login, loading)
             }
         }).catch(error => {
@@ -53,6 +61,8 @@ const Login = () => {
             window.removeEventListener("keydown", handleKeyPress);
         };
     }, [handleKeyPress]);
+
+    console.log(isDarkMode)
 
     return (
         <div className='column-center' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
@@ -69,5 +79,3 @@ const Login = () => {
         </div>
     )
 };
-
-export { Login }

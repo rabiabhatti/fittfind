@@ -1,6 +1,5 @@
 export * from './Hero';
 export * from './Image';
-export * from './Login';
 export * from './Slider';
 export * from './Header';
 export * from './Footer';
