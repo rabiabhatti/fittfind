@@ -1,8 +1,20 @@
-/**
- * Implement Gatsby's Browser APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/browser-apis/
- */
+import React, {Fragment} from "react"
+import { ApolloProvider } from '@apollo/react-hooks'
 
 import "./src/styles/global.css"
-export { wrapRootElement } from './src/apollo/wrap-root-element';
+
+import { client } from './src/apollo/client'
+// import ApolloWrapper from './src/apollo/ApolloWrapper';
+import ReduxWrapper from './src/state/ReduxWrapper';
+
+export const wrapRootElement = props => {
+    return (
+        <ApolloProvider client={client}>
+            <ReduxWrapper {...props} />
+        </ApolloProvider>
+    )
+};
+
+export const wrapPageElement = ({ element, props }) => {
+    return <div {...props}>{element}</div>
+}
