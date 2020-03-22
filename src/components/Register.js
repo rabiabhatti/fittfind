@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import gql from "graphql-tag";
 import { useMutation } from '@apollo/react-hooks';
+import { useDispatch, useSelector, shallowEqual } from "react-redux";
 
 import { BasketInput } from './.'
+import { addUser } from '../state/auth'
 
 const REGISTER_MUTATION = gql`
  mutation Register($input: UserInput!) {
@@ -19,12 +21,18 @@ const REGISTER_MUTATION = gql`
 `;
 
 const Register = () => {
+    const { user } = useSelector(state => ({
+        user: state.auth.user
+    }), shallowEqual);
+    const dispatch = useDispatch();
 
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState('');
     const [loading, setLoading] = useState(false);
     const [password, setPassword] = useState("");
+
     const [register] = useMutation(REGISTER_MUTATION);
+
     const enable = password !== '' && email !== '' && username !== '';
 
     const handleKeyPress = useCallback( (e) => {
@@ -39,7 +47,7 @@ const Register = () => {
         register({ variables: { input: {email, password, username}}}).then((res) => {
             if (res.data.register) {
                 setLoading(false);
-                console.log(res.data.register, loading)
+                dispatch(addUser(res.data.login));
             }
         }).catch(error => {
             console.log('error', error.message);
