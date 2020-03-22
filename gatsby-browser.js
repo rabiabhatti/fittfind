@@ -14,6 +14,6 @@ export const wrapRootElement = props => {
     )
 };
 
-export const wrapPageElement = ({ element, props }) => {
-    return <div {...props}>{element}</div>
-}
+// export const wrapPageElement = ({ element, props }) => {
+//     return <div {...props}>{element}</div>
+// }
