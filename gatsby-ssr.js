@@ -1,4 +1,4 @@
-import React, {Fragment} from 'react'
+import React from 'react'
 const { ApolloProvider } = require('@apollo/react-hooks');
 
 import { client } from './src/apollo/client'

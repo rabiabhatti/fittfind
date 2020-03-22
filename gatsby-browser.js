@@ -1,10 +1,9 @@
-import React, {Fragment} from "react"
+import React from "react"
 import { ApolloProvider } from '@apollo/react-hooks'
 
 import "./src/styles/global.css"
 
 import { client } from './src/apollo/client'
-// import ApolloWrapper from './src/apollo/ApolloWrapper';
 import ReduxWrapper from './src/state/ReduxWrapper';
 
 export const wrapRootElement = props => {
