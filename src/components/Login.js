@@ -27,8 +27,9 @@ export default () => {
     const dispatch = useDispatch();
 
     const [email, setEmail] = useState("");
-    const [loading, setLoading] = useState(false);
     const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [errors, setErrors] = useState([]);
 
     const [login] = useMutation(LOGIN_MUTATION);
 
@@ -46,10 +47,11 @@ export default () => {
         login({ variables: { input: {identifier: email, password: password}}}).then((res) => {
             if (res.data.login) {
                 setLoading(false);
+                setErrors([]);
                 dispatch(addUser(res.data.login));
             }
         }).catch(error => {
-            console.log(error);
+            setErrors(error.networkError.result.errors[0].extensions.data[0].messages);
             setLoading(false);
         })
     };
@@ -61,12 +63,15 @@ export default () => {
         };
     }, [handleKeyPress]);
 
-    console.log(user);
+    console.log(errors)
 
     return (
-        <div className='column-center' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
+        <div className='column-start' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
             <BasketInput className='section-basket-address-input' title='Username / Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} />
             <BasketInput type='password' className='section-basket-address-input' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} />
+            {!!errors.length &&
+            <p className='error-msg'>Email / Username or Password incorrect.</p>
+            }
             <button
                 disabled={!enable}
                 onClick={handleLogin}

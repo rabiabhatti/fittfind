@@ -28,8 +28,9 @@ const Register = () => {
 
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState('');
-    const [loading, setLoading] = useState(false);
     const [password, setPassword] = useState("");
+    const [loading, setLoading] = useState(false);
+    const [errors, setErrors] = useState([]);
 
     const [register] = useMutation(REGISTER_MUTATION);
 
@@ -47,10 +48,11 @@ const Register = () => {
         register({ variables: { input: {email, password, username}}}).then((res) => {
             if (res.data.register) {
                 setLoading(false);
+                setErrors([]);
                 dispatch(addUser(res.data.login));
             }
         }).catch(error => {
-            console.log('error', error.message);
+            setErrors(error.networkError.result.errors[0].extensions.data[0].messages);
             setLoading(false);
         })
     };
@@ -64,9 +66,9 @@ const Register = () => {
 
     return (
         <div className='column-center' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
-            <BasketInput className='section-basket-address-input' title='Username' name='username' width={100} onChange={(e) => setUsername(e.target.value)} value={username} />
-            <BasketInput className='section-basket-address-input' title='Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} />
-            <BasketInput type='password' className='section-basket-address-input' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} />
+            <BasketInput className='section-basket-address-input' title='Username' name='username' width={100} onChange={(e) => setUsername(e.target.value)} value={username} errors={errors} />
+            <BasketInput className='section-basket-address-input' title='Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} errors={errors} />
+            <BasketInput type='password' className='section-basket-address-input' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} errors={errors} />
             <button
                 disabled={!enable}
                 onClick={handleRegister}

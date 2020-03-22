@@ -236,9 +236,15 @@ button:disabled {
     from { opacity: 1; visibility: visible; }
     to {opacity: 0; visibility: hidden;}
 }
-
-
-
+.input-error {
+    border: 1px solid rgb(223 35 45) !important;
+    background-color: rgba(223, 35, 45, 0.07) !important;
+}
+.error-msg {
+    margin-bottom: 1rem;
+    color: rgb(223, 35, 45);
+    font-family: 'Montserrat', sans-serif;
+}
 
 
 /*laptops, desktops*/
