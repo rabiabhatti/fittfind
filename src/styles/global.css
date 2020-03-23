@@ -245,6 +245,11 @@ button:disabled {
     color: rgb(223, 35, 45);
     font-family: 'Montserrat', sans-serif;
 }
+.input-additional-info {
+    margin-bottom: 1rem;
+    color: #b5b9c5;
+    font-family: 'Montserrat', sans-serif;
+}
 
 
 /*laptops, desktops*/

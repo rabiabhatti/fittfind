@@ -45,17 +45,22 @@ const Register = () => {
 
     const handleRegister =  () => {
         if (enable) {
-            setLoading(true);
-            register({ variables: { input: {email, password, username}}}).then((res) => {
-                if (res.data.register) {
+            if (password.length < 8) {
+                setErrors([{id: 'password', message: 'Password is too short.'}]);
+                return null
+            } else {
+                setLoading(true);
+                register({ variables: { input: {email, password, username}}}).then((res) => {
+                    if (res.data.register) {
+                        setLoading(false);
+                        setErrors([]);
+                        dispatch(addUser(res.data.login));
+                    }
+                }).catch(error => {
+                    setErrors(error.networkError.result.errors[0].extensions.data[0].messages);
                     setLoading(false);
-                    setErrors([]);
-                    dispatch(addUser(res.data.login));
-                }
-            }).catch(error => {
-                setErrors(error.networkError.result.errors[0].extensions.data[0].messages);
-                setLoading(false);
-            })
+                })
+            }
         }
     };
 
@@ -67,10 +72,13 @@ const Register = () => {
     }, [handleKeyPress]);
 
     return (
-        <div className='column-center' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
+        <div className='column-start' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
             <BasketInput className='section-basket-address-input' title='Username' name='username' width={100} onChange={(e) => setUsername(e.target.value)} value={username} errors={errors} />
             <BasketInput className='section-basket-address-input' title='Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} errors={errors} />
             <BasketInput type='password' className='section-basket-address-input' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} errors={errors} />
+            {password.length < 8 &&
+                <p className='input-additional-info'>Password must contains at least 8 or more characters.</p>
+            }
             <button
                 disabled={!enable}
                 onClick={handleRegister}
