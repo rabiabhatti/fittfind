@@ -44,17 +44,19 @@ const Register = () => {
     }, [email, password, username]);
 
     const handleRegister =  () => {
-        setLoading(true);
-        register({ variables: { input: {email, password, username}}}).then((res) => {
-            if (res.data.register) {
+        if (enable) {
+            setLoading(true);
+            register({ variables: { input: {email, password, username}}}).then((res) => {
+                if (res.data.register) {
+                    setLoading(false);
+                    setErrors([]);
+                    dispatch(addUser(res.data.login));
+                }
+            }).catch(error => {
+                setErrors(error.networkError.result.errors[0].extensions.data[0].messages);
                 setLoading(false);
-                setErrors([]);
-                dispatch(addUser(res.data.login));
-            }
-        }).catch(error => {
-            setErrors(error.networkError.result.errors[0].extensions.data[0].messages);
-            setLoading(false);
-        })
+            })
+        }
     };
 
     useEffect(() => {

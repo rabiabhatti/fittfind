@@ -43,17 +43,19 @@ export default () => {
     }, [email, password]);
 
     const handleLogin =  () => {
-        setLoading(true);
-        login({ variables: { input: {identifier: email, password: password}}}).then((res) => {
-            if (res.data.login) {
+        if (enable) {
+            setLoading(true);
+            login({ variables: { input: {identifier: email, password: password}}}).then((res) => {
+                if (res.data.login) {
+                    setLoading(false);
+                    setErrors([]);
+                    dispatch(addUser(res.data.login));
+                }
+            }).catch(error => {
+                setErrors(error.networkError.result.errors[0].extensions.data[0].messages);
                 setLoading(false);
-                setErrors([]);
-                dispatch(addUser(res.data.login));
-            }
-        }).catch(error => {
-            setErrors(error.networkError.result.errors[0].extensions.data[0].messages);
-            setLoading(false);
-        })
+            })
+        }
     };
 
     useEffect(() => {
@@ -62,8 +64,6 @@ export default () => {
             window.removeEventListener("keydown", handleKeyPress);
         };
     }, [handleKeyPress]);
-
-    console.log(errors)
 
     return (
         <div className='column-start' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
