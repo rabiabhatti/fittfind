@@ -78,6 +78,9 @@ export default () => {
         fetch('http://localhost:1337/gyms', {
             method: 'POST',
             body: bodyFormData,
+            headers: {
+                Authorization: `Bearer ${user.jwt}`,
+            }
         })
             .then((response) => response.json())
             .then((result) => {
@@ -86,31 +89,30 @@ export default () => {
             .catch((error) => {
                 console.error('Error:', error);
             });
-    }, [img]);
+    }, [img, user]);
 
     const handleSubmit = (e) => {
         const formElement = document.querySelector('form');
         e.preventDefault();
-
         const request = new XMLHttpRequest();
-
         request.open('POST', 'http://localhost:1337/upload');
+        request.setRequestHeader('Authorization', `Bearer ${user.jwt}`);
 
         request.send(new FormData(formElement));
     };
 
     return (
         <div className='column-start' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
-            <input type='file' onChange={event => setImg(event.target.files[0])} />
-            <button onClick={handleGym}>Upload</button>
-            <img src={img} />
-            {/*<form onSubmit={handleSubmit}>*/}
-            {/*    <input type="file" name="files" />*/}
-            {/*    <input type="text" name="ref" value="gym" />*/}
-            {/*    <input type="text" name="refId" value="3" />*/}
-            {/*    <input type="text" name="field" value="avatar" />*/}
-            {/*    <input type="submit" value="Submit" />*/}
-            {/*</form>*/}
+            {/*<input type='file' onChange={event => setImg(event.target.files[0])} />*/}
+            {/*<button onClick={handleGym}>Upload</button>*/}
+            {/*<img src={img} />*/}
+            <form onSubmit={handleSubmit}>
+                <input type="file" name="files" />
+                <input type="text" name="ref" value="gym" />
+                <input type="text" name="refId" value="4" />
+                <input type="text" name="field" value="avatar" />
+                <input type="submit" value="Submit" />
+            </form>
             <BasketInput className='section-basket-address-input' title='Username / Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} />
             <BasketInput type='password' className='section-basket-address-input' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} />
             {!!errors.length &&
