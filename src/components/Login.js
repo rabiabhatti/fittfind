@@ -3,7 +3,7 @@ import gql from "graphql-tag";
 import { useMutation } from '@apollo/react-hooks';
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 
-import { BasketInput } from './.'
+import { CustomInput } from './.'
 import { addUser } from '../state/auth'
 
 const LOGIN_MUTATION = gql`
@@ -115,6 +115,8 @@ export default () => {
             </form>
             <BasketInput className='section-basket-address-input' title='Username / Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} />
             <BasketInput type='password' className='section-basket-address-input' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} />
+            <CustomInput className='section-basket-address-input' title='Username / Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} />
+            <CustomInput type='password' className='section-basket-address-input' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} />
             {!!errors.length &&
             <p className='error-msg'>Email / Username or Password incorrect.</p>
             }
