@@ -1,51 +1,51 @@
 import React from 'react'
 
-import '../styles/list-yourself.css'
-import down_arrow from '../images/forward-icon.png'
-import achievement_badge from '../images/ethereum.png'
-import gym_dashboard_banner from '../images/gym_dashboard_banner.jpg'
-import gym_dashboard_profile from '../images/gym_dashboard_profile.jpg'
-import { Wrapper, Hero, ImpossibleBanner, UserAttribute} from "../components";
+import '../../styles/list-yourself.css'
+import down_arrow from '../../images/forward-icon.png'
+import achievement_badge from '../../images/ethereum.png'
+import gym_dashboard_banner from '../../images/gym_dashboard_banner.jpg'
+import gym_dashboard_profile from '../../images/gym_dashboard_profile.jpg'
+import { Wrapper, Hero, ImpossibleBanner, UserAttribute} from "../../components";
 
-export default class Help extends React.Component {
+export default class ListYourself extends React.Component {
     state = {
-      user: {
-          name: 'scott mathison',
-          profession: 'Director, Professional Stuntman, & Blogger',
-          location: 'London, United Kingdom',
-          summery: 'Exercise is powerful ingredient for health and helps prevent many serious health problems. The Fitness Profile helps individuals see how fit they are and what they need to do to improve their overall fitness and health.',
-          life_style: 'Intermittently active',
-          training_env: 'Outdoor in Park',
-          xp: '160000',
-          profile_strength: 92,
-          fourteen_days_gym_sessions: 14,
-          total_gym_sessions: 398,
-          attribute: {
-              strength: 65,
-              power: 40,
-              agility: 96,
-              balance: 100,
-              flexibility: 39,
-              muscle_endurance: 100,
-              cardiovascular_endurance: 103,
-              co_ordination: 83
-          },
-          achievements: [
-              {
-                  title: 'practice makes perfect',
-                  desc: 'You completed fitness activities in gym/studio three times in a row!'
-              },{
-                  title: 'on a roll',
-                  desc: 'You completed fitness activities in gym/studio three times in a row!'
-              },{
-                  title: 'practice makes perfect',
-                  desc: 'You completed fitness activities in gym/studio three times in a row!'
-              },{
-                  title: 'practice makes perfect',
-                  desc: 'You completed fitness activities in gym/studio three times in a row!'
-              }
-          ],
-      }
+        user: {
+            name: 'scott mathison',
+            profession: 'Director, Professional Stuntman, & Blogger',
+            location: 'London, United Kingdom',
+            summery: 'Exercise is powerful ingredient for health and helps prevent many serious health problems. The Fitness Profile helps individuals see how fit they are and what they need to do to improve their overall fitness and health.',
+            life_style: 'Intermittently active',
+            training_env: 'Outdoor in Park',
+            xp: '160000',
+            profile_strength: 92,
+            fourteen_days_gym_sessions: 14,
+            total_gym_sessions: 398,
+            attribute: {
+                strength: 65,
+                power: 40,
+                agility: 96,
+                balance: 100,
+                flexibility: 39,
+                muscle_endurance: 100,
+                cardiovascular_endurance: 103,
+                co_ordination: 83
+            },
+            achievements: [
+                {
+                    title: 'practice makes perfect',
+                    desc: 'You completed fitness activities in gym/studio three times in a row!'
+                },{
+                    title: 'on a roll',
+                    desc: 'You completed fitness activities in gym/studio three times in a row!'
+                },{
+                    title: 'practice makes perfect',
+                    desc: 'You completed fitness activities in gym/studio three times in a row!'
+                },{
+                    title: 'practice makes perfect',
+                    desc: 'You completed fitness activities in gym/studio three times in a row!'
+                }
+            ],
+        }
     };
 
     handleFitnessClick = () => {
