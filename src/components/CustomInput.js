@@ -1,6 +1,6 @@
 import React from 'react'
 
-function BasketInput(props) {
+function CustomInput(props) {
     const { name, width, onChange, value, title, className, type, errors } = props;
     let found ;
     if (errors) {
@@ -15,4 +15,4 @@ function BasketInput(props) {
     )
 }
 
-export { BasketInput }
+export { CustomInput }

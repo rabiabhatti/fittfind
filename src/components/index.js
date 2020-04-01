@@ -11,7 +11,7 @@ export * from './Register';
 export * from './Loading';
 export * from './RightNav';
 export * from './HomeSlider';
-export * from './BasketInput';
+export * from './CustomInput';
 export * from './PrivateRoute';
 export * from './UserAttribute';
 export * from './Popup/SizeChart';

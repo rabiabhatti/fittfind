@@ -12,7 +12,7 @@ import product_1 from '../images/product-1.jpg'
 import product_2 from '../images/product-2.jpg'
 import product_3 from '../images/product-5.jpg'
 import forwardIcon from '../images/forward-icon.png'
-import { Wrapper, Hero, BasketInput } from '../components'
+import { Wrapper, Hero, CustomInput } from '../components'
 import horizontal_line from '../images/horizontal_line.png'
 
 // const APOLLO_QUERY = gql`
@@ -183,14 +183,14 @@ export default class Basket extends React.Component {
                                     <h4>Delivery address</h4>
                                     <div className='section-basket-address-inputs-container'>
                                         <div className='space-between'>
-                                            <BasketInput className='section-basket-address-input' title='First Name' name='firstName' width={49} onChange={this._onChange} value={firstName} />
-                                            <BasketInput className='section-basket-address-input' title='Last Name' name='lastName' width={49} onChange={this._onChange} value={lastName} />
+                                            <CustomInput className='section-basket-address-input' title='First Name' name='firstName' width={49} onChange={this._onChange} value={firstName} />
+                                            <CustomInput className='section-basket-address-input' title='Last Name' name='lastName' width={49} onChange={this._onChange} value={lastName} />
                                         </div>
-                                        <BasketInput className='section-basket-address-input' title='Company' name='company' width={100} onChange={this._onChange} value={company} />
-                                        <BasketInput className='section-basket-address-input' title='Address' name='address' width={100} onChange={this._onChange} value={address} />
-                                        <BasketInput className='section-basket-address-input' title='City / Region' name='city' width={100} onChange={this._onChange} value={city} />
+                                        <CustomInput className='section-basket-address-input' title='Company' name='company' width={100} onChange={this._onChange} value={company} />
+                                        <CustomInput className='section-basket-address-input' title='Address' name='address' width={100} onChange={this._onChange} value={address} />
+                                        <CustomInput className='section-basket-address-input' title='City / Region' name='city' width={100} onChange={this._onChange} value={city} />
                                         <div className='space-between align-center'>
-                                            <BasketInput className='section-basket-address-input' title='Post Code' name='postCode' width={49} onChange={this._onChange} value={postCode} />
+                                            <CustomInput className='section-basket-address-input' title='Post Code' name='postCode' width={49} onChange={this._onChange} value={postCode} />
                                             <div className='column-start section-basket-address-select-container'>
                                                 <p>Country</p>
                                                 <ReactFlagsSelect
@@ -200,7 +200,7 @@ export default class Basket extends React.Component {
                                                     placeholder="Please select" />
                                             </div>
                                         </div>
-                                        <BasketInput className='section-basket-address-input' title='Phone' name='phone' width={100} onChange={this._onChange} value={phone} />
+                                        <CustomInput className='section-basket-address-input' title='Phone' name='phone' width={100} onChange={this._onChange} value={phone} />
                                     </div>
                                 </div>
                                 <div className='section-basket-address-container'>
