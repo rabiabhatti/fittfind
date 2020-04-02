@@ -29,6 +29,7 @@ export default () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [img, setImg] = useState(null);
+    const [facilityCover, setFacilityCover] = useState(null);
     const [loading, setLoading] = useState(false);
     const [errors, setErrors] = useState([]);
 
@@ -69,10 +70,17 @@ export default () => {
     const handleGym = React.useCallback(() => {
         const bodyFormData = new FormData();
         bodyFormData.append('files.avatar', img);
+        bodyFormData.append('files.facilities[0].cover_image', facilityCover);
         bodyFormData.append('data', JSON.stringify({
-            name: 'testing gym',
+            name: 'Hello',
             about: 'something',
-            location: 'test'
+            location: 'test',
+            facilities: [{
+                name: 'Facility one',
+                detail: 'Facility detail',
+                price: 14
+            }],
+            user: user.user,
         }));
 
         fetch('http://localhost:1337/gyms', {
@@ -89,7 +97,7 @@ export default () => {
             .catch((error) => {
                 console.error('Error:', error);
             });
-    }, [img, user]);
+    }, [img, user, facilityCover]);
 
     const handleSubmit = (e) => {
         const formElement = document.querySelector('form');
@@ -100,21 +108,20 @@ export default () => {
 
         request.send(new FormData(formElement));
     };
-
+    
     return (
         <div className='column-start' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
-            {/*<input type='file' onChange={event => setImg(event.target.files[0])} />*/}
-            {/*<button onClick={handleGym}>Upload</button>*/}
-            {/*<img src={img} />*/}
-            <form onSubmit={handleSubmit}>
-                <input type="file" name="files" />
-                <input type="text" name="ref" value="gym" />
-                <input type="text" name="refId" value="4" />
-                <input type="text" name="field" value="avatar" />
-                <input type="submit" value="Submit" />
-            </form>
-            <BasketInput className='section-basket-address-input' title='Username / Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} />
-            <BasketInput type='password' className='section-basket-address-input' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} />
+            <input type='file' onChange={event => setImg(event.target.files[0])} />
+            <input type='file' onChange={event => setFacilityCover(event.target.files[0])} />
+            <button onClick={handleGym}>Upload</button>
+            <img src={img} />
+            {/*<form onSubmit={handleSubmit}>*/}
+            {/*    <input type="file" name="files" />*/}
+            {/*    <input type="text" name="ref" value="gym" />*/}
+            {/*    <input type="text" name="refId" value="4" />*/}
+            {/*    <input type="text" name="field" value="avatar" />*/}
+            {/*    <input type="submit" value="Submit" />*/}
+            {/*</form>*/}
             <CustomInput className='section-basket-address-input' title='Username / Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} />
             <CustomInput type='password' className='section-basket-address-input' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} />
             {!!errors.length &&
