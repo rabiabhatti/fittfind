@@ -11,6 +11,7 @@ export * from './Loading';
 export * from './RightNav';
 export * from './Register';
 export * from './Dashboard';
+export * from './FileInput';
 export * from './HomeSlider';
 export * from './CustomInput';
 export * from './PrivateRoute';
