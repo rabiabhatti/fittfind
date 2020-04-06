@@ -3,7 +3,7 @@ import { useSelector, shallowEqual } from "react-redux";
 
 import '../../styles/new_gym.css'
 import {STRAPI_SERVER_URL} from '../../../common'
-import { Wrapper, CustomInput, NewGymFacility } from '../../components'
+import { Wrapper, CustomInput, FileInput } from '../../components'
 
 
 export default () => {
@@ -65,24 +65,25 @@ export default () => {
 
     return (
         <Wrapper name='Dashboard' location={{pathname: 'list-yourself'}} gymNav={true}>
-            <div className='column-center'>
-                <CustomInput title='Gym Name' type='text' width='40' className='section-basket-address-input' value={gymName} onChange={e => setGymName(e.target.value)} />
-                <CustomInput title='About' type='text' width='40' className='section-basket-address-input' value={about} onChange={e => setAbout(e.target.value)} />
-                <CustomInput title='City' type='text' width='40' className='section-basket-address-input' value={city} onChange={e => setCity(e.target.value)} />
-                <input type='file' onChange={event => setImg(event.target.files[0])} />
-                {img && <img src={window.URL.createObjectURL(img)} alt={window.URL.createObjectURL(img)} width={150} />}
-                {!!facilities.length &&
+            <div className='column-center section-new-gym-container'>
+                <div className='column-start section-new-gym-basic-info'>
+                    <CustomInput title='Gym Name' type='text' width='100' className='section-basket-address-input' value={gymName} onChange={e => setGymName(e.target.value)} />
+                    <CustomInput title='City' type='text' width='100' className='section-basket-address-input' value={city} onChange={e => setCity(e.target.value)} />
+                    <FileInput onChange={event => setImg(event.target.files[0])} name='gym_cover' value={img}  />
+                    <CustomInput title='About' type='text' width='100' className='section-basket-address-input' value={about} onChange={e =>setAbout(e.target.value)} textArea={true} />
+                    {!!facilities.length &&
                     <div>
                         {facilities.map((item, i) => (
                             <div key={i}>
-                                <CustomInput title='Gym Name' type='text' width='100' className='section-basket-address-input' value={facilities[i].name} onChange={e => handleFacilityInput(i, e)} />
+                                <CustomInput title='Name' type='text' width='100' className='section-basket-address-input' value={facilities[i].name} onChange={e => handleFacilityInput(i, e)} />
                             </div>
                         ))}
                     </div>
-                }
-                <button onClick={handleAddFacility}>
-                    Add Facility
-                </button>
+                    }
+                    <button onClick={handleAddFacility}>
+                        Add Facility
+                    </button>
+                </div>
                 {/*<button onClick={handleGym}>Upload</button>*/}
             </div>
         </Wrapper>
