@@ -128,22 +128,10 @@
     padding: 1.5rem;
     flex-direction: column;
 }
-.section-basket-address-input {
-    display: flex;
-    flex-direction: column;
-}
-.section-basket-address-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p {
+.section-basket-address-select-container p, .section-basket-delivery-select-container p {
     font-weight: 600;
     font-size: 0.75rem;
     margin-bottom: 5px;
-}
-.section-basket-address-input input, .section-basket-address-input textarea {
-    width: 100%;
-    color: #333;
-    font-size: 0.95rem;
-    margin-bottom: 1rem;
-    padding: 0.8rem 0.5rem;
-    border: 1px solid #b2bac6;
 }
 .section-basket-address-select {
     width: 100%;
@@ -232,11 +220,11 @@ a.section-basket-hero-back-link>span {
     text-transform: uppercase;
 }
 
-.heading-light, p.section-basket-item-details, .space-between>.column-start>p, .section-basket-place-order-btn, .section-basket-address-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p, .flag-select .selected--flag--option, .remember-card-text {
+.heading-light, p.section-basket-item-details, .space-between>.column-start>p, .section-basket-place-order-btn, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p, .flag-select .selected--flag--option, .remember-card-text {
     font-family: 'Montserrat', sans-serif;
 }
 
-.section-basket-hero-back-link span, .section-basket-hero-products-count h1, .section-basket-hero-products-count p, .section-basket-details h3, .section-basket-details h2, .section-basket-item-details, .section-basket-single-item-price, .space-between>.column-start>p, .section-basket-address-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p {
+.section-basket-hero-back-link span, .section-basket-hero-products-count h1, .section-basket-hero-products-count p, .section-basket-details h3, .section-basket-details h2, .section-basket-item-details, .section-basket-single-item-price, .space-between>.column-start>p, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p {
     font-weight: 700;
 }
 .heading-light {
@@ -265,7 +253,7 @@ a.section-basket-hero-back-link>span {
 .section-basket-heading:nth-child(3), .section-basket-item-detail:nth-child(3) {
     font-size: 25px;
 }
-.heading-light, .section-basket-item-details, .space-between>.column-start>p, .section-basket-place-order-btn, .section-basket-address-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p, .flag-select .selected--flag--option, .remember-card-text, a.section-basket-hero-back-link>span, .country-label {
+.heading-light, .section-basket-item-details, .space-between>.column-start>p, .section-basket-place-order-btn, .section-custom-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p, .flag-select .selected--flag--option, .remember-card-text, a.section-basket-hero-back-link>span, .country-label {
     font-size: 13px;
 }
 .section-basket-details h3 {
@@ -295,7 +283,7 @@ a.section-basket-hero-back-link>span {
     .section-basket-heading:nth-child(3), .section-basket-item-detail:nth-child(3) {
         font-size: 18px;
     }
-    .heading-light, .section-basket-item-details, .space-between>.column-start>p, .section-basket-place-order-btn, .section-basket-address-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p, .flag-select .selected--flag--option, .remember-card-text, a.section-basket-hero-back-link>span, .section-basket-address-select, .country-label {
+    .heading-light, .section-basket-item-details, .space-between>.column-start>p, .section-basket-place-order-btn, .section-custom-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p, .flag-select .selected--flag--option, .remember-card-text, a.section-basket-hero-back-link>span, .section-basket-address-select, .country-label {
         font-size: 10px;
     }
 }
@@ -324,7 +312,7 @@ a.section-basket-hero-back-link>span {
     .section-basket-heading:nth-child(3), .section-basket-item-detail:nth-child(3) {
         font-size: 18px;
     }
-    .heading-light, .section-basket-item-details, .space-between>.column-start>p, .section-basket-place-order-btn, .section-basket-address-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p, .flag-select .selected--flag--option, .remember-card-text, a.section-basket-hero-back-link>span, .section-basket-address-select, .country-label {
+    .heading-light, .section-basket-item-details, .space-between>.column-start>p, .section-basket-place-order-btn, .section-custom-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p, .flag-select .selected--flag--option, .remember-card-text, a.section-basket-hero-back-link>span, .section-basket-address-select, .country-label {
         font-size: 10px;
     }
 }
@@ -351,7 +339,7 @@ a.section-basket-hero-back-link>span {
     .section-basket-heading:nth-child(3), .section-basket-item-detail:nth-child(3) {
         font-size: 18px;
     }
-    .heading-light, .section-basket-item-details, .space-between>.column-start>p, .section-basket-place-order-btn, .section-basket-address-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p, .flag-select .selected--flag--option, .remember-card-text, a.section-basket-hero-back-link>span, .section-basket-address-select, .country-label {
+    .heading-light, .section-basket-item-details, .space-between>.column-start>p, .section-basket-place-order-btn, .section-custom-input label, .section-basket-address-select-container p, .section-basket-delivery-select-container p, .section-basket-delivery-mode-container p, .flag-select .selected--flag--option, .remember-card-text, a.section-basket-hero-back-link>span, .section-basket-address-select, .country-label {
         font-size: 10px;
     }
 }

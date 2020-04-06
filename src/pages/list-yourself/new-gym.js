@@ -67,15 +67,15 @@ export default () => {
         <Wrapper name='Dashboard' location={{pathname: 'list-yourself'}} gymNav={true}>
             <div className='column-center section-new-gym-container'>
                 <div className='column-start section-new-gym-basic-info'>
-                    <CustomInput title='Gym Name' type='text' width='100' className='section-basket-address-input' value={gymName} onChange={e => setGymName(e.target.value)} />
-                    <CustomInput title='City' type='text' width='100' className='section-basket-address-input' value={city} onChange={e => setCity(e.target.value)} />
+                    <CustomInput title='Gym Name' type='text' width='100' value={gymName} onChange={e => setGymName(e.target.value)} />
+                    <CustomInput title='City' type='text' width='100' value={city} onChange={e => setCity(e.target.value)} />
                     <FileInput onChange={event => setImg(event.target.files[0])} name='gym_cover' value={img}  />
-                    <CustomInput title='About' type='text' width='100' className='section-basket-address-input' value={about} onChange={e =>setAbout(e.target.value)} textArea={true} />
+                    <CustomInput title='About' type='text' width='100' value={about} onChange={e =>setAbout(e.target.value)} textArea={true} />
                     {!!facilities.length &&
                     <div>
                         {facilities.map((item, i) => (
                             <div key={i}>
-                                <CustomInput title='Name' type='text' width='100' className='section-basket-address-input' value={facilities[i].name} onChange={e => handleFacilityInput(i, e)} />
+                                <CustomInput title='Name' type='text' width='100' value={facilities[i].name} onChange={e => handleFacilityInput(i, e)} />
                             </div>
                         ))}
                     </div>

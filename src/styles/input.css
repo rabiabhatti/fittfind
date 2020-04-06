@@ -38,3 +38,21 @@
 .custom-textArea:focus {
     outline: none;
 }
+.section-custom-input {
+    display: flex;
+    flex-direction: column;
+}
+.section-custom-input label {
+    font-size: 0.75rem;
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+.section-custom-input input, .section-custom-input textarea {
+    width: 100%;
+    color: #333;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+    padding: 0.8rem 0.5rem;
+    border: 1px solid #b2bac6;
+}

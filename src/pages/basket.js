@@ -183,14 +183,14 @@ export default class Basket extends React.Component {
                                     <h4>Delivery address</h4>
                                     <div className='section-basket-address-inputs-container'>
                                         <div className='space-between'>
-                                            <CustomInput className='section-basket-address-input' title='First Name' name='firstName' width={49} onChange={this._onChange} value={firstName} />
-                                            <CustomInput className='section-basket-address-input' title='Last Name' name='lastName' width={49} onChange={this._onChange} value={lastName} />
+                                            <CustomInput title='First Name' name='firstName' width={49} onChange={this._onChange} value={firstName} />
+                                            <CustomInput title='Last Name' name='lastName' width={49} onChange={this._onChange} value={lastName} />
                                         </div>
-                                        <CustomInput className='section-basket-address-input' title='Company' name='company' width={100} onChange={this._onChange} value={company} />
-                                        <CustomInput className='section-basket-address-input' title='Address' name='address' width={100} onChange={this._onChange} value={address} />
-                                        <CustomInput className='section-basket-address-input' title='City / Region' name='city' width={100} onChange={this._onChange} value={city} />
+                                        <CustomInput title='Company' name='company' width={100} onChange={this._onChange} value={company} />
+                                        <CustomInput title='Address' name='address' width={100} onChange={this._onChange} value={address} />
+                                        <CustomInput title='City / Region' name='city' width={100} onChange={this._onChange} value={city} />
                                         <div className='space-between align-center'>
-                                            <CustomInput className='section-basket-address-input' title='Post Code' name='postCode' width={49} onChange={this._onChange} value={postCode} />
+                                            <CustomInput title='Post Code' name='postCode' width={49} onChange={this._onChange} value={postCode} />
                                             <div className='column-start section-basket-address-select-container'>
                                                 <p>Country</p>
                                                 <ReactFlagsSelect
@@ -200,7 +200,7 @@ export default class Basket extends React.Component {
                                                     placeholder="Please select" />
                                             </div>
                                         </div>
-                                        <CustomInput className='section-basket-address-input' title='Phone' name='phone' width={100} onChange={this._onChange} value={phone} />
+                                        <CustomInput title='Phone' name='phone' width={100} onChange={this._onChange} value={phone} />
                                     </div>
                                 </div>
                                 <div className='section-basket-address-container'>
