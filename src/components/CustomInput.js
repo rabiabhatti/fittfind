@@ -1,6 +1,7 @@
 import React from 'react'
 
 import '../styles/input.css'
+import { PlusIcon } from ".";
 import default_image_thumbnail from "../images/default_image_thumbnail.png";
 import check_mark from "../images/check_mark.png";
 
@@ -39,7 +40,7 @@ function CheckBox(props) {
 }
 
 function FileInput(props) {
-    const { name, onChange, value } = props;
+    const { name, onChange, value, title } = props;
     let error ;
     let img;
     const validImageTypes = ['image/jpeg', 'image/png'];
@@ -60,7 +61,10 @@ function FileInput(props) {
                         <img src={default_image_thumbnail} alt='default_image_thumbnail' width={100} />
                     </div>
                 }
-                <label htmlFor={name} className='input_file_label row-center'><span>+</span> UPLOAD IMAGE</label>
+                <label htmlFor={name} className='input_file_label row-center'>
+                    <PlusIcon color='#333' width={15} height={15} />
+                    <p>{title}</p>
+                </label>
                 <input type='file' name={name} onChange={onChange} className='input_file' />
             </div>
         </div>

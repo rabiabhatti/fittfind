@@ -3,7 +3,7 @@ import { useSelector, shallowEqual } from "react-redux";
 
 import '../../styles/new_gym.css'
 import {STRAPI_SERVER_URL} from '../../../common'
-import { Wrapper, Input, FileInput, CheckBox } from '../../components'
+import { Wrapper, Input, FileInput, CheckBox, PlusIcon } from '../../components'
 
 const allAmenities = ['weight equipments', 'cardiovascular equipments', 'special machines', 'changing rooms', 'showers', 'lockers', 'healthy snacks', 'air condition', 'satellite tv'];
 
@@ -77,19 +77,25 @@ export default () => {
         setAmenities(copy)
     }, [amenities]);
 
+    const handleAllAmenities = useCallback(()=> {
+        if (amenities.length < allAmenities.length) {
+            setAmenities(allAmenities);
+        } else setAmenities([])
+    }, [amenities]);
+
     return (
         <Wrapper name='Dashboard' location={{pathname: 'list-yourself'}} gymNav={true}>
             <div className='column-center section-new-gym-container'>
                 <div className='column-start section-new-gym-basic-info'>
                     <Input title='Gym Name' type='text' width='100' value={gymName} onChange={e => setGymName(e.target.value)} />
                     <Input title='City' type='text' width='100' value={city} onChange={e => setCity(e.target.value)} />
-                    <FileInput onChange={event => setImg(event.target.files[0])} name='gym_cover' value={img}  />
+                    <FileInput onChange={event => setImg(event.target.files[0])} name='gym_cover' value={img} title='upload image' />
                     <Input title='About' type='text' width='100' value={about} onChange={e =>setAbout(e.target.value)} textArea={{rows: 10, cols: 30}} />
                 </div>
                 <div className='section-new-gym-amenities'>
                     <div className='row-center space-between'>
-                        <p>Amenities</p>
-                        <CheckBox name='select all' value='select all' onChange={() => setAmenities(amenities.length ? [] : allAmenities)} width={10} checked={amenities.length === allAmenities.length} />
+                        <p>Amenities({amenities.length})</p>
+                        <CheckBox name='select all' value='select all' onChange={handleAllAmenities} width={10} checked={amenities.length === allAmenities.length} />
                     </div>
                     <div className='section-new-gym-amenities-options row-center'>
                         <CheckBox name='weight_equipments' value='weight equipments' onChange={handleAmenityInput} width={30} checked={amenities.includes('weight equipments')} />
@@ -101,6 +107,12 @@ export default () => {
                         <CheckBox name='healthy_snacks' value='healthy snacks' onChange={handleAmenityInput} width={30} checked={amenities.includes('healthy snacks')} />
                         <CheckBox name='air_condition' value='air condition' onChange={handleAmenityInput} width={30} checked={amenities.includes('air condition')} />
                         <CheckBox name='satellite_tv' value='satellite tv' onChange={handleAmenityInput} width={30} checked={amenities.includes('satellite tv')} />
+                    </div>
+                </div>
+                <div className='section-new-gym-facilities'>
+                    <p>Facilities({facilities.length})</p>
+                    <div>
+                        <PlusIcon color={'red'} width={20} height={20} />
                     </div>
                 </div>
                 {!!facilities.length &&

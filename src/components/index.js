@@ -3,6 +3,7 @@ export * from './Image';
 export * from './Slider';
 export * from './Header';
 export * from './Footer';
+export * from './Common';
 export * from './LeftBar';
 export * from './Wrapper';
 export * from './Product';

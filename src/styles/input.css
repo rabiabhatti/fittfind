@@ -13,18 +13,21 @@
     bottom: 0;
     width: 100%;
     height: 100%;
+    cursor: pointer;
     overflow: hidden;
     position: absolute;
 }
 .input_file_label {
     width: 100%;
     font-size: 1rem;
+    padding: 0.5rem 0;
     justify-content: center;
     background-color: #ffffff;
 }
-.input_file_label span {
-    font-size: 2rem;
-    margin-right: 5px;
+.input_file_label p {
+    margin-top: 3px;
+    margin-left: 5px;
+    text-transform: uppercase;
 }
 .input_file_image {
     max-width: 350px;
