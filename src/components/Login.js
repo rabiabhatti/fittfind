@@ -3,7 +3,7 @@ import gql from "graphql-tag";
 import { useMutation } from '@apollo/react-hooks';
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 
-import { CustomInput } from './.'
+import { Input } from '.'
 import { addUser } from '../state/auth'
 
 const LOGIN_MUTATION = gql`
@@ -108,7 +108,7 @@ export default () => {
 
         request.send(new FormData(formElement));
     };
-    
+
     return (
         <div className='column-start' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
             <input type='file' onChange={event => setImg(event.target.files[0])} />
@@ -122,8 +122,8 @@ export default () => {
             {/*    <input type="text" name="field" value="avatar" />*/}
             {/*    <input type="submit" value="Submit" />*/}
             {/*</form>*/}
-            <CustomInput className='section-basket-address-input' title='Username / Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} />
-            <CustomInput type='password' className='section-basket-address-input' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} />
+            <Input title='Username / Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} />
+            <Input type='password' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} />
             {!!errors.length &&
             <p className='error-msg'>Email / Username or Password incorrect.</p>
             }
@@ -138,3 +138,4 @@ export default () => {
         </div>
     )
 };
+

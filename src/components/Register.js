@@ -3,7 +3,7 @@ import gql from "graphql-tag";
 import { useMutation } from '@apollo/react-hooks';
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 
-import { CustomInput } from './.'
+import { Input } from './.'
 import { addUser } from '../state/auth'
 
 const REGISTER_MUTATION = gql`
@@ -73,9 +73,9 @@ const Register = () => {
 
     return (
         <div className='column-start' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
-            <CustomInput title='Username' name='username' width={100} onChange={(e) => setUsername(e.target.value)} value={username} errors={errors} />
-            <CustomInput title='Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} errors={errors} />
-            <CustomInput type='password' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} errors={errors} />
+            <Input title='Username' name='username' width={100} onChange={(e) => setUsername(e.target.value)} value={username} errors={errors} />
+            <Input title='Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} errors={errors} />
+            <Input type='password' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} errors={errors} />
             {password.length < 8 &&
                 <p className='input-additional-info'>Password must contains at least 8 or more characters.</p>
             }

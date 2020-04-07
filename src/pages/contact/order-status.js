@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 import '../../styles/order-status.css'
 import backward_icon from "../../images/backward-icon.png";
-import {Wrapper, ImpossibleBanner, Hero, CustomInput} from "../../components";
+import {Wrapper, ImpossibleBanner, Hero, Input} from "../../components";
 
 export default class OrderStatus extends React.Component {
     state= {
@@ -45,7 +45,7 @@ export default class OrderStatus extends React.Component {
                         :
                         <div className='column-start section-order-status-form'>
                             <h2>Please enter your order number here.</h2>
-                            <CustomInput className='section-order-status-form-input' title='Order number' name='order_no' width={100} onChange={this._onChange} value={order_no} />
+                            <Input className='section-order-status-form-input' title='Order number' name='order_no' width={100} onChange={this._onChange} value={order_no} />
                             <button className='section-order-status-form-btn' onClick={this.handleCheckStatus}>Check order status</button>
                         </div>
                     }
