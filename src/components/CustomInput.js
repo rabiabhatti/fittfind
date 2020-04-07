@@ -12,7 +12,7 @@ function CustomInput(props) {
         <div style={{ width: `${width}%`, }} className='section-custom-input'>
             <label htmlFor={name}>{title}</label>
             {textArea ?
-                <textarea name={name} id={name} onChange={onChange} value={value} className={`${found && 'input-error'} custom-textArea`}  rows="15" cols="50" />
+                <textarea name={name} id={name} onChange={onChange} value={value} className={`${found && 'input-error'} custom-textArea`}  rows={textArea.rows} cols={textArea.cols} />
                 :
                 <input type={type ? type : 'text'} name={name} id={name} onChange={onChange} value={value} className={`${found && 'input-error'}`} />
             }

@@ -70,7 +70,7 @@ export default () => {
                     <CustomInput title='Gym Name' type='text' width='100' value={gymName} onChange={e => setGymName(e.target.value)} />
                     <CustomInput title='City' type='text' width='100' value={city} onChange={e => setCity(e.target.value)} />
                     <FileInput onChange={event => setImg(event.target.files[0])} name='gym_cover' value={img}  />
-                    <CustomInput title='About' type='text' width='100' value={about} onChange={e =>setAbout(e.target.value)} textArea={true} />
+                    <CustomInput title='About' type='text' width='100' value={about} onChange={e =>setAbout(e.target.value)} textArea={{rows: 10, cols: 30}} />
                     {!!facilities.length &&
                     <div>
                         {facilities.map((item, i) => (
