@@ -3,12 +3,14 @@ import { useSelector, shallowEqual } from "react-redux";
 
 import '../../styles/new_gym.css'
 import {STRAPI_SERVER_URL} from '../../../common'
-import { Wrapper, CustomInput, FileInput } from '../../components'
+import { Wrapper, Input, FileInput, CheckBox } from '../../components'
 
+const allAmenities = ['weight equipments', 'cardiovascular equipments', 'special machines', 'changing rooms', 'showers', 'lockers', 'healthy snacks', 'air condition', 'satellite tv'];
 
 export default () => {
     const [img, setImg] = useState(null);
     const [facilities, setFacilities] = useState([]);
+    const [amenities, setAmenities] = useState([]);
     const [gymName, setGymName] = useState('');
     const [about, setAbout] = useState('');
     const [city, setCity] = useState('');
@@ -63,27 +65,56 @@ export default () => {
         setFacilities(copied)
     };
 
+    const handleAmenityInput = useCallback((e) => {
+        const copy = amenities.slice();
+        const index = amenities.indexOf(e.target.value);
+        if (index === -1) {
+            copy.push(e.target.value);
+
+        } else {
+            copy.splice(index, 1);
+        }
+        setAmenities(copy)
+    }, [amenities]);
+
     return (
         <Wrapper name='Dashboard' location={{pathname: 'list-yourself'}} gymNav={true}>
             <div className='column-center section-new-gym-container'>
                 <div className='column-start section-new-gym-basic-info'>
-                    <CustomInput title='Gym Name' type='text' width='100' value={gymName} onChange={e => setGymName(e.target.value)} />
-                    <CustomInput title='City' type='text' width='100' value={city} onChange={e => setCity(e.target.value)} />
+                    <Input title='Gym Name' type='text' width='100' value={gymName} onChange={e => setGymName(e.target.value)} />
+                    <Input title='City' type='text' width='100' value={city} onChange={e => setCity(e.target.value)} />
                     <FileInput onChange={event => setImg(event.target.files[0])} name='gym_cover' value={img}  />
-                    <CustomInput title='About' type='text' width='100' value={about} onChange={e =>setAbout(e.target.value)} textArea={{rows: 10, cols: 30}} />
-                    {!!facilities.length &&
-                    <div>
-                        {facilities.map((item, i) => (
-                            <div key={i}>
-                                <CustomInput title='Name' type='text' width='100' value={facilities[i].name} onChange={e => handleFacilityInput(i, e)} />
-                            </div>
-                        ))}
-                    </div>
-                    }
-                    <button onClick={handleAddFacility}>
-                        Add Facility
-                    </button>
+                    <Input title='About' type='text' width='100' value={about} onChange={e =>setAbout(e.target.value)} textArea={{rows: 10, cols: 30}} />
                 </div>
+                <div className='section-new-gym-amenities'>
+                    <div className='row-center space-between'>
+                        <p>Amenities</p>
+                        <CheckBox name='select all' value='select all' onChange={() => setAmenities(amenities.length ? [] : allAmenities)} width={10} checked={amenities.length === allAmenities.length} />
+                    </div>
+                    <div className='section-new-gym-amenities-options row-center'>
+                        <CheckBox name='weight_equipments' value='weight equipments' onChange={handleAmenityInput} width={30} checked={amenities.includes('weight equipments')} />
+                        <CheckBox name='cardiovascular_equipments' value='cardiovascular equipments' onChange={handleAmenityInput} width={30} checked={amenities.includes('cardiovascular equipments')} />
+                        <CheckBox name='special_machines' value='special machines' onChange={handleAmenityInput} width={30} checked={amenities.includes('special machines')} />
+                        <CheckBox name='changing_rooms' value='changing rooms' onChange={handleAmenityInput} width={30} checked={amenities.includes('changing rooms')} />
+                        <CheckBox name='showers' value='showers' onChange={handleAmenityInput} width={30} checked={amenities.includes('showers')} />
+                        <CheckBox name='lockers' value='lockers' onChange={handleAmenityInput} width={30} checked={amenities.includes('lockers')} />
+                        <CheckBox name='healthy_snacks' value='healthy snacks' onChange={handleAmenityInput} width={30} checked={amenities.includes('healthy snacks')} />
+                        <CheckBox name='air_condition' value='air condition' onChange={handleAmenityInput} width={30} checked={amenities.includes('air condition')} />
+                        <CheckBox name='satellite_tv' value='satellite tv' onChange={handleAmenityInput} width={30} checked={amenities.includes('satellite tv')} />
+                    </div>
+                </div>
+                {!!facilities.length &&
+                <div>
+                    {facilities.map((item, i) => (
+                        <div key={i}>
+                            <Input title='Name' type='text' width='100' value={facilities[i].name} onChange={e => handleFacilityInput(i, e)} />
+                        </div>
+                    ))}
+                </div>
+                }
+                <button onClick={handleAddFacility}>
+                    Add Facility
+                </button>
                 {/*<button onClick={handleGym}>Upload</button>*/}
             </div>
         </Wrapper>
