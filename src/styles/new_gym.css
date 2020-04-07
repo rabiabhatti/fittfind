@@ -9,3 +9,43 @@
     width: 100%;
     flex-wrap: wrap;
 }
+.section-new-gym-multi-entries {
+    border: 1px solid #b2bac6;
+    /*font-family: 'Montserrat', sans-serif;*/
+}
+.section-new-gym-multi-entries-empty {
+    margin: 2rem 0;
+    font-size: 0.85rem;
+    color: rgb(158, 167, 184);
+}
+.section-new-gym-new-entry-btn {
+    color: #025696;
+    width: 100%;
+    font-size: 1rem;
+    border-top: 1px solid #b2bac6;
+    justify-content: center;
+    padding: 0.5rem 0;
+    text-transform: uppercase;
+}
+.section-new-gym-new-entry-btn p {
+    margin-top: 4px;
+    margin-left: 5px;
+}
+.section-new-gym-single-entry {
+    width: 100%;
+}
+.section-new-gym-opened-entry {
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+.section-new-gym-closed-entry {
+    padding: 0 1rem;
+    border-bottom: 1px solid #b2bac6;
+}
+.section-new-gym-closed-entry-title {
+    width: 95%;
+    color: #333333;
+    font-size: 1rem;
+    text-align: left;
+    padding: 1rem 0;
+}
