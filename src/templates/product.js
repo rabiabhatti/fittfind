@@ -3,7 +3,7 @@ import {graphql, navigate} from 'gatsby'
 
 import '../styles/single_product.css'
 import like_fill from '../images/like_fill.png'
-import { STRAPI_SERVER_URL } from '../../common'
+// import { STRAPI_SERVER_URL } from '../../common'
 import right_arrow from "../images/right_arrow.png";
 import like_outline from '../images/like_outline.png'
 import forwardIcon from '../images/forward_icon_dark.png'
