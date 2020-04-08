@@ -1,7 +1,7 @@
 .section-new-gym-container {
     padding: 3rem;
 }
-.section-new-gym-basic-info, .section-new-gym-amenities, .section-new-gym-facilities {
+.section-new-gym-basic-info, .section-new-gym-amenities, .section-new-gym-facilities, .section-new-gym-hours {
     width: 50%;
     margin-bottom: 3rem;
 }
