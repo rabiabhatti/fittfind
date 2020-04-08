@@ -111,7 +111,7 @@ export default () => {
                 <div className='column-start section-new-gym-basic-info'>
                     <Input title='Gym Name' name='gymName' width='100' value={gymName} onChange={e => setGymName(e.target.value)} />
                     <Input title='City' width='100' name='city' value={city} onChange={e => setCity(e.target.value)} />
-                    <FileInput onChange={event => setImg(event.target.files[0])} name='gym_cover' value={img} title='upload image' />
+                    <FileInput onChange={event => setImg(event.target.files[0])} name='gym_cover' value={img} title='upload image' width={350} height={250} />
                     <Input title='About' width='100' name='about' value={about} onChange={e =>setAbout(e.target.value)} textArea={{rows: 10, cols: 30}} />
                 </div>
                 <div className='section-new-gym-amenities'>
@@ -139,13 +139,21 @@ export default () => {
                             :
                             <div className='section-new-gym-single-entry'>
                                 {facilities.map((item, i) => (
-                                    <div key={i} className={`${currentFacility === i ? 'section-new-gym-opened-entry row-center space-between ' : 'section-new-gym-closed-entry'}`}>
+                                    <div key={i} className={`${currentFacility === i ? 'section-new-gym-opened-entry column-center space-between ' : 'section-new-gym-closed-entry'}`}>
                                        {currentFacility === i ?
                                            <Fragment>
-                                               <Input title='Name' name='name' width='49' value={facilities[i].name} onChange={e => handleFacilityInput(i, e)} />
-                                               <Input title='Price' name='price' width='49' value={facilities[i].price} onChange={e => handleFacilityInput(i, e)} />
-                                               <FileInput onChange={e => handleFacilityInput(i, e)} name='cover_image' value={facilities[i].cover_image} title='upload image' />
-                                               <Input title='Detail' name='detail' width='100' value={facilities[i].detail} onChange={e => handleFacilityInput(i, e)}  textArea={{rows: 10, cols: 30}} />
+                                               <div className='row-center space-between section-new-gym-opened-entry-top'>
+                                                   <p>{item.name || 'Enter facility credentials'}</p>
+                                                   <button className='section-new-gym-opened-entry-top-delete' onClick={() => handleRemoveFacility(i)}>
+                                                       <DeleteIcon color='#333' width={15} height={15} />
+                                                   </button>
+                                               </div>
+                                               <div className='row-center section-new-gym-opened-entry-bottom space-between'>
+                                                   <Input title='Name' name='name' width='49' value={facilities[i].name} onChange={e => handleFacilityInput(i, e)} />
+                                                   <Input title='Price' name='price' width='49' value={facilities[i].price} onChange={e => handleFacilityInput(i, e)} />
+                                                   <FileInput onChange={e => handleFacilityInput(i, e)} name='cover_image' value={facilities[i].cover_image} title='upload image' width={313} height={220} />
+                                                   <Input title='Detail' name='detail' width='100' value={facilities[i].detail} onChange={e => handleFacilityInput(i, e)}  textArea={{rows: 10, cols: 30}} />
+                                               </div>
                                            </Fragment>
                                         :
                                            <div className='row-center space-between'>

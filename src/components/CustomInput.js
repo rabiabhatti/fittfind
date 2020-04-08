@@ -40,7 +40,7 @@ function CheckBox(props) {
 }
 
 function FileInput(props) {
-    const { name, onChange, value, title } = props;
+    const { name, onChange, value, title, width, height } = props;
     let error ;
     let img;
     const validImageTypes = ['image/jpeg', 'image/png'];
@@ -53,9 +53,9 @@ function FileInput(props) {
     return (
         <div className='column-start section-file-input'>
             {error && <p className='error-msg'>{error}</p>}
-            <div className='input_file_container column-center space-between'>
+            <div className='input_file_container column-center space-between' style={{width: `${width}px`, height: `${height}px`}}>
                 {img ?
-                    <img src={window.URL.createObjectURL(value)} alt='default_image_thumbnail' className='input_file_image' />
+                    <img src={window.URL.createObjectURL(value)} alt='default_image_thumbnail' style={{maxWidth: `${width}px`, maxHeight: `${height-45}px`}} />
                     :
                     <div className='column-center input_file_image_thumbnail'>
                         <img src={default_image_thumbnail} alt='default_image_thumbnail' width={100} />
