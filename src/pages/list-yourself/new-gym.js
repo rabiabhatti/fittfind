@@ -1,8 +1,8 @@
 import React, { useState, useCallback, Fragment } from 'react'
-// import { useSelector, shallowEqual } from "react-redux";
+import { useSelector, shallowEqual } from "react-redux";
 
 import '../../styles/new_gym.css'
-// import {STRAPI_SERVER_URL} from '../../../common'
+import {STRAPI_SERVER_URL} from '../../../common'
 import { Wrapper, Input, FileInput, CheckBox, PlusIcon, DeleteIcon } from '../../components'
 
 const allAmenities = ['weight equipments', 'cardiovascular equipments', 'special machines', 'changing rooms', 'showers', 'lockers', 'healthy snacks', 'air condition', 'satellite tv'];
@@ -20,39 +20,43 @@ export default () => {
     const [currentHours, setCurrentHours] = useState(0);
     const [currentFacility, setCurrentFacility] = useState(0);
 
-    // const { user } = useSelector(state => ({
-    //     user: state.auth.user
-    // }), shallowEqual);
+    const { user } = useSelector(state => ({
+        user: state.auth.user
+    }), shallowEqual);
 
-    // const handleGym = useCallback(() => {
-    //     const data = {
-    //         refId: 1,
-    //         ref: 'gym',
-    //         field: 'files.gym-facility[0].cover_image',
-    //         files: img,
-    //     };
-    //
-    //     const form_data = new FormData();
-    //     for ( let key in data ) {
-    //         form_data.append(key, data[key]);
-    //     }
-    //
-    //     fetch(`${STRAPI_SERVER_URL}/upload`, {
-    //         method: 'POST',
-    //         body: form_data,
-    //         headers: {
-    //             Authorization: `Bearer ${user.jwt}`,
-    //         }
-    //     })
-    //         .then((response) => response.json())
-    //         .then((result) => {
-    //             console.log('Success:', result);
-    //         })
-    //         .catch((error) => {
-    //             console.error('Error:', error);
-    //         });
-    // }, [user, img]);
-    //
+    const handleCreateNewGym = React.useCallback(() => {
+        const bodyFormData = new FormData();
+        bodyFormData.append('files.avatar', img);
+        facilities.map((f, i) => {
+            bodyFormData.append(`files.facilities[${i}].cover_image`, f.cover_image);
+        });
+
+        bodyFormData.append('data', JSON.stringify({
+            name,
+            about,
+            location: city,
+            amenities,
+            hours,
+            facilities: facilities.map(f => ({name: f.name, detail: f.detail, price: parseInt(f.price)})),
+            user: user.user,
+        }));
+
+        fetch(`${STRAPI_SERVER_URL}/gyms`, {
+            method: 'POST',
+            body: bodyFormData,
+            headers: {
+                Authorization: `Bearer ${user.jwt}`,
+            }
+        })
+            .then((response) => response.json())
+            .then((result) => {
+                console.log('Success:', result);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }, [name, about, city, hours, img, user, facilities, amenities]);
+
     const handleAddFacility = useCallback(() => {
         if (!facilities.length) {
             setFacilities([{
@@ -123,18 +127,18 @@ export default () => {
 
     const handleAmenityInput = useCallback((e) => {
         const copy = amenities.slice();
-        const index = amenities.indexOf(e.target.value);
-        if (index === -1) {
-            copy.push(e.target.value);
-        } else {
+        const index = amenities.findIndex(amenity => amenity.name === e.target.value);
+        if (index !== -1) {
             copy.splice(index, 1);
+        } else {
+            copy.push({name: e.target.value})
         }
         setAmenities(copy)
     }, [amenities]);
 
     const handleAllAmenities = useCallback(()=> {
         if (amenities.length < allAmenities.length) {
-            setAmenities(allAmenities);
+            setAmenities(allAmenities.map(a => ({name: a})));
         } else setAmenities([])
     }, [amenities]);
 
@@ -150,7 +154,7 @@ export default () => {
         <Wrapper name='Dashboard' location={{pathname: 'list-yourself'}} gymNav={true}>
             <div className='column-center section-new-gym-container'>
                 <div className='column-start section-new-gym-basic-info'>
-                    <Input title='Gym Name' name='gymName' width='100' value={name} onChange={e => setName(e.target.value)} />
+                    <Input title='Name' name='name' width='100' value={name} onChange={e => setName(e.target.value)} />
                     <Input title='City' width='100' name='city' value={city} onChange={e => setCity(e.target.value)} />
                     <FileInput onChange={event => setImg(event.target.files[0])} name='gym_cover' value={img} title='upload image' width={350} height={250} />
                     <Input title='About' width='100' name='about' value={about} onChange={e =>setAbout(e.target.value)} textArea={{rows: 10, cols: 30}} />
@@ -162,15 +166,15 @@ export default () => {
                         <CheckBox name='all' value='all' onChange={handleAllAmenities} width={10} checked={amenities.length === allAmenities.length} />
                     </div>
                     <div className='section-new-gym-amenities-options row-center'>
-                        <CheckBox name='weight_equipments' value='weight equipments' onChange={handleAmenityInput} width={30} checked={amenities.includes('weight equipments')} />
-                        <CheckBox name='cardiovascular_equipments' value='cardiovascular equipments' onChange={handleAmenityInput} width={30} checked={amenities.includes('cardiovascular equipments')} />
-                        <CheckBox name='special_machines' value='special machines' onChange={handleAmenityInput} width={30} checked={amenities.includes('special machines')} />
-                        <CheckBox name='changing_rooms' value='changing rooms' onChange={handleAmenityInput} width={30} checked={amenities.includes('changing rooms')} />
-                        <CheckBox name='showers' value='showers' onChange={handleAmenityInput} width={30} checked={amenities.includes('showers')} />
-                        <CheckBox name='lockers' value='lockers' onChange={handleAmenityInput} width={30} checked={amenities.includes('lockers')} />
-                        <CheckBox name='healthy_snacks' value='healthy snacks' onChange={handleAmenityInput} width={30} checked={amenities.includes('healthy snacks')} />
-                        <CheckBox name='air_condition' value='air condition' onChange={handleAmenityInput} width={30} checked={amenities.includes('air condition')} />
-                        <CheckBox name='satellite_tv' value='satellite tv' onChange={handleAmenityInput} width={30} checked={amenities.includes('satellite tv')} />
+                        <CheckBox name='weight_equipments' value='weight equipments' onChange={handleAmenityInput} width={30} checked={amenities.some(a => a.name === 'weight equipments')} />
+                        <CheckBox name='cardiovascular_equipments' value='cardiovascular equipments' onChange={handleAmenityInput} width={30} checked={amenities.some(a => a.name === 'cardiovascular equipments')} />
+                        <CheckBox name='special_machines' value='special machines' onChange={handleAmenityInput} width={30} checked={amenities.some(a => a.name === 'special machines')} />
+                        <CheckBox name='changing_rooms' value='changing rooms' onChange={handleAmenityInput} width={30} checked={amenities.some(a => a.name === 'changing rooms')} />
+                        <CheckBox name='showers' value='showers' onChange={handleAmenityInput} width={30} checked={amenities.some(a => a.name === 'showers')} />
+                        <CheckBox name='lockers' value='lockers' onChange={handleAmenityInput} width={30} checked={amenities.some(a => a.name === 'lockers')} />
+                        <CheckBox name='healthy_snacks' value='healthy snacks' onChange={handleAmenityInput} width={30} checked={amenities.some(a => a.name === 'healthy snacks')} />
+                        <CheckBox name='air_condition' value='air condition' onChange={handleAmenityInput} width={30} checked={amenities.some(a => a.name === 'air condition')} />
+                        <CheckBox name='satellite_tv' value='satellite tv' onChange={handleAmenityInput} width={30} checked={amenities.some(a => a.name === 'satellite tv')} />
                     </div>
                 </div>
 
@@ -193,7 +197,7 @@ export default () => {
                                                </div>
                                                <div className='row-center section-new-gym-opened-entry-bottom space-between'>
                                                    <Input title='Name' name='name' width='49' value={facilities[i].name} onChange={e => handleFacilityInput(i, e)} />
-                                                   <Input title='Price' name='price' width='49' value={facilities[i].price} onChange={e => handleFacilityInput(i, e)} />
+                                                   <Input title='Price' name='price' type='number' width='49' value={facilities[i].price} onChange={e => handleFacilityInput(i, e)} />
                                                    <FileInput onChange={e => handleFacilityInput(i, e)} name='cover_image' value={facilities[i].cover_image} title='upload image' width={313} height={220} />
                                                    <Input title='Detail' name='detail' width='100' value={facilities[i].detail} onChange={e => handleFacilityInput(i, e)}  textArea={{rows: 10, cols: 30}} />
                                                </div>
@@ -262,7 +266,7 @@ export default () => {
                         </button>
                     </div>
                 </div>
-                {/*<button onClick={handleGym}>Upload</button>*/}
+                <button onClick={handleCreateNewGym}>Create New Gym</button>
             </div>
         </Wrapper>
     )
