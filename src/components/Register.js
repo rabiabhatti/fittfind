@@ -3,7 +3,8 @@ import gql from "graphql-tag";
 import { useMutation } from '@apollo/react-hooks';
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 
-import { Input } from './.'
+import { Input } from '.'
+import { request } from "../api/ecwid";
 import { addUser } from '../state/auth'
 
 const REGISTER_MUTATION = gql`
@@ -21,9 +22,6 @@ const REGISTER_MUTATION = gql`
 `;
 
 const Register = () => {
-    const { user } = useSelector(state => ({
-        user: state.auth.user
-    }), shallowEqual);
     const dispatch = useDispatch();
 
     const [email, setEmail] = useState("");
@@ -43,26 +41,35 @@ const Register = () => {
         }
     }, [email, password, username]);
 
-    const handleRegister =  () => {
+    const handleRegister = useCallback(() => {
         if (enable) {
             if (password.length < 8) {
                 setErrors([{id: 'password', message: 'Password is too short.'}]);
                 return null
             } else {
                 setLoading(true);
-                register({ variables: { input: {email, password, username}}}).then((res) => {
-                    if (res.data.register) {
-                        setLoading(false);
-                        setErrors([]);
-                        dispatch(addUser(res.data.login));
+                request('POST', {name: username, email, password}, 'customers').then(res => {
+                    const ecwid_id = JSON.parse(res);
+                    if (ecwid_id.id) {
+                        register({ variables: { input: {email, password, username, ecwid_id: ecwid_id.id.toString()}}}).then((res) => {
+                            if (res.data.register) {
+                                const user = res.data.register.user;
+                                setLoading(false);
+                                setErrors([]);
+                                user.ecwid_id = ecwid_id.id;
+                                dispatch(addUser({jwt: res.data.register.jwt, user}));
+                            }
+                        }).catch(error => {
+                            setErrors(error.networkError.result.errors[0].extensions.data[0].messages);
+                            setLoading(false);
+                        })
+                    } else {
+                        setErrors([{id: 'email', message: 'Email already taken.'}]);
                     }
-                }).catch(error => {
-                    setErrors(error.networkError.result.errors[0].extensions.data[0].messages);
-                    setLoading(false);
-                })
+                });
             }
         }
-    };
+    }, [username, email, password]);
 
     useEffect(() => {
         window.addEventListener("keydown", handleKeyPress);
@@ -73,7 +80,7 @@ const Register = () => {
 
     return (
         <div className='column-start' style={{width: '30%', margin: 'auto', height: '100vh', justifyContent: 'center'}}>
-            <Input title='Username' name='username' width={100} onChange={(e) => setUsername(e.target.value)} value={username} errors={errors} />
+            <Input title='Full Name' name='username' width={100} onChange={(e) => setUsername(e.target.value)} value={username} errors={errors} />
             <Input title='Email' name='email' width={100} onChange={(e) => setEmail(e.target.value)} value={email} errors={errors} />
             <Input type='password' title='Password' name='password' width={100} onChange={(e) => setPassword(e.target.value)} value={password} errors={errors} />
             {password.length < 8 &&
