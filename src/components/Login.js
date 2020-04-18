@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import gql from "graphql-tag";
-import { useMutation } from '@apollo/react-hooks';
+import { useMutation, useQuery } from '@apollo/react-hooks';
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 
 import { Input } from '.'
@@ -17,7 +17,14 @@ const LOGIN_MUTATION = gql`
         }
       }
   }
-  
+`;
+
+const GET_ECWID_ID = gql`
+  query($id: ID!) {
+       user(id: $id) {
+          ecwid_id
+       }
+  }
 `;
 
 export default () => {
@@ -35,6 +42,10 @@ export default () => {
 
     const [login] = useMutation(LOGIN_MUTATION);
 
+    const { data } = useQuery(GET_ECWID_ID, {
+        variables: { id: user && user.user.id},
+    });
+
     const enable = password !== '' && email !== '';
 
     const handleKeyPress = useCallback( (e) => {
@@ -44,12 +55,11 @@ export default () => {
         }
     }, [email, password]);
 
-    const handleLogin =  () => {
+    const handleLogin =  useCallback(() => {
         if (enable) {
             setLoading(true);
             login({ variables: { input: {identifier: email, password: password}}}).then((res) => {
                 if (res.data.login) {
-                    setLoading(false);
                     setErrors([]);
                     dispatch(addUser(res.data.login));
                 }
@@ -58,7 +68,16 @@ export default () => {
                 setLoading(false);
             })
         }
-    };
+    }, [email, password]);
+
+    useEffect(() => {
+        if (data && !user.user.ecwid_id) {
+                const newUser = user.user;
+                setLoading(false);
+                newUser.ecwid_id = data.user.ecwid_id;
+                dispatch(addUser({jwt: user.jwt, user: newUser}));
+        }
+    }, [user, data]);
 
     useEffect(() => {
         window.addEventListener("keydown", handleKeyPress);
@@ -114,7 +133,7 @@ export default () => {
             <input type='file' onChange={event => setImg(event.target.files[0])} />
             <input type='file' onChange={event => setFacilityCover(event.target.files[0])} />
             <button onClick={handleGym}>Upload</button>
-            <img src={img} />
+            <img src={img} alt={img} />
             {/*<form onSubmit={handleSubmit}>*/}
             {/*    <input type="file" name="files" />*/}
             {/*    <input type="text" name="ref" value="gym" />*/}
