@@ -23,6 +23,8 @@ const GET_ECWID_ID = gql`
   query($id: ID!) {
        user(id: $id) {
           ecwid_id
+          first_name
+          last_name
        }
   }
 `;
@@ -75,6 +77,8 @@ export default () => {
                 const newUser = user.user;
                 setLoading(false);
                 newUser.ecwid_id = data.user.ecwid_id;
+                newUser.first_name = data.user.first_name;
+                newUser.last_name = data.user.last_name;
                 dispatch(addUser({jwt: user.jwt, user: newUser}));
         }
     }, [user, data]);
