@@ -71,4 +71,15 @@ function FileInput(props) {
     )
 }
 
+function ToggleSwitch(props) {
+    const { onChange, name, value } = props;
+
+    return (
+        <div className='section-toggle-switch'>
+            <input type='checkbox' name={name} value={value} onClick={onChange} />
+            <label htmlFor={name}>{value}</label>
+        </div>
+    )
+}
+
 export { Input, CheckBox, FileInput }
