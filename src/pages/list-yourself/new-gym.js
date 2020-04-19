@@ -266,6 +266,16 @@ export default () => {
                         </button>
                     </div>
                 </div>
+                <div className='column-start section-new-gym-hours'>
+                    <div className='row-center space-between'>
+                        <p>Monday</p>
+
+                    </div>
+                    <div className='row-center space-between '>
+                        <Input title='Opening Hours' name='opening_hours' width='50' />
+                        <Input title='Closing Hours' name='closing_hours' width='50' />
+                    </div>
+                </div>
                 <button onClick={handleCreateNewGym}>Create New Gym</button>
             </div>
         </Wrapper>
