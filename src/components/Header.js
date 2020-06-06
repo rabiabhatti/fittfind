@@ -1,5 +1,5 @@
 import React, { Fragment } from "react"
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 import  '../styles/header.css';
 import { RightNav } from "./";
@@ -47,7 +47,7 @@ class Header extends React.Component {
         return (
             <li>
                 {currentURL.includes(name) && <img src={horizontal_line} alt='horizontal_line' className='active-nav-link' />}
-                <Link to={`/${link}/`}>{name.split('-').join(' ').toUpperCase()}</Link>
+                <button onClick={() => navigate(`/${link}/`)}>{name.split('-').join(' ').toUpperCase()}</button>
             </li>
         )
     };
