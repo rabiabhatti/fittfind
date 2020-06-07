@@ -3,24 +3,13 @@ import Select from 'react-select';
 import {Link, navigate} from 'gatsby'
 
 import '../styles/women.css'
-import men_banner from "../images/men_banner.jpg";
-import horizontal_line from '../images/horizontal_line_white.png'
-import horizontal_line_black from '../images/horizontal_line.png'
+import {get} from '../api/ecwid'
+import {allCategories} from '../../common'
 import background_imag from '../images/background-blue-imag.jpg'
-import women_category_bras from "../images/women_category_bras.jpg";
-import women_category_shorts from "../images/women_category_shorts.jpg";
-import women_category_leggings from "../images/women_category_leggings.jpg";
-import women_category_tanktops from "../images/women_category_tanktops.jpg";
-import women_new_release_banner from "../images/women_new_release_banner.jpg";
+import horizontal_line_black from '../images/horizontal_line.png'
+import horizontal_line from '../images/horizontal_line_white.png'
+import default_banner from '../images/default_category_banner.png'
 import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
-
-const women_categoryOptions = [
-    { value: 'Sport bras', label: 'Sport bras' },
-    { value: 'New Release', label: 'New Release' },
-    { value: 'Tank Tops', label: 'Tank Tops' },
-    { value: 'Leggings', label: 'Leggings' },
-    { value: 'Shorts', label: 'Shorts' },
-];
 
 const sizeOptions = [
     { value: '38DD', label: '38DD' },
@@ -39,76 +28,42 @@ const sortByOptions = [
     { value: 'Recommended 3', label: 'Recommended 3' },
 ];
 
-const men_categoryOptions = [
-    { value: 'Compression tops', label: 'Compression tops' },
-    { value: 'New Release', label: 'New Release' },
-    { value: 'Tights', label: 'Tights' },
-    { value: 'Hoodies', label: 'Hoodies' },
-    { value: 'Joggers and sweatpants', label: 'Joggers and sweatpants' },
-];
-
-
-const women_categories = [
-    {
-        name: 'New Release',
-        image: women_new_release_banner,
-    }, {
-        name: 'Sport Bras',
-        image: women_category_bras,
-    },{
-        name: 'Tank Tops',
-        image: women_category_tanktops,
-    },{
-        name: 'Leggings',
-        image: women_category_leggings,
-    },{
-        name: 'Shorts',
-        image: women_category_shorts,
-    },
-
-];
-
-const men_categories = [
-    {
-        name: 'New Release',
-        image: men_banner,
-    }, {
-        name: 'Compression tops',
-        image: men_banner,
-    }, {
-        name: 'Tights',
-        image: men_banner,
-    }, {
-        name: 'Hoodies',
-        image: men_banner,
-    }, {
-        name: 'Joggers and sweatpants',
-        image: men_banner,
-    },
-
-];
 
 export default function Category(props) {
+    const [categories, setCategories] =  useState([]);
     const [productList, setProductList] =  useState([]);
-    const [size, setSize] = useState(sizeOptions[0].value.toUpperCase())
-    const [sortBy, setSortBy] = useState(sortByOptions[0].value.toUpperCase())
-    const [collection, setCollection] = useState(collectionOptions[0].value.toUpperCase())
-    const category = props.pathContext.category.toLowerCase()
+    const [size, setSize] = useState(sizeOptions[0].value.toUpperCase());
+    const [categoryOptions, setCategoryOptions] =  useState([]);
+    const [sortBy, setSortBy] = useState(sortByOptions[0].value.toUpperCase());
+    const [collection, setCollection] = useState(collectionOptions[0].value.toUpperCase());
 
     const gender = props.pathContext.gender;
-    const categories = gender === 'men' ? men_categories : women_categories;
-    const categoryOptions = gender === 'men' ? men_categoryOptions : women_categoryOptions;
+    const currentCategory = props.pathContext.category.toLowerCase()
 
     useEffect(() => {
-        return getCategoryItems(props.pathContext.id)
-    }, [props.pathContext.id]);
+        const list = allCategories.filter(i => i.gender === props.pathContext.gender)
+        const options = list.map(item => ({value: item.name, label: item.name}))
+        setCategoryOptions(options)
+        getBanners(list)
+
+        getCategoryItems(props.pathContext.id)
+    }, [props.pathContext]);
 
     const getCategoryItems = (id) => {
-        fetch(`https://app.ecwid.com/api/v3/27677024/categories/${id}?token=secret_TyZ2wNXHhsuQxPrNfjzdVm1k8pL5Ra2H`).then(response => response.text()).then(res => {
-            const result  = JSON.parse(res)
-            console.log(result)
-            setProductList(result.productIds);
+        get('categories', id).then(res => {
+            setProductList(res.productIds);
         })
+    }
+
+    const getBanners = (list) => {
+        const copy = list.slice();
+        list.map(item => {
+            get('categories', item.id).then(res => {
+                const found = copy.find(i => i.id === item.id)
+                found['banner'] = res.hdThumbnailUrl || default_banner
+            })
+        })
+        setCategories(copy)
     }
 
     const handleCategoryChange = async input => {
@@ -126,10 +81,10 @@ export default function Category(props) {
                     <div className='section-products-hero-container'>
                         <div className='section-products-hero'>
                             {categories.map((item, i) => (
-                                <div className='section-hero-category-container' style={{backgroundImage: `url(${item.image})`}} key={i}>
+                                <div className='section-hero-category-container' style={{backgroundImage: `url(${item.banner})`}} key={i}>
                                     <Link
                                         to={`/${gender}/${item.name.toLowerCase().split(' ').join('-')}/`}
-                                        className={`section-hero-category ${item.name.toUpperCase() === category.toUpperCase() && 'section-hero-category-active'}`}
+                                        className={`section-hero-category ${item.name.toUpperCase() === currentCategory.toUpperCase() && 'section-hero-category-active'}`}
                                     >
                                         <img src={horizontal_line} alt='horizontal_line' />
                                         <p>{item.name.toUpperCase()}</p>
@@ -146,11 +101,11 @@ export default function Category(props) {
                             </p>
                             <Select
                                 isDisabled={false}
-                                value={category}
+                                value={currentCategory}
                                 options={categoryOptions}
                                 classNamePrefix="react-select"
                                 className='react-select-container'
-                                placeholder={category.toUpperCase()}
+                                placeholder={currentCategory.toUpperCase()}
                                 onChange={handleCategoryChange}
                             />
                         </div>
@@ -194,7 +149,7 @@ export default function Category(props) {
                 </div>
             </Hero>
             <div className='section-products-list'>
-                {productList.length && productList.map((item, i) => (
+                {!! productList && productList.length && productList.map((item, i) => (
                     <Product key={i} id={item} img={item.image} name={item.name} price={`$${item.price}.00`} />
                 ))}
             </div>
