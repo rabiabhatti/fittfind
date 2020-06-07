@@ -1,9 +1,9 @@
 import React from 'react';
 import Select from 'react-select';
-import {Link, graphql, navigate} from 'gatsby'
+import {Link, navigate} from 'gatsby'
 
 import '../styles/women.css'
-import { STRAPI_SERVER_URL } from '../../common'
+import { request } from "../api/ecwid";
 import product_1 from "../images/product-1.jpg";
 import product_2 from "../images/product-2.jpg";
 import product_3 from "../images/product-3.jpg";
@@ -174,15 +174,26 @@ const men_categories = [
 
 export default class Category extends React.Component {
     state = {
+        products_list: [],
         size: sizeOptions[0].value.toUpperCase(),
         sortBy: sortByOptions[0].value.toUpperCase(),
         collection: collectionOptions[0].value.toUpperCase(),
-        category: this.props.location.pathname.split('/')[this.props.location.pathname.split('/').length - 2].split('-').join(' '),
+        category: this.props.pathContext.category.toLowerCase(),
     };
 
+    componentDidMount() {
+        this.getCategoryItems(this.props.pathContext.id)
+    }
+
+    getCategoryItems = (id) => {
+        fetch(`https://app.ecwid.com/api/v3/27677024/categories/${id}?token=secret_TyZ2wNXHhsuQxPrNfjzdVm1k8pL5Ra2H`).then(response => response.text()).then(res => {
+            const result  = JSON.parse(res)
+            this.setState({ products_list: result.productIds || [] })
+        })
+    }
+
     handleCategoryChange = async input => {
-        const pathName = this.props.location.pathname;
-        const gender = pathName.split('/')[1];
+        const gender = this.props.pathContext.gender;
         await navigate(`/${gender}/${input.value.toLowerCase().split(' ').join('-')}/`);
     };
 
@@ -203,9 +214,8 @@ export default class Category extends React.Component {
     };
 
     render() {
-        const { category, size, collection, sortBy } = this.state;
-        const pathName = this.props.location.pathname;
-        const gender = pathName.split('/')[1];
+        const { category, size, collection, sortBy, products_list } = this.state;
+        const gender = this.props.pathContext.gender;
         const categories = gender === 'men' ? men_categories : women_categories;
         const categoryOptions = gender === 'men' ? men_categoryOptions : women_categoryOptions;
 
@@ -287,11 +297,8 @@ export default class Category extends React.Component {
                     </div>
                 </Hero>
                 <div className='section-products-list'>
-                    {this.props.data.allStrapiCategory.edges[0].node.products.map((product, i) => (
-                        <Product key={i} img={`${product.images[0].url}`} name={product.name} price={`$${product.price}.00`} id={product.id} />
-                    ))}
-                    {products_list.map((item, i) => (
-                        <Product key={i} img={item.image} name={item.name} price={`$${item.price}.00`} />
+                    {products_list.length && products_list.map((item, i) => (
+                        <Product key={i} id={item} img={item.image} name={item.name} price={`$${item.price}.00`} />
                     ))}
                 </div>
                 <div className='section-social-media'>
@@ -304,36 +311,3 @@ export default class Category extends React.Component {
     }
 }
 
-export const query = graphql`
-              query CategoryQuery ($category: String!, $gender: String!) {
-                    allStrapiCategory(filter: {name: {eq: $category}, gender: {type: {eq: $gender}}}) {
-                        edges {
-                            node {
-                                name
-                                gender {
-                                    type
-                                }
-                                products {
-                                    id
-                                    name
-                                    description
-                                    price
-                                    product_id
-                                    sizes {
-                                        size_name
-                                    }
-                                    images {
-                                         url
-                                    }
-                                    benefits {
-                                         benefit
-                                    }
-                                    details {
-                                        detail
-                                    }
-                                }
-                            }
-                        }
-                    }
-              }
-`;
