@@ -11,3 +11,8 @@ export function request(method, body, endpoint, params) {
     }).then(response => response.text());
 }
 
+export function get(endpoint, params) {
+    return fetch(`${ECWID_URL}/${endpoint}/${params}?token=${ECWID_TOKEN}`)
+        .then(response => response.text())
+        .then(result => JSON.parse(result));
+}
