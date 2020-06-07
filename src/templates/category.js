@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react'
 import Select from 'react-select';
 import {Link, navigate} from 'gatsby'
 
@@ -19,85 +19,6 @@ import women_category_tanktops from "../images/women_category_tanktops.jpg";
 import women_new_release_banner from "../images/women_new_release_banner.jpg";
 import {Wrapper, Hero, Slider, ImpossibleBanner, Product} from "../components"
 
-const products_list = [
-    {
-        name: 'Women hybrid Joggers Black',
-        price: 45,
-        image: product_1,
-    },{
-        name: 'New! Sport mesh jacket',
-        price: 30,
-        image: product_2
-    },{
-        name: 'Sport mesh jacket',
-        price: 75,
-        image: product_3
-    },{
-        name: 'New! Sport mesh jacket',
-        price: 30,
-        image: product_4
-    },{
-        name: 'Sport mesh jacket',
-        price: 75,
-        image: women_category_bras
-    },{
-        name: 'Women hybrid Joggers',
-        price: 100,
-        image: women_category_shorts
-    },{
-        name: 'New! Sport mesh jacket',
-        price: 30,
-        image: product_4
-    },{
-        name: 'Sport mesh jacket',
-        price: 75,
-        image: women_category_leggings
-    },{
-        name: 'Women hybrid Joggers',
-        price: 100,
-        image: women_category_bras
-    },{
-        name: 'New! Sport mesh jacket',
-        price: 30,
-        image: product_2
-    },{
-        name: 'Sport mesh jacket',
-        price: 75,
-        image: women_category_shorts
-    },{
-        name: 'Women hybrid Joggers Black',
-        price: 45,
-        image: product_1,
-    },{
-        name: 'New! Sport mesh jacket',
-        price: 30,
-        image: product_2
-    },{
-        name: 'Sport mesh jacket',
-        price: 75,
-        image: product_3
-    },{
-        name: 'New! Sport mesh jacket',
-        price: 30,
-        image: product_4
-    },{
-        name: 'Sport mesh jacket',
-        price: 75,
-        image: product_3
-    },{
-        name: 'Women hybrid Joggers',
-        price: 100,
-        image: product_4
-    },{
-        name: 'New! Sport mesh jacket',
-        price: 30,
-        image: product_2
-    },{
-        name: 'Sport mesh jacket',
-        price: 75,
-        image: women_category_shorts
-    },
-];
 const women_categoryOptions = [
     { value: 'Sport bras', label: 'Sport bras' },
     { value: 'New Release', label: 'New Release' },
@@ -172,142 +93,122 @@ const men_categories = [
 
 ];
 
-export default class Category extends React.Component {
-    state = {
-        products_list: [],
-        size: sizeOptions[0].value.toUpperCase(),
-        sortBy: sortByOptions[0].value.toUpperCase(),
-        collection: collectionOptions[0].value.toUpperCase(),
-        category: this.props.pathContext.category.toLowerCase(),
-    };
+export default function Category(props) {
+    const [productList, setProductList] =  useState([]);
+    const [size, setSize] = useState(sizeOptions[0].value.toUpperCase())
+    const [sortBy, setSortBy] = useState(sortByOptions[0].value.toUpperCase())
+    const [collection, setCollection] = useState(collectionOptions[0].value.toUpperCase())
+    const [category, setCategory] = useState(props.pathContext.category.toLowerCase())
 
-    componentDidMount() {
-        this.getCategoryItems(this.props.pathContext.id)
-    }
+    const gender = props.pathContext.gender;
+    const categories = gender === 'men' ? men_categories : women_categories;
+    const categoryOptions = gender === 'men' ? men_categoryOptions : women_categoryOptions;
 
-    getCategoryItems = (id) => {
+    useEffect(() => {
+        return getCategoryItems(props.pathContext.id)
+    }, [props.pathContext.id]);
+
+    const getCategoryItems = (id) => {
         fetch(`https://app.ecwid.com/api/v3/27677024/categories/${id}?token=secret_TyZ2wNXHhsuQxPrNfjzdVm1k8pL5Ra2H`).then(response => response.text()).then(res => {
             const result  = JSON.parse(res)
-            this.setState({ products_list: result.productIds || [] })
+            console.log(result)
+            setProductList(result.productIds);
         })
     }
 
-    handleCategoryChange = async input => {
-        const gender = this.props.pathContext.gender;
+    const handleCategoryChange = async input => {
+        const gender = props.pathContext.gender;
         await navigate(`/${gender}/${input.value.toLowerCase().split(' ').join('-')}/`);
     };
 
-    handleSizeChange = input => {
-        this.setState(
-            { size: input.value.toUpperCase()}
-        );
-    };
-    handleCollectionChange = input => {
-        this.setState(
-            { collection: input.value.toUpperCase()}
-        );
-    };
-    handleSortChange = input => {
-        this.setState(
-            { sortBy: input.value.toUpperCase()}
-        );
-    };
-
-    render() {
-        const { category, size, collection, sortBy, products_list } = this.state;
-        const gender = this.props.pathContext.gender;
-        const categories = gender === 'men' ? men_categories : women_categories;
-        const categoryOptions = gender === 'men' ? men_categoryOptions : women_categoryOptions;
-
-        return (
-            <Wrapper name='Women' location={this.props.location}>
-                <div className='section-background'>
-                    <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag'/>
-                </div>
-                <Hero className='section-products-hero-main'>
+    return (
+        <Wrapper name='Women' location={props.location}>
+            <div className='section-background'>
+                <img className='section-background-blue-right women' src={background_imag} alt='background_blue_imag'/>
+            </div>
+            <Hero className='section-products-hero-main'>
+                <div className='section-products-hero-container'>
                     <div className='section-products-hero-container'>
-                        <div className='section-products-hero-container'>
-                            <div className='section-products-hero'>
-                                {categories.map((item, i) => (
-                                    <div className='section-hero-category-container' style={{backgroundImage: `url(${item.image})`}} key={i}>
-                                        <Link
-                                            to={`/${gender}/${item.name.toLowerCase().split(' ').join('-')}/`}
-                                            className={`section-hero-category ${item.name.toUpperCase() === category.toUpperCase() && 'section-hero-category-active'}`}
-                                        >
-                                            <img src={horizontal_line} alt='horizontal_line' />
-                                            <p>{item.name.toUpperCase()}</p>
-                                        </Link>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                        <div className='section-products-filters'>
-                            <div className='select-container'>
-                                <p>
-                                    <img src={horizontal_line} alt='horizontal_line' />
-                                    CATEGORIES:
-                                </p>
-                                <Select
-                                    isDisabled={false}
-                                    value={category}
-                                    options={categoryOptions}
-                                    classNamePrefix="react-select"
-                                    className='react-select-container'
-                                    placeholder={category.toUpperCase()}
-                                    onChange={this.handleCategoryChange}
-                                />
-                            </div>
-                            <div className='select-container'>
-                                <p><img src={horizontal_line} alt='horizontal_line' />SIZE:</p>
-                                <Select
-                                    isDisabled={false}
-                                    value={size}
-                                    options={sizeOptions}
-                                    placeholder={size}
-                                    classNamePrefix="react-select"
-                                    className='react-select-container'
-                                    onChange={this.handleSizeChange}
-                                />
-                            </div>
-                            <div className='select-container'>
-                                <p><img src={horizontal_line} alt='horizontal_line' />COLLECTION:</p>
-                                <Select
-                                    isDisabled={false}
-                                    value={collection}
-                                    options={collectionOptions}
-                                    placeholder={collection}
-                                    classNamePrefix="react-select"
-                                    className='react-select-container'
-                                    onChange={this.handleCollectionChange}
-                                />
-                            </div>
-                            <div className='select-container'>
-                                <p><img src={horizontal_line} alt='horizontal_line' />SORT BY:</p>
-                                <Select
-                                    isDisabled={false}
-                                    value={sortBy}
-                                    options={sortByOptions}
-                                    placeholder={sortBy}
-                                    classNamePrefix="react-select"
-                                    className='react-select-container'
-                                    onChange={this.handleSortChange}
-                                />
-                            </div>
+                        <div className='section-products-hero'>
+                            {categories.map((item, i) => (
+                                <div className='section-hero-category-container' style={{backgroundImage: `url(${item.image})`}} key={i}>
+                                    <Link
+                                        to={`/${gender}/${item.name.toLowerCase().split(' ').join('-')}/`}
+                                        className={`section-hero-category ${item.name.toUpperCase() === category.toUpperCase() && 'section-hero-category-active'}`}
+                                    >
+                                        <img src={horizontal_line} alt='horizontal_line' />
+                                        <p>{item.name.toUpperCase()}</p>
+                                    </Link>
+                                </div>
+                            ))}
                         </div>
                     </div>
-                </Hero>
-                <div className='section-products-list'>
-                    {products_list.length && products_list.map((item, i) => (
-                        <Product key={i} id={item} img={item.image} name={item.name} price={`$${item.price}.00`} />
-                    ))}
+                    <div className='section-products-filters'>
+                        <div className='select-container'>
+                            <p>
+                                <img src={horizontal_line} alt='horizontal_line' />
+                                CATEGORIES:
+                            </p>
+                            <Select
+                                isDisabled={false}
+                                value={category}
+                                options={categoryOptions}
+                                classNamePrefix="react-select"
+                                className='react-select-container'
+                                placeholder={category.toUpperCase()}
+                                onChange={handleCategoryChange}
+                            />
+                        </div>
+                        <div className='select-container'>
+                            <p><img src={horizontal_line} alt='horizontal_line' />SIZE:</p>
+                            <Select
+                                isDisabled={false}
+                                value={size}
+                                options={sizeOptions}
+                                placeholder={size}
+                                classNamePrefix="react-select"
+                                className='react-select-container'
+                                onChange={input => setSize(input.value.toUpperCase())}
+                            />
+                        </div>
+                        <div className='select-container'>
+                            <p><img src={horizontal_line} alt='horizontal_line' />COLLECTION:</p>
+                            <Select
+                                isDisabled={false}
+                                value={collection}
+                                options={collectionOptions}
+                                placeholder={collection}
+                                classNamePrefix="react-select"
+                                className='react-select-container'
+                                onChange={input => setCollection(input.value.toUpperCase())}
+                            />
+                        </div>
+                        <div className='select-container'>
+                            <p><img src={horizontal_line} alt='horizontal_line' />SORT BY:</p>
+                            <Select
+                                isDisabled={false}
+                                value={sortBy}
+                                options={sortByOptions}
+                                placeholder={sortBy}
+                                classNamePrefix="react-select"
+                                className='react-select-container'
+                                onChange={input => setSortBy(input.value.toUpperCase())}
+                            />
+                        </div>
+                    </div>
                 </div>
-                <div className='section-social-media'>
+            </Hero>
+            <div className='section-products-list'>
+                {productList.length && productList.map((item, i) => (
+                    <Product key={i} id={item} img={item.image} name={item.name} price={`$${item.price}.00`} />
+                ))}
+            </div>
+            <div className='section-social-media'>
                 <h2><img src={horizontal_line_black} alt='horizontal_line_black'/> Follow <span>fitt</span><span>find</span></h2>
-                    <Slider type='social_media' />
-                </div>
-                <ImpossibleBanner />
-            </Wrapper>
-        );
-    }
+                <Slider type='social_media' />
+            </div>
+            <ImpossibleBanner />
+        </Wrapper>
+    );
 }
 
