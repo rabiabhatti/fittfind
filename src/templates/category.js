@@ -1,13 +1,8 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect } from 'react'
 import Select from 'react-select';
 import {Link, navigate} from 'gatsby'
 
 import '../styles/women.css'
-import { request } from "../api/ecwid";
-import product_1 from "../images/product-1.jpg";
-import product_2 from "../images/product-2.jpg";
-import product_3 from "../images/product-3.jpg";
-import product_4 from "../images/product-4.jpg";
 import men_banner from "../images/men_banner.jpg";
 import horizontal_line from '../images/horizontal_line_white.png'
 import horizontal_line_black from '../images/horizontal_line.png'
@@ -98,7 +93,7 @@ export default function Category(props) {
     const [size, setSize] = useState(sizeOptions[0].value.toUpperCase())
     const [sortBy, setSortBy] = useState(sortByOptions[0].value.toUpperCase())
     const [collection, setCollection] = useState(collectionOptions[0].value.toUpperCase())
-    const [category, setCategory] = useState(props.pathContext.category.toLowerCase())
+    const category = props.pathContext.category.toLowerCase()
 
     const gender = props.pathContext.gender;
     const categories = gender === 'men' ? men_categories : women_categories;
