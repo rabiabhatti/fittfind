@@ -41,7 +41,8 @@ function FeaturedProducts () {
     const getProducts = () => {
         const products_pages = [];
         get('categories', '52986347').then(res => {
-            setProducts(res.productIds);
+            const shuffled = res.productIds.sort(() => Math.random() - 0.5);
+            setProducts(shuffled);
             for (let i = 0; i < res.productIds.length / 4; i++) {
                 products_pages.push(i)
             }
