@@ -55,5 +55,10 @@ export const allCategories = [
         id: '49225597',
         banner: default_banner,
         gender: 'men',
+    },{
+        name: 'Featured',
+        id: '52986347',
+        banner: default_banner,
+        gender: 'both',
     },
 ]

@@ -3,7 +3,7 @@ import {graphql, Link} from "gatsby"
 
 import '../styles/products_categories.css'
 
-import {Wrapper, Hero, Slider, ImpossibleBanner, VideoPopup, Loading, Image, HomeSlider} from "../components"
+import {Wrapper, Hero, Slider, ImpossibleBanner, VideoPopup, Loading, Image, HomeSlider, FeaturedProducts} from "../components"
 
 import fit from '../images/fit.png'
 import men_banner from '../images/men_banner.jpg'
@@ -35,9 +35,9 @@ class IndexPage extends React.Component {
 
     render() {
         const { show_video, show_loading } = this.state;
-        if (show_loading) {
-            return <Loading totalTime={3} />
-        }
+        // if (show_loading) {
+        //     return <Loading totalTime={3} />
+        // }
 
         return (
             <Wrapper name='Home' location={this.props.location}>
@@ -112,7 +112,7 @@ class IndexPage extends React.Component {
                 </div>
                 <div className='section-features'>
                     <h2><img src={horizontal_line} alt='horizontal_line'/> <span>Featured Items</span></h2>
-                    <Slider type='products' />
+                    <FeaturedProducts />
                 </div>
                 <div className='section-background'>
                     <img className='section-background-fittfind' src={fittfind_h} alt='fittfind_imag'/>

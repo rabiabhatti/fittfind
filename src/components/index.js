@@ -17,6 +17,7 @@ export * from './CustomInput';
 export * from './PrivateRoute';
 export * from './UserAttribute';
 export * from './Popup/SizeChart';
+export * from './FeaturedProducts';
 export * from './Popup/VideoPopup';
 export * from './Popup/NewsLetter';
 export * from './ImpossibleBanner';
