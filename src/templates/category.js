@@ -50,7 +50,7 @@ export default function Category(props) {
     }, [props.pathContext]);
 
     const getCategoryItems = (id) => {
-        get('categories', id).then(res => {
+        get('categories', parseFloat(id)).then(res => {
             setProductList(res.productIds);
         })
     }
@@ -58,7 +58,7 @@ export default function Category(props) {
     const getBanners = (list) => {
         const copy = list.slice();
         list.map(item => {
-            get('categories', item.id).then(res => {
+            get('categories', parseFloat(item.id)).then(res => {
                 const found = copy.find(i => i.id === item.id)
                 found['banner'] = res.hdThumbnailUrl || default_banner
             })
@@ -149,8 +149,8 @@ export default function Category(props) {
                 </div>
             </Hero>
             <div className='section-products-list'>
-                {!! productList && productList.length && productList.map((item, i) => (
-                    <Product key={i} id={item} img={item.image} name={item.name} price={`$${item.price}.00`} />
+                {!!productList && productList.length && productList.map((item, i) => (
+                    <Product key={i} id={item} />
                 ))}
             </div>
             <div className='section-social-media'>
